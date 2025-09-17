@@ -3,21 +3,33 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+type CropSettings = {
+  scale: number;
+  position: { x: number; y: number };
+};
+
+type User = {
+  name: string;
+  email: string;
+  profilePicture: string;
+  cropSettings?: CropSettings | null;
+};
+
 export default function ProfileMenuPage() {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [isEditing, setIsEditing] = useState(false);
   const [cropImage, setCropImage] = useState<string | null>(null);
-  const [cropSettings, setCropSettings] = useState<any>(null);
+  const [cropSettings, setCropSettings] = useState<CropSettings | null>(null);
   const [showCropModal, setShowCropModal] = useState(false);
 
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (userData) {
       try {
-        const parsedUser = JSON.parse(userData);
+        const parsedUser = JSON.parse(userData) as User;
         setUser(parsedUser);
-        setCropImage(parsedUser.profilePicture);
-        setCropSettings(parsedUser.cropSettings);
+        setCropImage(parsedUser.profilePicture ?? null);
+        setCropSettings(parsedUser.cropSettings ?? null);
       } catch (error) {
         console.error("Error parsing user data", error);
       }
@@ -38,21 +50,23 @@ export default function ProfileMenuPage() {
   };
 
   const handleCropSave = () => {
-    if (cropImage && cropSettings) {
-      const updatedUser = {
+    if (cropImage && cropSettings && user) {
+      const updatedUser: User = {
         ...user,
         profilePicture: cropImage,
-        cropSettings: cropSettings
+        cropSettings,
       };
-      
+
       localStorage.setItem("user", JSON.stringify(updatedUser));
       setUser(updatedUser);
-      
+
       // Dispatch custom event to notify other components
-      window.dispatchEvent(new CustomEvent('userDataUpdated', { 
-        detail: updatedUser 
-      }));
-      
+      window.dispatchEvent(
+        new CustomEvent("userDataUpdated", {
+          detail: updatedUser,
+        })
+      );
+
       setShowCropModal(false);
     }
   };
@@ -80,7 +94,7 @@ export default function ProfileMenuPage() {
           ← Back to Library
         </Link>
       </div>
-      
+
       <div style={{ maxWidth: "600px", margin: "0 auto" }}>
         <h1 style={{ margin: "0 0 8px", fontSize: "28px", fontWeight: "600", textAlign: "center" }}>
           Profile Menu
@@ -88,13 +102,13 @@ export default function ProfileMenuPage() {
         <p style={{ margin: "0 0 32px", color: "var(--muted)", textAlign: "center" }}>
           Manage your account information and preferences
         </p>
-        
+
         {/* Account Information */}
         <div className="card" style={{ marginBottom: "24px" }}>
           <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>
             Account Information
           </h2>
-          
+
           <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
             <div style={{ position: "relative" }}>
               <img
@@ -105,16 +119,18 @@ export default function ProfileMenuPage() {
                   height: "80px",
                   borderRadius: "50%",
                   objectFit: "cover",
-                  objectPosition: user.cropSettings ?
-                    `${50 + (user.cropSettings.position.x / 3)}% ${50 + (user.cropSettings.position.y / 3)}%` :
-                    "center center",
+                  objectPosition: user.cropSettings
+                    ? `${50 + user.cropSettings.position.x / 3}% ${
+                        50 + user.cropSettings.position.y / 3
+                      }%`
+                    : "center center",
                   transform: user.cropSettings ? `scale(${user.cropSettings.scale})` : "scale(1)",
                   transformOrigin: "center center",
-                  background: "var(--border)"
+                  background: "var(--border)",
                 }}
               />
               <button
-                onClick={() => document.getElementById('profile-picture-upload')?.click()}
+                onClick={() => document.getElementById("profile-picture-upload")?.click()}
                 style={{
                   position: "absolute",
                   bottom: "0",
@@ -129,7 +145,7 @@ export default function ProfileMenuPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "12px"
+                  fontSize: "12px",
                 }}
               >
                 ✏️
@@ -142,23 +158,19 @@ export default function ProfileMenuPage() {
                 style={{ display: "none" }}
               />
             </div>
-            
+
             <div>
-              <h3 style={{ margin: "0 0 4px", fontSize: "18px", fontWeight: "600" }}>
-                {user.name}
-              </h3>
-              <p style={{ margin: "0 0 8px", color: "var(--muted)" }}>
-                {user.email}
-              </p>
+              <h3 style={{ margin: "0 0 4px", fontSize: "18px", fontWeight: "600" }}>{user.name}</h3>
+              <p style={{ margin: "0 0 8px", color: "var(--muted)" }}>{user.email}</p>
               <button
-                onClick={() => document.getElementById('profile-picture-upload')?.click()}
+                onClick={() => document.getElementById("profile-picture-upload")?.click()}
                 style={{
                   background: "none",
                   border: "none",
                   color: "var(--accent)",
                   cursor: "pointer",
                   fontSize: "14px",
-                  textDecoration: "underline"
+                  textDecoration: "underline",
                 }}
               >
                 Click to edit profile picture
@@ -169,43 +181,47 @@ export default function ProfileMenuPage() {
 
         {/* Quick Actions */}
         <div className="card" style={{ marginBottom: "24px" }}>
-          <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>
-            Quick Actions
-          </h2>
+          <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>Quick Actions</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <Link href="/profile" style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-              padding: "12px 16px",
-              border: "1px solid var(--border)",
-              borderRadius: "8px",
-              background: "var(--bg)",
-              color: "var(--fg)",
-              textDecoration: "none",
-              transition: "border-color 0.2s ease"
-            }}>
+            <Link
+              href="/profile"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                padding: "12px 16px",
+                border: "1px solid var(--border)",
+                borderRadius: "8px",
+                background: "var(--bg)",
+                color: "var(--fg)",
+                textDecoration: "none",
+                transition: "border-color 0.2s ease",
+              }}
+            >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
               </svg>
               View Public Profile
             </Link>
-            <Link href="/settings" style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-              padding: "12px 16px",
-              border: "1px solid var(--border)",
-              borderRadius: "8px",
-              background: "var(--bg)",
-              color: "var(--fg)",
-              textDecoration: "none",
-              transition: "border-color 0.2s ease"
-            }}>
+            <Link
+              href="/settings"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                padding: "12px 16px",
+                border: "1px solid var(--border)",
+                borderRadius: "8px",
+                background: "var(--bg)",
+                color: "var(--fg)",
+                textDecoration: "none",
+                transition: "border-color 0.2s ease",
+              }}
+            >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" />
               </svg>
               Settings
             </Link>
@@ -223,13 +239,13 @@ export default function ProfileMenuPage() {
                 cursor: "pointer",
                 transition: "border-color 0.2s ease",
                 width: "100%",
-                textAlign: "left"
+                textAlign: "left",
               }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-                <polyline points="16,17 21,12 16,7"/>
-                <line x1="21" y1="12" x2="9" y2="12"/>
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16,17 21,12 16,7" />
+                <line x1="21" y1="12" x2="9" y2="12" />
               </svg>
               Sign Out
             </button>
@@ -239,44 +255,50 @@ export default function ProfileMenuPage() {
 
       {/* Crop Modal */}
       {showCropModal && cropImage && (
-        <div style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: "rgba(0, 0, 0, 0.8)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 1000
-        }}>
-          <div style={{
-            background: "var(--bg)",
-            borderRadius: "12px",
-            padding: "24px",
-            maxWidth: "500px",
-            width: "90%",
-            maxHeight: "90%",
-            overflow: "auto"
-          }}>
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "rgba(0, 0, 0, 0.8)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000,
+          }}
+        >
+          <div
+            style={{
+              background: "var(--bg)",
+              borderRadius: "12px",
+              padding: "24px",
+              maxWidth: "500px",
+              width: "90%",
+              maxHeight: "90%",
+              overflow: "auto",
+            }}
+          >
             <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>
               Crop Profile Picture
             </h2>
             <p style={{ margin: "0 0 16px", color: "var(--muted)" }}>
               Adjust the position and zoom of your profile picture
             </p>
-            
+
             <div style={{ textAlign: "center", marginBottom: "16px" }}>
-              <div style={{
-                width: "200px",
-                height: "200px",
-                borderRadius: "50%",
-                overflow: "hidden",
-                margin: "0 auto 16px",
-                border: "2px solid var(--border)",
-                position: "relative"
-              }}>
+              <div
+                style={{
+                  width: "200px",
+                  height: "200px",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  margin: "0 auto 16px",
+                  border: "2px solid var(--border)",
+                  position: "relative",
+                }}
+              >
                 <img
                   src={cropImage}
                   alt="Crop preview"
@@ -284,35 +306,41 @@ export default function ProfileMenuPage() {
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
-                    objectPosition: cropSettings ?
-                      `${50 + (cropSettings.position.x / 3)}% ${50 + (cropSettings.position.y / 3)}%` :
-                      "center center",
+                    objectPosition: cropSettings
+                      ? `${50 + cropSettings.position.x / 3}% ${
+                          50 + cropSettings.position.y / 3
+                        }%`
+                      : "center center",
                     transform: cropSettings ? `scale(${cropSettings.scale})` : "scale(1)",
-                    transformOrigin: "center center"
+                    transformOrigin: "center center",
                   }}
                 />
               </div>
-              
+
               <div style={{ marginBottom: "16px" }}>
                 <label style={{ display: "block", marginBottom: "8px", fontSize: "14px", fontWeight: "500" }}>
                   Zoom: {Math.round((cropSettings?.scale || 1) * 100)}%
                 </label>
                 <input
                   type="range"
-                  min="1"
-                  max="3"
-                  step="0.1"
-                  value={cropSettings?.scale || 1}
-                  onChange={(e) => setCropSettings(prev => ({
-                    ...prev,
-                    scale: parseFloat(e.target.value),
-                    position: prev?.position || { x: 0, y: 0 }
-                  }))}
+                  min={1}
+                  max={3}
+                  step={0.1}
+                  value={cropSettings?.scale ?? 1}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setCropSettings((prev: CropSettings | null): CropSettings => {
+                      const base: CropSettings = prev ?? { scale: 1, position: { x: 0, y: 0 } };
+                      return {
+                        ...base,
+                        scale: parseFloat(e.target.value),
+                      };
+                    })
+                  }
                   style={{ width: "100%" }}
                 />
               </div>
             </div>
-            
+
             <div style={{ display: "flex", gap: "12px", justifyContent: "flex-end" }}>
               <button
                 onClick={() => setShowCropModal(false)}
@@ -322,7 +350,7 @@ export default function ProfileMenuPage() {
                   borderRadius: "6px",
                   background: "var(--bg)",
                   color: "var(--fg)",
-                  cursor: "pointer"
+                  cursor: "pointer",
                 }}
               >
                 Cancel
@@ -335,7 +363,7 @@ export default function ProfileMenuPage() {
                   borderRadius: "6px",
                   background: "var(--accent)",
                   color: "white",
-                  cursor: "pointer"
+                  cursor: "pointer",
                 }}
               >
                 Save

@@ -1,0 +1,399 @@
+{
+  "data_types": {
+    "Comic": {
+      "description": "Main comic/series data type",
+      "fields": {
+        "id": {
+          "type": "text",
+          "description": "Unique identifier for the comic"
+        },
+        "title": {
+          "type": "text",
+          "description": "Title of the comic"
+        },
+        "series": {
+          "type": "text",
+          "description": "Series name"
+        },
+        "author": {
+          "type": "text",
+          "description": "Author/Writer name"
+        },
+        "artist": {
+          "type": "text",
+          "description": "Artist name"
+        },
+        "year": {
+          "type": "number",
+          "description": "Publication year"
+        },
+        "cover": {
+          "type": "image",
+          "description": "Cover image URL"
+        },
+        "description": {
+          "type": "text",
+          "description": "Comic description"
+        },
+        "tags": {
+          "type": "list of text",
+          "description": "Genre and content tags"
+        },
+        "status": {
+          "type": "text",
+          "description": "Publication status (Ongoing, Completed, etc.)"
+        },
+        "totalChapters": {
+          "type": "number",
+          "description": "Total number of chapters"
+        },
+        "views": {
+          "type": "number",
+          "description": "Total view count"
+        },
+        "likes": {
+          "type": "number",
+          "description": "Total like count"
+        },
+        "created_date": {
+          "type": "date",
+          "description": "When the comic was added"
+        }
+      }
+    },
+    "Chapter": {
+      "description": "Individual chapters within comics",
+      "fields": {
+        "id": {
+          "type": "text",
+          "description": "Unique identifier for the chapter"
+        },
+        "title": {
+          "type": "text",
+          "description": "Chapter title"
+        },
+        "comic": {
+          "type": "Comic",
+          "description": "Reference to parent comic"
+        },
+        "chapterNumber": {
+          "type": "number",
+          "description": "Chapter number in sequence"
+        },
+        "pages": {
+          "type": "list of image",
+          "description": "List of page images"
+        },
+        "published_date": {
+          "type": "date",
+          "description": "When chapter was published"
+        }
+      }
+    },
+    "UserProgress": {
+      "description": "User's reading progress and preferences",
+      "fields": {
+        "user": {
+          "type": "User",
+          "description": "Reference to the user"
+        },
+        "comic": {
+          "type": "Comic",
+          "description": "Reference to the comic"
+        },
+        "chaptersRead": {
+          "type": "number",
+          "description": "Number of chapters read"
+        },
+        "rating": {
+          "type": "number",
+          "description": "User's rating (1-5)"
+        },
+        "isFavorite": {
+          "type": "yes/no",
+          "description": "Whether comic is favorited"
+        },
+        "readingStatus": {
+          "type": "text",
+          "description": "Current reading status"
+        },
+        "lastRead": {
+          "type": "date",
+          "description": "Last time user read this comic"
+        },
+        "dateAdded": {
+          "type": "date",
+          "description": "When user added to their list"
+        }
+      }
+    },
+    "Creator": {
+      "description": "Creator/Author information",
+      "fields": {
+        "user": {
+          "type": "User",
+          "description": "Reference to user account"
+        },
+        "displayName": {
+          "type": "text",
+          "description": "Public display name"
+        },
+        "bio": {
+          "type": "text",
+          "description": "Creator biography"
+        },
+        "website": {
+          "type": "text",
+          "description": "Creator's website URL"
+        },
+        "socialLinks": {
+          "type": "list of text",
+          "description": "Social media links"
+        },
+        "isVerified": {
+          "type": "yes/no",
+          "description": "Whether creator is verified"
+        },
+        "totalViews": {
+          "type": "number",
+          "description": "Total views across all works"
+        },
+        "totalLikes": {
+          "type": "number",
+          "description": "Total likes across all works"
+        }
+      }
+    }
+  },
+  "sample_data": {
+    "Comics": [
+      {
+        "id": "sample-issue",
+        "title": "Sample Issue #1",
+        "series": "Sample Series",
+        "author": "John Smith",
+        "artist": "Jane Doe",
+        "year": 1941,
+        "cover": "/comics/sample-series/sample-issue/001.svg",
+        "description": "A thrilling adventure story featuring our hero as they navigate through mysterious lands and face incredible challenges. This classic tale combines action, mystery, and heartwarming moments that will keep you on the edge of your seat.",
+        "tags": ["Action", "Adventure", "Classic", "Superhero"],
+        "status": "Completed",
+        "totalChapters": 2,
+        "views": 15420,
+        "likes": 892,
+        "created_date": "2024-01-15"
+      },
+      {
+        "id": "fantasy-tale",
+        "title": "The Magic Forest",
+        "series": "Fantasy Tales",
+        "author": "Sarah Johnson",
+        "artist": "Mike Chen",
+        "year": 1950,
+        "cover": "/comics/fantasy-tales/magic-forest/001.svg",
+        "description": "Step into a world of magic and wonder where mystical creatures roam and ancient spells hold incredible power. Follow our protagonist as they discover their hidden magical abilities and embark on an epic quest to save their homeland.",
+        "tags": ["Fantasy", "Magic", "Adventure", "Mystical"],
+        "status": "Ongoing",
+        "totalChapters": 2,
+        "views": 8930,
+        "likes": 456,
+        "created_date": "2024-01-20"
+      },
+      {
+        "id": "space-adventure",
+        "title": "Galaxy Explorer",
+        "series": "Space Adventures",
+        "author": "Alex Rodriguez",
+        "artist": "Emma Wilson",
+        "year": 1960,
+        "cover": "/comics/space-adventures/galaxy-explorer/001.svg",
+        "description": "Join Captain Nova and her crew as they explore the far reaches of space, encountering alien civilizations and uncovering the mysteries of the universe. A sci-fi epic filled with action, discovery, and intergalactic diplomacy.",
+        "tags": ["Sci-Fi", "Space", "Adventure", "Aliens"],
+        "status": "Ongoing",
+        "totalChapters": 1,
+        "views": 12300,
+        "likes": 678,
+        "created_date": "2024-01-25"
+      },
+      {
+        "id": "romance-webtoon",
+        "title": "Digital Hearts",
+        "series": "Cyber Romance",
+        "author": "Maya Patel",
+        "artist": "David Kim",
+        "year": 2023,
+        "cover": "/comics/cyber-romance/digital-hearts/001.svg",
+        "description": "A modern romance story set in a digital world where hearts can be programmed and love is just a code away. Follow two programmers as they navigate the complexities of virtual relationships and real emotions.",
+        "tags": ["Romance", "Sci-Fi", "Modern", "Webtoon"],
+        "status": "Ongoing",
+        "totalChapters": 6,
+        "views": 12300,
+        "likes": 678,
+        "created_date": "2024-02-01"
+      },
+      {
+        "id": "mystery-thriller",
+        "title": "The Silent Witness",
+        "series": "Crime Chronicles",
+        "author": "Robert Chen",
+        "artist": "Lisa Martinez",
+        "year": 2022,
+        "cover": "/comics/crime-chronicles/silent-witness/001.svg",
+        "description": "A gripping mystery thriller about a detective who must solve a case where the only witness cannot speak. As the investigation deepens, dark secrets are revealed that threaten to tear apart the city's elite.",
+        "tags": ["Mystery", "Thriller", "Crime", "Drama"],
+        "status": "Completed",
+        "totalChapters": 8,
+        "views": 18750,
+        "likes": 923,
+        "created_date": "2024-02-05"
+      }
+    ],
+    "Chapters": [
+      {
+        "id": "sample-issue-ch1",
+        "title": "Chapter 1: The Beginning",
+        "comic": "sample-issue",
+        "chapterNumber": 1,
+        "pages": [
+          "/comics/sample-series/sample-issue/001.svg",
+          "/comics/sample-series/sample-issue/002.svg",
+          "/comics/sample-series/sample-issue/003.svg"
+        ],
+        "published_date": "2024-01-15"
+      },
+      {
+        "id": "sample-issue-ch2",
+        "title": "Chapter 2: The Journey",
+        "comic": "sample-issue",
+        "chapterNumber": 2,
+        "pages": [
+          "/comics/sample-series/sample-issue/004.svg",
+          "/comics/sample-series/sample-issue/005.svg",
+          "/comics/sample-series/sample-issue/006.svg"
+        ],
+        "published_date": "2024-01-20"
+      },
+      {
+        "id": "fantasy-tale-ch1",
+        "title": "Chapter 1: The Discovery",
+        "comic": "fantasy-tale",
+        "chapterNumber": 1,
+        "pages": [
+          "/comics/fantasy-tales/magic-forest/001.svg",
+          "/comics/fantasy-tales/magic-forest/002.svg"
+        ],
+        "published_date": "2024-01-20"
+      },
+      {
+        "id": "fantasy-tale-ch2",
+        "title": "Chapter 2: The Quest Begins",
+        "comic": "fantasy-tale",
+        "chapterNumber": 2,
+        "pages": [
+          "/comics/fantasy-tales/magic-forest/003.svg",
+          "/comics/fantasy-tales/magic-forest/004.svg"
+        ],
+        "published_date": "2024-01-25"
+      },
+      {
+        "id": "space-adventure-ch1",
+        "title": "Chapter 1: Launch Day",
+        "comic": "space-adventure",
+        "chapterNumber": 1,
+        "pages": [
+          "/comics/space-adventures/galaxy-explorer/001.svg",
+          "/comics/space-adventures/galaxy-explorer/002.svg",
+          "/comics/space-adventures/galaxy-explorer/003.svg"
+        ],
+        "published_date": "2024-01-25"
+      }
+    ],
+    "UserProgress": [
+      {
+        "user": "test-user",
+        "comic": "sample-issue",
+        "chaptersRead": 2,
+        "rating": 4.5,
+        "isFavorite": true,
+        "readingStatus": "Finished",
+        "lastRead": "2024-01-28",
+        "dateAdded": "2024-01-15"
+      },
+      {
+        "user": "test-user",
+        "comic": "fantasy-tale",
+        "chaptersRead": 1,
+        "rating": 4.0,
+        "isFavorite": false,
+        "readingStatus": "Waiting for new chapters",
+        "lastRead": "2024-01-25",
+        "dateAdded": "2024-01-20"
+      },
+      {
+        "user": "test-user",
+        "comic": "space-adventure",
+        "chaptersRead": 0,
+        "rating": 0,
+        "isFavorite": true,
+        "readingStatus": "Plan to read",
+        "lastRead": null,
+        "dateAdded": "2024-01-25"
+      }
+    ],
+    "Creators": [
+      {
+        "user": "test-user",
+        "displayName": "John Smith",
+        "bio": "Award-winning comic writer with over 10 years of experience in the industry. Known for creating compelling characters and engaging storylines.",
+        "website": "https://johnsmithcomics.com",
+        "socialLinks": ["@johnsmithcomics", "johnsmith.com"],
+        "isVerified": true,
+        "totalViews": 50000,
+        "totalLikes": 2500
+      },
+      {
+        "user": "creator-2",
+        "displayName": "Sarah Johnson",
+        "bio": "Fantasy writer and illustrator specializing in magical worlds and mystical creatures. Creator of the popular 'Fantasy Tales' series.",
+        "website": "https://sarahjohnsonart.com",
+        "socialLinks": ["@sarahjohnsonart", "sarahjohnson.com"],
+        "isVerified": true,
+        "totalViews": 35000,
+        "totalLikes": 1800
+      }
+    ]
+  },
+  "import_instructions": {
+    "step_1": "Go to Bubble.io and create a new app called 'IndiWave'",
+    "step_2": "Navigate to the Data tab in your Bubble app",
+    "step_3": "Create the following data types with the specified fields:",
+    "data_types_to_create": [
+      "Comic (with all fields listed above)",
+      "Chapter (with all fields listed above)", 
+      "UserProgress (with all fields listed above)",
+      "Creator (with all fields listed above)"
+    ],
+    "step_4": "Use Bubble's 'Import from CSV/JSON' feature",
+    "step_5": "Upload this JSON file and map the fields correctly",
+    "step_6": "Verify the data imported correctly",
+    "step_7": "Set up relationships between data types (Comic -> Chapter, User -> UserProgress, etc.)"
+  },
+  "bubble_setup_notes": {
+    "user_authentication": "Use Bubble's built-in User type for authentication",
+    "file_uploads": "Set up file upload elements for comic covers and pages",
+    "search_functionality": "Use Bubble's Search element with multiple criteria",
+    "responsive_design": "Use Bubble's responsive design tools for mobile compatibility",
+    "workflows": "Create workflows for user interactions (favorites, ratings, progress tracking)",
+    "conditional_display": "Use conditional logic to show/hide creator features based on user.isCreator"
+  },
+  "page_structure": {
+    "home_page": "Welcome section, featured comics, creator signup button, bookmark instructions",
+    "library_page": "Comic grid, search bar, filters, pagination",
+    "profile_page": "User info, description editing, profile picture upload",
+    "my_list_page": "Followed comics, progress tracking, favorites, ratings",
+    "creator_dashboard": "Creator stats, work management, upload tools",
+    "comic_reader": "Page-by-page reading, progress tracking, navigation",
+    "advanced_search": "Multiple filters, year range, tags, sorting options"
+  }
+}
+

@@ -1,69 +1,12 @@
-"use client";
-
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
+import data from "../../../data/comics.json";
+import { notFound } from "next/navigation";
 
-export default function ComicDetailsPage() {
-  const params = useParams();
-  const [comic, setComic] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const fetchComic = async () => {
-      try {
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
-        const res = await fetch(`${baseUrl}/api/comics/${params.id}`);
-        if (res.ok) {
-          const data = await res.json();
-          setComic(data);
-        } else {
-          setError(true);
-        }
-      } catch (error) {
-        console.error("Failed to load comic:", error);
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    if (params.id) {
-      fetchComic();
-    }
-  }, [params.id]);
-
-  if (loading) {
-    return (
-      <div style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "50vh",
-        fontSize: "18px",
-        color: "var(--fg)"
-      }}>
-        Loading comic...
-      </div>
-    );
-  }
-
-  if (error || !comic) {
-    return (
-      <div style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "50vh",
-        fontSize: "18px",
-        color: "var(--fg)"
-      }}>
-        <h2>Comic not found</h2>
-        <Link href="/library" style={{ color: "var(--accent)" }}>Back to Library</Link>
-      </div>
-    );
+export default function ComicDetailsPage({ params }: { params: { id: string } }) {
+  const comic = data.comics.find((c) => c.id === params.id);
+  
+  if (!comic) {
+    notFound();
   }
 
   return (

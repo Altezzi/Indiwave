@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
-  trailingSlash: true,
+  trailingSlash: true, // optional, fine to keep if you want /path/ style URLs
   images: {
-    unoptimized: true
+    unoptimized: true, // needed for Netlify unless you add image optimization
   },
-  // Disable API routes for static export
   experimental: {
     outputFileTracingRoot: undefined,
   },
 };
-export default nextConfig;
+
+module.exports = nextConfig; // ✅ use module.exports, not export default

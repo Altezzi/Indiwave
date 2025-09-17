@@ -44,26 +44,32 @@ export default function CreateAccountPage() {
         return;
       }
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Store user session (in a real app, you'd use proper auth)
-      localStorage.setItem("user", JSON.stringify({ 
-        email: formData.email, 
-        name: formData.username,
-        profilePicture: "/default-profile-picture.svg",
-        cropSettings: {
-          scale: 1.3,
-          position: { x: 0, y: 0 }
+      // Call the registration API
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        isCreator: false // New users start as non-creators
-      }));
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password,
+          name: formData.username,
+          username: formData.username,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || "Account creation failed. Please try again.");
+        return;
+      }
       
       setSuccess(true);
       
-      // Redirect to home page after a short delay
+      // Redirect to sign-in page after a short delay
       setTimeout(() => {
-        window.location.href = "/";
+        window.location.href = "/sign-in";
       }, 1500);
       
     } catch (err) {

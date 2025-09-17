@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ReactNode, useState, useEffect } from "react";
 import ProfileDropdown from "../components/ProfileDropdown";
 import SearchDropdown from "../components/SearchDropdown";
+import Providers from "../components/Providers";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const [comics, setComics] = useState<any[]>([]);
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <Providers>
             <header className="header">
               <div className="header-inner container">
                 <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
@@ -363,6 +365,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </div>
         )}
+        </Providers>
       </body>
     </html>
   );

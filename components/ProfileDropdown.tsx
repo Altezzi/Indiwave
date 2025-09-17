@@ -3,57 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
 import ThemeToggle from "./ThemeToggle";
 
 export default function ProfileDropdown() {
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState<any>(null);
+  const { data: session, status } = useSession();
   const router = useRouter();
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Check if user is logged in
-    const userData = localStorage.getItem("user");
-    if (userData) {
-      try {
-        const parsedUser = JSON.parse(userData);
-        setUser(parsedUser);
-        console.log("ProfileDropdown: User loaded", parsedUser);
-      } catch (error) {
-        console.error("ProfileDropdown: Error parsing user data", error);
-      }
-    }
-  }, []);
-
-  // Listen for storage changes and custom user data updates
-  useEffect(() => {
-    const handleStorageChange = () => {
-      const userData = localStorage.getItem("user");
-      if (userData) {
-        try {
-          const parsedUser = JSON.parse(userData);
-          setUser(parsedUser);
-        } catch (error) {
-          console.error("ProfileDropdown: Error parsing user data on storage change", error);
-        }
-      } else {
-        setUser(null);
-      }
-    };
-
-    const handleUserDataUpdate = (event: CustomEvent) => {
-      console.log("ProfileDropdown: Received userDataUpdated event", event.detail);
-      setUser(event.detail);
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-    window.addEventListener('userDataUpdated', handleUserDataUpdate as EventListener);
-    
-    return () => {
-      window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener('userDataUpdated', handleUserDataUpdate as EventListener);
-    };
-  }, []);
 
   useEffect(() => {
     // Handle click outside to close dropdown
@@ -73,10 +30,8 @@ export default function ProfileDropdown() {
   }, [isOpen]);
 
   const handleSignOut = () => {
-    localStorage.removeItem("user");
-    setUser(null);
+    signOut({ callbackUrl: "/" });
     setIsOpen(false);
-    router.push("/");
   };
 
   const handleSignInClick = () => {
@@ -84,8 +39,8 @@ export default function ProfileDropdown() {
     router.push("/sign-in");
   };
 
-  // Debug: Log user state
-  console.log("ProfileDropdown render - user:", user, "has profilePicture:", user?.profilePicture, "cropSettings:", user?.cropSettings);
+  // Debug: Log session state
+  console.log("ProfileDropdown render - session:", session);
 
   return (
     <div className="profile-dropdown" ref={dropdownRef}>
@@ -106,7 +61,7 @@ export default function ProfileDropdown() {
           transition: "border-color 0.2s ease"
         }}
       >
-        {user && user.profilePicture ? (
+        {session?.user && session.user.image ? (
           <div style={{
             width: "100%",
             height: "100%",
@@ -117,17 +72,15 @@ export default function ProfileDropdown() {
             justifyContent: "center"
           }}>
             <img 
-              src={user.profilePicture} 
+              src={session.user.image} 
               alt="Profile" 
               style={{
                 width: "100%",
                 height: "100%",
                 borderRadius: "50%",
                 objectFit: "cover",
-                objectPosition: user.cropSettings ? 
-                  `${50 + (user.cropSettings.position.x * 0.6)}% ${50 + (user.cropSettings.position.y * 0.6)}%` : 
-                  "center center",
-                transform: user.cropSettings ? `scale(${user.cropSettings.scale * 2.0})` : "scale(1)",
+                objectPosition: "center center",
+                transform: "scale(1)",
                 transformOrigin: "center center",
                 background: "var(--border)",
                 overflow: "hidden"
@@ -166,12 +119,22 @@ export default function ProfileDropdown() {
                 </svg>
                 Profile Menu
               </Link>
-              {user.isCreator && (
+              {session?.user?.role === "CREATOR" && (
                 <Link href="/creator-menu" className="dropdown-item">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
                   Creator Menu
+                </Link>
+              )}
+              {["ADMIN", "SENIOR_MOD"].includes(session?.user?.role || "") && (
+                <Link href="/admin" className="dropdown-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    <path d="M12 2v20"/>
+                    <path d="M2 12h20"/>
+                  </svg>
+                  Admin Dashboard
                 </Link>
               )}
               <div className="dropdown-divider"></div>

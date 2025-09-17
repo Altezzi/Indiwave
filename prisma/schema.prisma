@@ -1,0 +1,206 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// User roles enum based on ROLES.md
+enum UserRole {
+  USER
+  CREATOR
+  REVIEWER
+  UPLOAD_TEAM
+  MODERATOR
+  SENIOR_MOD
+  ADMIN
+}
+
+// Account model for NextAuth.js
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+// Session model for NextAuth.js
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// Verification token model for NextAuth.js
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// Main User model
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  emailVerified DateTime?
+  name          String?
+  username      String?   @unique
+  password      String?   // For credentials login
+  image         String?
+  role          UserRole  @default(USER)
+  isCreator     Boolean   @default(false)
+  isSilenced    Boolean   @default(false)
+  silencedUntil DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Profile settings
+  profilePicture String?
+  cropSettings   String? // JSON string for crop settings
+
+  // NextAuth.js relations
+  accounts Account[]
+  sessions Session[]
+
+  // Creator relations
+  createdSeries Series[]
+  createdChapters Chapter[]
+
+  // User interactions
+  comments Comment[]
+  libraryEntries LibraryEntry[]
+  creatorClaims CreatorClaim[]
+  auditLogs AuditLog[]
+
+  @@map("users")
+}
+
+// Series model
+model Series {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  coverImage  String?
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Creator relation
+  creatorId String
+  creator   User     @relation(fields: [creatorId], references: [id])
+
+  // Series content
+  chapters Chapter[]
+  libraryEntries LibraryEntry[]
+  creatorClaims CreatorClaim[]
+
+  @@map("series")
+}
+
+// Chapter model
+model Chapter {
+  id          String   @id @default(cuid())
+  title       String
+  chapterNumber Int
+  pages       String   // JSON string of page URLs/paths
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  seriesId String
+  series   Series @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  creatorId String
+  creator   User   @relation(fields: [creatorId], references: [id])
+
+  // Chapter content
+  comments Comment[]
+
+  @@map("chapters")
+}
+
+// Comment model
+model Comment {
+  id        String   @id @default(cuid())
+  content   String
+  isHidden  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  userId    String
+  user      User    @relation(fields: [userId], references: [id])
+  chapterId String
+  chapter   Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+
+  @@map("comments")
+}
+
+// User's library (saved series)
+model LibraryEntry {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  // Relations
+  userId  String
+  user    User   @relation(fields: [userId], references: [id])
+  seriesId String
+  series  Series @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, seriesId])
+  @@map("library_entries")
+}
+
+// Creator claim requests
+model CreatorClaim {
+  id          String   @id @default(cuid())
+  status      String   @default("pending") // pending, approved, rejected
+  evidence    String?  // Evidence provided by the claimant
+  notes       String?  // Admin notes
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  claimantId String
+  claimant   User   @relation(fields: [claimantId], references: [id])
+  seriesId   String
+  series     Series @relation(fields: [seriesId], references: [id])
+
+  @@map("creator_claims")
+}
+
+// Audit log for tracking privileged actions
+model AuditLog {
+  id        String   @id @default(cuid())
+  action    String   // e.g., "role_change", "content_upload", "moderation_action"
+  target    String?  // Target user/content ID
+  details   String?  // JSON string with additional details
+  createdAt DateTime @default(now())
+
+  // Relations
+  actorId String
+  actor   User   @relation(fields: [actorId], references: [id])
+
+  @@map("audit_logs")
+}

@@ -5,7 +5,6 @@ import bcrypt from "bcryptjs"
 import { prisma } from "./prisma"
 
 export const authOptions: NextAuthOptions = {
-  // adapter: PrismaAdapter(prisma), // Temporarily disabled for deployment
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -22,54 +21,75 @@ export const authOptions: NextAuthOptions = {
           return null
         }
 
-        // Temporary hardcoded users for production deployment
-        const testUsers = [
-          {
-            id: "admin-1",
-            email: "admin@indiwave.com",
-            password: "admin123",
-            name: "Admin User",
-            role: "ADMIN"
-          },
-          {
-            id: "creator-1", 
-            email: "creator@indiwave.com",
-            password: "creator123",
-            name: "Creator User",
-            role: "CREATOR"
-          },
-          {
-            id: "user-1",
-            email: "user@indiwave.com", 
-            password: "user123",
-            name: "Regular User",
-            role: "USER"
+        try {
+          // First check hardcoded test users for backward compatibility
+          const testUsers = [
+            {
+              id: "admin-1",
+              email: "admin@indiwave.com",
+              password: "admin123",
+              name: "Admin User",
+              role: "ADMIN"
+            },
+            {
+              id: "creator-1", 
+              email: "creator@indiwave.com",
+              password: "creator123",
+              name: "Creator User",
+              role: "CREATOR"
+            },
+            {
+              id: "user-1",
+              email: "user@indiwave.com", 
+              password: "user123",
+              name: "Regular User",
+              role: "USER"
+            },
+            {
+              id: "your-admin-1",
+              email: "sfg.churst@gmail.com",
+              password: "Impetigo8423@",
+              name: "SealSCKS",
+              role: "ADMIN"
+            }
+          ]
+
+          const testUser = testUsers.find(u => u.email === credentials.email)
+          if (testUser && testUser.password === credentials.password) {
+            return {
+              id: testUser.id,
+              email: testUser.email,
+              name: testUser.name,
+              image: null,
+              role: testUser.role,
+            }
           }
-        ]
 
-        // Add your own admin account here
-        const yourAccount = {
-          id: "your-admin-1",
-          email: "sfg.churst@gmail.com",
-          password: "Impetigo8423@",
-          name: "SealSCKS",
-          role: "ADMIN"
-        }
-        
-        testUsers.push(yourAccount)
+          // If not a test user, check database
+          const user = await prisma.user.findUnique({
+            where: { email: credentials.email }
+          })
 
-        const user = testUsers.find(u => u.email === credentials.email)
-        
-        if (!user || user.password !== credentials.password) {
+          if (!user || !user.password) {
+            return null
+          }
+
+          const isPasswordValid = await bcrypt.compare(credentials.password, user.password)
+
+          if (!isPasswordValid) {
+            return null
+          }
+
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            image: user.image,
+            role: user.role,
+          }
+        } catch (error) {
+          console.error("Authentication error:", error)
           return null
-        }
-
-        return {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-          image: null,
-          role: user.role,
         }
       }
     })
@@ -78,6 +98,36 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt"
   },
   callbacks: {
+    async signIn({ user, account, profile }) {
+      // Handle Google OAuth sign in
+      if (account?.provider === "google") {
+        try {
+          // Check if user exists in database
+          const existingUser = await prisma.user.findUnique({
+            where: { email: user.email! }
+          })
+
+          if (!existingUser) {
+            // Create new user from Google OAuth
+            await prisma.user.create({
+              data: {
+                email: user.email!,
+                name: user.name!,
+                image: user.image,
+                role: "USER",
+                isCreator: false,
+                emailVerified: new Date()
+              }
+            })
+          }
+          return true
+        } catch (error) {
+          console.error("Error handling Google sign in:", error)
+          return false
+        }
+      }
+      return true
+    },
     async jwt({ token, user }) {
       if (user) {
         token.role = user.role

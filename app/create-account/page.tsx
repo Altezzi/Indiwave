@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 
 export default function CreateAccountPage() {
   const [formData, setFormData] = useState({
@@ -270,20 +271,7 @@ export default function CreateAccountPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             <button 
               type="button" 
-              onClick={() => {
-                // Simulate Google sign up
-                localStorage.setItem("user", JSON.stringify({ 
-                  email: "user@gmail.com", 
-                  name: "Google User",
-                  profilePicture: "/default-profile-picture.svg",
-                  cropSettings: {
-                    scale: 1.3,
-                    position: { x: 0, y: 0 }
-                  },
-                  isCreator: false
-                }));
-                window.location.href = "/";
-              }}
+              onClick={() => signIn("google", { callbackUrl: "/" })}
               style={{ 
                 display: "flex", 
                 alignItems: "center", 
@@ -312,18 +300,8 @@ export default function CreateAccountPage() {
             <button 
               type="button" 
               onClick={() => {
-                // Simulate Apple sign up
-                localStorage.setItem("user", JSON.stringify({ 
-                  email: "user@icloud.com", 
-                  name: "Apple User",
-                  profilePicture: "/default-profile-picture.svg",
-                  cropSettings: {
-                    scale: 1.3,
-                    position: { x: 0, y: 0 }
-                  },
-                  isCreator: false
-                }));
-                window.location.href = "/";
+                // Apple sign up not implemented yet
+                alert("Apple sign up coming soon!");
               }}
               style={{ 
                 display: "flex", 
@@ -352,7 +330,7 @@ export default function CreateAccountPage() {
         <div style={{ textAlign: "center", marginTop: "24px", paddingTop: "24px", borderTop: "1px solid var(--border)" }}>
           <p style={{ margin: "0", color: "var(--muted)", fontSize: "14px" }}>
             Already have an account?{" "}
-            <Link href="/login" style={{ color: "var(--accent)", textDecoration: "none" }}>
+            <Link href="/sign-in" style={{ color: "var(--accent)", textDecoration: "none" }}>
               Sign in
             </Link>
           </p>

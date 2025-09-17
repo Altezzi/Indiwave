@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useSession, signOut } from "next-auth/react";
 
 type CropSettings = {
   scale: number;
@@ -16,25 +17,26 @@ type User = {
 };
 
 export default function ProfileMenuPage() {
-  const [user, setUser] = useState<User | null>(null);
+  const { data: session, status } = useSession();
   const [isEditing, setIsEditing] = useState(false);
   const [cropImage, setCropImage] = useState<string | null>(null);
   const [cropSettings, setCropSettings] = useState<CropSettings | null>(null);
   const [showCropModal, setShowCropModal] = useState(false);
 
   useEffect(() => {
-    const userData = localStorage.getItem("user");
-    if (userData) {
-      try {
-        const parsedUser = JSON.parse(userData) as User;
-        setUser(parsedUser);
-        setCropImage(parsedUser.profilePicture ?? null);
-        setCropSettings(parsedUser.cropSettings ?? null);
-      } catch (error) {
-        console.error("Error parsing user data", error);
+    if (session?.user) {
+      setCropImage(session.user.image || "/default-profile-picture.svg");
+      // Load crop settings from localStorage if available
+      const savedSettings = localStorage.getItem(`cropSettings_${session.user.id}`);
+      if (savedSettings) {
+        try {
+          setCropSettings(JSON.parse(savedSettings));
+        } catch (error) {
+          console.error("Error parsing crop settings", error);
+        }
       }
     }
-  }, []);
+  }, [session]);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -50,20 +52,14 @@ export default function ProfileMenuPage() {
   };
 
   const handleCropSave = () => {
-    if (cropImage && cropSettings && user) {
-      const updatedUser: User = {
-        ...user,
-        profilePicture: cropImage,
-        cropSettings,
-      };
-
-      localStorage.setItem("user", JSON.stringify(updatedUser));
-      setUser(updatedUser);
-
+    if (cropImage && cropSettings && session?.user) {
+      // Save crop settings to localStorage with user ID
+      localStorage.setItem(`cropSettings_${session.user.id}`, JSON.stringify(cropSettings));
+      
       // Dispatch custom event to notify other components
       window.dispatchEvent(
         new CustomEvent("userDataUpdated", {
-          detail: updatedUser,
+          detail: { cropSettings },
         })
       );
 
@@ -72,11 +68,18 @@ export default function ProfileMenuPage() {
   };
 
   const handleSignOut = () => {
-    localStorage.removeItem("user");
-    window.location.href = "/";
+    signOut({ callbackUrl: "/" });
   };
 
-  if (!user) {
+  if (status === "loading") {
+    return (
+      <div style={{ textAlign: "center", padding: "40px" }}>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
+  if (!session?.user) {
     return (
       <div style={{ textAlign: "center", padding: "40px" }}>
         <h1>Please sign in to access your profile menu</h1>
@@ -112,19 +115,19 @@ export default function ProfileMenuPage() {
           <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "20px" }}>
             <div style={{ position: "relative" }}>
               <img
-                src={user.profilePicture}
+                src={cropImage || "/default-profile-picture.svg"}
                 alt="Profile"
                 style={{
                   width: "80px",
                   height: "80px",
                   borderRadius: "50%",
                   objectFit: "cover",
-                  objectPosition: user.cropSettings
-                    ? `${50 + user.cropSettings.position.x / 3}% ${
-                        50 + user.cropSettings.position.y / 3
+                  objectPosition: cropSettings
+                    ? `${50 + cropSettings.position.x / 3}% ${
+                        50 + cropSettings.position.y / 3
                       }%`
                     : "center center",
-                  transform: user.cropSettings ? `scale(${user.cropSettings.scale})` : "scale(1)",
+                  transform: cropSettings ? `scale(${cropSettings.scale})` : "scale(1)",
                   transformOrigin: "center center",
                   background: "var(--border)",
                 }}
@@ -160,8 +163,8 @@ export default function ProfileMenuPage() {
             </div>
 
             <div>
-              <h3 style={{ margin: "0 0 4px", fontSize: "18px", fontWeight: "600" }}>{user.name}</h3>
-              <p style={{ margin: "0 0 8px", color: "var(--muted)" }}>{user.email}</p>
+              <h3 style={{ margin: "0 0 4px", fontSize: "18px", fontWeight: "600" }}>{session.user.name}</h3>
+              <p style={{ margin: "0 0 8px", color: "var(--muted)" }}>{session.user.email}</p>
               <button
                 onClick={() => document.getElementById("profile-picture-upload")?.click()}
                 style={{

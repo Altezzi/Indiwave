@@ -6,10 +6,20 @@ import { prisma } from "./prisma"
 
 export const authOptions: NextAuthOptions = {
   providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    }),
+    // Only add Google provider if credentials are configured
+    ...(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET ? [
+      GoogleProvider({
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        authorization: {
+          params: {
+            prompt: "consent",
+            access_type: "offline",
+            response_type: "code"
+          }
+        }
+      })
+    ] : []),
     CredentialsProvider({
       name: "credentials",
       credentials: {
@@ -109,7 +119,7 @@ export const authOptions: NextAuthOptions = {
 
           if (!existingUser) {
             // Create new user from Google OAuth
-            await prisma.user.create({
+            const newUser = await prisma.user.create({
               data: {
                 email: user.email!,
                 name: user.name!,
@@ -119,6 +129,9 @@ export const authOptions: NextAuthOptions = {
                 emailVerified: new Date()
               }
             })
+            console.log("Created new user from Google OAuth:", newUser)
+          } else {
+            console.log("Existing user signed in via Google:", existingUser)
           }
           return true
         } catch (error) {
@@ -128,10 +141,26 @@ export const authOptions: NextAuthOptions = {
       }
       return true
     },
-    async jwt({ token, user }) {
+    async jwt({ token, user, account }) {
       if (user) {
         token.role = user.role
       }
+      
+      // For Google OAuth, fetch user role from database
+      if (account?.provider === "google" && token.email) {
+        try {
+          const dbUser = await prisma.user.findUnique({
+            where: { email: token.email as string },
+            select: { role: true }
+          })
+          if (dbUser) {
+            token.role = dbUser.role
+          }
+        } catch (error) {
+          console.error("Error fetching user role:", error)
+        }
+      }
+      
       return token
     },
     async session({ session, token }) {

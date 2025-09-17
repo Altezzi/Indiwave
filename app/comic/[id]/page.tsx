@@ -1,10 +1,26 @@
 import Link from "next/link";
-import data from "../../../data/comics.json";
 import { notFound } from "next/navigation";
 
-export default function ComicDetailsPage({ params }: { params: { id: string } }) {
-  const comic = data.comics.find((c) => c.id === params.id);
-  
+type Params = { params: { id: string } };
+
+async function getComic(comicId: string) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/comics/${comicId}`, {
+    cache: "no-store", // always fetch fresh data
+  });
+  if (!res.ok) return null;
+  return res.json();
+}
+
+// ✅ allow dynamic params so new comics work without redeploy
+export const dynamicParams = true;
+// ✅ ISR caching — pages revalidate every 60s
+export const revalidate = 60;
+
+export default async function ComicDetailsPage({ params }: Params) {
+  const comicData = await getComic(params.id);
+  const comic = comicData?.comic;
+
   if (!comic) {
     notFound();
   }
@@ -13,75 +29,97 @@ export default function ComicDetailsPage({ params }: { params: { id: string } })
     <div>
       {/* Back Navigation */}
       <div style={{ marginBottom: "24px" }}>
-        <Link href="/library" style={{ 
-          display: "inline-flex", 
-          alignItems: "center", 
-          gap: "8px",
-          color: "var(--accent)",
-          textDecoration: "none",
-          fontSize: "16px",
-          fontWeight: "500"
-        }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        <Link
+          href="/library"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "8px",
+            color: "var(--accent)",
+            textDecoration: "none",
+            fontSize: "16px",
+            fontWeight: "500",
+          }}
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
           </svg>
           Back to Library
         </Link>
       </div>
 
       {/* Comic Details */}
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "300px 1fr",
-        gap: "32px",
-        alignItems: "start"
-      }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "300px 1fr",
+          gap: "32px",
+          alignItems: "start",
+        }}
+      >
         {/* Cover Image */}
-        <div style={{
-          position: "sticky",
-          top: "20px"
-        }}>
-          <img 
-            src={comic.cover} 
+        <div style={{ position: "sticky", top: "20px" }}>
+          <img
+            src={comic.cover}
             alt={comic.title}
             style={{
               width: "100%",
               height: "auto",
               borderRadius: "12px",
-              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)"
+              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
             }}
           />
         </div>
 
         {/* Comic Info */}
         <div>
-          <h1 style={{ 
-            fontSize: "32px", 
-            fontWeight: "700", 
-            margin: "0 0 8px",
-            color: "var(--fg)"
-          }}>
+          <h1
+            style={{
+              fontSize: "32px",
+              fontWeight: "700",
+              margin: "0 0 8px",
+              color: "var(--fg)",
+            }}
+          >
             {comic.title}
           </h1>
-          
-          <p style={{ 
-            fontSize: "18px", 
-            color: "var(--muted)", 
-            margin: "0 0 24px" 
-          }}>
+
+          <p
+            style={{
+              fontSize: "18px",
+              color: "var(--muted)",
+              margin: "0 0 24px",
+            }}
+          >
             {comic.series} • {comic.year}
           </p>
 
           <div style={{ marginBottom: "24px" }}>
-            <h3 style={{ fontSize: "18px", fontWeight: "600", margin: "0 0 12px", color: "var(--fg)" }}>
+            <h3
+              style={{
+                fontSize: "18px",
+                fontWeight: "600",
+                margin: "0 0 12px",
+                color: "var(--fg)",
+              }}
+            >
               Description
             </h3>
-            <p style={{ 
-              fontSize: "16px", 
-              lineHeight: "1.6", 
-              color: "var(--fg)",
-              margin: "0 0 16px"
-            }}>
+            <p
+              style={{
+                fontSize: "16px",
+                lineHeight: "1.6",
+                color: "var(--fg)",
+                margin: "0 0 16px",
+              }}
+            >
               {comic.description}
             </p>
           </div>
@@ -90,7 +128,14 @@ export default function ComicDetailsPage({ params }: { params: { id: string } })
           <div style={{ marginBottom: "24px" }}>
             <div style={{ display: "flex", gap: "32px", flexWrap: "wrap" }}>
               <div>
-                <h4 style={{ fontSize: "14px", fontWeight: "600", margin: "0 0 4px", color: "var(--muted)" }}>
+                <h4
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    margin: "0 0 4px",
+                    color: "var(--muted)",
+                  }}
+                >
                   Author
                 </h4>
                 <p style={{ fontSize: "16px", margin: "0", color: "var(--fg)" }}>
@@ -98,7 +143,14 @@ export default function ComicDetailsPage({ params }: { params: { id: string } })
                 </p>
               </div>
               <div>
-                <h4 style={{ fontSize: "14px", fontWeight: "600", margin: "0 0 4px", color: "var(--muted)" }}>
+                <h4
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    margin: "0 0 4px",
+                    color: "var(--muted)",
+                  }}
+                >
                   Artist
                 </h4>
                 <p style={{ fontSize: "16px", margin: "0", color: "var(--fg)" }}>
@@ -110,18 +162,28 @@ export default function ComicDetailsPage({ params }: { params: { id: string } })
 
           {/* Tags */}
           <div style={{ marginBottom: "32px" }}>
-            <h4 style={{ fontSize: "14px", fontWeight: "600", margin: "0 0 8px", color: "var(--muted)" }}>
+            <h4
+              style={{
+                fontSize: "14px",
+                fontWeight: "600",
+                margin: "0 0 8px",
+                color: "var(--muted)",
+              }}
+            >
               Tags
             </h4>
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
               {comic.tags?.map((tag: string) => (
-                <span key={tag} style={{
-                  padding: "4px 12px",
-                  background: "var(--border)",
-                  borderRadius: "16px",
-                  fontSize: "12px",
-                  color: "var(--fg)"
-                }}>
+                <span
+                  key={tag}
+                  style={{
+                    padding: "4px 12px",
+                    background: "var(--border)",
+                    borderRadius: "16px",
+                    fontSize: "12px",
+                    color: "var(--fg)",
+                  }}
+                >
                   {tag}
                 </span>
               ))}
@@ -130,12 +192,19 @@ export default function ComicDetailsPage({ params }: { params: { id: string } })
 
           {/* Chapters */}
           <div>
-            <h3 style={{ fontSize: "20px", fontWeight: "600", margin: "0 0 16px", color: "var(--fg)" }}>
+            <h3
+              style={{
+                fontSize: "20px",
+                fontWeight: "600",
+                margin: "0 0 16px",
+                color: "var(--fg)",
+              }}
+            >
               Chapters
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               {comic.chapters?.map((chapter: any) => (
-                <Link 
+                <Link
                   key={chapter.id}
                   href={`/reader/${comic.id}/${chapter.id}`}
                   style={{
@@ -145,28 +214,41 @@ export default function ComicDetailsPage({ params }: { params: { id: string } })
                     borderRadius: "8px",
                     textDecoration: "none",
                     color: "var(--fg)",
-                    transition: "background 0.2s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "var(--accent)";
-                    e.currentTarget.style.color = "white";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "var(--border)";
-                    e.currentTarget.style.color = "var(--fg)";
+                    transition: "background 0.2s ease",
                   }}
                 >
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
                     <div>
-                      <h4 style={{ margin: "0 0 4px", fontSize: "16px", fontWeight: "600" }}>
+                      <h4
+                        style={{
+                          margin: "0 0 4px",
+                          fontSize: "16px",
+                          fontWeight: "600",
+                        }}
+                      >
                         {chapter.title}
                       </h4>
-                      <p style={{ margin: "0", fontSize: "14px", opacity: 0.8 }}>
+                      <p
+                        style={{ margin: "0", fontSize: "14px", opacity: 0.8 }}
+                      >
                         {chapter.pages?.length || 0} pages
                       </p>
                     </div>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M9 18l6-6-6-6"/>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M9 18l6-6-6-6" />
                     </svg>
                   </div>
                 </Link>

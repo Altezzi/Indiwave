@@ -1,0 +1,37 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="100" cy="100" r="100"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" fill="#000000" clip-path="url(#circle)"/>
+  
+  <!-- Wave design inspired by Hokusai's Great Wave -->
+  <g fill="#ffffff" clip-path="url(#circle)">
+    <!-- Main wave crest -->
+    <path d="M20 120 Q40 80 60 100 T100 90 T140 100 T180 80 L180 200 L20 200 Z" opacity="0.9"/>
+    
+    <!-- Secondary wave -->
+    <path d="M10 140 Q30 110 50 130 T90 120 T130 130 T170 110 L170 200 L10 200 Z" opacity="0.7"/>
+    
+    <!-- Wave foam and spray -->
+    <circle cx="45" cy="85" r="3" opacity="0.8"/>
+    <circle cx="55" cy="75" r="2" opacity="0.6"/>
+    <circle cx="65" cy="80" r="2.5" opacity="0.7"/>
+    <circle cx="75" cy="70" r="2" opacity="0.5"/>
+    <circle cx="85" cy="75" r="3" opacity="0.8"/>
+    <circle cx="95" cy="65" r="2" opacity="0.6"/>
+    <circle cx="105" cy="70" r="2.5" opacity="0.7"/>
+    <circle cx="115" cy="60" r="2" opacity="0.5"/>
+    <circle cx="125" cy="65" r="3" opacity="0.8"/>
+    <circle cx="135" cy="55" r="2" opacity="0.6"/>
+    <circle cx="145" cy="60" r="2.5" opacity="0.7"/>
+    <circle cx="155" cy="50" r="2" opacity="0.5"/>
+    
+    <!-- Additional wave details -->
+    <path d="M30 110 Q50 90 70 110 T110 100 T150 110" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M40 130 Q60 110 80 130 T120 120 T160 130" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.4"/>
+  </g>
+</svg>

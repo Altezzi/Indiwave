@@ -1,0 +1,490 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+
+export default function MyListPage() {
+  const [user, setUser] = useState<any>(null);
+  const [activeTab, setActiveTab] = useState<"all" | "favorites">("all");
+  const [followedSeries, setFollowedSeries] = useState([
+    {
+      id: "sample-issue",
+      title: "Sample Issue",
+      series: "Sample Series",
+      author: "John Smith",
+      cover: "/comics/sample-series/sample-issue/001.svg",
+      totalChapters: 2,
+      chaptersRead: 2,
+      rating: 4.5,
+      status: "Completed",
+      readingStatus: "Finished",
+      lastRead: "2 days ago",
+      isFavorite: true,
+      description: "A thrilling adventure story featuring our hero as they navigate through mysterious lands and face incredible challenges.",
+      tags: ["Action", "Adventure", "Classic", "Superhero"]
+    },
+    {
+      id: "fantasy-tale",
+      title: "The Magic Forest",
+      series: "Fantasy Tales",
+      author: "Sarah Johnson",
+      cover: "/comics/fantasy-tales/magic-forest/001.svg",
+      totalChapters: 2,
+      chaptersRead: 1,
+      rating: 4.0,
+      status: "Ongoing",
+      readingStatus: "Waiting for new chapters",
+      lastRead: "1 week ago",
+      isFavorite: false,
+      description: "Step into a world of magic and wonder where mystical creatures roam and ancient spells hold incredible power.",
+      tags: ["Fantasy", "Magic", "Adventure", "Mystical"]
+    },
+    {
+      id: "space-adventure",
+      title: "Galaxy Explorer",
+      series: "Space Adventures",
+      author: "Alex Rodriguez",
+      cover: "/comics/space-adventures/galaxy-explorer/001.svg",
+      totalChapters: 1,
+      chaptersRead: 0,
+      rating: 0,
+      status: "Not Started",
+      readingStatus: "Plan to read",
+      lastRead: "Never",
+      isFavorite: true,
+      description: "Join Captain Nova and her crew as they explore the far reaches of space, encountering alien civilizations.",
+      tags: ["Sci-Fi", "Space", "Adventure", "Aliens"]
+    }
+  ]);
+
+  useEffect(() => {
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+  }, []);
+
+  const handleRatingChange = (seriesId: string, newRating: number) => {
+    setFollowedSeries(prev => 
+      prev.map(series => 
+        series.id === seriesId 
+          ? { ...series, rating: newRating }
+          : series
+      )
+    );
+  };
+
+  const handleReadingStatusChange = (seriesId: string, newStatus: string) => {
+    setFollowedSeries(prev => 
+      prev.map(series => 
+        series.id === seriesId 
+          ? { ...series, readingStatus: newStatus }
+          : series
+      )
+    );
+  };
+
+  const handleFavoriteToggle = (seriesId: string) => {
+    setFollowedSeries(prev => 
+      prev.map(series => 
+        series.id === seriesId 
+          ? { ...series, isFavorite: !series.isFavorite }
+          : series
+      )
+    );
+  };
+
+  const getProgressPercentage = (read: number, total: number) => {
+    if (total === 0) return 0;
+    return Math.round((read / total) * 100);
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case "Completed": return "var(--accent)";
+      case "Ongoing": return "#ffa500";
+      case "Not Started": return "var(--muted)";
+      default: return "var(--border)";
+    }
+  };
+
+  if (!user) {
+    return (
+      <div style={{ padding: "24px", maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
+        <h1 style={{ margin: "0 0 16px", fontSize: "24px", fontWeight: "600" }}>Please Sign In</h1>
+        <p style={{ margin: "0 0 24px", color: "var(--muted)" }}>
+          You need to be signed in to view your reading list.
+        </p>
+        <Link href="/sign-in" style={{ color: "var(--accent)", textDecoration: "none" }}>
+          Sign In
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ padding: "24px", maxWidth: "1000px", margin: "0 auto" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
+        <Link href="/" style={{ color: "var(--accent)", textDecoration: "none" }}>
+          ← Back to Home
+        </Link>
+      </div>
+
+      <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--accent)" }}>
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <h1 style={{ margin: "0", fontSize: "32px", fontWeight: "700" }}>
+          My List
+        </h1>
+        <span style={{
+          padding: "4px 8px",
+          background: "var(--border)",
+          color: "var(--fg)",
+          borderRadius: "12px",
+          fontSize: "14px",
+          fontWeight: "500"
+        }}>
+          {followedSeries.length} series
+        </span>
+      </div>
+
+      {/* Tab Navigation */}
+      <div style={{ display: "flex", gap: "8px", marginBottom: "24px" }}>
+        <button
+          onClick={() => setActiveTab("all")}
+          style={{
+            padding: "8px 16px",
+            background: activeTab === "all" ? "var(--accent)" : "transparent",
+            color: activeTab === "all" ? "white" : "var(--fg)",
+            border: "1px solid var(--border)",
+            borderRadius: "8px",
+            fontSize: "14px",
+            fontWeight: "500",
+            cursor: "pointer",
+            transition: "all 0.2s ease"
+          }}
+        >
+          All Series ({followedSeries.length})
+        </button>
+        <button
+          onClick={() => setActiveTab("favorites")}
+          style={{
+            padding: "8px 16px",
+            background: activeTab === "favorites" ? "var(--accent)" : "transparent",
+            color: activeTab === "favorites" ? "white" : "var(--fg)",
+            border: "1px solid var(--border)",
+            borderRadius: "8px",
+            fontSize: "14px",
+            fontWeight: "500",
+            cursor: "pointer",
+            transition: "all 0.2s ease",
+            display: "flex",
+            alignItems: "center",
+            gap: "6px"
+          }}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          Favorites ({followedSeries.filter(s => s.isFavorite).length})
+        </button>
+      </div>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+        {followedSeries
+          .filter(series => activeTab === "all" || series.isFavorite)
+          .map((series) => (
+          <div key={series.id} className="card" style={{
+            display: "flex",
+            gap: "16px",
+            padding: "20px",
+            transition: "border-color 0.2s ease"
+          }}>
+            {/* Cover Image */}
+            <Link href={`/comic/${series.id}`} style={{ textDecoration: "none" }}>
+              <img
+                src={series.cover}
+                alt={series.title}
+                style={{
+                  width: "80px",
+                  height: "110px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                  background: "var(--border)",
+                  cursor: "pointer"
+                }}
+              />
+            </Link>
+
+            {/* Series Info */}
+            <div style={{ flex: 1 }}>
+              <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "8px" }}>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+                    <Link href={`/comic/${series.id}`} style={{ textDecoration: "none" }}>
+                      <h3 style={{ 
+                        margin: "0", 
+                        fontSize: "20px", 
+                        fontWeight: "600", 
+                        color: "var(--fg)",
+                        cursor: "pointer"
+                      }}>
+                        {series.title}
+                      </h3>
+                    </Link>
+                    <button
+                      onClick={() => handleFavoriteToggle(series.id)}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer",
+                        padding: "4px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
+                      }}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill={series.isFavorite ? "#ff6b6b" : "none"}
+                        stroke={series.isFavorite ? "#ff6b6b" : "var(--muted)"}
+                        strokeWidth="2"
+                        style={{
+                          transition: "all 0.2s ease"
+                        }}
+                      >
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <p style={{ margin: "0 0 8px", color: "var(--muted)", fontSize: "14px" }}>
+                    {series.series} • by {series.author}
+                  </p>
+                </div>
+
+                {/* Rating */}
+                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  <div style={{ display: "flex", gap: "2px" }}>
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button
+                        key={star}
+                        onClick={() => handleRatingChange(series.id, star)}
+                        style={{
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          padding: "2px"
+                        }}
+                      >
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill={star <= series.rating ? "#ffd700" : "none"}
+                          stroke={star <= series.rating ? "#ffd700" : "var(--muted)"}
+                          strokeWidth="2"
+                        >
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      </button>
+                    ))}
+                  </div>
+                  <span style={{ fontSize: "14px", color: "var(--muted)", minWidth: "30px" }}>
+                    {series.rating > 0 ? series.rating.toFixed(1) : "—"}
+                  </span>
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div style={{ marginBottom: "12px" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "4px" }}>
+                  <span style={{ fontSize: "14px", color: "var(--fg)", fontWeight: "500" }}>
+                    Progress
+                  </span>
+                  <span style={{ fontSize: "14px", color: "var(--muted)" }}>
+                    {series.chaptersRead}/{series.totalChapters} chapters
+                  </span>
+                </div>
+                <div style={{
+                  width: "100%",
+                  height: "6px",
+                  background: "var(--border)",
+                  borderRadius: "3px",
+                  overflow: "hidden"
+                }}>
+                  <div style={{
+                    width: `${getProgressPercentage(series.chaptersRead, series.totalChapters)}%`,
+                    height: "100%",
+                    background: "var(--accent)",
+                    transition: "width 0.3s ease"
+                  }} />
+                </div>
+                <div style={{ 
+                  fontSize: "12px", 
+                  color: "var(--muted)", 
+                  marginTop: "4px",
+                  textAlign: "right"
+                }}>
+                  {getProgressPercentage(series.chaptersRead, series.totalChapters)}% complete
+                </div>
+              </div>
+
+              {/* Status and Last Read */}
+              <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "12px" }}>
+                <span style={{
+                  padding: "4px 8px",
+                  background: getStatusColor(series.status),
+                  color: "white",
+                  borderRadius: "12px",
+                  fontSize: "12px",
+                  fontWeight: "600",
+                  textTransform: "uppercase"
+                }}>
+                  {series.status}
+                </span>
+                <span style={{ fontSize: "12px", color: "var(--muted)" }}>
+                  Last read: {series.lastRead}
+                </span>
+              </div>
+
+              {/* Reading Status */}
+              <div style={{ marginBottom: "12px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+                  <span style={{ fontSize: "12px", color: "var(--muted)", fontWeight: "500" }}>
+                    Reading Status:
+                  </span>
+                  <select
+                    value={series.readingStatus}
+                    onChange={(e) => handleReadingStatusChange(series.id, e.target.value)}
+                    style={{
+                      padding: "6px 12px",
+                      background: "var(--bg)",
+                      border: "1px solid var(--border)",
+                      borderRadius: "8px",
+                      color: "var(--fg)",
+                      fontSize: "12px",
+                      cursor: "pointer",
+                      minWidth: "140px",
+                      appearance: "none",
+                      backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
+                      backgroundPosition: "right 8px center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "16px",
+                      paddingRight: "32px"
+                    }}
+                  >
+                    <option value="Currently reading">Currently reading</option>
+                    <option value="Waiting for new chapters">Waiting for new chapters</option>
+                    <option value="On hold">On hold</option>
+                    <option value="Plan to read">Plan to read</option>
+                    <option value="Finished">Finished</option>
+                    <option value="Rereading">Rereading</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p style={{ 
+                margin: "0 0 12px", 
+                fontSize: "14px", 
+                color: "var(--muted)", 
+                lineHeight: "1.4",
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden"
+              }}>
+                {series.description}
+              </p>
+
+              {/* Tags */}
+              <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
+                {series.tags.slice(0, 3).map((tag) => (
+                  <span key={tag} style={{
+                    padding: "2px 6px",
+                    background: "var(--border)",
+                    color: "var(--fg)",
+                    borderRadius: "4px",
+                    fontSize: "11px",
+                    fontWeight: "500"
+                  }}>
+                    {tag}
+                  </span>
+                ))}
+                {series.tags.length > 3 && (
+                  <span style={{
+                    padding: "2px 6px",
+                    background: "var(--border)",
+                    color: "var(--muted)",
+                    borderRadius: "4px",
+                    fontSize: "11px"
+                  }}>
+                    +{series.tags.length - 3} more
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {followedSeries.length === 0 && (
+        <div className="card" style={{ textAlign: "center", padding: "40px" }}>
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--muted)", margin: "0 auto 16px" }}>
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+          <h3 style={{ margin: "0 0 8px", fontSize: "20px", fontWeight: "600" }}>
+            Your list is empty
+          </h3>
+          <p style={{ margin: "0 0 24px", color: "var(--muted)" }}>
+            Start following series to see them here
+          </p>
+          <Link href="/library" style={{
+            display: "inline-block",
+            padding: "12px 24px",
+            background: "var(--accent)",
+            color: "white",
+            textDecoration: "none",
+            borderRadius: "8px",
+            fontWeight: "600"
+          }}>
+            Browse Library
+          </Link>
+        </div>
+      )}
+
+      {followedSeries.length > 0 && followedSeries.filter(s => activeTab === "all" || s.isFavorite).length === 0 && activeTab === "favorites" && (
+        <div className="card" style={{ textAlign: "center", padding: "40px" }}>
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--muted)", margin: "0 auto 16px" }}>
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <h3 style={{ margin: "0 0 8px", fontSize: "20px", fontWeight: "600" }}>
+            No favorites yet
+          </h3>
+          <p style={{ margin: "0 0 24px", color: "var(--muted)" }}>
+            Click the heart icon on any series to add it to your favorites
+          </p>
+          <button
+            onClick={() => setActiveTab("all")}
+            style={{
+              padding: "12px 24px",
+              background: "var(--accent)",
+              color: "white",
+              border: "none",
+              borderRadius: "8px",
+              fontWeight: "600",
+              cursor: "pointer"
+            }}
+          >
+            View All Series
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}

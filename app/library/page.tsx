@@ -1,45 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import ComicCard from "../../components/ComicCard";
-import { useState, useEffect } from "react";
+import data from "../../data/comics.json";
 
 export default function LibraryPage() {
-  const [comics, setComics] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchComics = async () => {
-      try {
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
-        const res = await fetch(`${baseUrl}/api/comics`);
-        if (res.ok) {
-          const data = await res.json();
-          setComics(data.comics || []);
-        }
-      } catch (error) {
-        console.error("Failed to load comics:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchComics();
-  }, []);
-  
-  if (loading) {
-    return (
-      <div style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "50vh",
-        fontSize: "18px",
-        color: "var(--fg)"
-      }}>
-        Loading comics...
-      </div>
-    );
-  }
+  const comics = data.comics;
 
   return (
     <div style={{

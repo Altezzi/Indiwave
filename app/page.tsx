@@ -1,16 +1,7 @@
 import Link from "next/link";
 import ComicCard from "../components/ComicCard";
 
-async function getComics() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/comics`, { cache: "no-store" });
-  if (!res.ok) throw new Error("Failed to load comics");
-  return res.json();
-}
-
-export default async function HomePage() {
-  const data = await getComics();
-  const comics = data.comics as any[];
+export default function HomePage() {
   
   return (
     <div>
@@ -183,7 +174,7 @@ export default async function HomePage() {
           border: "1px solid rgba(138, 180, 255, 0.2)"
         }}>
           <p style={{ margin: "0", fontSize: "14px", color: "var(--accent)", fontWeight: "500" }}>
-            💡 Pro Tip: Adding to home screen gives you app-like experience with faster loading!
+            �� Pro Tip: Adding to home screen gives you app-like experience with faster loading!
           </p>
         </div>
       </div>

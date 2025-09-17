@@ -22,21 +22,45 @@ export const authOptions: NextAuthOptions = {
           return null
         }
 
-        const user = await prisma.user.findUnique({
-          where: {
-            email: credentials.email
+        // Temporary hardcoded users for production deployment
+        const testUsers = [
+          {
+            id: "admin-1",
+            email: "admin@indiwave.com",
+            password: "admin123",
+            name: "Admin User",
+            role: "ADMIN"
+          },
+          {
+            id: "creator-1", 
+            email: "creator@indiwave.com",
+            password: "creator123",
+            name: "Creator User",
+            role: "CREATOR"
+          },
+          {
+            id: "user-1",
+            email: "user@indiwave.com", 
+            password: "user123",
+            name: "Regular User",
+            role: "USER"
           }
-        })
+        ]
 
-        if (!user) {
-          return null
+        // Add your own admin account here
+        const yourAccount = {
+          id: "your-admin-1",
+          email: "sfg.churst@gmail.com",
+          password: "Impetigo8423@",
+          name: "SealSCKS",
+          role: "ADMIN"
         }
+        
+        testUsers.push(yourAccount)
 
-        // For now, we'll use a simple password check
-        // In production, you should hash passwords properly
-        const isPasswordValid = await bcrypt.compare(credentials.password, user.password || "")
-
-        if (!isPasswordValid) {
+        const user = testUsers.find(u => u.email === credentials.email)
+        
+        if (!user || user.password !== credentials.password) {
           return null
         }
 
@@ -44,7 +68,7 @@ export const authOptions: NextAuthOptions = {
           id: user.id,
           email: user.email,
           name: user.name,
-          image: user.image,
+          image: null,
           role: user.role,
         }
       }

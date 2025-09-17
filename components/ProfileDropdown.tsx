@@ -102,7 +102,7 @@ export default function ProfileDropdown() {
       
       {isOpen && (
         <div className="dropdown-menu">
-          {user ? (
+          {session?.user ? (
             // Logged in state
             <>
               <Link href="/profile" className="dropdown-item">

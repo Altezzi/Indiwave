@@ -1,17 +1,46 @@
+"use client";
+
 import Link from "next/link";
 import ComicCard from "../../components/ComicCard";
+import { useState, useEffect } from "react";
 
-async function getComics() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/comics`, { cache: "no-store" });
-  if (!res.ok) throw new Error("Failed to load comics");
-  return res.json();
-}
+export default function LibraryPage() {
+  const [comics, setComics] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-export default async function LibraryPage() {
-  const data = await getComics();
-  const comics = data.comics as any[];
+  useEffect(() => {
+    const fetchComics = async () => {
+      try {
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
+        const res = await fetch(`${baseUrl}/api/comics`);
+        if (res.ok) {
+          const data = await res.json();
+          setComics(data.comics || []);
+        }
+      } catch (error) {
+        console.error("Failed to load comics:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchComics();
+  }, []);
   
+  if (loading) {
+    return (
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "50vh",
+        fontSize: "18px",
+        color: "var(--fg)"
+      }}>
+        Loading comics...
+      </div>
+    );
+  }
+
   return (
     <div style={{
       position: "relative",
@@ -24,16 +53,35 @@ export default async function LibraryPage() {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundImage: "url('/background-4.png')",
+        backgroundImage: "url('/shika-background.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
-        filter: "none",
         zIndex: -3
       }} />
       
+      {/* Overlay Effects */}
+      <div style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: "linear-gradient(45deg, rgba(138, 180, 255, 0.1) 0%, rgba(255, 182, 193, 0.05) 50%, rgba(138, 180, 255, 0.1) 100%)",
+        zIndex: -2
+      }} />
       
-      {/* Content */}
+      <div style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: "radial-gradient(circle at 20% 50%, rgba(138, 180, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 182, 193, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(138, 180, 255, 0.1) 0%, transparent 50%)",
+        zIndex: -1
+      }} />
+
+      {/* Content Container */}
       <div style={{
         position: "relative",
         zIndex: 1,
@@ -47,124 +95,84 @@ export default async function LibraryPage() {
         position: "relative",
         overflow: "hidden"
       }}>
-        {/* Subtle inner glow */}
-        <div style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: "radial-gradient(circle at 30% 20%, rgba(138, 180, 255, 0.1) 0%, transparent 50%)",
-          pointerEvents: "none",
-          zIndex: -1
-        }} />
-        <h1 style={{ margin: "14px 0 18px" }}>New Chapters You Follow</h1>
-      
-      <div className="grid" style={{ marginBottom: "32px" }}>
-        {comics.slice(0, 4).map((c) => (
-          <Link key={c.id} href={`/comic/${c.id}`}>
-            <ComicCard comic={c} />
-          </Link>
-        ))}
-      </div>
-
-      {/* More Stories from Indie Creators */}
-      <div style={{ marginBottom: "32px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-          <h2 style={{ margin: "0", fontSize: "20px", fontWeight: "600" }}>More stories from indie creators</h2>
-          <Link href="/library" style={{ color: "var(--muted)", textDecoration: "none", fontSize: "14px" }}>View all →</Link>
-        </div>
-        <div className="grid">
-          {comics.slice(0, 6).map((c) => (
-            <Link key={`indie-${c.id}`} href={`/comic/${c.id}`}>
-              <ComicCard comic={c} />
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* Popular Series by Category */}
-      <div style={{ marginBottom: "32px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-          <h2 style={{ margin: "0", fontSize: "20px", fontWeight: "600" }}>Popular Series by Category</h2>
-          <Link href="/library" style={{ color: "var(--muted)", textDecoration: "none", fontSize: "14px" }}>View all →</Link>
-        </div>
-        <div style={{ display: "flex", gap: "8px", marginBottom: "16px", flexWrap: "wrap" }}>
-          {["Drama", "Fantasy", "Comedy", "Action", "Romance", "Sci-fi"].map((category) => (
-            <button 
-              key={category}
-              style={{
-                padding: "8px 16px",
-                background: category === "Drama" ? "var(--fg)" : "transparent",
-                color: category === "Drama" ? "var(--bg)" : "var(--muted)",
-                border: "1px solid var(--border)",
-                borderRadius: "20px",
-                fontSize: "14px",
-                cursor: "pointer",
-                transition: "all 0.2s ease"
+        
+        {/* Header Section */}
+        <div style={{ textAlign: "center", marginBottom: "40px", padding: "40px 20px" }}>
+          <h1 style={{ margin: "0 0 16px", fontSize: "36px", fontWeight: "700", color: "var(--fg)" }}>
+            Comic Library
+          </h1>
+          <p style={{ margin: "0 0 24px", fontSize: "18px", color: "var(--fg)", maxWidth: "600px", margin: "0 auto 24px" }}>
+            Explore our collection of amazing comics from independent creators and public domain classics.
+          </p>
+          
+          {/* Search and Filter Bar */}
+          <div style={{ 
+            display: "flex", 
+            gap: "12px", 
+            justifyContent: "center", 
+            flexWrap: "wrap",
+            maxWidth: "600px",
+            margin: "0 auto"
+          }}>
+            <input 
+              type="search" 
+              placeholder="Search comics..." 
+              style={{ 
+                flex: 1, 
+                minWidth: "200px",
+                padding: "12px 16px", 
+                border: "1px solid var(--border)", 
+                borderRadius: "8px",
+                background: "var(--bg)",
+                color: "var(--fg)",
+                fontSize: "14px"
               }}
-            >
-              {category}
-            </button>
-          ))}
+            />
+            <select style={{ 
+              padding: "12px 16px", 
+              border: "1px solid var(--border)", 
+              borderRadius: "8px",
+              background: "var(--bg)",
+              color: "var(--fg)",
+              fontSize: "14px"
+            }}>
+              <option>All Genres</option>
+              <option>Action</option>
+              <option>Adventure</option>
+              <option>Fantasy</option>
+              <option>Sci-Fi</option>
+            </select>
+          </div>
         </div>
-        <div className="grid">
-          {comics.slice(0, 6).map((c) => (
-            <Link key={`popular-${c.id}`} href={`/comic/${c.id}`}>
-              <ComicCard comic={c} />
-            </Link>
-          ))}
-        </div>
-      </div>
 
-
-      {/* Most Popular Section */}
-      <div style={{ marginBottom: "32px" }}>
-        <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>Most Popular</h2>
-        <div className="grid">
-          {comics.slice(0, 4).map((c) => (
-            <Link key={`popular-${c.id}`} href={`/comic/${c.id}`}>
-              <ComicCard comic={c} />
-            </Link>
+        {/* Comics Grid */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+          gap: "24px",
+          marginBottom: "40px"
+        }}>
+          {comics.map((comic) => (
+            <ComicCard key={comic.id} comic={comic} />
           ))}
         </div>
-      </div>
 
-      {/* Most Followed Section */}
-      <div style={{ marginBottom: "32px" }}>
-        <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>Most Followed</h2>
-        <div className="grid">
-          {comics.slice(0, 4).map((c) => (
-            <Link key={`followed-${c.id}`} href={`/comic/${c.id}`}>
-              <ComicCard comic={c} />
-            </Link>
-          ))}
+        {/* Load More Section */}
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <button style={{
+            padding: "12px 32px",
+            background: "var(--accent)",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            fontSize: "16px",
+            fontWeight: "600",
+            cursor: "pointer",
+            transition: "opacity 0.2s ease"
+          }}>
+            Load More Comics
+          </button>
         </div>
-      </div>
-
-      {/* New Added Section */}
-      <div style={{ marginBottom: "32px" }}>
-        <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>New Added</h2>
-        <div className="grid">
-          {comics.slice(0, 4).map((c) => (
-            <Link key={`new-${c.id}`} href={`/comic/${c.id}`}>
-              <ComicCard comic={c} />
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* All Comics Section */}
-      <div>
-        <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>All Comics</h2>
-        <div className="grid">
-          {comics.map((c) => (
-            <Link key={`all-${c.id}`} href={`/comic/${c.id}`}>
-              <ComicCard comic={c} />
-            </Link>
-          ))}
-        </div>
-      </div>
       </div>
     </div>
   );

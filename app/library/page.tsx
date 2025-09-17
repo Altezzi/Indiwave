@@ -1,9 +1,36 @@
+// app/library/page.tsx
 import Link from "next/link";
 import ComicCard from "../../components/ComicCard";
-import data from "../../data/comics.json";
 
-export default function LibraryPage() {
-  const comics = data.comics;
+type Comic = {
+  id: string;
+  title: string;
+  cover: string;
+  author?: string;
+  artist?: string;
+  year?: string | number;
+  tags?: string[];
+  chapters?: Array<{ id: string; title: string; pages?: string[] }>;
+  // allow extra fields safely
+  [key: string]: any;
+};
+
+async function getComics(): Promise<{ comics: Comic[] } | Comic[]> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/comics`, {
+    // ISR: cache for 60s, then refresh in the background
+    next: { revalidate: 60 },
+  });
+  if (!res.ok) throw new Error("Failed to load comics");
+  return res.json();
+}
+
+// Revalidate this page every 60s (ISR)
+export const revalidate = 60;
+
+export default async function LibraryPage() {
+  const data = await getComics();
+  const comics: Comic[] = Array.isArray(data) ? data : data.comics ?? [];
 
   return (
     <div
@@ -85,17 +112,17 @@ export default function LibraryPage() {
           </h1>
           <p
             style={{
-              // keep the centered auto margins version
               margin: "0 auto 24px",
               fontSize: "18px",
               color: "var(--fg)",
               maxWidth: "600px",
             }}
           >
-            Explore our collection of amazing comics from independent creators and public domain classics.
+            Explore our collection of amazing comics from independent creators and
+            public domain classics.
           </p>
 
-          {/* Search and Filter Bar */}
+          {/* Search and Filter Bar (UI only for now) */}
           <div
             style={{
               display: "flex",
@@ -119,6 +146,7 @@ export default function LibraryPage() {
                 color: "var(--fg)",
                 fontSize: "14px",
               }}
+              readOnly
             />
             <select
               style={{
@@ -129,6 +157,7 @@ export default function LibraryPage() {
                 color: "var(--fg)",
                 fontSize: "14px",
               }}
+              defaultValue="All Genres"
             >
               <option>All Genres</option>
               <option>Action</option>
@@ -151,9 +180,14 @@ export default function LibraryPage() {
           {comics.map((comic) => (
             <ComicCard key={comic.id} comic={comic} />
           ))}
+          {comics.length === 0 && (
+            <p style={{ textAlign: "center", opacity: 0.8 }}>
+              No comics yet — check back soon!
+            </p>
+          )}
         </div>
 
-        {/* Load More Section */}
+        {/* Load More Section (placeholder) */}
         <div style={{ textAlign: "center", marginTop: "40px" }}>
           <button
             style={{
@@ -167,6 +201,8 @@ export default function LibraryPage() {
               cursor: "pointer",
               transition: "opacity 0.2s ease",
             }}
+            disabled
+            title="Pagination coming soon"
           >
             Load More Comics
           </button>

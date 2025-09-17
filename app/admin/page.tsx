@@ -28,12 +28,33 @@ interface AuditLog {
   };
 }
 
+interface CreatorClaim {
+  id: string;
+  status: string;
+  evidence: string;
+  notes: string | null;
+  createdAt: string;
+  claimant: {
+    id: string;
+    name: string;
+    email: string;
+    username: string;
+  };
+  series: {
+    id: string;
+    title: string;
+    description: string;
+    coverImage: string;
+  };
+}
+
 export default function AdminDashboard() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("overview");
   const [users, setUsers] = useState<User[]>([]);
   const [auditLogs, setAuditLogs] = useState<AuditLog[]>([]);
+  const [creatorClaims, setCreatorClaims] = useState<CreatorClaim[]>([]);
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({
     totalUsers: 0,
@@ -71,6 +92,13 @@ export default function AdminDashboard() {
         setAuditLogs(logsData.logs || []);
       }
 
+      // Fetch creator claims
+      const claimsResponse = await fetch("/api/admin/creator-claims");
+      if (claimsResponse.ok) {
+        const claimsData = await claimsResponse.json();
+        setCreatorClaims(claimsData.claims || []);
+      }
+
       // Fetch stats
       const statsResponse = await fetch("/api/admin/stats");
       if (statsResponse.ok) {
@@ -104,6 +132,30 @@ export default function AdminDashboard() {
     } catch (error) {
       console.error("Error changing role:", error);
       alert("Failed to change role");
+    }
+  };
+
+  const handleClaimAction = async (claimId: string, action: string, notes?: string) => {
+    try {
+      const response = await fetch("/api/admin/creator-claims", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ claimId, action, notes }),
+      });
+
+      if (response.ok) {
+        // Refresh claims list
+        fetchDashboardData();
+        alert(`Claim ${action} successfully`);
+      } else {
+        const error = await response.json();
+        alert(`Error: ${error.error}`);
+      }
+    } catch (error) {
+      console.error("Error processing claim:", error);
+      alert("Failed to process claim");
     }
   };
 
@@ -503,17 +555,213 @@ export default function AdminDashboard() {
               <h2 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>
                 Creator Claim Review Queue
               </h2>
-              <div style={{
-                background: "var(--muted)",
-                padding: "24px",
-                borderRadius: "12px",
-                border: "1px solid var(--border)",
-                textAlign: "center"
-              }}>
-                <p style={{ color: "var(--muted-foreground)" }}>
-                  Creator claim review functionality coming soon...
-                </p>
-              </div>
+              
+              {creatorClaims.length === 0 ? (
+                <div style={{
+                  background: "var(--muted)",
+                  padding: "24px",
+                  borderRadius: "12px",
+                  border: "1px solid var(--border)",
+                  textAlign: "center"
+                }}>
+                  <p style={{ color: "var(--muted-foreground)" }}>
+                    No creator claims to review
+                  </p>
+                </div>
+              ) : (
+                <div style={{
+                  background: "var(--muted)",
+                  borderRadius: "12px",
+                  border: "1px solid var(--border)",
+                  overflow: "hidden"
+                }}>
+                  {creatorClaims.map((claim) => (
+                    <div key={claim.id} style={{
+                      padding: "20px",
+                      borderBottom: "1px solid var(--border)",
+                      display: "flex",
+                      gap: "20px",
+                      alignItems: "flex-start"
+                    }}>
+                      {/* Series Info */}
+                      <div style={{ flex: "0 0 120px" }}>
+                        {claim.series.coverImage ? (
+                          <img 
+                            src={claim.series.coverImage} 
+                            alt={claim.series.title}
+                            style={{
+                              width: "100px",
+                              height: "140px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                              border: "1px solid var(--border)"
+                            }}
+                          />
+                        ) : (
+                          <div style={{
+                            width: "100px",
+                            height: "140px",
+                            background: "var(--border)",
+                            borderRadius: "8px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            color: "var(--muted-foreground)",
+                            fontSize: "12px",
+                            textAlign: "center"
+                          }}>
+                            No Cover
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Claim Details */}
+                      <div style={{ flex: "1" }}>
+                        <div style={{ marginBottom: "12px" }}>
+                          <h3 style={{ 
+                            fontSize: "18px", 
+                            fontWeight: "600", 
+                            margin: "0 0 4px 0",
+                            color: "var(--fg)"
+                          }}>
+                            {claim.series.title}
+                          </h3>
+                          <p style={{ 
+                            margin: "0 0 8px 0", 
+                            color: "var(--muted-foreground)",
+                            fontSize: "14px"
+                          }}>
+                            Claimed by: {claim.claimant.name} ({claim.claimant.email})
+                          </p>
+                          <div style={{
+                            display: "inline-block",
+                            padding: "4px 8px",
+                            borderRadius: "6px",
+                            fontSize: "12px",
+                            fontWeight: "500",
+                            background: claim.status === "pending" ? "#f59e0b" : 
+                                       claim.status === "approved" ? "#10b981" : "#ef4444",
+                            color: "white"
+                          }}>
+                            {claim.status.toUpperCase()}
+                          </div>
+                        </div>
+
+                        <div style={{ marginBottom: "12px" }}>
+                          <h4 style={{ 
+                            fontSize: "14px", 
+                            fontWeight: "600", 
+                            margin: "0 0 4px 0",
+                            color: "var(--fg)"
+                          }}>
+                            Evidence:
+                          </h4>
+                          <p style={{ 
+                            margin: "0", 
+                            color: "var(--muted-foreground)",
+                            fontSize: "14px",
+                            lineHeight: "1.5"
+                          }}>
+                            {claim.evidence}
+                          </p>
+                        </div>
+
+                        {claim.notes && (
+                          <div style={{ marginBottom: "12px" }}>
+                            <h4 style={{ 
+                              fontSize: "14px", 
+                              fontWeight: "600", 
+                              margin: "0 0 4px 0",
+                              color: "var(--fg)"
+                            }}>
+                              Admin Notes:
+                            </h4>
+                            <p style={{ 
+                              margin: "0", 
+                              color: "var(--muted-foreground)",
+                              fontSize: "14px"
+                            }}>
+                              {claim.notes}
+                            </p>
+                          </div>
+                        )}
+
+                        <div style={{ 
+                          fontSize: "12px", 
+                          color: "var(--muted-foreground)",
+                          marginBottom: "12px"
+                        }}>
+                          Submitted: {new Date(claim.createdAt).toLocaleString()}
+                        </div>
+
+                        {/* Action Buttons */}
+                        {claim.status === "pending" && (
+                          <div style={{ display: "flex", gap: "8px" }}>
+                            <button
+                              onClick={() => {
+                                const notes = prompt("Add notes (optional):");
+                                handleClaimAction(claim.id, "approved", notes || undefined);
+                              }}
+                              style={{
+                                padding: "8px 16px",
+                                background: "#10b981",
+                                color: "white",
+                                border: "none",
+                                borderRadius: "6px",
+                                fontSize: "14px",
+                                fontWeight: "500",
+                                cursor: "pointer"
+                              }}
+                            >
+                              Approve
+                            </button>
+                            <button
+                              onClick={() => {
+                                const notes = prompt("Add rejection reason:");
+                                if (notes) {
+                                  handleClaimAction(claim.id, "rejected", notes);
+                                }
+                              }}
+                              style={{
+                                padding: "8px 16px",
+                                background: "#ef4444",
+                                color: "white",
+                                border: "none",
+                                borderRadius: "6px",
+                                fontSize: "14px",
+                                fontWeight: "500",
+                                cursor: "pointer"
+                              }}
+                            >
+                              Reject
+                            </button>
+                            <button
+                              onClick={() => {
+                                const notes = prompt("Request more information:");
+                                if (notes) {
+                                  handleClaimAction(claim.id, "pending", notes);
+                                }
+                              }}
+                              style={{
+                                padding: "8px 16px",
+                                background: "#6b7280",
+                                color: "white",
+                                border: "none",
+                                borderRadius: "6px",
+                                fontSize: "14px",
+                                fontWeight: "500",
+                                cursor: "pointer"
+                              }}
+                            >
+                              Request Info
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 

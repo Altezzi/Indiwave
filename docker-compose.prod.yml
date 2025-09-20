@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  indiwave-app:
+    image: indiwave:latest
+    container_name: indiwave-prod
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:./data/prod.db
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+    volumes:
+      - indiwave_data:/app/data
+      - indiwave_public:/app/public
+    restart: unless-stopped
+    networks:
+      - indiwave-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: PostgreSQL for production (uncomment if you want to use PostgreSQL instead of SQLite)
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: indiwave-db
+  #   environment:
+  #     POSTGRES_DB: indiwave
+  #     POSTGRES_USER: indiwave
+  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   restart: unless-stopped
+  #   networks:
+  #     - indiwave-network
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U indiwave"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+networks:
+  indiwave-network:
+    driver: bridge
+
+volumes:
+  indiwave_data:
+    driver: local
+  indiwave_public:
+    driver: local
+  # postgres_data:
+  #   driver: local

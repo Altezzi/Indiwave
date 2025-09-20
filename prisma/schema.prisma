@@ -62,6 +62,7 @@ model VerificationToken {
 // Main User model
 model User {
   id            String    @id @default(cuid())
+  accountId     Int       @unique // Sequential account ID for tracking (will be set manually)
   email         String    @unique
   emailVerified DateTime?
   name          String?

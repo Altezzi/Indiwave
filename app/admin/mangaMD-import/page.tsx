@@ -29,6 +29,7 @@ interface SearchResponse {
 
 interface ImportResponse {
   success: boolean;
+  error?: string;
   series: {
     id: string;
     title: string;
@@ -50,7 +51,7 @@ export default function MangaMDImportPage() {
   const [isSearching, setIsSearching] = useState(false);
   const [isImporting, setIsImporting] = useState<string | null>(null);
   const [selectedCreator, setSelectedCreator] = useState('');
-  const [creators, setCreators] = useState<Array<{ id: string; name: string; username: string }>>([]);
+  const [creators, setCreators] = useState<Array<{ id: string; name: string; username: string; role?: string }>>([]);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
@@ -183,7 +184,7 @@ export default function MangaMDImportPage() {
             <option value="">Select a creator...</option>
             {creators.map((creator) => (
               <option key={creator.id} value={creator.id}>
-                {creator.name || creator.username} ({creator.role})
+                {creator.name || creator.username}{creator.role ? ` (${creator.role})` : ''}
               </option>
             ))}
           </select>

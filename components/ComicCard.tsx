@@ -10,7 +10,7 @@ interface ComicCardProps {
     artist?: string;
     authors?: string;
     artists?: string;
-    tags?: string;
+    tags?: string | string[];
     mangaMDStatus?: string;
     isImported?: boolean;
     [key: string]: any;
@@ -36,10 +36,12 @@ export default function ComicCard({ comic }: ComicCardProps) {
   })();
   
   const tags = (() => {
+    if (!comic.tags) return [];
+    if (Array.isArray(comic.tags)) return comic.tags;
     try {
-      return comic.tags ? JSON.parse(comic.tags) : [];
+      return JSON.parse(comic.tags);
     } catch {
-      return [];
+      return [comic.tags]; // fallback to single tag as array
     }
   })();
   

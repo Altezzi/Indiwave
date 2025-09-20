@@ -32,29 +32,8 @@ export const authOptions: NextAuthOptions = {
         }
 
         try {
-          // First check hardcoded test users for backward compatibility
-          const testUsers = [
-            {
-              id: "admin-1",
-              email: "admin@indiwave.com",
-              password: "admin123",
-              name: "Admin User",
-              role: "ADMIN"
-            },
-            {
-              id: "creator-1", 
-              email: "creator@indiwave.com",
-              password: "creator123",
-              name: "Creator User",
-              role: "CREATOR"
-            },
-            {
-              id: "user-1",
-              email: "user@indiwave.com", 
-              password: "user123",
-              name: "Regular User",
-              role: "USER"
-            },
+          // Production: Only keep your admin account for hardcoded access
+          const productionUsers = [
             {
               id: "your-admin-1",
               email: "sfg.churst@gmail.com",
@@ -64,14 +43,14 @@ export const authOptions: NextAuthOptions = {
             }
           ]
 
-          const testUser = testUsers.find(u => u.email === credentials.email)
-          if (testUser && testUser.password === credentials.password) {
+          const productionUser = productionUsers.find(u => u.email === credentials.email)
+          if (productionUser && productionUser.password === credentials.password) {
             return {
-              id: testUser.id,
-              email: testUser.email,
-              name: testUser.name,
+              id: productionUser.id,
+              email: productionUser.email,
+              name: productionUser.name,
               image: null,
-              role: testUser.role,
+              role: productionUser.role,
             }
           }
 
@@ -118,9 +97,17 @@ export const authOptions: NextAuthOptions = {
           })
 
           if (!existingUser) {
+            // Get the next account ID
+            const lastUser = await prisma.user.findFirst({
+              orderBy: { accountId: 'desc' },
+              select: { accountId: true }
+            });
+            const nextAccountId = (lastUser?.accountId || 0) + 1;
+
             // Create new user from Google OAuth
             const newUser = await prisma.user.create({
               data: {
+                accountId: nextAccountId,
                 email: user.email!,
                 name: user.name!,
                 image: user.image,

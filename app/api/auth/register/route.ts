@@ -60,9 +60,17 @@ export async function POST(request: NextRequest) {
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 12)
 
+    // Get the next account ID
+    const lastUser = await prisma.user.findFirst({
+      orderBy: { accountId: 'desc' },
+      select: { accountId: true }
+    });
+    const nextAccountId = (lastUser?.accountId || 0) + 1;
+
     // Create user
     const user = await prisma.user.create({
       data: {
+        accountId: nextAccountId,
         email,
         password: hashedPassword,
         name,

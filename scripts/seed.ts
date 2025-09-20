@@ -13,6 +13,7 @@ async function main() {
     where: { email: 'admin@indiwave.com' },
     update: {},
     create: {
+      accountId: 1,
       email: 'admin@indiwave.com',
       password: hashedPassword,
       name: 'Admin User',
@@ -29,6 +30,7 @@ async function main() {
     where: { email: 'user@indiwave.com' },
     update: {},
     create: {
+      accountId: 2,
       email: 'user@indiwave.com',
       password: userPassword,
       name: 'Regular User',
@@ -45,6 +47,7 @@ async function main() {
     where: { email: 'creator@indiwave.com' },
     update: {},
     create: {
+      accountId: 3,
       email: 'creator@indiwave.com',
       password: creatorPassword,
       name: 'Creator User',

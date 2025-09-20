@@ -97,17 +97,9 @@ export const authOptions: NextAuthOptions = {
           })
 
           if (!existingUser) {
-            // Get the next account ID
-            const lastUser = await prisma.user.findFirst({
-              orderBy: { accountId: 'desc' },
-              select: { accountId: true }
-            });
-            const nextAccountId = (lastUser?.accountId || 0) + 1;
-
             // Create new user from Google OAuth
             const newUser = await prisma.user.create({
               data: {
-                accountId: nextAccountId,
                 email: user.email!,
                 name: user.name!,
                 image: user.image,

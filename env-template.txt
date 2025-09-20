@@ -15,3 +15,4 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret-here
 
 # Public Google Client ID (for client-side checks)
 NEXT_PUBLIC_GOOGLE_CLIENT_ID=your-google-client-id-here
+

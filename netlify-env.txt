@@ -6,3 +6,4 @@ NEXTAUTH_URL=https://your-site-name.netlify.app
 DATABASE_URL=file:./dev.db
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
+

@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  indiwave-app:
+    build: .
+    container_name: indiwave-local
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:./dev.db
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=94a7109fb6b7c7b5c7c6c2d31f28f5c69df641c0680f48b68467a86f379a33be
+    volumes:
+      - ./data:/app/data
+      - ./public:/app/public
+    restart: unless-stopped
+    networks:
+      - indiwave-network
+
+  # Optional: Add a PostgreSQL database for production use
+  # postgres:
+  #   image: postgres:15
+  #   container_name: indiwave-db
+  #   environment:
+  #     POSTGRES_DB: indiwave
+  #     POSTGRES_USER: indiwave
+  #     POSTGRES_PASSWORD: indiwave123
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   restart: unless-stopped
+  #   networks:
+  #     - indiwave-network
+
+networks:
+  indiwave-network:
+    driver: bridge
+
+# volumes:
+#   postgres_data:

@@ -44,7 +44,7 @@ export default function ComicCard({ comic }: ComicCardProps) {
           <span className="mono">no cover</span>
         )}
         
-        {/* MangaDex import indicator */}
+        {/* MangaMD import indicator */}
         {comic.isImported && (
           <div style={{ 
             position: "absolute", 

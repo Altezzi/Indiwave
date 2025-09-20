@@ -192,6 +192,7 @@ export default function AdminDashboard() {
   const tabs = [
     { id: "overview", label: "Overview", icon: "📊" },
     { id: "users", label: "User Management", icon: "👥" },
+    { id: "mangaMD", label: "MangaMD Import", icon: "📚" },
     { id: "audit", label: "Audit Logs", icon: "📋" },
     { id: "claims", label: "Review Queue", icon: "🔍" },
     { id: "moderation", label: "Content Moderation", icon: "🛡️" },
@@ -492,6 +493,63 @@ export default function AdminDashboard() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === "mangaMD" && (
+            <div>
+              <h2 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>
+                MangaMD Import
+              </h2>
+              
+              <div style={{
+                background: "var(--muted)",
+                padding: "24px",
+                borderRadius: "12px",
+                border: "1px solid var(--border)",
+                marginBottom: "20px"
+              }}>
+                <h3 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>
+                  Import Manga from MangaMD
+                </h3>
+                <p style={{ color: "var(--muted-foreground)", marginBottom: "16px" }}>
+                  Search and import manga metadata from MangaMD to add to your platform. 
+                  This will fetch covers, descriptions, tags, and other metadata.
+                </p>
+                <Link 
+                  href="/admin/mangaMD-import"
+                  style={{
+                    display: "inline-block",
+                    padding: "12px 24px",
+                    background: "var(--accent)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500"
+                  }}
+                >
+                  Open MangaMD Import Tool →
+                </Link>
+              </div>
+
+              <div style={{
+                background: "var(--muted)",
+                padding: "24px",
+                borderRadius: "12px",
+                border: "1px solid var(--border)"
+              }}>
+                <h3 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>
+                  Import Guidelines
+                </h3>
+                <ul style={{ color: "var(--muted-foreground)", lineHeight: "1.6" }}>
+                  <li>• Only import manga that you have permission to use</li>
+                  <li>• MangaMD metadata is used for discovery and organization</li>
+                  <li>• You'll need to assign a creator to each imported series</li>
+                  <li>• Imported series are automatically published</li>
+                  <li>• Cover images are fetched from MangaMD CDN</li>
+                </ul>
               </div>
             </div>
           )}

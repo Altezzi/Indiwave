@@ -106,6 +106,18 @@ model Series {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
+  // MangaMD integration fields
+  mangaMDId     String?   @unique // MangaMD manga ID
+  mangaMDTitle  String?   // Original MangaMD title
+  mangaMDStatus String?   // ongoing, completed, hiatus, cancelled
+  mangaMDYear   Int?      // Publication year from MangaMD
+  contentRating  String?   // safe, suggestive, erotica, pornographic
+  tags           String?   // JSON array of tags
+  authors        String?   // JSON array of author names
+  artists        String?   // JSON array of artist names
+  altTitles      String?   // JSON array of alternative titles
+  isImported     Boolean   @default(false) // Whether this series was imported from MangaMD
+
   // Creator relation
   creatorId String
   creator   User     @relation(fields: [creatorId], references: [id])

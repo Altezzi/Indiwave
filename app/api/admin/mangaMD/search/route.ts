@@ -8,6 +8,7 @@ export async function GET(request: NextRequest) {
     const session = await getServerSession(authOptions);
     
     if (!session?.user || session.user.role !== 'ADMIN') {
+      console.log('Unauthorized access attempt:', { user: session?.user?.email, role: session?.user?.role });
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
@@ -15,6 +16,8 @@ export async function GET(request: NextRequest) {
     const query = searchParams.get('q');
     const limit = parseInt(searchParams.get('limit') || '20');
     const offset = parseInt(searchParams.get('offset') || '0');
+
+    console.log('Search request:', { query, limit, offset });
 
     if (!query) {
       return NextResponse.json(
@@ -24,7 +27,9 @@ export async function GET(request: NextRequest) {
     }
 
     // Search MangaDex
+    console.log('Calling mangaMDService.searchManga...');
     const searchResults = await mangaMDService.searchManga(query, limit, offset);
+    console.log('Search results received:', { total: searchResults.total, dataLength: searchResults.data.length });
 
     // Transform the results to include only necessary data
     const transformedResults = searchResults.data.map(manga => {

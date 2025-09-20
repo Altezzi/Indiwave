@@ -65,8 +65,12 @@ export async function GET(request: NextRequest) {
       description: series.description,
       cover: series.coverImage,
       coverImage: series.coverImage,
-      author: series.authors ? JSON.parse(series.authors)[0] : undefined,
-      artist: series.artists ? JSON.parse(series.artists)[0] : undefined,
+      author: series.authors ? (() => {
+        try { return JSON.parse(series.authors)[0]; } catch { return undefined; }
+      })() : undefined,
+      artist: series.artists ? (() => {
+        try { return JSON.parse(series.artists)[0]; } catch { return undefined; }
+      })() : undefined,
       authors: series.authors,
       artists: series.artists,
       year: series.mangaMDYear || new Date(series.createdAt).getFullYear(),

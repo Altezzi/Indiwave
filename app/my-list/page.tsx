@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 
 export default function MyListPage() {
-  const [user, setUser] = useState<any>(null);
+  const { data: session, status } = useSession();
   const [activeTab, setActiveTab] = useState<"all" | "favorites">("all");
   const [followedSeries, setFollowedSeries] = useState([
     {
@@ -57,12 +58,7 @@ export default function MyListPage() {
     }
   ]);
 
-  useEffect(() => {
-    const userData = localStorage.getItem("user");
-    if (userData) {
-      setUser(JSON.parse(userData));
-    }
-  }, []);
+  // No need for useEffect since we're using NextAuth session
 
   const handleRatingChange = (seriesId: string, newRating: number) => {
     setFollowedSeries(prev => 
@@ -108,7 +104,20 @@ export default function MyListPage() {
     }
   };
 
-  if (!user) {
+  // Show loading state while checking authentication
+  if (status === "loading") {
+    return (
+      <div style={{ padding: "24px", maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
+        <h1 style={{ margin: "0 0 16px", fontSize: "24px", fontWeight: "600" }}>Loading...</h1>
+        <p style={{ margin: "0 0 24px", color: "var(--muted)" }}>
+          Checking authentication...
+        </p>
+      </div>
+    );
+  }
+
+  // Show sign-in prompt if not authenticated
+  if (!session?.user) {
     return (
       <div style={{ padding: "24px", maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
         <h1 style={{ margin: "0 0 16px", fontSize: "24px", fontWeight: "600" }}>Please Sign In</h1>

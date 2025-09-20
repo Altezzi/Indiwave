@@ -18,10 +18,30 @@ interface ComicCardProps {
 }
 
 export default function ComicCard({ comic }: ComicCardProps) {
-  // Parse JSON fields if they exist
-  const authors = comic.authors ? JSON.parse(comic.authors) : [];
-  const artists = comic.artists ? JSON.parse(comic.artists) : [];
-  const tags = comic.tags ? JSON.parse(comic.tags) : [];
+  // Parse JSON fields if they exist, with error handling
+  const authors = (() => {
+    try {
+      return comic.authors ? JSON.parse(comic.authors) : [];
+    } catch {
+      return [];
+    }
+  })();
+  
+  const artists = (() => {
+    try {
+      return comic.artists ? JSON.parse(comic.artists) : [];
+    } catch {
+      return [];
+    }
+  })();
+  
+  const tags = (() => {
+    try {
+      return comic.tags ? JSON.parse(comic.tags) : [];
+    } catch {
+      return [];
+    }
+  })();
   
   // Get the best author/artist info
   const authorInfo = authors.length > 0 ? authors.join(', ') : comic.author;

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
@@ -74,11 +74,16 @@ export default function MangaMDImportPage() {
     setSearchResults([]);
 
     try {
+      console.log('Searching for:', searchQuery);
       const response = await fetch(`/api/admin/mangaMD/search?q=${encodeURIComponent(searchQuery)}`);
+      console.log('Response status:', response.status);
+      
       const data: SearchResponse = await response.json();
+      console.log('Response data:', data);
 
       if (data.success) {
         setSearchResults(data.data);
+        console.log('Search results:', data.data);
       } else {
         setError('Failed to search MangaMD');
       }
@@ -141,9 +146,9 @@ export default function MangaMDImportPage() {
   };
 
   // Load creators on component mount
-  useState(() => {
+  useEffect(() => {
     loadCreators();
-  });
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">

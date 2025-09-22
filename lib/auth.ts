@@ -6,13 +6,18 @@ import { prisma } from "./prisma"
 
 export const authOptions: NextAuthOptions = {
   providers: [
-    // Only add Google provider if credentials are configured
-    ...(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET ? [
-      GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET
-      })
-    ] : []),
+    // Google provider
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        }
+      }
+    }),
     CredentialsProvider({
       name: "credentials",
       credentials: {
@@ -92,9 +97,17 @@ export const authOptions: NextAuthOptions = {
           })
 
           if (!existingUser) {
+            // Get the next account ID
+            const lastUser = await prisma.user.findFirst({
+              orderBy: { accountId: 'desc' },
+              select: { accountId: true }
+            });
+            const nextAccountId = (lastUser?.accountId || 0) + 1;
+
             // Create new user from Google OAuth
             const newUser = await prisma.user.create({
               data: {
+                accountId: nextAccountId,
                 email: user.email!,
                 name: user.name!,
                 image: user.image,

@@ -1,6 +1,6 @@
 # MangaMD Integration
 
-This document describes the MangaMD integration features added to IndiWave.
+This document describes the MangaMD integration features added to indiwave.
 
 ## Overview
 

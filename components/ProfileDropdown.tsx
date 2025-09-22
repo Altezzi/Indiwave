@@ -39,8 +39,6 @@ export default function ProfileDropdown() {
     router.push("/sign-in");
   };
 
-  // Debug: Log session state
-  console.log("ProfileDropdown render - session:", session);
 
   return (
     <div className="profile-dropdown" ref={dropdownRef}>
@@ -101,7 +99,25 @@ export default function ProfileDropdown() {
       </button>
       
       {isOpen && (
-        <div className="dropdown-menu">
+        <div 
+          className="dropdown-menu"
+          style={{
+            position: "absolute",
+            top: "100%",
+            right: "0",
+            marginTop: "8px",
+            minWidth: "200px",
+            background: "var(--bg)",
+            border: "1px solid var(--border)",
+            borderRadius: "12px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+            zIndex: 1001,
+            opacity: 1,
+            visibility: "visible",
+            transform: "translateY(0)",
+            transition: "all 0.2s ease"
+          }}
+        >
           {session?.user ? (
             // Logged in state
             <>

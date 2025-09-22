@@ -8,7 +8,8 @@ export async function GET(request: NextRequest) {
     // Get query parameters
     const { searchParams } = new URL(request.url);
     const includeImported = searchParams.get('includeImported') !== 'false';
-    const limit = parseInt(searchParams.get('limit') || '50');
+    const limitParam = searchParams.get('limit');
+    const limit = limitParam ? parseInt(limitParam) : null; // null means no limit
     const offset = parseInt(searchParams.get('offset') || '0');
 
     // Fetch series from database (both user-created and imported)
@@ -41,8 +42,7 @@ export async function GET(request: NextRequest) {
         }
       },
       orderBy: { createdAt: 'desc' },
-      take: limit,
-      skip: offset,
+      ...(limit !== null ? { take: limit, skip: offset } : {}),
     });
 
     // Also get static comics from JSON file
@@ -74,7 +74,9 @@ export async function GET(request: NextRequest) {
       authors: series.authors,
       artists: series.artists,
       year: series.mangaMDYear || new Date(series.createdAt).getFullYear(),
-      tags: series.tags,
+      tags: series.tags ? (() => {
+        try { return JSON.parse(series.tags); } catch { return []; }
+      })() : [],
       mangaMDStatus: series.mangaMDStatus,
       isImported: series.isImported,
       contentRating: series.contentRating,
@@ -83,6 +85,9 @@ export async function GET(request: NextRequest) {
         id: chapter.id,
         title: chapter.title,
         chapterNumber: chapter.chapterNumber,
+        pages: chapter.pages ? (() => {
+          try { return JSON.parse(chapter.pages); } catch { return []; }
+        })() : [],
       })),
       libraryCount: series._count.libraryEntries,
       createdAt: series.createdAt,

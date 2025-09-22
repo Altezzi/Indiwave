@@ -1,4 +1,4 @@
-# IndiWave Deployment with Portainer & Cloudflare
+# indiwave Deployment with Portainer & Cloudflare
 
 ## 🚀 Quick Deployment Guide
 
@@ -207,4 +207,4 @@ If you encounter issues:
 4. Check environment variables
 5. Review this troubleshooting guide
 
-Your IndiWave site should now be live at `https://indiwave.yourdomain.com`! 🎉
+Your indiwave site should now be live at `https://indiwave.yourdomain.com`! 🎉

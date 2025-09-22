@@ -212,7 +212,7 @@ export default function MyListPage() {
             transition: "border-color 0.2s ease"
           }}>
             {/* Cover Image */}
-            <Link href={`/comic/${series.id}`} style={{ textDecoration: "none" }}>
+            <Link href={`/series/${series.id}`} style={{ textDecoration: "none" }}>
               <img
                 src={series.cover}
                 alt={series.title}
@@ -232,7 +232,7 @@ export default function MyListPage() {
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "8px" }}>
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-                    <Link href={`/comic/${series.id}`} style={{ textDecoration: "none" }}>
+                    <Link href={`/series/${series.id}`} style={{ textDecoration: "none" }}>
                       <h3 style={{ 
                         margin: "0", 
                         fontSize: "20px", 

@@ -364,7 +364,7 @@
     ]
   },
   "import_instructions": {
-    "step_1": "Go to Bubble.io and create a new app called 'IndiWave'",
+    "step_1": "Go to Bubble.io and create a new app called 'indiwave'",
     "step_2": "Navigate to the Data tab in your Bubble app",
     "step_3": "Create the following data types with the specified fields:",
     "data_types_to_create": [

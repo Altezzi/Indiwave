@@ -33,10 +33,14 @@ export async function GET(request: NextRequest) {
 
     // Transform the results to include only necessary data
     const transformedResults = searchResults.data.map(manga => {
+      // Debug: log the full manga object structure
+      console.log('Full manga object:', JSON.stringify(manga, null, 2));
+      
       const title = mangaMDService.getBestTitle(manga);
       const description = mangaMDService.getBestDescription(manga);
       const { authors, artists } = mangaMDService.getAuthorsAndArtists(manga);
       const allTags = mangaMDService.getAllTags(manga);
+      const coverUrl = mangaMDService.getCoverUrlFromManga(manga);
 
       return {
         id: manga.id,
@@ -49,6 +53,7 @@ export async function GET(request: NextRequest) {
         artists,
         tags: allTags,
         altTitles: manga.altTitles || [],
+        coverUrl,
       };
     });
 

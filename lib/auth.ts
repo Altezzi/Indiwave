@@ -10,14 +10,7 @@ export const authOptions: NextAuthOptions = {
     ...(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET ? [
       GoogleProvider({
         clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        authorization: {
-          params: {
-            prompt: "consent",
-            access_type: "offline",
-            response_type: "code"
-          }
-        }
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET
       })
     ] : []),
     CredentialsProvider({
@@ -88,6 +81,8 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     async signIn({ user, account, profile }) {
+      console.log("SignIn callback - user:", user?.email, "account:", account?.provider)
+      
       // Handle Google OAuth sign in
       if (account?.provider === "google") {
         try {

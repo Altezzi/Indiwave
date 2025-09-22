@@ -1,4 +1,4 @@
-# IndiWave - Comic Platform
+# indiwave - Comic Platform
 
 A modern web platform for reading and sharing comics, built with Next.js 14, featuring a comprehensive role-based admin system.
 

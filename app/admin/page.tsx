@@ -193,6 +193,7 @@ export default function AdminDashboard() {
     { id: "overview", label: "Overview", icon: "📊" },
     { id: "users", label: "User Management", icon: "👥" },
     { id: "mangaMD", label: "MangaMD Import", icon: "📚" },
+    { id: "curation", label: "Manga Curation", icon: "🎨" },
     { id: "audit", label: "Audit Logs", icon: "📋" },
     { id: "claims", label: "Review Queue", icon: "🔍" },
     { id: "moderation", label: "Content Moderation", icon: "🛡️" },
@@ -550,6 +551,44 @@ export default function AdminDashboard() {
                   <li>• Imported series are automatically published</li>
                   <li>• Cover images are fetched from MangaMD CDN</li>
                 </ul>
+              </div>
+            </div>
+          )}
+
+          {activeTab === "curation" && (
+            <div>
+              <h2 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>
+                Manga Curation
+              </h2>
+              
+              <div style={{
+                background: "var(--muted)",
+                padding: "24px",
+                borderRadius: "12px",
+                border: "1px solid var(--border)",
+                marginBottom: "20px"
+              }}>
+                <h3 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>
+                  Review and Manage Imported Manga
+                </h3>
+                <p style={{ color: "var(--muted-foreground)", marginBottom: "16px" }}>
+                  Review imported manga from MangaDex, publish or unpublish manga, and manage your library.
+                </p>
+                <Link
+                  href="/admin/manga-curation"
+                  style={{
+                    display: "inline-block",
+                    background: "var(--accent)",
+                    color: "white",
+                    padding: "12px 24px",
+                    borderRadius: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    textDecoration: "none"
+                  }}
+                >
+                  Open Manga Curation Tool →
+                </Link>
               </div>
             </div>
           )}

@@ -64,6 +64,34 @@ export interface MangaMDAuthor {
   };
 }
 
+export interface MangaMDChapter {
+  id: string;
+  type: string;
+  attributes: {
+    title?: string;
+    volume?: string;
+    chapter?: string;
+    pages: number;
+    translatedLanguage: string;
+    uploader?: string;
+    externalUrl?: string;
+    version: number;
+    createdAt: string;
+    updatedAt: string;
+    publishAt: string;
+    readableAt: string;
+  };
+  relationships: Array<{
+    id: string;
+    type: string;
+    attributes?: {
+      name?: string;
+      fileName?: string;
+      [key: string]: any;
+    };
+  }>;
+}
+
 export interface MangaMDSearchResult {
   result: string;
   response: string;
@@ -116,38 +144,80 @@ class MangaMDService {
     
     const response = await fetch(url, {
       headers: {
-        'User-Agent': 'IndiWave/1.0 (MangaMD Integration)',
+        'User-Agent': 'indiwave/1.0 (MangaMD Integration)',
       },
     });
 
     if (!response.ok) {
-      throw new Error(`MangaMD API error: ${response.status} ${response.statusText}`);
+      // Try to get error details from response
+      let errorDetails = '';
+      try {
+        const errorData = await response.text();
+        errorDetails = ` - ${errorData}`;
+      } catch (e) {
+        // Ignore if we can't parse error response
+      }
+      
+      throw new Error(`MangaMD API error: ${response.status} ${response.statusText}${errorDetails}`);
     }
 
     return response;
   }
 
   async searchManga(query: string, limit = 20, offset = 0): Promise<MangaMDSearchResult> {
-    const searchParams = new URLSearchParams({
-      title: query,
-      limit: limit.toString(),
-      offset: offset.toString(),
-      'contentRating[]': 'safe,suggestive',
-      'order[relevance]': 'desc',
-      'includes[]': 'cover_art,author,artist',
-    });
+    try {
+      // Try the full search first
+      const searchParams = new URLSearchParams();
+      
+      // Add title search
+      searchParams.append('title', query);
+      
+      // Add pagination
+      searchParams.append('limit', limit.toString());
+      searchParams.append('offset', offset.toString());
+      
+      // Add content ratings (safe and suggestive only)
+      searchParams.append('contentRating[]', 'safe');
+      searchParams.append('contentRating[]', 'suggestive');
+      
+      // Add ordering
+      searchParams.append('order[relevance]', 'desc');
+      
+      // Add includes
+      searchParams.append('includes[]', 'cover_art');
+      searchParams.append('includes[]', 'author');
+      searchParams.append('includes[]', 'artist');
 
-    const url = `${this.baseUrl}/manga?${searchParams}`;
-    const response = await this.fetchWithRateLimit(url);
-    return response.json();
+      const url = `${this.baseUrl}/manga?${searchParams.toString()}`;
+      console.log('MangaDex search URL:', url);
+      
+      const response = await this.fetchWithRateLimit(url);
+      return response.json();
+    } catch (error) {
+      console.log('Full search failed, trying simplified search:', error);
+      
+      // Fallback to a simpler search
+      const simpleParams = new URLSearchParams({
+        title: query,
+        limit: limit.toString(),
+        offset: offset.toString(),
+      });
+
+      const simpleUrl = `${this.baseUrl}/manga?${simpleParams.toString()}`;
+      console.log('MangaDex simple search URL:', simpleUrl);
+      
+      const response = await this.fetchWithRateLimit(simpleUrl);
+      return response.json();
+    }
   }
 
   async getMangaById(id: string): Promise<MangaMDManga> {
-    const searchParams = new URLSearchParams({
-      'includes[]': 'cover_art,author,artist',
-    });
+    const searchParams = new URLSearchParams();
+    searchParams.append('includes[]', 'cover_art');
+    searchParams.append('includes[]', 'author');
+    searchParams.append('includes[]', 'artist');
 
-    const url = `${this.baseUrl}/manga/${id}?${searchParams}`;
+    const url = `${this.baseUrl}/manga/${id}?${searchParams.toString()}`;
     const response = await this.fetchWithRateLimit(url);
     const result = await response.json();
     
@@ -159,12 +229,11 @@ class MangaMDService {
   }
 
   async getMangaCovers(mangaId: string): Promise<MangaMDCoverResult> {
-    const searchParams = new URLSearchParams({
-      'manga[]': mangaId,
-      limit: '100',
-    });
+    const searchParams = new URLSearchParams();
+    searchParams.append('manga[]', mangaId);
+    searchParams.append('limit', '100');
 
-    const url = `${this.baseUrl}/cover?${searchParams}`;
+    const url = `${this.baseUrl}/cover?${searchParams.toString()}`;
     const response = await this.fetchWithRateLimit(url);
     return response.json();
   }
@@ -183,12 +252,35 @@ class MangaMDService {
 
   // Helper method to get the best available title
   getBestTitle(manga: MangaMDManga): string {
-    return manga.title.en || manga.title.ja || Object.values(manga.title)[0] || 'Unknown Title';
+    // Check if manga has attributes and title
+    if (!manga.attributes || !manga.attributes.title) {
+      console.log('No title found in manga attributes');
+      return 'Unknown Title';
+    }
+    
+    const title = manga.attributes.title;
+    
+    // Debug: log the title structure
+    console.log('Title structure for manga ID', manga.id, ':', JSON.stringify(title, null, 2));
+    
+    // Try different title formats
+    if (typeof title === 'string') {
+      return title;
+    }
+    
+    if (typeof title === 'object') {
+      // Try English first, then Japanese, then any other language
+      return title.en || title.ja || Object.values(title)[0] || 'Unknown Title';
+    }
+    
+    return 'Unknown Title';
   }
 
   // Helper method to get the best available description
   getBestDescription(manga: MangaMDManga): string {
-    return manga.description.en || manga.description.ja || Object.values(manga.description)[0] || '';
+    if (!manga.attributes || !manga.attributes.description) return '';
+    const description = manga.attributes.description;
+    return description.en || description.ja || Object.values(description)[0] || '';
   }
 
   // Helper method to get cover image URL
@@ -203,18 +295,42 @@ class MangaMDService {
     return `${baseUrl}/${cover.relationships[0]?.id}/${cover.attributes.fileName}${sizeMap[size]}`;
   }
 
+  // Helper method to get cover URL from manga relationships
+  getCoverUrlFromManga(manga: MangaMDManga, size: 'small' | 'medium' | 'large' = 'medium'): string | null {
+    if (!manga.relationships || !Array.isArray(manga.relationships)) {
+      return null;
+    }
+
+    // Find cover art relationship
+    const coverRel = manga.relationships.find(rel => rel.type === 'cover_art');
+    if (!coverRel || !coverRel.attributes?.fileName) {
+      return null;
+    }
+
+    const baseUrl = 'https://uploads.mangadex.org/covers';
+    const sizeMap = {
+      small: '.256.jpg',
+      medium: '.512.jpg',
+      large: '.512.jpg'
+    };
+    
+    return `${baseUrl}/${manga.id}/${coverRel.attributes.fileName}${sizeMap[size]}`;
+  }
+
   // Helper method to extract tags by group
   getTagsByGroup(manga: MangaMDManga, group: 'content' | 'format' | 'genre' | 'theme'): string[] {
-    return manga.tags
-      .filter(tag => tag.attributes.group === group)
-      .map(tag => tag.attributes.name.en || Object.values(tag.attributes.name)[0])
+    if (!manga.attributes?.tags || !Array.isArray(manga.attributes.tags)) return [];
+    return manga.attributes.tags
+      .filter(tag => tag?.attributes?.group === group)
+      .map(tag => tag?.attributes?.name?.en || Object.values(tag?.attributes?.name || {})[0])
       .filter(Boolean);
   }
 
   // Helper method to get all tags as a flat array
   getAllTags(manga: MangaMDManga): string[] {
-    return manga.tags
-      .map(tag => tag.attributes.name.en || Object.values(tag.attributes.name)[0])
+    if (!manga.attributes?.tags || !Array.isArray(manga.attributes.tags)) return [];
+    return manga.attributes.tags
+      .map(tag => tag?.attributes?.name?.en || Object.values(tag?.attributes?.name || {})[0])
       .filter(Boolean);
   }
 
@@ -222,6 +338,10 @@ class MangaMDService {
   getAuthorsAndArtists(manga: MangaMDManga): { authors: string[]; artists: string[] } {
     const authors: string[] = [];
     const artists: string[] = [];
+
+    if (!manga.relationships || !Array.isArray(manga.relationships)) {
+      return { authors, artists };
+    }
 
     manga.relationships.forEach(rel => {
       if (rel.type === 'author' && rel.attributes?.name) {
@@ -232,6 +352,59 @@ class MangaMDService {
     });
 
     return { authors, artists };
+  }
+
+  async getMangaChapters(mangaId: string, limit: number = 100, offset: number = 0): Promise<{ result: string; response: string; data: MangaMDChapter[]; limit: number; offset: number; total: number }> {
+    const searchParams = new URLSearchParams();
+    searchParams.append('manga', mangaId);
+    searchParams.append('limit', limit.toString());
+    searchParams.append('offset', offset.toString());
+    searchParams.append('translatedLanguage[]', 'en'); // Only get English chapters
+    searchParams.append('order[chapter]', 'asc'); // Order by chapter number ascending
+
+    const url = `${this.baseUrl}/chapter?${searchParams.toString()}`;
+    console.log('MangaDex chapters URL:', url);
+    
+    const response = await this.fetchWithRateLimit(url);
+    const result = await response.json();
+    
+    if (result.result !== 'ok') {
+      throw new Error(`Failed to fetch chapters: ${result.result}`);
+    }
+    
+    return result;
+  }
+
+  // Fetch ALL chapters for a manga (handles pagination automatically)
+  async getAllMangaChapters(mangaId: string): Promise<MangaMDChapter[]> {
+    console.log('Fetching ALL chapters for manga:', mangaId);
+    
+    const allChapters: MangaMDChapter[] = [];
+    let offset = 0;
+    const limit = 100; // MangaDex max per request
+    let hasMore = true;
+
+    while (hasMore) {
+      console.log(`Fetching chapters batch: offset ${offset}, limit ${limit}`);
+      
+      const batch = await this.getMangaChapters(mangaId, limit, offset);
+      allChapters.push(...batch.data);
+      
+      console.log(`Fetched ${batch.data.length} chapters in this batch`);
+      
+      // Check if we've got all chapters
+      if (batch.data.length < limit || allChapters.length >= batch.total) {
+        hasMore = false;
+      } else {
+        offset += limit;
+      }
+      
+      // Add a small delay to be respectful to the API
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+
+    console.log(`Total chapters fetched: ${allChapters.length}`);
+    return allChapters;
   }
 }
 

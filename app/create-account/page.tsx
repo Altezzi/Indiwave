@@ -271,14 +271,9 @@ export default function CreateAccountPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             <button 
               type="button" 
-              onClick={() => {
-                // Check if Google OAuth is configured
-                if (!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID) {
-                  alert("Google OAuth is not configured. Please set up Google OAuth credentials to use this feature.");
-                  return;
-                }
-                signIn("google", { callbackUrl: "/" });
-              }}
+                  onClick={() => {
+                    signIn("google", { callbackUrl: "/" });
+                  }}
               style={{ 
                 display: "flex", 
                 alignItems: "center", 

@@ -1,16 +1,16 @@
-# Deployment Guide for IndiWave
+# Deployment Guide for indiwave
 
 ## 🚀 Netlify Deployment
 
 ### Prerequisites
-- GitHub repository with your IndiWave code
+- GitHub repository with your indiwave code
 - Netlify account
 
 ### Step 1: Connect Repository
 1. Go to [Netlify](https://netlify.com)
 2. Click "New site from Git"
 3. Connect your GitHub repository
-4. Select your IndiWave repository
+4. Select your indiwave repository
 
 ### Step 2: Build Settings
 The following settings are already configured in `netlify.toml`:

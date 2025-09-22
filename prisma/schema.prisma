@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,18 +7,6 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-// User roles enum based on ROLES.md
-enum UserRole {
-  USER
-  CREATOR
-  REVIEWER
-  UPLOAD_TEAM
-  MODERATOR
-  SENIOR_MOD
-  ADMIN
-}
-
-// Account model for NextAuth.js
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -35,13 +20,11 @@ model Account {
   scope             String?
   id_token          String?
   session_state     String?
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }
 
-// Session model for NextAuth.js
 model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique
@@ -50,7 +33,6 @@ model Session {
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
-// Verification token model for NextAuth.js
 model VerificationToken {
   identifier String
   token      String   @unique
@@ -59,161 +41,182 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
-// Main User model
+enum UserRole {
+  USER
+  CREATOR
+  REVIEWER
+  UPLOAD_TEAM
+  MODERATOR
+  SENIOR_MOD
+  ADMIN
+}
+
 model User {
-  id            String    @id @default(cuid())
-  accountId     Int       @unique // Sequential account ID for tracking (will be set manually)
-  email         String    @unique
-  emailVerified DateTime?
-  name          String?
-  username      String?   @unique
-  password      String?   // For credentials login
-  image         String?
-  role          UserRole  @default(USER)
-  isCreator     Boolean   @default(false)
-  isSilenced    Boolean   @default(false)
-  silencedUntil DateTime?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-
-  // Profile settings
-  profilePicture String?
-  cropSettings   String? // JSON string for crop settings
-
-  // NextAuth.js relations
-  accounts Account[]
-  sessions Session[]
-
-  // Creator relations
-  createdSeries Series[]
+  id              String         @id @default(cuid())
+  accountId       Int?           @unique
+  email           String         @unique
+  emailVerified   DateTime?
+  name            String?
+  username        String?        @unique
+  password        String?
+  image           String?
+  role            UserRole       @default(USER)
+  isCreator       Boolean        @default(false)
+  isSilenced      Boolean        @default(false)
+  silencedUntil   DateTime?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  profilePicture  String?
+  cropSettings    String?
+  accounts        Account[]
+  sessions        Session[]
+  auditLogs       AuditLog[]
   createdChapters Chapter[]
-
-  // User interactions
-  comments Comment[]
-  libraryEntries LibraryEntry[]
-  creatorClaims CreatorClaim[]
-  auditLogs AuditLog[]
+  comments        Comment[]
+  creatorClaims   CreatorClaim[]
+  libraryEntries  LibraryEntry[]
+  createdSeries   Series[]
+  userUrls        UserUrl[]
+  ratings         Rating[]
 
   @@map("users")
 }
 
-// Series model
 model Series {
-  id          String   @id @default(cuid())
-  title       String
-  description String?
-  coverImage  String?
-  isPublished Boolean  @default(false)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  // MangaMD integration fields
-  mangaMDId     String?   @unique // MangaMD manga ID
-  mangaMDTitle  String?   // Original MangaMD title
-  mangaMDStatus String?   // ongoing, completed, hiatus, cancelled
-  mangaMDYear   Int?      // Publication year from MangaMD
-  contentRating  String?   // safe, suggestive, erotica, pornographic
-  tags           String?   // JSON array of tags
-  authors        String?   // JSON array of author names
-  artists        String?   // JSON array of artist names
-  altTitles      String?   // JSON array of alternative titles
-  isImported     Boolean   @default(false) // Whether this series was imported from MangaMD
-
-  // Creator relation
-  creatorId String
-  creator   User     @relation(fields: [creatorId], references: [id])
-
-  // Series content
-  chapters Chapter[]
+  id             String         @id @default(cuid())
+  title          String
+  description    String?
+  coverImage     String?
+  isPublished    Boolean        @default(false)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  mangaMDId      String?        @unique
+  mangaMDTitle   String?
+  mangaMDStatus  String?
+  mangaMDYear    Int?
+  contentRating  String?
+  tags           String?
+  authors        String?
+  artists        String?
+  altTitles      String?
+  isImported     Boolean        @default(false)
+  creatorId      String
+  chapters       Chapter[]
+  creatorClaims  CreatorClaim[]
   libraryEntries LibraryEntry[]
-  creatorClaims CreatorClaim[]
+  ratings        Rating[]
+  creator        User           @relation(fields: [creatorId], references: [id])
 
   @@map("series")
 }
 
-// Chapter model
 model Chapter {
-  id          String   @id @default(cuid())
-  title       String
+  id            String    @id @default(cuid())
+  title         String
   chapterNumber Int
-  pages       String   // JSON string of page URLs/paths
-  isPublished Boolean  @default(false)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  // Relations
-  seriesId String
-  series   Series @relation(fields: [seriesId], references: [id], onDelete: Cascade)
-  creatorId String
-  creator   User   @relation(fields: [creatorId], references: [id])
-
-  // Chapter content
-  comments Comment[]
+  pages         String
+  isPublished   Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  seriesId      String
+  creatorId     String
+  creator       User      @relation(fields: [creatorId], references: [id])
+  series        Series    @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  comments      Comment[]
+  
+  // MangaDex import fields
+  mangaMDChapterId       String?
+  mangaMDChapterTitle    String?
+  mangaMDChapterNumber   Float?
+  mangaMDPages           Int?
+  mangaMDTranslatedLanguage String?
+  mangaMDPublishAt       DateTime?
 
   @@map("chapters")
 }
 
-// Comment model
 model Comment {
   id        String   @id @default(cuid())
   content   String
   isHidden  Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-  // Relations
   userId    String
-  user      User    @relation(fields: [userId], references: [id])
-  chapterId String
-  chapter   Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  seriesId  String
+  chapterId String?
+  chapter   Chapter? @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id])
 
   @@map("comments")
 }
 
-// User's library (saved series)
+model UserUrl {
+  id        String   @id @default(cuid())
+  url       String
+  label     String
+  chapterId String?
+  seriesId  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_urls")
+}
+
 model LibraryEntry {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-
-  // Relations
-  userId  String
-  user    User   @relation(fields: [userId], references: [id])
-  seriesId String
-  series  Series @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  updatedAt DateTime @updatedAt
+  userId    String
+  seriesId  String
+  status    String?  @default("READING")
+  rating    Int?
+  notes     String?
+  series    Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id])
 
   @@unique([userId, seriesId])
   @@map("library_entries")
 }
 
-// Creator claim requests
-model CreatorClaim {
-  id          String   @id @default(cuid())
-  status      String   @default("pending") // pending, approved, rejected
-  evidence    String?  // Evidence provided by the claimant
-  notes       String?  // Admin notes
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+model Rating {
+  id        String   @id @default(cuid())
+  rating    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String
+  seriesId  String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  series    Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
 
-  // Relations
+  @@unique([userId, seriesId])
+  @@map("ratings")
+}
+
+model CreatorClaim {
+  id         String   @id @default(cuid())
+  status     String   @default("pending")
+  evidence   String?
+  notes      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
   claimantId String
-  claimant   User   @relation(fields: [claimantId], references: [id])
   seriesId   String
-  series     Series @relation(fields: [seriesId], references: [id])
+  series     Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  claimant   User     @relation(fields: [claimantId], references: [id])
 
   @@map("creator_claims")
 }
 
-// Audit log for tracking privileged actions
 model AuditLog {
   id        String   @id @default(cuid())
-  action    String   // e.g., "role_change", "content_upload", "moderation_action"
-  target    String?  // Target user/content ID
-  details   String?  // JSON string with additional details
+  action    String
+  target    String?
+  details   String?
   createdAt DateTime @default(now())
-
-  // Relations
-  actorId String
-  actor   User   @relation(fields: [actorId], references: [id])
+  actorId   String
+  actor     User     @relation(fields: [actorId], references: [id])
 
   @@map("audit_logs")
 }

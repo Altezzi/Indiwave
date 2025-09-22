@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 
 interface Chapter {
   id: string;
@@ -45,7 +45,8 @@ interface UserUrl {
 export default function SeriesPage() {
   const params = useParams();
   const router = useRouter();
-  const { data: session } = useSession();
+  // const { data: session, status } = useSession();
+  const session = null; // Temporarily disable NextAuth
   const [comic, setComic] = useState<Comic | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
@@ -63,8 +64,8 @@ export default function SeriesPage() {
     if (params.id) {
       fetchComicData(params.id as string);
       fetchComments(params.id as string);
+      fetchUserUrls(params.id as string); // Always fetch user URLs now
       if (session?.user?.id) {
-        fetchUserUrls(params.id as string);
         fetchUserRating(params.id as string);
         fetchFollowStatus(params.id as string);
       }
@@ -105,13 +106,16 @@ export default function SeriesPage() {
 
          const fetchUserUrls = async (seriesId: string) => {
            try {
-             const response = await fetch(`/api/user-urls?seriesId=${seriesId}`);
-             if (response.ok) {
-               const data = await response.json();
-               setUserUrls(data.userUrls || []);
+             // For now, load from localStorage since NextAuth is disabled
+             const storedUrls = localStorage.getItem(`userUrls_${seriesId}`);
+             if (storedUrls) {
+               setUserUrls(JSON.parse(storedUrls));
+             } else {
+               setUserUrls([]);
              }
            } catch (error) {
              console.error("Error fetching user URLs:", error);
+             setUserUrls([]);
            }
          };
 
@@ -176,56 +180,58 @@ export default function SeriesPage() {
   };
 
          const handleSaveUrl = async () => {
-           if (!newUrl.trim() || !newLabel.trim() || !session?.user || !params.id) return;
+           if (!newUrl.trim() || !newLabel.trim() || !params.id) return;
 
+           // For now, store in localStorage since NextAuth is disabled
            try {
-             const response = await fetch("/api/user-urls", {
-               method: "POST",
-               headers: {
-                 "Content-Type": "application/json",
-               },
-               body: JSON.stringify({
-                 seriesId: params.id,
-                 url: newUrl.trim(),
-                 label: newLabel.trim(),
-               }),
-             });
+             const newUserUrl = {
+               id: Date.now().toString(),
+               url: newUrl.trim(),
+               label: newLabel.trim(),
+               userId: 'local-user',
+               seriesId: params.id
+             };
 
-             if (response.ok) {
-               setNewUrl("");
-               setNewLabel("");
-               setShowUrlForm(false);
-               fetchUserUrls(params.id as string);
-               alert("Reading site added successfully!");
-             } else {
-               const errorData = await response.json();
-               alert(`Failed to add reading site: ${errorData.error || "Unknown error"}`);
-             }
+             // Get existing URLs from localStorage
+             const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${params.id}`) || '[]');
+             existingUrls.push(newUserUrl);
+             
+             // Save back to localStorage
+             localStorage.setItem(`userUrls_${params.id}`, JSON.stringify(existingUrls));
+             
+             // Update state
+             setUserUrls(existingUrls);
+             setNewUrl("");
+             setNewLabel("");
+             setShowUrlForm(false);
+             
+             alert("Reading option added successfully!");
            } catch (error) {
              console.error("Error saving URL:", error);
-             alert("Failed to add reading site. Please try again.");
+             alert("Failed to add reading option. Please try again.");
            }
          };
 
   const handleDeleteUrl = async (urlId: string) => {
-    if (!confirm("Are you sure you want to delete this reading site?")) {
+    if (!confirm("Are you sure you want to delete this reading option?")) {
       return;
     }
 
     try {
-      const response = await fetch(`/api/user-urls/${urlId}`, {
-        method: "DELETE",
-      });
-
-      if (response.ok) {
-        fetchUserUrls(params.id as string);
-        alert("Reading site deleted successfully!");
-      } else {
-        alert("Failed to delete reading site. Please try again.");
-      }
+      // Get existing URLs from localStorage
+      const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${params.id}`) || '[]');
+      const updatedUrls = existingUrls.filter((url: any) => url.id !== urlId);
+      
+      // Save back to localStorage
+      localStorage.setItem(`userUrls_${params.id}`, JSON.stringify(updatedUrls));
+      
+      // Update state
+      setUserUrls(updatedUrls);
+      
+      alert("Reading option deleted successfully!");
     } catch (error) {
       console.error("Error deleting URL:", error);
-      alert("Failed to delete reading site. Please try again.");
+      alert("Failed to delete reading option. Please try again.");
     }
   };
 
@@ -589,8 +595,8 @@ export default function SeriesPage() {
 
         {/* Sidebar */}
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-          {/* Reading Sites Section */}
-          {session?.user && (
+          {/* Where to Read Section */}
+          {(
             <div style={{ 
               background: "rgba(var(--bg-rgb, 18, 18, 18), 0.6)",
               borderRadius: "16px",
@@ -603,13 +609,95 @@ export default function SeriesPage() {
                 margin: "0 0 20px 0",
                 color: "var(--fg)"
               }}>
-                Reading Sites
+                Where to Read
               </h2>
 
-              {/* Reading Site Buttons */}
+              {/* Where to Read Buttons */}
               <div style={{ marginBottom: "16px" }}>
-                {userUrls.length > 0 ? (
-                  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                {/* Default Reading Options */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                  <a
+                    href={`https://mangadex.org/title/${comic?.id || ''}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      padding: "12px 16px",
+                      background: "var(--accent)",
+                      color: "white",
+                      textDecoration: "none",
+                      borderRadius: "8px",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      textAlign: "center",
+                      transition: "opacity 0.2s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = "0.9";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = "1";
+                    }}
+                  >
+                    📖 Read on MangaDex
+                  </a>
+                  
+                  <a
+                    href={`https://mangakakalot.com/search/story/${encodeURIComponent(comic?.title || '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      padding: "12px 16px",
+                      background: "var(--accent)",
+                      color: "white",
+                      textDecoration: "none",
+                      borderRadius: "8px",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      textAlign: "center",
+                      transition: "opacity 0.2s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = "0.9";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = "1";
+                    }}
+                  >
+                    📚 Search on MangaKakalot
+                  </a>
+                  
+                  <a
+                    href={`https://mangasee123.com/search/?name=${encodeURIComponent(comic?.title || '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      padding: "12px 16px",
+                      background: "var(--accent)",
+                      color: "white",
+                      textDecoration: "none",
+                      borderRadius: "8px",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      textAlign: "center",
+                      transition: "opacity 0.2s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = "0.9";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = "1";
+                    }}
+                  >
+                    🔍 Search on MangaSee
+                  </a>
+                </div>
+
+                {/* User Custom URLs (if any) */}
+                {userUrls.length > 0 && (
+                  <div style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                    <h3 style={{ fontSize: "16px", fontWeight: "600", margin: "0 0 8px 0", color: "var(--fg)" }}>
+                      Your Reading Options
+                    </h3>
                     {userUrls.map((userUrl) => (
                       <div key={userUrl.id} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                         <a
@@ -619,8 +707,8 @@ export default function SeriesPage() {
                           style={{
                             flex: 1,
                             padding: "12px 16px",
-                            background: "var(--accent)",
-                            color: "white",
+                            background: "var(--border)",
+                            color: "var(--fg)",
                             textDecoration: "none",
                             borderRadius: "8px",
                             fontSize: "14px",
@@ -651,48 +739,42 @@ export default function SeriesPage() {
                             alignItems: "center",
                             justifyContent: "center"
                           }}
-                          title="Delete this reading site"
+                          title="Delete this reading option"
                         >
                           ×
                         </button>
                       </div>
                     ))}
                   </div>
-                ) : (
-                  <p style={{ 
-                    color: "var(--muted-foreground)", 
-                    fontSize: "14px",
-                    margin: "0 0 16px 0"
-                  }}>
-                    Add reading sites for this series (only you can see them).
-                  </p>
                 )}
               </div>
 
-              {/* Add New Site Button */}
-              <button
-                onClick={() => setShowUrlForm(true)}
-                style={{
-                  width: "100%",
-                  padding: "8px 16px",
-                  background: "var(--border)",
-                  color: "var(--fg)",
-                  border: "none",
-                  borderRadius: "6px",
-                  fontSize: "14px",
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "8px"
-                }}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="12" y1="5" x2="12" y2="19"/>
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                </svg>
-                Add Reading Site
-              </button>
+              {/* Add New Site Button - Temporarily allow for all users */}
+              {(
+                <button
+                  onClick={() => setShowUrlForm(true)}
+                  style={{
+                    width: "100%",
+                    padding: "8px 16px",
+                    background: "var(--border)",
+                    color: "var(--fg)",
+                    border: "none",
+                    borderRadius: "6px",
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "8px"
+                  }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                  Add Reading Option
+                </button>
+              )}
             </div>
           )}
 
@@ -866,7 +948,7 @@ export default function SeriesPage() {
               fontWeight: "600",
               color: "var(--fg)"
             }}>
-              Add Reading Site
+              Add Reading Option
             </h3>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -884,7 +966,7 @@ export default function SeriesPage() {
                   type="text"
                   value={newLabel}
                   onChange={(e) => setNewLabel(e.target.value)}
-                  placeholder="e.g., Official, MangaDex, Fan Translation"
+                  placeholder="e.g., Official, Fan Translation, My Site"
                   style={{
                     width: "100%",
                     padding: "12px 16px",
@@ -912,7 +994,7 @@ export default function SeriesPage() {
                   type="url"
                   value={newUrl}
                   onChange={(e) => setNewUrl(e.target.value)}
-                  placeholder="https://example.com/series"
+                  placeholder="https://example.com/read"
                   style={{
                     width: "100%",
                     padding: "12px 16px",
@@ -967,7 +1049,7 @@ export default function SeriesPage() {
                   opacity: newUrl.trim() && newLabel.trim() ? 1 : 0.5
                 }}
               >
-                Add Site
+                Add Option
               </button>
             </div>
           </div>

@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     // Fetch comics data for search
     const fetchComics = async () => {
       try {
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3003";
         const res = await fetch(`${baseUrl}/api/comics`, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();

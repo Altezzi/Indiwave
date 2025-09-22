@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 
 interface Chapter {
   id: string;
@@ -44,7 +44,8 @@ interface UserUrl {
 export default function ChapterPage() {
   const params = useParams();
   const router = useRouter();
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
+  const session = null; // Temporarily disable NextAuth
   const [series, setSeries] = useState<Series | null>(null);
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);

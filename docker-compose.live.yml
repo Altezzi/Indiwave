@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: indiwave-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - indiwave-app
+    restart: unless-stopped
+    networks:
+      - indiwave-network
+
+  indiwave-app:
+    image: indiwave:latest
+    container_name: indiwave-prod
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:./dev.db
+      - NEXTAUTH_URL=https://indiwave.io
+      - NEXTAUTH_SECRET=4702b5e97e6ea07133f16d3659162286c2c58e932c0203393a82dc153c2e337e
+      - GOOGLE_CLIENT_ID=959986325042-o5pqr065tc2dm267ub4f8pnkp4bigs34.apps.googleusercontent.com
+      - GOOGLE_CLIENT_SECRET=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
+      - NEXT_PUBLIC_GOOGLE_CLIENT_ID=959986325042-o5pqr065tc2dm267ub4f8pnkp4bigs34.apps.googleusercontent.com
+    volumes:
+      - indiwave_data:/app/data
+      - indiwave_public:/app/public
+    restart: unless-stopped
+    networks:
+      - indiwave-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  indiwave-network:
+    driver: bridge
+
+volumes:
+  indiwave_data:
+    driver: local
+  indiwave_public:
+    driver: local

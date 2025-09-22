@@ -28,8 +28,8 @@ export async function POST(request: NextRequest) {
     // Check if series already exists
     console.log('Checking if series already exists...');
     const existingSeries = await prisma.series.findFirst({
-      where: { 
-        title: { contains: mangaTitle, mode: 'insensitive' }
+      where: {
+        title: { contains: mangaTitle }
       }
     });
 

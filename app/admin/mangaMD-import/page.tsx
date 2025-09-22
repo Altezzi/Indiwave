@@ -143,8 +143,7 @@ export default function MangaMDImportPage() {
       }
 
       if (data.success) {
-        const chapterInfo = data.chapters ? ` with ${data.chapters.count} chapters` : '';
-        setSuccess(`✅ Successfully imported "${title}" to the public library${chapterInfo} and added MangaDex reading site!`);
+        setSuccess(`✅ Successfully imported "${title}" to the public library and added MangaDex reading site!`);
         // Remove the imported manga from search results
         setSearchResults(prev => prev.filter(manga => manga.id !== mangaId));
         // Show success message for 5 seconds
@@ -199,8 +198,7 @@ export default function MangaMDImportPage() {
       }
 
       if (data.success) {
-        const chapterInfo = data.chapters ? ` with ${data.chapters.count} chapters` : '';
-        setSuccess(`✅ Test import successful! "${title}" has been added to the public library${chapterInfo}!`);
+        setSuccess(`✅ Test import successful! "${title}" has been added to the public library!`);
         // Remove the imported manga from search results
         setSearchResults(prev => prev.filter(manga => manga.id !== mangaId));
         // Show success message for 5 seconds

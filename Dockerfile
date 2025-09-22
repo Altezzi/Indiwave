@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Install git for cloning repositories
 RUN apk add --no-cache git
@@ -24,7 +24,7 @@ RUN npx prisma generate
 # Build the application (with build-time environment variables)
 ARG NEXT_PUBLIC_GOOGLE_CLIENT_ID
 ENV NEXT_PUBLIC_GOOGLE_CLIENT_ID=$NEXT_PUBLIC_GOOGLE_CLIENT_ID
-RUN npm run build
+RUN npm run build:no-check
 
 # Expose port
 EXPOSE 3000

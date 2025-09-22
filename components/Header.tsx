@@ -56,6 +56,7 @@ export default function Header({
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "20px", flex: 1, justifyContent: "center", overflow: "visible" }}>
           <div 
+            className="search-container"
             style={{ 
               position: "relative", 
               display: "flex", 
@@ -100,7 +101,7 @@ export default function Header({
             />
             
             {/* Keyboard shortcut hint */}
-            <div style={{
+            <div className="keyboard-shortcut" style={{
               display: "flex",
               alignItems: "center",
               gap: "4px",

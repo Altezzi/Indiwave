@@ -41,9 +41,11 @@ README.md
 *.md
 docs/
 
-# Exclude scripts
+# Exclude scripts (but keep real-time import scripts)
 scripts/
 *.js
 *.mjs
 !next.config.mjs
 !next-env.d.ts
+!scripts/start-realtime-import.js
+!scripts/file-watcher.js

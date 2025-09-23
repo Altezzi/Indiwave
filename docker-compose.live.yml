@@ -21,7 +21,7 @@ services:
     environment:
       - NODE_ENV=production
       - DATABASE_URL=file:./dev.db
-      - NEXTAUTH_URL=https://indiwave.io
+      - NEXTAUTH_URL=http://indiwave.io:2222
       - NEXTAUTH_SECRET=4702b5e97e6ea07133f16d3659162286c2c58e932c0203393a82dc153c2e337e
       - GOOGLE_CLIENT_ID=959986325042-o5pqr065tc2dm267ub4f8pnkp4bigs34.apps.googleusercontent.com
       - GOOGLE_CLIENT_SECRET=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
@@ -29,6 +29,7 @@ services:
     volumes:
       - indiwave_data:/app/data
       - indiwave_public:/app/public
+      - ./series:/app/series:ro
     restart: unless-stopped
     networks:
       - indiwave-network

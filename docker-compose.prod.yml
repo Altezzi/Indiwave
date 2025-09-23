@@ -6,17 +6,14 @@ services:
     container_name: indiwave-prod
     ports:
       - "3000:3000"
+    env_file:
+      - production.env
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=${DATABASE_URL}
-      - NEXTAUTH_URL=${NEXTAUTH_URL}
-      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
-      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
-      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
-      - NEXT_PUBLIC_GOOGLE_CLIENT_ID=${NEXT_PUBLIC_GOOGLE_CLIENT_ID}
     volumes:
       - indiwave_data:/app/data
       - indiwave_public:/app/public
+      - ./series:/app/series:ro
     restart: unless-stopped
     networks:
       - indiwave-network

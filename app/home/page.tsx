@@ -33,34 +33,34 @@ async function getAllComics(): Promise<Comic[]> {
   const origin = getBaseUrl();
 
   try {
-    // Use the new manga API
-    const res = await fetch(`${origin}/api/manga`, {
+    // Use the comics API
+    const res = await fetch(`${origin}/api/comics`, {
       cache: 'no-store',
     });
 
     if (!res.ok) {
-      console.error('Failed to fetch manga data:', res.status);
+      console.error('Failed to fetch comics data:', res.status);
       return [];
     }
 
-    const mangaData = await res.json();
+    const comicsData = await res.json();
     
-    if (mangaData.success && mangaData.data) {
-      // Convert manga data to comic format for compatibility
-      const comics: Comic[] = mangaData.data.map((manga: any) => ({
-        id: String(manga.id || ''),
-        title: String(manga.title || ''),
-        cover: String(manga.coverUrl || ''),
-        coverImage: String(manga.coverUrl || ''),
-        author: String(manga.authors?.join(', ') || ''),
-        artist: String(manga.artists?.join(', ') || ''),
-        year: manga.year || 0,
-        tags: Array.isArray(manga.tags) ? manga.tags : [],
-        description: String(manga.description || ''),
-        status: String(manga.status || ''),
-        contentRating: String(manga.contentRating || ''),
-        totalChapters: manga.totalChapters || 0,
-        source: String(manga.source || '')
+    if (comicsData.comics) {
+      // Convert comics data to the expected format
+      const comics: Comic[] = comicsData.comics.map((comic: any) => ({
+        id: String(comic.id || ''),
+        title: String(comic.title || ''),
+        cover: String(comic.cover || ''),
+        coverImage: String(comic.cover || ''),
+        author: String(comic.author || ''),
+        artist: String(comic.artist || ''),
+        year: comic.year || 0,
+        tags: Array.isArray(comic.tags) ? comic.tags : [],
+        description: String(comic.description || ''),
+        status: String(comic.status || ''),
+        contentRating: String(comic.contentRating || ''),
+        totalChapters: comic.totalChapters || 0,
+        source: String(comic.source || '')
       }));
       
       return comics;
@@ -136,11 +136,59 @@ async function getLatestChapters(): Promise<any[]> {
   }
 }
 
+async function getLatestManga(): Promise<Comic[]> {
+  const origin = getBaseUrl();
+
+  try {
+    const res = await fetch(`${origin}/api/manga/latest`, {
+      cache: 'no-store',
+    });
+
+    if (!res.ok) {
+      console.error('Failed to fetch latest manga data:', res.status);
+      return [];
+    }
+
+    const mangaData = await res.json();
+    
+    if (mangaData.success && mangaData.data) {
+      // Convert manga data to comic format for compatibility
+      const comics: Comic[] = mangaData.data.map((manga: any) => ({
+        id: manga.id,
+        title: manga.title,
+        series: manga.title,
+        cover: manga.coverImage || '/placeholder-cover.jpg',
+        coverImage: manga.coverImage || '/placeholder-cover.jpg',
+        author: manga.authors?.[0] || '',
+        artist: manga.artists?.[0] || '',
+        authors: manga.authors || [],
+        artists: manga.artists || [],
+        year: manga.year || new Date().getFullYear(),
+        tags: manga.tags || [],
+        description: String(manga.description || ''),
+        status: String(manga.status || ''),
+        contentRating: String(manga.contentRating || ''),
+        totalChapters: manga.totalChapters || 0,
+        source: String(manga.source || ''),
+        createdAt: manga.createdAt
+      }));
+      
+      return comics;
+    }
+    
+    return [];
+  } catch (error) {
+    console.error("Error fetching latest manga:", error);
+    return [];
+  }
+}
+
 export default async function HomePage() {
-  const [allComics, followedManga, latestChapters] = await Promise.all([
+  const [allComics, followedManga, latestChapters, latestManga] = await Promise.all([
     getAllComics(),
     getFollowedManga(),
-    getLatestChapters()
+    getLatestChapters(),
+    getLatestManga()
   ]);
   
   // Create different sections
@@ -224,6 +272,15 @@ export default async function HomePage() {
               ))}
             </div>
           </div>
+        )}
+
+        {/* Latest Manga Section */}
+        {latestManga.length > 0 && (
+          <HomeSection
+            title="Latest Manga"
+            comics={latestManga}
+            viewAllLink="/library?sort=latest"
+          />
         )}
 
         {/* Recently Added Section */}

@@ -21,25 +21,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     const fetchComics = async () => {
       try {
         const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3003";
-        const res = await fetch(`${baseUrl}/api/manga`, { cache: "no-store" });
+        const res = await fetch(`${baseUrl}/api/comics`, { cache: "no-store" });
         if (res.ok) {
-          const mangaData = await res.json();
-          if (mangaData.success && mangaData.data) {
-            // Convert manga data to comic format for compatibility
-            const comics = mangaData.data.map((manga: any) => ({
-              id: String(manga.id || ''),
-              title: String(manga.title || ''),
-              cover: String(manga.coverUrl || ''),
-              coverImage: String(manga.coverUrl || ''),
-              author: String(manga.authors?.join(', ') || ''),
-              artist: String(manga.artists?.join(', ') || ''),
-              year: manga.year || 0,
-              tags: Array.isArray(manga.tags) ? manga.tags : [],
-              description: String(manga.description || ''),
-              status: String(manga.status || ''),
-              contentRating: String(manga.contentRating || ''),
-              totalChapters: manga.totalChapters || 0,
-              source: String(manga.source || '')
+          const comicsData = await res.json();
+          if (comicsData.comics) {
+            // Convert comics data to the expected format
+            const comics = comicsData.comics.map((comic: any) => ({
+              id: String(comic.id || ''),
+              title: String(comic.title || ''),
+              cover: String(comic.cover || ''),
+              coverImage: String(comic.cover || ''),
+              author: String(comic.author || ''),
+              artist: String(comic.artist || ''),
+              year: comic.year || 0,
+              tags: Array.isArray(comic.tags) ? comic.tags : [],
+              description: String(comic.description || ''),
+              status: String(comic.status || ''),
+              contentRating: String(comic.contentRating || ''),
+              totalChapters: comic.totalChapters || 0,
+              source: String(comic.source || '')
             }));
             setComics(comics);
           }

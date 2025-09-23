@@ -78,33 +78,33 @@ export default function SeriesPage() {
 
   const fetchComicData = async (id: string) => {
     try {
-      const response = await fetch("/api/manga");
+      const response = await fetch("/api/comics");
       if (!response.ok) {
-        throw new Error(`Failed to fetch manga data: ${response.status}`);
+        throw new Error(`Failed to fetch comics data: ${response.status}`);
       }
       
       const data = await response.json();
-      if (!data.success || !data.data) {
-        throw new Error("Invalid manga data response");
+      if (!data.comics) {
+        throw new Error("Invalid comics data response");
       }
       
       // Try multiple matching strategies to find the series
-      let foundComic = data.data.find((c: any) => c.id === id);
+      let foundComic = data.comics.find((c: any) => c.id === id);
       
       if (!foundComic) {
         // Try with URL decoding
         const decodedId = decodeURIComponent(id);
-        foundComic = data.data.find((c: any) => c.id === decodedId);
+        foundComic = data.comics.find((c: any) => c.id === decodedId);
       }
       
       if (!foundComic) {
         // Try case-insensitive match
-        foundComic = data.data.find((c: any) => c.id.toLowerCase() === id.toLowerCase());
+        foundComic = data.comics.find((c: any) => c.id.toLowerCase() === id.toLowerCase());
       }
       
       if (!foundComic) {
         // Try partial match
-        foundComic = data.data.find((c: any) => 
+        foundComic = data.comics.find((c: any) => 
           c.id.toLowerCase().includes(id.toLowerCase()) || 
           id.toLowerCase().includes(c.id.toLowerCase())
         );

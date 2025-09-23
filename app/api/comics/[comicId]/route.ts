@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
 import fs from 'fs';
 import path from 'path';
 
@@ -44,8 +43,8 @@ export async function GET(
                 title: metadata.title,
                 series: metadata.title,
                 description: metadata.description || '',
-                cover: metadata.coverImage || '',
-                coverImage: metadata.coverImage || '',
+              cover: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
+              coverImage: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
                 author: metadata.authors?.[0] || '',
                 artist: metadata.artists?.[0] || '',
                 authors: metadata.authors || [],
@@ -86,87 +85,31 @@ export async function GET(
       });
     }
 
-    // Otherwise, try to find in database
-    const series = await prisma.series.findFirst({
-      where: {
-        OR: [
-          { id: comicId },
-          { mangaMDId: comicId }
-        ],
-        isPublished: true
-      },
-      include: {
-        creator: {
-          select: {
-            id: true,
-            name: true,
-            username: true,
-          }
-        },
-        chapters: {
-          where: { isPublished: true },
-          select: {
-            id: true,
-            title: true,
-            chapterNumber: true,
-            pages: true,
-          },
-          orderBy: { chapterNumber: 'asc' }
-        },
-        _count: {
-          select: {
-            libraryEntries: true,
-          }
-        }
-      }
-    });
-
-    if (!series) {
-      return NextResponse.json(
-        { error: 'Comic not found' },
-        { status: 404 }
+    // Check static comics file
+    const comicsJsonPath = path.join(process.cwd(), 'data', 'comics.json');
+    try {
+      const comicsData = fs.readFileSync(comicsJsonPath, 'utf8');
+      const parsedData = JSON.parse(comicsData);
+      const staticComics = Array.isArray(parsedData) ? parsedData : parsedData.comics || [];
+      
+      const staticComic = staticComics.find((comic: any) => 
+        comic.id === comicId || comic.mangaMDId === comicId
       );
+      
+      if (staticComic) {
+        return NextResponse.json({
+          comic: staticComic
+        });
+      }
+    } catch (error) {
+      console.warn('Could not read static comics file:', error);
     }
 
-    // Transform database series to comic format
-    const comic = {
-      id: series.id,
-      title: series.title,
-      series: series.title,
-      description: series.description,
-      cover: series.coverImage,
-      coverImage: series.coverImage,
-      author: series.authors ? (() => {
-        try { return JSON.parse(series.authors)[0]; } catch { return undefined; }
-      })() : undefined,
-      artist: series.artists ? (() => {
-        try { return JSON.parse(series.artists)[0]; } catch { return undefined; }
-      })() : undefined,
-      authors: series.authors,
-      artists: series.artists,
-      year: series.mangaMDYear || new Date(series.createdAt).getFullYear(),
-      tags: series.tags ? (() => {
-        try { return JSON.parse(series.tags); } catch { return []; }
-      })() : [],
-      mangaMDStatus: series.mangaMDStatus,
-      isImported: series.isImported,
-      contentRating: series.contentRating,
-      creator: series.creator,
-      chapters: series.chapters.map(chapter => ({
-        id: chapter.id,
-        title: chapter.title,
-        chapterNumber: chapter.chapterNumber,
-        pages: chapter.pages ? (() => {
-          try { return JSON.parse(chapter.pages); } catch { return []; }
-        })() : [],
-      })),
-      libraryCount: series._count.libraryEntries,
-      createdAt: series.createdAt,
-    };
-
-    return NextResponse.json({
-      comic
-    });
+    // Comic not found
+    return NextResponse.json(
+      { error: 'Comic not found' },
+      { status: 404 }
+    );
 
   } catch (error) {
     console.error('Error fetching comic:', error);

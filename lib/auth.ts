@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs"
 import { prisma } from "./prisma"
 
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     // Google provider
     GoogleProvider({
@@ -82,7 +83,19 @@ export const authOptions: NextAuthOptions = {
     })
   ],
   session: {
-    strategy: "jwt"
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
+  cookies: {
+    sessionToken: {
+      name: `next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        secure: process.env.NODE_ENV === 'production'
+      }
+    }
   },
   callbacks: {
     async signIn({ user, account, profile }) {
@@ -97,17 +110,9 @@ export const authOptions: NextAuthOptions = {
           })
 
           if (!existingUser) {
-            // Get the next account ID
-            const lastUser = await prisma.user.findFirst({
-              orderBy: { accountId: 'desc' },
-              select: { accountId: true }
-            });
-            const nextAccountId = (lastUser?.accountId || 0) + 1;
-
             // Create new user from Google OAuth
             const newUser = await prisma.user.create({
               data: {
-                accountId: nextAccountId,
                 email: user.email!,
                 name: user.name!,
                 image: user.image,

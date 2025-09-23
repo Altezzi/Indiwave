@@ -32,19 +32,45 @@ function getBaseUrl() {
 async function getAllComics(): Promise<Comic[]> {
   const origin = getBaseUrl();
 
-  // Force fresh data - no caching
-  const res = await fetch(`${origin}/api/comics`, {
-    cache: 'no-store',
-  });
+  try {
+    // Use the new manga API
+    const res = await fetch(`${origin}/api/manga`, {
+      cache: 'no-store',
+    });
 
-  if (!res.ok) {
+    if (!res.ok) {
+      console.error('Failed to fetch manga data:', res.status);
+      return [];
+    }
+
+    const mangaData = await res.json();
+    
+    if (mangaData.success && mangaData.data) {
+      // Convert manga data to comic format for compatibility
+      const comics: Comic[] = mangaData.data.map((manga: any) => ({
+        id: String(manga.id || ''),
+        title: String(manga.title || ''),
+        cover: String(manga.coverUrl || ''),
+        coverImage: String(manga.coverUrl || ''),
+        author: String(manga.authors?.join(', ') || ''),
+        artist: String(manga.artists?.join(', ') || ''),
+        year: manga.year || 0,
+        tags: Array.isArray(manga.tags) ? manga.tags : [],
+        description: String(manga.description || ''),
+        status: String(manga.status || ''),
+        contentRating: String(manga.contentRating || ''),
+        totalChapters: manga.totalChapters || 0,
+        source: String(manga.source || '')
+      }));
+      
+      return comics;
+    }
+    
+    return [];
+  } catch (error) {
+    console.error('Error fetching manga data:', error);
     return [];
   }
-
-  const data = await res.json();
-  const allComics: Comic[] = Array.isArray(data) ? data : data.comics ?? [];
-  
-  return allComics;
 }
 
 // Get recently added comics (last 10)

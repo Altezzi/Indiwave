@@ -1,39 +1,42 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../../../../lib/auth";
-import { prisma } from "../../../../lib/prisma";
+import { authOptions } from "@/lib/auth";
+import fs from "fs";
+import path from "path";
 
 export async function GET(request: NextRequest) {
   try {
     const session = await getServerSession(authOptions);
-
+    
     if (!session?.user?.id) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+      return NextResponse.json({ isFollowing: false });
     }
 
     const { searchParams } = new URL(request.url);
     const seriesId = searchParams.get("seriesId");
 
     if (!seriesId) {
-      return NextResponse.json({ error: "Series ID is required" }, { status: 400 });
+      return NextResponse.json({ error: "Missing seriesId" }, { status: 400 });
     }
 
-    const followEntry = await prisma.libraryEntry.findFirst({
-      where: {
-        userId: session.user.id,
-        seriesId: seriesId,
-      },
-    });
+    const followsPath = path.join(process.cwd(), 'data', 'follows.json');
+    
+    // Read existing follows data
+    let followsData: Record<string, string[]> = {};
+    if (fs.existsSync(followsPath)) {
+      const followsContent = fs.readFileSync(followsPath, 'utf-8');
+      followsData = JSON.parse(followsContent);
+    }
 
-    return NextResponse.json({
-      isFollowing: !!followEntry
-    });
+    // Check if user is following this series
+    const userFollows = followsData[session.user.id] || [];
+    const isFollowing = userFollows.includes(seriesId);
 
+    return NextResponse.json({ 
+      isFollowing 
+    });
   } catch (error) {
-    console.error("Error fetching follow status:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch follow status" },
-      { status: 500 }
-    );
+    console.error("Error in follow-status API:", error);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

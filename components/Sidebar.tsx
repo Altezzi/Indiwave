@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -12,6 +12,7 @@ interface SidebarProps {
 
 export default function Sidebar({ isOpen, onClose, onOpen }: SidebarProps) {
   const [screenSize, setScreenSize] = useState("desktop");
+  const sidebarTabRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Sidebar({ isOpen, onClose, onOpen }: SidebarProps) {
         setScreenSize("desktop");
       }
     };
-    
+
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
     return () => window.removeEventListener('resize', checkScreenSize);
@@ -65,6 +66,8 @@ export default function Sidebar({ isOpen, onClose, onOpen }: SidebarProps) {
 
       {/* File Tab Handle - Always Visible */}
       <div
+        ref={sidebarTabRef}
+        className="sidebar-tab"
         style={{
           position: "fixed",
           left: isOpen ? "280px" : "0px",
@@ -76,13 +79,13 @@ export default function Sidebar({ isOpen, onClose, onOpen }: SidebarProps) {
           backdropFilter: "blur(16px) saturate(1.1)",
           border: "1px solid rgba(138, 180, 255, 0.2)",
           borderLeft: isOpen ? "none" : "1px solid rgba(138, 180, 255, 0.2)",
-          borderRadius: "0 12px 12px 0",
+          borderRadius: isOpen ? "0 12px 12px 0" : "0 12px 12px 0", // Right-rounded when open (right side), right-rounded when closed (left side)
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow: "4px 0 16px rgba(0, 0, 0, 0.3)",
-          zIndex: 1000,
+          boxShadow: isOpen ? "4px 0 16px rgba(0, 0, 0, 0.3)" : "4px 0 16px rgba(0, 0, 0, 0.3)", // Right shadow when open, right shadow when closed
+          zIndex: 1002, // Higher than header (1000)
           transition: "all 0.3s ease",
         }}
         onClick={isOpen ? onClose : onOpen}
@@ -112,7 +115,7 @@ export default function Sidebar({ isOpen, onClose, onOpen }: SidebarProps) {
           background: "rgba(var(--bg-rgb, 18, 18, 18), 0.95)",
           backdropFilter: "blur(16px) saturate(1.1)",
           borderRight: isOpen ? "none" : "1px solid rgba(138, 180, 255, 0.2)",
-          zIndex: 999,
+          zIndex: 1001, // Higher than header (1000)
           transform: isOpen ? "translateX(0)" : "translateX(-100%)",
           transition: "transform 0.3s ease",
           overflow: "hidden",

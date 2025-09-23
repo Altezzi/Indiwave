@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import ProfileDropdown from "./ProfileDropdown";
 import SearchDropdown from "./SearchDropdown";
@@ -21,9 +22,38 @@ export default function Header({
   setIsAdvancedSearchOpen,
   isSidebarOpen
 }: HeaderProps) {
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const hideBetaBadges = () => {
+      // Find and hide any Beta badges on mobile
+      const width = window.innerWidth;
+      if (width <= 768) {
+        const betaBadges = document.querySelectorAll('.badge');
+        betaBadges.forEach(badge => {
+          if (badge.textContent?.includes('Beta')) {
+            (badge as HTMLElement).style.display = 'none';
+            (badge as HTMLElement).style.visibility = 'hidden';
+            (badge as HTMLElement).style.opacity = '0';
+          }
+        });
+      }
+    };
+
+    // Apply Beta badge hiding
+    hideBetaBadges();
+
+    // Also apply after a short delay to ensure DOM is ready
+    setTimeout(hideBetaBadges, 100);
+
+    // Apply on resize
+    window.addEventListener('resize', hideBetaBadges);
+    return () => window.removeEventListener('resize', hideBetaBadges);
+  }, []);
+
   return (
     <header className="header">
-      <div className="header-inner container" style={{ overflow: "visible" }}>
+      <div ref={headerRef} className="header-inner container" style={{ overflow: "visible" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           {!isSidebarOpen && (
             <>
@@ -50,7 +80,7 @@ export default function Header({
                   }} 
                 />
               </Link>
-              <span className="badge">Beta</span>
+              {/* Beta badge removed for mobile optimization */}
             </>
           )}
         </div>

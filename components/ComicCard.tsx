@@ -59,8 +59,9 @@ export default function ComicCard({ comic }: ComicCardProps) {
   // Truncate long text to keep tiles uniform
   const truncateText = (text: string | undefined, maxLength: number = 60) => {
     if (!text) return '';
-    if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + '...';
+    const textStr = String(text);
+    if (textStr.length <= maxLength) return textStr;
+    return textStr.substring(0, maxLength) + '...';
   };
   
   // Get cover image (use coverImage from database, fallback to last successful)

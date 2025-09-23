@@ -22,6 +22,24 @@ type Comic = {
   [key: string]: any;
 };
 
+type MangaSeries = {
+  id: string;
+  title: string;
+  description: string;
+  authors: string[];
+  artists: string[];
+  tags: string[];
+  status: string;
+  year: number;
+  contentRating: string;
+  coverImage: string;
+  totalChapters: number;
+  createdAt: string;
+  updatedAt: string;
+  source: string;
+  coverUrl: string;
+};
+
 function getBaseUrl() {
   const h = headers();
 
@@ -45,18 +63,45 @@ function getBaseUrl() {
 async function getComics(): Promise<{ comics: Comic[] } | Comic[]> {
   const origin = getBaseUrl();
 
-  // Force fresh data - no caching
-  const res = await fetch(`${origin}/api/comics`, {
-    cache: 'no-store',
-  });
+  try {
+    // Fetch manga data from the new API
+    const res = await fetch(`${origin}/api/manga`, {
+      cache: 'no-store',
+    });
 
-  if (!res.ok) {
-    // During first-ever build, if your API depends on runtime state, avoid failing the whole build.
-    // Render an empty library but allow ISR to repopulate on first requests.
+    if (!res.ok) {
+      console.error('Failed to fetch manga data:', res.status);
+      return { comics: [] };
+    }
+
+    const mangaData = await res.json();
+    
+    if (mangaData.success && mangaData.data) {
+      // Convert manga data to comic format for compatibility
+      const comics: Comic[] = mangaData.data.map((manga: MangaSeries) => ({
+        id: String(manga.id || ''),
+        title: String(manga.title || ''),
+        cover: String(manga.coverUrl || ''),
+        coverImage: String(manga.coverUrl || ''), // Add this for ComicCard compatibility
+        author: String(manga.authors?.join(', ') || ''),
+        artist: String(manga.artists?.join(', ') || ''),
+        year: manga.year || 0,
+        tags: Array.isArray(manga.tags) ? manga.tags : [],
+        description: String(manga.description || ''),
+        status: String(manga.status || ''),
+        contentRating: String(manga.contentRating || ''),
+        totalChapters: manga.totalChapters || 0,
+        source: String(manga.source || '')
+      }));
+      
+      return { comics };
+    }
+    
+    return { comics: [] };
+  } catch (error) {
+    console.error('Error fetching manga data:', error);
     return { comics: [] };
   }
-
-  return res.json();
 }
 
 export default async function LibraryPage({
@@ -113,7 +158,7 @@ export default async function LibraryPage({
               color: "var(--fg)",
             }}
           >
-            Comic Library
+            Manga Library
           </h1>
           <p
             style={{
@@ -123,8 +168,7 @@ export default async function LibraryPage({
               maxWidth: "600px",
             }}
           >
-            Explore our collection of amazing comics from independent creators and
-            public domain classics.
+            Explore our collection of amazing manga series with cover art and detailed metadata.
           </p>
           
           {/* Library Stats */}

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-// import { useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 interface Chapter {
   id: string;
@@ -45,8 +45,7 @@ interface UserUrl {
 export default function SeriesPage() {
   const params = useParams();
   const router = useRouter();
-  // const { data: session, status } = useSession();
-  const session = null; // Temporarily disable NextAuth
+  const { data: session, status } = useSession();
   const [comic, setComic] = useState<Comic | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
@@ -65,28 +64,77 @@ export default function SeriesPage() {
       fetchComicData(params.id as string);
       fetchComments(params.id as string);
       fetchUserUrls(params.id as string); // Always fetch user URLs now
-      if (session?.user?.id) {
-        fetchUserRating(params.id as string);
-        fetchFollowStatus(params.id as string);
-      }
       fetchCommunityRating(params.id as string);
     }
-  }, [params.id, session?.user?.id]);
+  }, [params.id]);
+
+  // Fetch follow status after comic data is loaded
+  useEffect(() => {
+    if (comic?.id && session?.user?.id) {
+      fetchFollowStatus(comic.id);
+      fetchUserRating(comic.id);
+    }
+  }, [comic?.id, session?.user?.id]);
 
   const fetchComicData = async (id: string) => {
     try {
-      const response = await fetch("/api/comics");
+      const response = await fetch("/api/manga");
+      if (!response.ok) {
+        throw new Error(`Failed to fetch manga data: ${response.status}`);
+      }
+      
       const data = await response.json();
-      const foundComic = data.comics.find((c: any) => c.id === id);
+      if (!data.success || !data.data) {
+        throw new Error("Invalid manga data response");
+      }
+      
+      // Try multiple matching strategies to find the series
+      let foundComic = data.data.find((c: any) => c.id === id);
+      
+      if (!foundComic) {
+        // Try with URL decoding
+        const decodedId = decodeURIComponent(id);
+        foundComic = data.data.find((c: any) => c.id === decodedId);
+      }
+      
+      if (!foundComic) {
+        // Try case-insensitive match
+        foundComic = data.data.find((c: any) => c.id.toLowerCase() === id.toLowerCase());
+      }
+      
+      if (!foundComic) {
+        // Try partial match
+        foundComic = data.data.find((c: any) => 
+          c.id.toLowerCase().includes(id.toLowerCase()) || 
+          id.toLowerCase().includes(c.id.toLowerCase())
+        );
+      }
       
       if (foundComic) {
-        setComic(foundComic);
+        // Convert manga data to comic format for compatibility
+        const comic = {
+          id: foundComic.id,
+          title: foundComic.title,
+          cover: foundComic.coverUrl,
+          author: foundComic.authors?.join(', ') || '',
+          artist: foundComic.artists?.join(', ') || '',
+          year: foundComic.year,
+          tags: foundComic.tags || [],
+          description: foundComic.description,
+          status: foundComic.status,
+          contentRating: foundComic.contentRating,
+          totalChapters: foundComic.totalChapters,
+          source: foundComic.source,
+          chapters: [] // Initialize empty chapters array
+        };
+        setComic(comic);
       } else {
-        router.push("/library");
+        // Series not found - stay on page and show error
+        setComic(null);
       }
     } catch (error) {
       console.error("Error fetching comic:", error);
-      router.push("/library");
+      setComic(null);
     } finally {
       setLoading(false);
     }
@@ -261,7 +309,7 @@ export default function SeriesPage() {
   };
 
   const handleFollow = async () => {
-    if (!session?.user || !params.id) return;
+    if (!session?.user || !comic?.id) return;
 
     setIsLoadingFollow(true);
     try {
@@ -271,13 +319,15 @@ export default function SeriesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          seriesId: params.id,
+          seriesId: comic.id,
           action: isFollowing ? "unfollow" : "follow",
         }),
       });
 
       if (response.ok) {
         setIsFollowing(!isFollowing);
+      } else {
+        console.error("Failed to follow/unfollow series:", response.status);
       }
     } catch (error) {
       console.error("Error following/unfollowing series:", error);
@@ -305,13 +355,43 @@ export default function SeriesPage() {
     return (
       <div style={{ 
         display: "flex", 
+        flexDirection: "column",
         justifyContent: "center", 
         alignItems: "center", 
         minHeight: "50vh",
-        fontSize: "18px",
-        color: "var(--muted-foreground)"
+        gap: "16px",
+        textAlign: "center"
       }}>
-        Series not found
+        <div style={{ 
+          fontSize: "24px",
+          color: "var(--fg)",
+          marginBottom: "8px"
+        }}>
+          📚 Series Not Found
+        </div>
+        <div style={{ 
+          fontSize: "16px",
+          color: "var(--muted-foreground)",
+          maxWidth: "400px"
+        }}>
+          The series "{params.id}" could not be found in our library.
+        </div>
+        <Link 
+          href="/library"
+          style={{
+            marginTop: "16px",
+            padding: "12px 24px",
+            background: "#8ab4ff",
+            color: "white",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontSize: "16px",
+            fontWeight: "500",
+            transition: "all 0.2s ease"
+          }}
+        >
+          ← Back to Library
+        </Link>
       </div>
     );
   }

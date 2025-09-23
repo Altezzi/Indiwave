@@ -2,11 +2,7 @@ version: '3.8'
 
 services:
   indiwave-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        - NEXT_PUBLIC_GOOGLE_CLIENT_ID=${NEXT_PUBLIC_GOOGLE_CLIENT_ID}
+    image: indiwave:latest
     container_name: indiwave-prod
     ports:
       - "3000:3000"

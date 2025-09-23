@@ -68,6 +68,7 @@ model User {
   updatedAt       DateTime       @updatedAt
   profilePicture  String?
   cropSettings    String?
+  themePreference String?        @default("default")
   accounts        Account[]
   sessions        Session[]
   auditLogs       AuditLog[]

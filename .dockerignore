@@ -1,10 +1,10 @@
-# Exclude large series files from Docker build
-series/
-*.jpg
-*.png
-*.jpeg
-*.gif
-*.webp
+# Exclude large series files from Docker build (but keep series folder for manga library)
+# series/
+# *.jpg
+# *.png
+# *.jpeg
+# *.gif
+# *.webp
 
 # Exclude development files
 node_modules/

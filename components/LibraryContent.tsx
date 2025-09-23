@@ -70,30 +70,30 @@ export default function LibraryContent({
         }
       }
 
-      // Adult content filter - always filter for non-authenticated users, or when toggle is off for authenticated users
+      // Adult content filter - only filter explicit sexual content
       if (!session || !showAdultContent) {
-        // Filter by content rating
+        // Filter by content rating - only filter explicit sexual content
         if (comic.contentRating) {
           const rating = comic.contentRating.toLowerCase();
-          if (rating === "erotica" || rating === "pornographic" || rating === "suggestive") return false;
+          if (rating === "erotica" || rating === "pornographic") return false;
+          // Allow "suggestive" content by default
         }
         
-        // Filter by tags for gore, blood, violence, and other mature content
+        // Filter by tags for explicit sexual content only
         if (comic.tags && Array.isArray(comic.tags)) {
-          const adultTags = [
-            'gore', 'blood', 'violence', 'torture', 'death', 'murder', 'suicide',
-            'sexual', 'nudity', 'explicit', 'mature', 'adult', 'hentai', 'ecchi',
-            'rape', 'abuse', 'torture', 'horror', 'psychological', 'disturbing'
+          const explicitTags = [
+            'hentai', 'ecchi', 'sexual', 'nudity', 'explicit', 'adult', 'mature',
+            'rape', 'abuse'
           ];
           
-          // Check if any of the comic's tags match adult content tags (case insensitive)
-          const hasAdultContent = comic.tags.some(tag => 
-            adultTags.some(adultTag => 
-              tag.toLowerCase().includes(adultTag.toLowerCase())
+          // Check if any of the comic's tags match explicit content tags (case insensitive)
+          const hasExplicitContent = comic.tags.some(tag => 
+            explicitTags.some(explicitTag => 
+              tag.toLowerCase().includes(explicitTag.toLowerCase())
             )
           );
           
-          if (hasAdultContent) return false;
+          if (hasExplicitContent) return false;
         }
       }
 

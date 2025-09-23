@@ -2,15 +2,162 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 
 export default function SettingsPage() {
   const [layoutWidth, setLayoutWidth] = useState("full");
+  const [theme, setTheme] = useState("default");
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const { data: session, status } = useSession();
+
+  const applyTheme = (themeToApply: string) => {
+    // Apply theme changes
+    const root = document.documentElement;
+    const body = document.body;
+    
+    // Remove all theme classes first
+    root.classList.remove('dark', 'light');
+    
+    if (themeToApply === 'dark') {
+      root.classList.add('dark');
+      // Apply dark background for full viewport coverage
+      root.style.setProperty('--bg', '#121212');
+      body.style.background = '#121212';
+      body.style.backgroundColor = '#121212';
+      body.style.backgroundImage = 'none';
+      
+      // Override any custom backgrounds on ALL elements
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach((el: any) => {
+        if (el.tagName !== 'SCRIPT' && el.tagName !== 'STYLE') {
+          el.style.background = '#121212';
+          el.style.backgroundColor = '#121212';
+          el.style.backgroundImage = 'none';
+        }
+      });
+    } else if (themeToApply === 'light') {
+      root.classList.add('light');
+      // Apply light background for full viewport coverage
+      root.style.setProperty('--bg', '#ffffff');
+      body.style.background = '#ffffff';
+      body.style.backgroundColor = '#ffffff';
+      body.style.backgroundImage = 'none';
+      
+      // Override any custom backgrounds on ALL elements
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach((el: any) => {
+        if (el.tagName !== 'SCRIPT' && el.tagName !== 'STYLE') {
+          el.style.background = '#ffffff';
+          el.style.backgroundColor = '#ffffff';
+          el.style.backgroundImage = 'none';
+        }
+      });
+    } else {
+      // Default theme - use your existing backgrounds
+      root.style.removeProperty('--bg');
+      body.style.background = '';
+      body.style.backgroundColor = '';
+      body.style.backgroundImage = '';
+      
+      // Remove overrides from ALL elements
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach((el: any) => {
+        if (el.tagName !== 'SCRIPT' && el.tagName !== 'STYLE') {
+          el.style.background = '';
+          el.style.backgroundColor = '';
+          el.style.backgroundImage = '';
+        }
+      });
+    }
+  };
+
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
+    
+    // For signed-in users, mark as unsaved changes
+    if (session?.user) {
+      setHasUnsavedChanges(true);
+    } else {
+      // For non-signed-in users, apply immediately but don't save
+      localStorage.setItem('theme', newTheme);
+    }
+    
+    // Apply the theme immediately for preview
+    applyTheme(newTheme);
+    
+    console.log('Theme changed to:', newTheme);
+  };
+
+  const saveThemePreference = async () => {
+    if (!session?.user) return;
+    
+    setIsSaving(true);
+    try {
+      const response = await fetch('/api/user/theme', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ theme }),
+      });
+      
+      if (response.ok) {
+        setHasUnsavedChanges(false);
+        localStorage.setItem('theme', theme);
+        console.log('Theme preference saved to account');
+      } else {
+        console.error('Failed to save theme preference');
+      }
+    } catch (error) {
+      console.error('Error saving theme preference:', error);
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   useEffect(() => {
     // Load saved layout width setting
     const savedWidth = localStorage.getItem('layoutWidth') || 'full';
     setLayoutWidth(savedWidth);
-  }, []);
+    
+    // Load theme setting based on user status
+    if (session?.user) {
+      // For signed-in users, load from account
+      loadUserThemePreference();
+    } else {
+      // For non-signed-in users, always use default (cherry blossom)
+      setTheme('default');
+      applyTheme('default');
+    }
+  }, [session]);
+
+  const loadUserThemePreference = async () => {
+    if (!session?.user) return;
+    
+    try {
+      const response = await fetch('/api/user/theme');
+      if (response.ok) {
+        const data = await response.json();
+        const userTheme = data.theme || 'default';
+        setTheme(userTheme);
+        applyTheme(userTheme);
+        localStorage.setItem('theme', userTheme);
+      } else {
+        // Fallback to localStorage if API fails
+        const savedTheme = localStorage.getItem('theme') || 'default';
+        setTheme(savedTheme);
+        applyTheme(savedTheme);
+      }
+    } catch (error) {
+      console.error('Error loading user theme preference:', error);
+      // Fallback to localStorage if API fails
+      const savedTheme = localStorage.getItem('theme') || 'default';
+      setTheme(savedTheme);
+      applyTheme(savedTheme);
+    }
+  };
+
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
@@ -26,24 +173,58 @@ export default function SettingsPage() {
         <div className="card">
           <h2 style={{ margin: "0 0 16px", fontSize: "20px", fontWeight: "600" }}>Appearance</h2>
           <p style={{ margin: "0 0 16px", color: "var(--muted)" }}>
-            Customize the look and feel of Indiwave
+            {session?.user 
+              ? "Customize the look and feel of Indiwave. Changes are saved to your account."
+              : "Customize the look and feel of Indiwave. Sign in to save your preferences."
+            }
           </p>
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <span>Theme:</span>
-            <Link 
-              href="/profile" 
-              style={{ 
-                padding: "8px 16px", 
-                background: "var(--accent)", 
-                borderRadius: "8px", 
-                color: "white",
-                fontSize: "14px",
-                textDecoration: "none",
-                fontWeight: "500"
-              }}
-            >
-              Go to Profile Menu →
-            </Link>
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
+              <label style={{ fontWeight: "500", minWidth: "80px" }}>Theme:</label>
+              <select
+                value={theme}
+                onChange={(e) => handleThemeChange(e.target.value)}
+                style={{
+                  padding: "8px 12px",
+                  borderRadius: "8px",
+                  border: "1px solid var(--border)",
+                  background: "var(--bg)",
+                  color: "var(--fg)",
+                  fontSize: "14px",
+                  minWidth: "150px"
+                }}
+              >
+                <option value="default">Default (Your Backgrounds)</option>
+                <option value="dark">Dark Theme</option>
+                <option value="light">Light Theme</option>
+              </select>
+              {session?.user && hasUnsavedChanges && (
+                <button
+                  onClick={saveThemePreference}
+                  disabled={isSaving}
+                  style={{
+                    padding: "8px 16px",
+                    borderRadius: "8px",
+                    border: "none",
+                    background: "var(--accent)",
+                    color: "white",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    cursor: isSaving ? "not-allowed" : "pointer",
+                    opacity: isSaving ? 0.7 : 1,
+                    transition: "opacity 0.2s ease"
+                  }}
+                >
+                  {isSaving ? "Saving..." : "Save Theme"}
+                </button>
+              )}
+            </div>
+            <div style={{ fontSize: "12px", color: "var(--muted)", maxWidth: "500px" }}>
+              {theme === "default" && "Uses your custom page backgrounds (cherry blossom, etc.)"}
+              {theme === "dark" && "Solid dark background with full viewport coverage"}
+              {theme === "light" && "Solid light background with full viewport coverage"}
+              {!session?.user && " • Sign in to save your theme preference to your account"}
+            </div>
           </div>
         </div>
 

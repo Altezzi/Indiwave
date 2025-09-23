@@ -7,58 +7,76 @@ import Link from "next/link";
 export default function MyListPage() {
   const { data: session, status } = useSession();
   const [activeTab, setActiveTab] = useState<"all" | "favorites">("all");
-  const [followedSeries, setFollowedSeries] = useState([
-    {
-      id: "sample-issue",
-      title: "Sample Issue",
-      series: "Sample Series",
-      author: "John Smith",
-      cover: "/comics/sample-series/sample-issue/001.svg",
-      totalChapters: 2,
-      chaptersRead: 2,
-      rating: 4.5,
-      status: "Completed",
-      readingStatus: "Finished",
-      lastRead: "2 days ago",
-      isFavorite: true,
-      description: "A thrilling adventure story featuring our hero as they navigate through mysterious lands and face incredible challenges.",
-      tags: ["Action", "Adventure", "Classic", "Superhero"]
-    },
-    {
-      id: "fantasy-tale",
-      title: "The Magic Forest",
-      series: "Fantasy Tales",
-      author: "Sarah Johnson",
-      cover: "/comics/fantasy-tales/magic-forest/001.svg",
-      totalChapters: 2,
-      chaptersRead: 1,
-      rating: 4.0,
-      status: "Ongoing",
-      readingStatus: "Waiting for new chapters",
-      lastRead: "1 week ago",
-      isFavorite: false,
-      description: "Step into a world of magic and wonder where mystical creatures roam and ancient spells hold incredible power.",
-      tags: ["Fantasy", "Magic", "Adventure", "Mystical"]
-    },
-    {
-      id: "space-adventure",
-      title: "Galaxy Explorer",
-      series: "Space Adventures",
-      author: "Alex Rodriguez",
-      cover: "/comics/space-adventures/galaxy-explorer/001.svg",
-      totalChapters: 1,
-      chaptersRead: 0,
-      rating: 0,
-      status: "Not Started",
-      readingStatus: "Plan to read",
-      lastRead: "Never",
-      isFavorite: true,
-      description: "Join Captain Nova and her crew as they explore the far reaches of space, encountering alien civilizations.",
-      tags: ["Sci-Fi", "Space", "Adventure", "Aliens"]
-    }
-  ]);
+  const [followedSeries, setFollowedSeries] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [statusFilter, setStatusFilter] = useState<string[]>([]);
+  const [showFilterModal, setShowFilterModal] = useState(false);
 
-  // No need for useEffect since we're using NextAuth session
+  // Fetch user's followed series when component mounts or session changes
+  useEffect(() => {
+    const fetchFollowedSeries = async () => {
+      if (!session?.user?.id) {
+        setLoading(false);
+        return;
+      }
+
+      try {
+        // Get user's followed series IDs
+        const followsResponse = await fetch('/api/user/followed-series');
+        if (!followsResponse.ok) {
+          throw new Error('Failed to fetch followed series');
+        }
+        const followsData = await followsResponse.json();
+        const followedSeriesIds = followsData.followedSeries || [];
+
+        if (followedSeriesIds.length === 0) {
+          setFollowedSeries([]);
+          setLoading(false);
+          return;
+        }
+
+        // Get full manga data for followed series
+        const mangaResponse = await fetch('/api/manga');
+        if (!mangaResponse.ok) {
+          throw new Error('Failed to fetch manga data');
+        }
+        const mangaData = await mangaResponse.json();
+        const allManga = mangaData.data || [];
+
+        // Filter manga data to only include followed series
+        const userFollowedManga = allManga.filter((manga: any) => 
+          followedSeriesIds.includes(manga.id)
+        );
+
+        // Convert manga data to the format expected by the UI
+        const formattedSeries = userFollowedManga.map((manga: any) => ({
+          id: manga.id,
+          title: manga.title,
+          series: manga.title, // Using title as series name
+          author: manga.authors?.join(', ') || 'Unknown',
+          cover: manga.coverUrl,
+          totalChapters: manga.totalChapters || 0,
+          chaptersRead: 0, // Default to 0 - could be enhanced later
+          rating: 0, // Default to 0 - could be enhanced later
+          status: manga.status || 'Unknown',
+          readingStatus: 'Plan to read', // Default status
+          lastRead: 'Never', // Default - could be enhanced later
+          isFavorite: false, // Default to false - could be enhanced later
+          description: manga.description || 'No description available',
+          tags: manga.tags || []
+        }));
+
+        setFollowedSeries(formattedSeries);
+      } catch (error) {
+        console.error('Error fetching followed series:', error);
+        setFollowedSeries([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFollowedSeries();
+  }, [session?.user?.id]);
 
   const handleRatingChange = (seriesId: string, newRating: number) => {
     setFollowedSeries(prev => 
@@ -104,13 +122,43 @@ export default function MyListPage() {
     }
   };
 
-  // Show loading state while checking authentication
-  if (status === "loading") {
+  const handleStatusFilterChange = (status: string, checked: boolean) => {
+    if (checked) {
+      setStatusFilter(prev => [...prev, status]);
+    } else {
+      setStatusFilter(prev => prev.filter(s => s !== status));
+    }
+  };
+
+  // Get unique statuses from followed series
+  const availableStatuses = Array.from(new Set(followedSeries.map(series => series.status))).sort();
+
+  // Filter series based on status filter
+  const getFilteredSeries = () => {
+    let filtered = followedSeries;
+    
+    // Apply status filter
+    if (statusFilter.length > 0) {
+      filtered = filtered.filter(series => !statusFilter.includes(series.status));
+    }
+    
+    // Apply tab filter (all vs favorites)
+    if (activeTab === "favorites") {
+      filtered = filtered.filter(series => series.isFavorite);
+    }
+    
+    return filtered;
+  };
+
+  const filteredSeries = getFilteredSeries();
+
+  // Show loading state while checking authentication or fetching data
+  if (status === "loading" || loading) {
     return (
       <div style={{ padding: "24px", maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
         <h1 style={{ margin: "0 0 16px", fontSize: "24px", fontWeight: "600" }}>Loading...</h1>
         <p style={{ margin: "0 0 24px", color: "var(--muted)" }}>
-          Checking authentication...
+          {status === "loading" ? "Checking authentication..." : "Loading your list..."}
         </p>
       </div>
     );
@@ -139,24 +187,62 @@ export default function MyListPage() {
         </Link>
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--accent)" }}>
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-        </svg>
-        <h1 style={{ margin: "0", fontSize: "32px", fontWeight: "700" }}>
-          My List
-        </h1>
-        <span style={{
-          padding: "4px 8px",
-          background: "var(--border)",
-          color: "var(--fg)",
-          borderRadius: "12px",
-          fontSize: "14px",
-          fontWeight: "500"
-        }}>
-          {followedSeries.length} series
-        </span>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "24px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--accent)" }}>
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+          <h1 style={{ margin: "0", fontSize: "32px", fontWeight: "700" }}>
+            My List
+          </h1>
+          <span style={{
+            padding: "4px 8px",
+            background: "var(--border)",
+            color: "var(--fg)",
+            borderRadius: "12px",
+            fontSize: "14px",
+            fontWeight: "500"
+          }}>
+            {filteredSeries.length} series
+          </span>
+        </div>
+        
+        {/* Filter Button */}
+        <button
+          onClick={() => setShowFilterModal(true)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            padding: "10px 16px",
+            background: statusFilter.length > 0 ? "var(--accent)" : "transparent",
+            color: statusFilter.length > 0 ? "white" : "var(--fg)",
+            border: `2px solid var(--accent)`,
+            borderRadius: "8px",
+            fontSize: "14px",
+            fontWeight: "600",
+            cursor: "pointer",
+            transition: "all 0.2s ease"
+          }}
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+          Filter
+          {statusFilter.length > 0 && (
+            <span style={{
+              background: "rgba(255,255,255,0.2)",
+              color: "white",
+              borderRadius: "10px",
+              padding: "2px 6px",
+              fontSize: "12px",
+              fontWeight: "600"
+            }}>
+              {statusFilter.length}
+            </span>
+          )}
+        </button>
       </div>
 
       {/* Tab Navigation */}
@@ -202,9 +288,7 @@ export default function MyListPage() {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-        {followedSeries
-          .filter(series => activeTab === "all" || series.isFavorite)
-          .map((series) => (
+        {filteredSeries.map((series) => (
           <div key={series.id} className="card" style={{
             display: "flex",
             gap: "16px",
@@ -467,6 +551,37 @@ export default function MyListPage() {
         </div>
       )}
 
+      {followedSeries.length > 0 && filteredSeries.length === 0 && (
+        <div className="card" style={{ textAlign: "center", padding: "40px" }}>
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--muted)", margin: "0 auto 16px" }}>
+            <path d="M3 3l18 18"/>
+            <path d="M9 9l6 6"/>
+            <path d="M21 3l-6 6"/>
+            <path d="M3 21l6-6"/>
+          </svg>
+          <h3 style={{ margin: "0 0 8px", fontSize: "20px", fontWeight: "600" }}>
+            No series match your filters
+          </h3>
+          <p style={{ margin: "0 0 24px", color: "var(--muted)" }}>
+            Try adjusting your status filters to see more series
+          </p>
+          <button
+            onClick={() => setStatusFilter([])}
+            style={{
+              padding: "12px 24px",
+              background: "var(--accent)",
+              color: "white",
+              border: "none",
+              borderRadius: "8px",
+              fontWeight: "600",
+              cursor: "pointer"
+            }}
+          >
+            Clear Filters
+          </button>
+        </div>
+      )}
+
       {followedSeries.length > 0 && followedSeries.filter(s => activeTab === "all" || s.isFavorite).length === 0 && activeTab === "favorites" && (
         <div className="card" style={{ textAlign: "center", padding: "40px" }}>
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--muted)", margin: "0 auto 16px" }}>
@@ -492,6 +607,177 @@ export default function MyListPage() {
           >
             View All Series
           </button>
+        </div>
+      )}
+
+      {/* Filter Modal */}
+      {showFilterModal && (
+        <div style={{ 
+          position: "fixed", 
+          inset: 0, 
+          background: "rgba(0, 0, 0, 0.6)", 
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "center", 
+          zIndex: 1000,
+          padding: "20px"
+        }}>
+          <div style={{ 
+            background: "var(--bg)", 
+            padding: "24px", 
+            borderRadius: "12px", 
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)", 
+            maxWidth: "500px", 
+            width: "100%",
+            border: "1px solid var(--border)",
+            maxHeight: "80vh",
+            overflow: "auto"
+          }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "20px" }}>
+              <h3 style={{ 
+                margin: "0", 
+                fontSize: "20px", 
+                fontWeight: "600",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px"
+              }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                </svg>
+                Filter by Status
+              </h3>
+              <button
+                onClick={() => setShowFilterModal(false)}
+                style={{
+                  background: "none",
+                  border: "none",
+                  color: "var(--muted)",
+                  cursor: "pointer",
+                  padding: "4px",
+                  borderRadius: "4px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            
+            <p style={{ 
+              margin: "0 0 20px", 
+              fontSize: "14px", 
+              color: "var(--muted)",
+              lineHeight: "1.4"
+            }}>
+              Hide series with these statuses:
+            </p>
+
+            {availableStatuses.length > 0 ? (
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "20px" }}>
+                {availableStatuses.map((status) => {
+                  const isFiltered = statusFilter.includes(status);
+                  const count = followedSeries.filter(s => s.status === status).length;
+                  
+                  return (
+                    <label key={status} style={{ 
+                      display: "flex", 
+                      alignItems: "center", 
+                      gap: "12px",
+                      cursor: "pointer",
+                      padding: "12px",
+                      borderRadius: "8px",
+                      transition: "background-color 0.2s ease",
+                      backgroundColor: isFiltered ? "var(--accent)" : "var(--bg-secondary)",
+                      border: "1px solid var(--border)"
+                    }}>
+                      <input
+                        type="checkbox"
+                        checked={isFiltered}
+                        onChange={(e) => handleStatusFilterChange(status, e.target.checked)}
+                        style={{
+                          width: "18px",
+                          height: "18px",
+                          accentColor: "var(--accent)"
+                        }}
+                      />
+                      <div style={{ flex: 1, display: "flex", alignItems: "center", gap: "12px" }}>
+                        <div style={{
+                          width: "12px",
+                          height: "12px",
+                          borderRadius: "50%",
+                          backgroundColor: getStatusColor(status)
+                        }} />
+                        <span style={{ 
+                          fontSize: "16px",
+                          color: isFiltered ? "white" : "var(--fg)",
+                          fontWeight: isFiltered ? "500" : "400"
+                        }}>
+                          {status}
+                        </span>
+                        <span style={{ 
+                          fontSize: "14px",
+                          color: isFiltered ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                          marginLeft: "auto"
+                        }}>
+                          ({count})
+                        </span>
+                      </div>
+                    </label>
+                  );
+                })}
+              </div>
+            ) : (
+              <p style={{ 
+                margin: "0 0 20px", 
+                fontSize: "14px", 
+                color: "var(--muted)",
+                fontStyle: "italic",
+                textAlign: "center"
+              }}>
+                No series with different statuses found
+              </p>
+            )}
+
+            <div style={{ display: "flex", gap: "12px", justifyContent: "flex-end" }}>
+              {statusFilter.length > 0 && (
+                <button
+                  onClick={() => setStatusFilter([])}
+                  style={{
+                    padding: "10px 20px",
+                    background: "transparent",
+                    color: "var(--muted)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "8px",
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease"
+                  }}
+                >
+                  Clear All
+                </button>
+              )}
+              <button
+                onClick={() => setShowFilterModal(false)}
+                style={{
+                  padding: "10px 20px",
+                  background: "var(--accent)",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "8px",
+                  fontSize: "14px",
+                  cursor: "pointer",
+                  transition: "all 0.2s ease"
+                }}
+              >
+                Done
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

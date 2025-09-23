@@ -21,10 +21,28 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     const fetchComics = async () => {
       try {
         const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3003";
-        const res = await fetch(`${baseUrl}/api/comics`, { cache: "no-store" });
+        const res = await fetch(`${baseUrl}/api/manga`, { cache: "no-store" });
         if (res.ok) {
-          const data = await res.json();
-          setComics(data.comics || []);
+          const mangaData = await res.json();
+          if (mangaData.success && mangaData.data) {
+            // Convert manga data to comic format for compatibility
+            const comics = mangaData.data.map((manga: any) => ({
+              id: String(manga.id || ''),
+              title: String(manga.title || ''),
+              cover: String(manga.coverUrl || ''),
+              coverImage: String(manga.coverUrl || ''),
+              author: String(manga.authors?.join(', ') || ''),
+              artist: String(manga.artists?.join(', ') || ''),
+              year: manga.year || 0,
+              tags: Array.isArray(manga.tags) ? manga.tags : [],
+              description: String(manga.description || ''),
+              status: String(manga.status || ''),
+              contentRating: String(manga.contentRating || ''),
+              totalChapters: manga.totalChapters || 0,
+              source: String(manga.source || '')
+            }));
+            setComics(comics);
+          }
         }
       } catch (error) {
         console.error("Failed to fetch comics for search:", error);
@@ -36,6 +54,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+        <title>indiwave</title>
+      </head>
       <body>
         <Providers>
           <Header 

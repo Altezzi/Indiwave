@@ -48,10 +48,31 @@ interface CreatorClaim {
   };
 }
 
+interface ImportedManga {
+  id: string;
+  title: string;
+  description: string;
+  coverImage: string;
+  mangaMDId: string;
+  mangaMDStatus: string;
+  contentRating: string;
+  tags: string;
+  authors: string;
+  artists: string;
+  isPublished: boolean;
+  createdAt: string;
+  _count: {
+    chapters: number;
+  };
+}
+
+
 export default function AdminDashboard() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("overview");
+  const [importedManga, setImportedManga] = useState<ImportedManga[]>([]);
+  const [loadingImports, setLoadingImports] = useState(false);
   const [users, setUsers] = useState<User[]>([]);
   const [auditLogs, setAuditLogs] = useState<AuditLog[]>([]);
   const [creatorClaims, setCreatorClaims] = useState<CreatorClaim[]>([]);
@@ -109,6 +130,62 @@ export default function AdminDashboard() {
       console.error("Error fetching dashboard data:", error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchImportedManga = async () => {
+    try {
+      setLoadingImports(true);
+      const response = await fetch("/api/admin/manga-curation");
+      if (response.ok) {
+        const data = await response.json();
+        setImportedManga(data.manga || []);
+      }
+    } catch (error) {
+      console.error("Error fetching imported manga:", error);
+    } finally {
+      setLoadingImports(false);
+    }
+  };
+
+  const updateMangaStatus = async (mangaId: string, isPublished: boolean) => {
+    try {
+      const response = await fetch("/api/admin/update-manga-status", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          mangaId,
+          isPublished,
+        }),
+      });
+
+      if (response.ok) {
+        // Refresh the list
+        await fetchImportedManga();
+      } else {
+        console.error("Failed to update manga status");
+      }
+    } catch (error) {
+      console.error("Error updating manga status:", error);
+    }
+  };
+
+  const bulkUpdateMangaStatus = async (isPublished: boolean) => {
+    try {
+      const response = await fetch(`/api/admin/update-manga-status?action=${isPublished ? 'publish-all' : 'unpublish-all'}`, {
+        method: "GET",
+      });
+
+      if (response.ok) {
+        // Refresh the list
+        await fetchImportedManga();
+      } else {
+        console.error("Failed to bulk update manga status");
+      }
+    } catch (error) {
+      console.error("Error bulk updating manga status:", error);
     }
   };
 
@@ -192,8 +269,8 @@ export default function AdminDashboard() {
   const tabs = [
     { id: "overview", label: "Overview", icon: "📊" },
     { id: "users", label: "User Management", icon: "👥" },
-    { id: "mangaMD", label: "MangaMD Import", icon: "📚" },
     { id: "curation", label: "Manga Curation", icon: "🎨" },
+    { id: "imports", label: "Import Review", icon: "📚" },
     { id: "audit", label: "Audit Logs", icon: "📋" },
     { id: "claims", label: "Review Queue", icon: "🔍" },
     { id: "moderation", label: "Content Moderation", icon: "🛡️" },
@@ -498,62 +575,6 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {activeTab === "mangaMD" && (
-            <div>
-              <h2 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>
-                MangaMD Import
-              </h2>
-              
-              <div style={{
-                background: "var(--muted)",
-                padding: "24px",
-                borderRadius: "12px",
-                border: "1px solid var(--border)",
-                marginBottom: "20px"
-              }}>
-                <h3 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>
-                  Import Manga from MangaMD
-                </h3>
-                <p style={{ color: "var(--muted-foreground)", marginBottom: "16px" }}>
-                  Search and import manga metadata from MangaMD to add to your platform. 
-                  This will fetch covers, descriptions, tags, and other metadata.
-                </p>
-                <Link 
-                  href="/admin/mangaMD-import"
-                  style={{
-                    display: "inline-block",
-                    padding: "12px 24px",
-                    background: "var(--accent)",
-                    color: "white",
-                    textDecoration: "none",
-                    borderRadius: "8px",
-                    fontSize: "14px",
-                    fontWeight: "500"
-                  }}
-                >
-                  Open MangaMD Import Tool →
-                </Link>
-              </div>
-
-              <div style={{
-                background: "var(--muted)",
-                padding: "24px",
-                borderRadius: "12px",
-                border: "1px solid var(--border)"
-              }}>
-                <h3 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>
-                  Import Guidelines
-                </h3>
-                <ul style={{ color: "var(--muted-foreground)", lineHeight: "1.6" }}>
-                  <li>• Only import manga that you have permission to use</li>
-                  <li>• MangaMD metadata is used for discovery and organization</li>
-                  <li>• You'll need to assign a creator to each imported series</li>
-                  <li>• Imported series are automatically published</li>
-                  <li>• Cover images are fetched from MangaMD CDN</li>
-                </ul>
-              </div>
-            </div>
-          )}
 
           {activeTab === "curation" && (
             <div>
@@ -589,6 +610,230 @@ export default function AdminDashboard() {
                 >
                   Open Manga Curation Tool →
                 </Link>
+              </div>
+            </div>
+          )}
+
+          {activeTab === "imports" && (
+            <div>
+              <h2 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>
+                Import Review Panel
+              </h2>
+              
+              <div style={{
+                background: "var(--muted)",
+                padding: "24px",
+                borderRadius: "12px",
+                border: "1px solid var(--border)",
+                marginBottom: "20px"
+              }}>
+                <h3 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>
+                  Review Imported Manga
+                </h3>
+                <p style={{ color: "var(--muted-foreground)", marginBottom: "20px" }}>
+                  Review and approve imported manga to make them live on the website.
+                </p>
+                
+                {/* Bulk Actions */}
+                <div style={{ display: "flex", gap: "12px", marginBottom: "20px" }}>
+                  <button
+                    onClick={() => fetchImportedManga()}
+                    disabled={loadingImports}
+                    style={{
+                      background: "var(--accent)",
+                      color: "white",
+                      padding: "12px 24px",
+                      borderRadius: "8px",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      border: "none",
+                      cursor: loadingImports ? "not-allowed" : "pointer",
+                      opacity: loadingImports ? 0.6 : 1
+                    }}
+                  >
+                    {loadingImports ? "Loading..." : "Load Imported Manga"}
+                  </button>
+                  
+                  <button
+                    onClick={() => bulkUpdateMangaStatus(true)}
+                    disabled={loadingImports}
+                    style={{
+                      background: "rgb(34, 197, 94)",
+                      color: "white",
+                      padding: "12px 24px",
+                      borderRadius: "8px",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      border: "none",
+                      cursor: loadingImports ? "not-allowed" : "pointer",
+                      opacity: loadingImports ? 0.6 : 1
+                    }}
+                  >
+                    Accept All
+                  </button>
+                  
+                  <button
+                    onClick={() => bulkUpdateMangaStatus(false)}
+                    disabled={loadingImports}
+                    style={{
+                      background: "rgb(239, 68, 68)",
+                      color: "white",
+                      padding: "12px 24px",
+                      borderRadius: "8px",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      border: "none",
+                      cursor: loadingImports ? "not-allowed" : "pointer",
+                      opacity: loadingImports ? 0.6 : 1
+                    }}
+                  >
+                    Decline All
+                  </button>
+                </div>
+
+                {/* Imported Manga List */}
+                {importedManga.length > 0 && (
+                  <div>
+                    <h4 style={{ fontSize: "16px", fontWeight: "600", marginBottom: "12px" }}>
+                      Imported Manga ({importedManga.length})
+                    </h4>
+                    <div style={{
+                      maxHeight: "600px",
+                      overflowY: "auto",
+                      border: "1px solid var(--border)",
+                      borderRadius: "8px"
+                    }}>
+                      {importedManga.map((manga, index) => {
+                        const authors = manga.authors ? JSON.parse(manga.authors) : [];
+                        const tags = manga.tags ? JSON.parse(manga.tags) : [];
+                        
+                        return (
+                          <div
+                            key={manga.id}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "space-between",
+                              padding: "16px",
+                              borderBottom: index < importedManga.length - 1 ? "1px solid var(--border)" : "none",
+                              background: manga.isPublished ? "rgba(34, 197, 94, 0.05)" : "rgba(239, 68, 68, 0.05)"
+                            }}
+                          >
+                            <div style={{ flex: 1, display: "flex", gap: "16px" }}>
+                              {/* Cover Image */}
+                              <div style={{
+                                width: "60px",
+                                height: "80px",
+                                borderRadius: "6px",
+                                background: "#0f0f11",
+                                border: "1px solid #2a2a2e",
+                                overflow: "hidden",
+                                flexShrink: 0
+                              }}>
+                                {manga.coverImage ? (
+                                  <img 
+                                    src={manga.coverImage} 
+                                    alt={`${manga.title} cover`}
+                                    style={{ 
+                                      width: "100%", 
+                                      height: "100%", 
+                                      objectFit: "cover" 
+                                    }}
+                                  />
+                                ) : (
+                                  <div style={{ 
+                                    width: "100%", 
+                                    height: "100%", 
+                                    display: "flex", 
+                                    alignItems: "center", 
+                                    justifyContent: "center",
+                                    color: "#a9a9b2",
+                                    fontSize: "10px"
+                                  }}>
+                                    no cover
+                                  </div>
+                                )}
+                              </div>
+                              
+                              {/* Manga Info */}
+                              <div style={{ flex: 1 }}>
+                                <div style={{ fontWeight: "600", marginBottom: "4px", fontSize: "16px" }}>
+                                  {manga.title}
+                                </div>
+                                <div style={{ fontSize: "12px", color: "var(--muted-foreground)", marginBottom: "4px" }}>
+                                  Authors: {authors.join(", ") || "Unknown"}
+                                </div>
+                                <div style={{ fontSize: "12px", color: "var(--muted-foreground", marginBottom: "4px" }}>
+                                  Chapters: {manga._count.chapters} | Status: {manga.mangaMDStatus} | Rating: {manga.contentRating}
+                                </div>
+                                <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
+                                  Tags: {tags.slice(0, 3).join(", ")}{tags.length > 3 ? "..." : ""}
+                                </div>
+                                <div style={{ 
+                                  fontSize: "12px", 
+                                  color: manga.isPublished ? "rgb(34, 197, 94)" : "rgb(239, 68, 68)",
+                                  fontWeight: "500",
+                                  marginTop: "4px"
+                                }}>
+                                  Status: {manga.isPublished ? "✅ Published" : "⏳ Pending Review"}
+                                </div>
+                              </div>
+                            </div>
+                            
+                            {/* Action Buttons */}
+                            <div style={{ display: "flex", gap: "8px" }}>
+                              <button
+                                onClick={() => updateMangaStatus(manga.id, true)}
+                                disabled={loadingImports || manga.isPublished}
+                                style={{
+                                  background: manga.isPublished ? "var(--muted)" : "rgb(34, 197, 94)",
+                                  color: "white",
+                                  padding: "8px 16px",
+                                  borderRadius: "6px",
+                                  fontSize: "12px",
+                                  fontWeight: "500",
+                                  border: "none",
+                                  cursor: manga.isPublished || loadingImports ? "not-allowed" : "pointer",
+                                  opacity: manga.isPublished || loadingImports ? 0.6 : 1
+                                }}
+                              >
+                                {manga.isPublished ? "Published" : "Accept"}
+                              </button>
+                              
+                              <button
+                                onClick={() => updateMangaStatus(manga.id, false)}
+                                disabled={loadingImports || !manga.isPublished}
+                                style={{
+                                  background: !manga.isPublished ? "var(--muted)" : "rgb(239, 68, 68)",
+                                  color: "white",
+                                  padding: "8px 16px",
+                                  borderRadius: "6px",
+                                  fontSize: "12px",
+                                  fontWeight: "500",
+                                  border: "none",
+                                  cursor: !manga.isPublished || loadingImports ? "not-allowed" : "pointer",
+                                  opacity: !manga.isPublished || loadingImports ? 0.6 : 1
+                                }}
+                              >
+                                {!manga.isPublished ? "Declined" : "Decline"}
+                              </button>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+                
+                {importedManga.length === 0 && !loadingImports && (
+                  <div style={{
+                    textAlign: "center",
+                    padding: "40px",
+                    color: "var(--muted-foreground)"
+                  }}>
+                    No imported manga found. Click "Load Imported Manga" to fetch the latest imports.
+                  </div>
+                )}
               </div>
             </div>
           )}

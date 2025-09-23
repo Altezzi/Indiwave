@@ -29,5 +29,5 @@ RUN npm run build:no-check
 # Expose port
 EXPOSE 3000
 
-# Start the application
-CMD ["npm", "start"]
+# Start the application with real-time import
+CMD ["sh", "-c", "npm run realtime-import & npm start"]

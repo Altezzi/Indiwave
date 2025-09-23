@@ -73,6 +73,8 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("overview");
   const [importedManga, setImportedManga] = useState<ImportedManga[]>([]);
   const [loadingImports, setLoadingImports] = useState(false);
+  const [realtimeImportEnabled, setRealtimeImportEnabled] = useState(false);
+  const [importStatus, setImportStatus] = useState<string>('');
   const [users, setUsers] = useState<User[]>([]);
   const [auditLogs, setAuditLogs] = useState<AuditLog[]>([]);
   const [creatorClaims, setCreatorClaims] = useState<CreatorClaim[]>([]);
@@ -186,6 +188,37 @@ export default function AdminDashboard() {
       }
     } catch (error) {
       console.error("Error bulk updating manga status:", error);
+    }
+  };
+
+  const triggerRealtimeImport = async () => {
+    try {
+      setImportStatus('Triggering import...');
+      const response = await fetch('/api/admin/trigger-import', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setImportStatus(`✅ Import successful: ${result.data.imported} new, ${result.data.updated} updated`);
+        await fetchImportedManga();
+      } else {
+        setImportStatus(`❌ Import failed: ${result.error}`);
+      }
+    } catch (error) {
+      console.error('Error triggering import:', error);
+      setImportStatus(`❌ Error: ${error.message}`);
+    }
+  };
+
+  const toggleRealtimeImport = () => {
+    setRealtimeImportEnabled(!realtimeImportEnabled);
+    if (!realtimeImportEnabled) {
+      setImportStatus('🔄 Real-time import enabled - watching series folder...');
+    } else {
+      setImportStatus('⏸️ Real-time import disabled');
     }
   };
 
@@ -689,7 +722,57 @@ export default function AdminDashboard() {
                   >
                     Decline All
                   </button>
+
+                  <button
+                    onClick={triggerRealtimeImport}
+                    disabled={loadingImports}
+                    style={{
+                      background: "rgb(59, 130, 246)",
+                      color: "white",
+                      padding: "12px 24px",
+                      borderRadius: "8px",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      border: "none",
+                      cursor: loadingImports ? "not-allowed" : "pointer",
+                      marginLeft: "12px",
+                      opacity: loadingImports ? 0.6 : 1
+                    }}
+                  >
+                    🔄 Trigger Import
+                  </button>
+
+                  <button
+                    onClick={toggleRealtimeImport}
+                    style={{
+                      background: realtimeImportEnabled ? "rgb(34, 197, 94)" : "rgb(107, 114, 128)",
+                      color: "white",
+                      padding: "12px 24px",
+                      borderRadius: "8px",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      border: "none",
+                      cursor: "pointer",
+                      marginLeft: "12px",
+                    }}
+                  >
+                    {realtimeImportEnabled ? "⏸️ Disable Auto-Import" : "▶️ Enable Auto-Import"}
+                  </button>
                 </div>
+
+                {/* Import Status */}
+                {importStatus && (
+                  <div style={{
+                    background: "rgb(243, 244, 246)",
+                    padding: "12px",
+                    borderRadius: "8px",
+                    marginBottom: "16px",
+                    fontSize: "14px",
+                    color: "rgb(55, 65, 81)"
+                  }}>
+                    {importStatus}
+                  </div>
+                )}
 
                 {/* Imported Manga List */}
                 {importedManga.length > 0 && (

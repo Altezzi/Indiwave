@@ -1,0 +1,5 @@
+series/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+series/**/*.png filter=lfs diff=lfs merge=lfs -text
+series/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+series/**/*.gif filter=lfs diff=lfs merge=lfs -text
+series/**/*.webp filter=lfs diff=lfs merge=lfs -text

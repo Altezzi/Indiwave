@@ -17,7 +17,7 @@ services:
     volumes:
       - indiwave_data:/app/data
       - indiwave_public:/app/public
-    command: sh -c "npx prisma db push && npm run import:series && npm run build && npm start"
+    command: sh -c "npx prisma db push && npm run build && npm start"
     restart: unless-stopped
 
 volumes:

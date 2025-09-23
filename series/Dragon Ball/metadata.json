@@ -25,9 +25,116 @@
   "status": "completed",
   "year": 1984,
   "contentRating": "suggestive",
-  "coverImage": "cover.jpg",
-  "totalChapters": 3,
-  "createdAt": "2025-09-22T05:14:42.959Z",
-  "updatedAt": "2025-09-22T05:24:24.466Z",
-  "source": "MangaDex"
+  "coverImage": "cover.jpeg",
+  "altTitles": [
+    {
+      "ja": "ドラゴンボール"
+    },
+    {
+      "en": "Dragonball"
+    },
+    {
+      "en": "Dragon Ball Z"
+    },
+    {
+      "en": "DBZ"
+    },
+    {
+      "de": "Dragon Ball"
+    },
+    {
+      "nl": "Dragon Ball"
+    },
+    {
+      "la": "Pila draconis"
+    },
+    {
+      "pt-br": "Dragon Ball"
+    },
+    {
+      "ca": "Bola de drac"
+    },
+    {
+      "es": "Bola de dragón"
+    },
+    {
+      "eo": "DrakoPilko"
+    },
+    {
+      "sq": "Sferat e Dragoit"
+    },
+    {
+      "lt": "Drakonų kovos"
+    },
+    {
+      "uk": "Куля Дракона"
+    },
+    {
+      "ru": "Жемчуг дракона"
+    },
+    {
+      "sr": "Zmajeva kugla"
+    },
+    {
+      "fa": "دراگون بال"
+    },
+    {
+      "ur": "ڈریگن گیند"
+    },
+    {
+      "hi": "ड्रैगन बॉल"
+    },
+    {
+      "bn": "ড্রাগন বল"
+    },
+    {
+      "te": "డ్రాగన్ బాల్"
+    },
+    {
+      "he": "דרגון בול"
+    },
+    {
+      "ar": "دراغون بول"
+    },
+    {
+      "eu": "Dragoi Bola"
+    },
+    {
+      "ms": "Mutiara naga"
+    },
+    {
+      "id": "Bola naga"
+    },
+    {
+      "th": "ดราก้อนบอล"
+    },
+    {
+      "tr": "Ejder topu"
+    },
+    {
+      "ko": "드래곤볼"
+    },
+    {
+      "zh": "七龙珠"
+    },
+    {
+      "zh-hk": "七龍珠"
+    },
+    {
+      "vi": "Bảy viên ngọc rồng"
+    },
+    {
+      "vi": "Viên ngọc thần kỳ"
+    },
+    {
+      "vi": "7 viên ngọc rồng"
+    },
+    {
+      "fa": "گوی اژدها"
+    }
+  ],
+  "createdAt": "2025-09-23T04:57:22.916Z",
+  "updatedAt": "2025-09-23T04:57:22.916Z",
+  "source": "MangaDex",
+  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Dragon Ball"
 }

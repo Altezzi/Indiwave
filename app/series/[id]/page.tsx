@@ -77,7 +77,8 @@ export default function SeriesPage() {
   const [isFollowing, setIsFollowing] = useState(false);
   const [isLoadingFollow, setIsLoadingFollow] = useState(false);
   const [selectedSeason, setSelectedSeason] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<'chapters' | 'seasons'>('chapters');
+  const [chapterOrder, setChapterOrder] = useState<'asc' | 'desc'>('asc'); // 'asc' = first chapter first, 'desc' = last chapter first
+  const [activeTab, setActiveTab] = useState<'chapters'>('chapters');
 
   useEffect(() => {
     if (params.id) {
@@ -648,7 +649,7 @@ export default function SeriesPage() {
                 })()})
               </button>
               
-              {/* Season Dropdown for Chapters Tab */}
+              {/* Season Dropdown and Chapter Ordering Controls */}
               {activeTab === 'chapters' && comic.seasons && comic.seasons.length > 0 && (
                 <div style={{ display: "flex", alignItems: "center", gap: "8px", marginLeft: "16px" }}>
                   <label style={{ 
@@ -678,44 +679,104 @@ export default function SeriesPage() {
                       </option>
                     ))}
                   </select>
+                  
+                  {/* Chapter Ordering Control */}
+                  <button
+                    onClick={() => setChapterOrder(chapterOrder === 'asc' ? 'desc' : 'asc')}
+                    style={{
+                      padding: "6px 8px",
+                      borderRadius: "4px",
+                      border: "1px solid var(--border)",
+                      background: "var(--bg)",
+                      color: "var(--fg)",
+                      cursor: "pointer",
+                      fontSize: "14px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      minWidth: "32px",
+                      height: "32px",
+                      marginLeft: "8px"
+                    }}
+                    title={chapterOrder === 'asc' ? "Click to show last chapter first" : "Click to show first chapter first"}
+                  >
+                    {chapterOrder === 'asc' ? '↓' : '↑'}
+                  </button>
                 </div>
               )}
               
-              {comic.seasons && comic.seasons.length > 0 && (
-                <button
-                  onClick={() => setActiveTab('seasons')}
-                  style={{
-                    padding: "12px 20px",
-                    background: activeTab === 'seasons' ? "var(--accent)" : "transparent",
-                    color: activeTab === 'seasons' ? "white" : "var(--fg)",
-                    border: "none",
-                    borderRadius: "8px 8px 0 0",
-                    cursor: "pointer",
-                    fontWeight: "500",
-                    transition: "all 0.2s ease"
-                  }}
-                >
-                  Seasons ({comic.seasons.length})
-                </button>
-              )}
             </div>
 
             {/* Tab Content */}
             {activeTab === 'chapters' && (
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 {(() => {
-                  // Get chapters to display based on selected season
+                  // Get chapters to display based on selected season or all seasons
                   let chaptersToShow = [];
                   
-                  if (selectedSeason && comic.seasons) {
-                    // Show chapters from selected season
-                    const selectedSeasonData = comic.seasons.find(s => s.seasonNumber === selectedSeason);
-                    if (selectedSeasonData) {
-                      chaptersToShow = selectedSeasonData.chapters || [];
+                  if (comic.seasons && comic.seasons.length > 0) {
+                    // If seasons exist, show chapters from selected season or all seasons
+                    if (selectedSeason) {
+                      // Show chapters from specific season
+                      const selectedSeasonData = comic.seasons.find(s => s.seasonNumber === selectedSeason);
+                      if (selectedSeasonData) {
+                        chaptersToShow = selectedSeasonData.chapters || [];
+                        // Apply ordering for single season
+                        if (chaptersToShow.length > 0) {
+                          chaptersToShow.sort((a, b) => {
+                            if (chapterOrder === 'asc') {
+                              return a.chapterNumber - b.chapterNumber;
+                            } else {
+                              return b.chapterNumber - a.chapterNumber;
+                            }
+                          });
+                        }
+                      }
+                    } else {
+                      // Show all chapters from all seasons grouped by season
+                      chaptersToShow = [];
+                      // Sort seasons by season number (ascending or descending based on order)
+                      const sortedSeasons = [...comic.seasons].sort((a, b) => {
+                        if (chapterOrder === 'asc') {
+                          return a.seasonNumber - b.seasonNumber; // Season 1, 2, 3...
+                        } else {
+                          return b.seasonNumber - a.seasonNumber; // Season 3, 2, 1...
+                        }
+                      });
+                      
+                      sortedSeasons.forEach(season => {
+                        if (season.chapters && season.chapters.length > 0) {
+                          // Sort chapters within each season
+                          const sortedChapters = [...season.chapters].sort((a, b) => {
+                            if (chapterOrder === 'asc') {
+                              return a.chapterNumber - b.chapterNumber; // Chapter 1, 2, 3...
+                            } else {
+                              return b.chapterNumber - a.chapterNumber; // Chapter 3, 2, 1...
+                            }
+                          });
+                          
+                          // Add chapters with season info
+                          chaptersToShow = chaptersToShow.concat(sortedChapters.map(chapter => ({
+                            ...chapter,
+                            seasonNumber: season.seasonNumber,
+                            seasonTitle: season.title
+                          })));
+                        }
+                      });
                     }
                   } else {
-                    // Show all chapters from main series
+                    // Show all chapters from main series (no seasons)
                     chaptersToShow = comic.chapters || [];
+                    // Apply ordering for main series
+                    if (chaptersToShow.length > 0) {
+                      chaptersToShow.sort((a, b) => {
+                        if (chapterOrder === 'asc') {
+                          return a.chapterNumber - b.chapterNumber;
+                        } else {
+                          return b.chapterNumber - a.chapterNumber;
+                        }
+                      });
+                    }
                   }
                   
                   if (chaptersToShow.length === 0) {
@@ -772,6 +833,11 @@ export default function SeriesPage() {
                           {selectedSeason && (
                             <span style={{ marginLeft: "8px", color: "var(--accent)" }}>
                               • Season {selectedSeason}
+                            </span>
+                          )}
+                          {!selectedSeason && chapter.seasonNumber && (
+                            <span style={{ marginLeft: "8px", color: "var(--accent)" }}>
+                              • Season {chapter.seasonNumber}
                             </span>
                           )}
                         </div>

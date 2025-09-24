@@ -1,9 +1,9 @@
 {
   "title": "Unknown Title",
-  "description": "\"If you were to disappear... I might just lose myself.\"\n\nArcs is reborn into the world of the wildly popular otome game Celestia Kingdom. He thought he was just a background character—until it's revealed he's actually the childhood friend of the final boss! Determined to avoid the bad ending, he throws himself into his daily life as her servant. But it seems the true cause of her descent into darkness is... her childhood friend!?\n\nAn unpredictable tale of master and servant, between a slightly (maybe more than slightly?) yandere heroine and an obliviously overpowered protagonist, begins...!",
+  "description": "Chung Myung, The 13th Disciple of the Mount Hua Sect, One of the 3 Great Swordsmen, Plum Blossom Sword Saint, defeated Chun Ma, who has brought destruction and disarray onto the world. \n\nAfter the battle, he breathes his last breath on top of the headquarter mountain of the Heavenly Demon Sect. \n\nHe is reborn after 100 years in the body of a child. ……What? The Mount Hua Sect has fallen? What kind of nonsense is that!?\n\n---\n\n**Links:**\n- [Animated PV](https://www.youtube.com/watch?v=ZHTcZsg975A)\n- [Official Traditional Chinese Translation](https://www.webtoons.com/zh-hant/action/jianzunguilai/list?title_no=2695)\n- [Official Simplified Chinese Translation](https://www.dongmanmanhua.cn/ANCIENTCHINESE/jianzunguilai/list?title_no=1639)\n- [Official Indonesian Translation](https://www.webtoons.com/id/action/sword-master/list?title_no=2899)\n- [Official Thai Translation](https://www.webtoons.com/th/fantasy/return-of-the-blossoming-blade/list?title_no=3029)",
   "authors": [],
   "artists": [],
-  "year": 2025,
+  "year": 2021,
   "tags": [
     {
       "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
@@ -11,6 +11,19 @@
       "attributes": {
         "name": {
           "en": "Reincarnation"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "292e862b-2d17-4062-90a2-0356caa4ae27",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Time Travel"
         },
         "description": {},
         "group": "theme",
@@ -32,11 +45,24 @@
       "relationships": []
     },
     {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "id": "3e2b8dae-350e-4ab8-a8ce-016e844b9f0d",
       "type": "tag",
       "attributes": {
         "name": {
-          "en": "Romance"
+          "en": "Long Strip"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
         },
         "description": {},
         "group": "genre",
@@ -45,11 +71,11 @@
       "relationships": []
     },
     {
-      "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+      "id": "799c202e-7daa-44eb-9cf7-8a3c0441531e",
       "type": "tag",
       "attributes": {
         "name": {
-          "en": "Magic"
+          "en": "Martial Arts"
         },
         "description": {},
         "group": "theme",
@@ -58,27 +84,14 @@
       "relationships": []
     },
     {
-      "id": "ace04997-f6bd-436e-b261-779182193d3d",
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
       "type": "tag",
       "attributes": {
         "name": {
-          "en": "Isekai"
+          "en": "Adventure"
         },
         "description": {},
         "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
         "version": 1
       },
       "relationships": []
@@ -97,14 +110,14 @@
       "relationships": []
     },
     {
-      "id": "d14322ac-4d6f-4e9b-afd9-629d5f4d8a41",
+      "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
       "type": "tag",
       "attributes": {
         "name": {
-          "en": "Villainess"
+          "en": "Web Comic"
         },
         "description": {},
-        "group": "theme",
+        "group": "format",
         "version": 1
       },
       "relationships": []
@@ -121,9 +134,22 @@
         "version": 1
       },
       "relationships": []
+    },
+    {
+      "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Full Color"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
     }
   ],
-  "status": "ongoing",
-  "contentRating": "suggestive",
-  "mangaMDId": "6f8509aa-dec9-4b92-aa20-014b14fa4d7f"
+  "status": "hiatus",
+  "contentRating": "safe",
+  "mangaMDId": "f0f62b75-5989-4f32-9b59-ab56abe35fc1"
 }

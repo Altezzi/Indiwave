@@ -1,26 +1,19 @@
 {
-  "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Youjo Rem-rin to Issho (Doujinshi)",
-  "mangaMDId": "40531354-ee23-4235-84bd-7df34df68648",
-  "description": "",
+  "title": "Re:Zero - Starting Life in Another World",
+  "description": "An exciting manga series: Re:Zero - Starting Life in Another World",
   "authors": [
-    "Yasuyuki",
-    "Kamikire Basami (Circle)"
+    "Unknown Author"
   ],
   "artists": [
-    "Yasuyuki",
-    "Kamikire Basami (Circle)"
+    "Unknown Artist"
   ],
+  "year": 2020,
   "tags": [
-    "Comedy",
-    "Isekai",
-    "Doujinshi"
+    "action",
+    "adventure",
+    "fantasy"
   ],
-  "status": "completed",
-  "year": null,
+  "status": "ongoing",
   "contentRating": "safe",
-  "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:15:48.804Z",
-  "updatedAt": "2025-09-22T05:25:25.746Z",
-  "source": "MangaDex"
+  "mangaMDId": "series_re_zero___starting_life_in_another_world_1758674130598_lp08l61sk"
 }

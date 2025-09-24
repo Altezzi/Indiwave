@@ -1,0 +1,103 @@
+{
+  "title": "Blood on the Tracks",
+  "description": "Seiichi Osabe is just a normal if not insular 14-year-old boy with a beautiful, loving mother and a hardworking father. The bond between him and his mother is iron-clad, but when an accident involving his cousin sows the seeds of doubt in his head, Seiichi begins to question whether his mother's doting nature is normal, or something more sinister and abnormal. Where do you draw the line between motherly love and unhealthy adoration? And how can you tell where that line is when your mother's love is all you've ever known?",
+  "authors": [],
+  "artists": [],
+  "year": 2017,
+  "tags": [
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "5ca48985-9a9d-4bd8-be29-80dc0303db72",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Crime"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b1e97889-25b4-4258-b28b-cd7f4d28ea9b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Philosophical"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdad7e68-1419-41dd-bdce-27753074a640",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Horror"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "suggestive",
+  "mangaMDId": "ab41d97a-0725-4f37-85db-da001d4ff0dc"
+}

@@ -1,0 +1,168 @@
+{
+  "title": "Miraizer Vam",
+  "description": "(from ebookjapan):\n\nWhat is time? What is life? A superhuman who travels through time, from the past to the future--Miraizer Vam! \n\nIn the eternal circle of time, a boy desperately fights against his destiny. When will he solve all the mysteries and learn about himself? A popular SF tale!",
+  "authors": [],
+  "artists": [],
+  "year": 1976,
+  "tags": [
+    {
+      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Thriller"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sci-Fi"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "292e862b-2d17-4062-90a2-0356caa4ae27",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Time Travel"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b1e97889-25b4-4258-b28b-cd7f4d28ea9b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Philosophical"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Supernatural"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Tragedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "5bcae92e-322e-4c22-9b26-45dd5e7edd51"
+}

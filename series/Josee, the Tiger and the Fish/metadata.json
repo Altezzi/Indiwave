@@ -1,0 +1,64 @@
+{
+  "title": "Josee, the Tiger and the Fish",
+  "description": "The story centers on the relationship between Tsuneo and Josee. Tsuneo is a university student, and Josee is a young girl who has rarely gone out of the house by herself due to her being unable to walk. The two meet when Tsuneo finds Josee's grandmother taking her out for a morning walk.",
+  "authors": [],
+  "artists": [],
+  "year": 2020,
+  "tags": [
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adaptation"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "c8c7de84-4ad7-4712-9800-549314c8e6c6"
+}

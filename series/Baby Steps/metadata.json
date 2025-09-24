@@ -1,0 +1,103 @@
+{
+  "title": "Baby Steps",
+  "description": "Maruo Eiichirou (Ei-Chan), a first year honor student, one day decides he's unhappy with the way things are and lacks exercise. He finds a flyer for the Tennis Club and decides to check it out. He's instantly captivated by it. With no prior experience and poor physical conditioning, join Ei-Chan as he embarks on a tennis journey using his smarts, dedication and work ethic.  \r\n\r\n---\r\n- **Won the 38th Kodansha Manga Award for Shonen Manga in 2014**",
+  "authors": [],
+  "artists": [],
+  "year": 2007,
+  "tags": [
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sports"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "c433f163-d610-49ba-a031-a1f3b6377af2"
+}

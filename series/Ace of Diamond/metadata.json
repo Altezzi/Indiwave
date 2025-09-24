@@ -1,0 +1,77 @@
+{
+  "title": "Ace of Diamond",
+  "description": "Eijun Sawamura had his heart set on the middle-school national baseball championships. But his team is eliminated thanks to a wild pitch thrown by Eijun himself. He’s planning to go to high school with his teammates and try again next year when he’s scouted by the famous Seido High School baseball team. When he goes for a campus visit, he finds himself on the receiving end of a baptism by fire! His experience forming a battery with up-and-coming catcher Miyuki rekindles his passion for baseball!!  \n\n---\n  \n- **Won the 53rd Shogakukan Manga Award in 2008** \n- **Won the 34th Kodansha Manga Award for Shonen**",
+  "authors": [],
+  "artists": [],
+  "year": 2006,
+  "tags": [
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sports"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "60879eb7-3845-4dff-b86d-5a612108053b"
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Kumo no Mukou, Yakusoku no Basho",
+  "description": "In an alternate history of the aftermath of World War II, Japan has been cleaved in half, with the south—Honshu and the other islands—allied with the United States and the northern island Hokkaido annexed by the enigmatic Union. It was on Hokkaido that a mysterious tower had been built, a strand of metal reaching up out of the atmosphere, visible from the northern tip of Honshu. In 1996, three teenagers, Hiroki, Takuya and Sayuri, make a pact—they will build an experimental aircraft, almost invisible to surveillance, cross over to Hokkaido and unlock the secrets of the tower. Their dream was never realized, because Sayuri was sent to Tokyo for treatment after she fell into a coma. It is now three years later. The rosy illusions of youth have fallen away, but not the unbreakable strength of the trio’s promise. The truth of the tower will be uncovered, and with it, the link between it and Sayuri’s mysterious, carefully tended condition.  \n  \nThis is a manga version of the film the Place Promised in Our Early Days",
+  "authors": [],
+  "artists": [],
+  "year": 2006,
+  "tags": [
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "cancelled",
+  "contentRating": "safe",
+  "mangaMDId": "69b88d6f-7439-46d0-9983-f4b5ea6a96c9"
+}

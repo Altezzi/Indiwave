@@ -1,0 +1,311 @@
+{
+  "title": "Pretty Guardian Sailor Moon",
+  "description": "Teenager Usagi is not the best athlete, she's never gotten good grades, and, well, she's a bit of a crybaby. But when she meets a talking cat, she begins a journey that will teach her she has a well of great strength just beneath the surface and the heart to inspire and stand up for her friends as Sailor Moon! [Kodansha]\n\n---\n- **Won the Kodansha Manga Award for Shojo in 1993**\n\n---  \n- [Link to AnimeNewsNetwork for the manga and various anime releases](https://www.animenewsnetwork.com/encyclopedia/manga.php?id=1578)",
+  "authors": [],
+  "artists": [],
+  "year": 1991,
+  "tags": [
+    {
+      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Thriller"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Reincarnation"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "292e862b-2d17-4062-90a2-0356caa4ae27",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Time Travel"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Monsters"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "39730448-9a5f-48a2-85b0-a70db87b1233",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Demons"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3bb26d85-09d5-4d2e-880c-c34b974339e9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Ghosts"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "81c836c9-914a-4eca-981a-560dad663e73",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Magical Girls"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "9438db5a-7e2a-4ac0-b39e-e0d95a34b8a8",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Video Games"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Magic"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Gore"
+        },
+        "description": {},
+        "group": "content",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e64f6742-c834-471d-8d72-dd51fc02b835",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Aliens"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "ee968100-4191-4968-93d3-f82d72be7e46",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Mystery"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Tragedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "e39944f5-15bf-4464-9556-a4e9b3945571"
+}

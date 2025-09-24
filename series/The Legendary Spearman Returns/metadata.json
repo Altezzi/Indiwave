@@ -1,0 +1,155 @@
+{
+  "title": "The Legendary Spearman Returns",
+  "description": "Joshua Sanders, the legendary spearman who ended the brutal civil war, shattered the belief that one must wield a sword to be a master knight.\n\nHe fought in the service of his friend, Emperor Caesar van Briton, but it is all for naught when his fearful comrades try to kill him. He’s on the brink of death when his trusty weapon, Lugia, shines and propels him back to the stables of his childhood.\n\nWith his mighty spear in hand, Joshua is dead set on revenge in this life!",
+  "authors": [],
+  "artists": [],
+  "year": 2021,
+  "tags": [
+    {
+      "id": "292e862b-2d17-4062-90a2-0356caa4ae27",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Time Travel"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Monsters"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "39730448-9a5f-48a2-85b0-a70db87b1233",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Demons"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3e2b8dae-350e-4ab8-a8ce-016e844b9f0d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Long Strip"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Magic"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adaptation"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Full Color"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "ongoing",
+  "contentRating": "safe",
+  "mangaMDId": "707a112b-55cb-41a5-afe1-601d3e52e9a8"
+}

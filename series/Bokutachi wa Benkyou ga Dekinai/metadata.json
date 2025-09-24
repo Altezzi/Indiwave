@@ -1,70 +1,77 @@
 {
   "title": "Bokutachi wa Benkyou ga Dekinai",
-  "mangaMDId": "6ce4c88e-381e-4c4a-a858-7585fff92f47",
   "description": "Yuiga Nariyuki wasn't always a top-notch student; he had to study intensively to get where he is. Even so, he is constantly outperformed by literary genius Furuhashi and science whiz Ogata. When he's supposed to be preparing for college entrance exams, Yuiga is ordered by the headmaster to tutor both these girls—in the subjects with which they struggle the most! How will he manage to get results out of these geniuses?",
-  "authors": [
-    "Tsutsui Taishi"
-  ],
-  "artists": [
-    "Tsutsui Taishi"
-  ],
-  "tags": [
-    "Romance",
-    "Comedy",
-    "Harem",
-    "School Life",
-    "Slice of Life"
-  ],
-  "status": "completed",
+  "authors": [],
+  "artists": [],
   "year": 2017,
-  "contentRating": "suggestive",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
+  "tags": [
     {
-      "ja-ro": "Boku-tachi wa Benkyo ga Dekinai"
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "tl": "Hindi Kami Natuto"
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "id": "Kami Susah Belajar"
+      "id": "aafb99c1-7f60-43fa-b75f-fc9502ce29c7",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Harem"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "id": "Kami Tidak Bisa Belajar"
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "es": "No podemos estudiar"
-    },
-    {
-      "en": "We Never Learn"
-    },
-    {
-      "en": "We Can't Study"
-    },
-    {
-      "ru": "Мы не можем учиться"
-    },
-    {
-      "th": "เรื่องนี้ตำราไม่มีสอน"
-    },
-    {
-      "ja": "ぼくたちは勉強ができない"
-    },
-    {
-      "zh-hk": "我們無法一起學習"
-    },
-    {
-      "zh-hk": "我們真的學不來"
-    },
-    {
-      "ko": "우리는 공부를 못해"
-    },
-    {
-      "vi": "Chúng Ta Không Thể Học"
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     }
   ],
-  "createdAt": "2025-09-23T07:41:01.951Z",
-  "updatedAt": "2025-09-23T07:41:01.951Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Bokutachi wa Benkyou ga Dekinai"
+  "status": "completed",
+  "contentRating": "suggestive",
+  "mangaMDId": "6ce4c88e-381e-4c4a-a858-7585fff92f47"
 }

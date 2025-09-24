@@ -1,0 +1,64 @@
+{
+  "title": "Log Horizon",
+  "description": "How would you react if one day you were sucked into an MMORPG and could never get out? After a mysterious incident, roughly 30,000 players from Japan are now forced to live their life inside the MMORPG \"Elder Tale\" and can not log out. Even death is met with a respawn. Even worse is the fact that food has absolutely no taste. All this combined, many of the players inside this MMO has lost any will to actually play this game, but they are never allowed to leave. A player named Shiro will venture forth to uncover the mystery behind the reason why they are inside this game.",
+  "authors": [],
+  "artists": [],
+  "year": 2012,
+  "tags": [
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "ace04997-f6bd-436e-b261-779182193d3d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Isekai"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "cancelled",
+  "contentRating": "safe",
+  "mangaMDId": "fead53e5-f3b5-4793-b19f-b483208ad04e"
+}

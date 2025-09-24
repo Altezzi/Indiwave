@@ -1,0 +1,51 @@
+{
+  "title": "Barakamon",
+  "description": "Handa Seishuu, a young and handsome calligrapher, is sent to Japan's westernmost island after a certain incident. On the very first day of his new life in the countryside, Sensei, as he comes to be called, meets the simple and innocent Naru, a native kid.  \nFollow the (mis)adventures of this city-bred, hot-and-cold Sensei as he deals with his new neighbors' never-ending antics.",
+  "authors": [],
+  "artists": [],
+  "year": 2009,
+  "tags": [
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "b9a99e3f-6803-4efe-9f7c-f7d566703e4c"
+}

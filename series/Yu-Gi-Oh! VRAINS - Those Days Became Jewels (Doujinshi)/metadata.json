@@ -1,0 +1,77 @@
+{
+  "title": "Yu-Gi-Oh! VRAINS - Those Days Became Jewels (Doujinshi)",
+  "description": "Jin and Lightning go on a trip to Italy together.",
+  "authors": [],
+  "artists": [],
+  "year": 2019,
+  "tags": [
+    {
+      "id": "0234a31e-a729-4e28-9d6a-3f87c4966b9e",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Oneshot"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sci-Fi"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "5920b825-4181-4a17-beeb-9918b0ff7a30",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Boys' Love"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b13b2a48-c720-44a9-9c77-39c9979373fb",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Doujinshi"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "ee89fb3c-9a3c-4043-8449-c3c3d2571f4e"
+}

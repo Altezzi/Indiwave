@@ -1,0 +1,64 @@
+{
+  "title": "Capeta",
+  "description": "Taira Capeta was a 4th grader boy. He had lost his mother when he had been very little. Although he pretended to be tough in front of his father, actually he felt lonely. One day, his father brought junk parts home from his workplace and made a racing kart. Soon, they went to a circuit to drive the kart. However, Capeta found that its frame was bent and it could hardly run straight. But, with his technique he managed the kart. Furthermore, he followed soon after the fast kart and he could nearly leave it behind. The driver in the kart was Minamoto Naomi, the champion of the East Japan Junior Kart. Looking at their chase, Naomi’s mother, Minamoto Nanako, advised Capeta to take part in the official race.  \n  \nThis manga won the Kodansha Manga Award for shōnen in 2005.",
+  "authors": [],
+  "artists": [],
+  "year": 2003,
+  "tags": [
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sports"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "03bcdcf5-1550-4ccb-9c4e-4793cb4b8380"
+}

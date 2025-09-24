@@ -1,0 +1,90 @@
+{
+  "title": "AIR",
+  "description": "Yukito Kunisaki is a man traveling Japan in search of the \"girl in the sky\". Eventually he makes his way to a sleepy seaside town where he meets a strange girl named Misuzu Kamio who has dreams of flying in the sky. During his stay in the town, Yukito meets other unique people and begins to learn more about Misuzu and the town she lives in",
+  "authors": [],
+  "artists": [],
+  "year": 2004,
+  "tags": [
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Tragedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "c8ec11e4-3e52-4100-8614-9f466b03644f"
+}

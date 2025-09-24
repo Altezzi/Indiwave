@@ -1,0 +1,77 @@
+{
+  "title": "Inazuma Eleven",
+  "description": "Raimon Middle School 's soccer club captain, Endou Mamoru is in a pinch - his club is about to be destroyed! Literally! To avert the wrecking ball and disbanding of the club, his team must win against the toughest soccer team in the area - Teikoku. Will Endou and his team meet a crushing defeat or will a mysterious transfer student with a fiery kick save them from disaster?!  \n  \nWon the 34th Annual Kodansha Manga Award for Best Children's Manga.",
+  "authors": [],
+  "artists": [],
+  "year": 2008,
+  "tags": [
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sports"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "af0f31a0-372d-4aa5-a632-f2e2b769ab83"
+}

@@ -1,0 +1,103 @@
+{
+  "title": "Senpai ga Uzai Kouhai no Hanashi",
+  "description": "Futaba Igarashi is a diminutive office lady who finds that her towering and boisterous work senpai Harumi Takeda always gets in her hair, but he always has her back, he always keeps her company, and she starts noticing that her heart is slowly veering towards him…\n\nWon 1st place in the 2018 Next Manga Awards Web Category.\n___\n+++ Difference to volumes\nPixiv/Twitter (Web) to volume mapping:\n| Web Ch. | Volume Ch. | Change | Difference \n| :--- | :--- | :--- | :--- |\n| 64 | v.4 64 | | 0 |\n| 65 | v.4 64.5 | - | 1 |\n| 66 | v.4 65 |  | 1 |\n| 79 | v.4 77.5 | - | 2 |\n| 146.5 | v. 5. 145 | + | 1 |\n| 149.5 | v. 8 149 | + | 0 |\n| 150.5 | v. 8 151 | + | 1 |\n| 153.5 | v. 8 155 | + | 2 |\n| 154.5 | v. 8 157 | + | 3 |\n+++",
+  "authors": [],
+  "artists": [],
+  "year": 2017,
+  "tags": [
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "92d6d951-ca5e-429c-ac78-451071cbf064",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Office Workers"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Web Comic"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Full Color"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "af38f328-8df1-4b4c-a272-e737625c3ddc"
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Hoshi wo Ou Kodomo",
+  "description": "The story centers on Asuna, a girl who spends her solitary days listening to the mysterious music emanating from the crystal radio she received from her father as a memento. However, one day she meets a mysterious boy and is thrust into a magical world beneath the earth. This is their journey to find the Quetzalcoatl and the reasons behind life and death.",
+  "authors": [],
+  "artists": [],
+  "year": 2011,
+  "tags": [
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "648665d6-bc09-41e3-85da-853cd57d3a53"
+}

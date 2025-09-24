@@ -1,0 +1,259 @@
+{
+  "title": "Master Keaton",
+  "description": "Taichi Hiraga-Keaton, who has a Japanese father and an English mother, works as an insurance op (investigator) while teaching archaeology at a university.\nHe is also a former instructor of survival techniques in the SAS (Special Air Service) of the British army.\n\nKeaton's dream is to work as an archaeologist to discover the mysterious Danube civilization.\n\nIn reality, however, he spends his days doing detective work, which is always fraught with danger.\n\nWhen he is thrown out into the desert, he uses his knowledge as a weapon to survive, and he uses chocolate to disable a bomb planted by terrorists.\n\nHe is supported by his daughter Yuriko, who scolds Keaton for his clumsiness, his father Taihei, who is still thriving in his old age, and his partner Daniel, an insurance investigator, while still feeling regret over his ex-wife.\n\n\n\n---\nOfficial Release:\n- English release by [Viz Media](https://www.viz.com/master-keaton)\n- Indonesian release by Elex Media (cancelled)",
+  "authors": [],
+  "artists": [],
+  "year": 1988,
+  "tags": [
+    {
+      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Thriller"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "33771934-028e-4cb3-8744-691e866a923e",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Historical"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "5ca48985-9a9d-4bd8-be29-80dc0303db72",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Crime"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Survival"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "85daba54-a71c-4554-8a28-9901a8b0afad",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Mafia"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "92d6d951-ca5e-429c-ac78-451071cbf064",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Office Workers"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "ac72833b-c4e9-4878-b9db-6c8a4a99444a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Military"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b1e97889-25b4-4258-b28b-cd7f4d28ea9b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Philosophical"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Gore"
+        },
+        "description": {},
+        "group": "content",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "df33b754-73a3-4c54-80e6-1a74a8058539",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Police"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "ee968100-4191-4968-93d3-f82d72be7e46",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Mystery"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Tragedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "b965ba5a-52a3-42c0-b16e-bbea1ee4b8cc"
+}

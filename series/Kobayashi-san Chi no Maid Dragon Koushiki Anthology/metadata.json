@@ -1,0 +1,116 @@
+{
+  "title": "Kobayashi-san Chi no Maid Dragon Koushiki Anthology",
+  "description": "An official anthology of Miss Kobayashi's Dragon Maid side-stories.\n\n---\n**Volume 1**\n**Cover**: [Cool-kyou Shinja](https://mangadex.org/author/9df2ffe2-1b7f-4619-93e1-c97aa0f1c0d0)\n\n**Author list**:\n1. GUNP\n2. OYSTER\n3. Itou Hachi\n4. Kurokawa Otogi\n5. Kimura Mitsuhiro\n6. Hamada Yoshikazu\n7. Yoshikita Popuri\n8. Nobuyoshi Zamurai\n9. Shake O\n10. Tottori Sakyuu\n11. AHOBAKA\n12. 221\n13. Hori Hiroaki\n14. Masayoshi\n\n**Volume 2**\n**Cover**: [Cool-kyou Shinja](https://mangadex.org/author/9df2ffe2-1b7f-4619-93e1-c97aa0f1c0d0)\n\n**Author list**:\n1. Kazama Ayami\n2. Takatsu (as Takatsu Keita)\n3. Nobuyoshi Zamurai\n4. Teiotei Teio\n5. 221\n6. Kurokawa Otogi\n7. Chomoran\n8. Yukiko\n9. Amagappa Shoujogun\n10. Fujisawa Kamiya\n11. Yoshikita Popuri\n12. Shake O\n13. Uzu\n14. Watarai Kou\n15. Nakamura Kanko\n16. GUNP\n\n**Volume 3**\n**Cover**: [Cool-kyou Shinja](https://mangadex.org/author/9df2ffe2-1b7f-4619-93e1-c97aa0f1c0d0)\n\n**Author list**:\n1. Yukiko\n2. Itou Hachi\n3. Orihara Sachiko\n4. Sanzo\n5. Iwatobi Neko\n6. GUNP\n7. Watarai Kou\n8. Nobuyoshi Zamurai\n9. Ukanmuri\n10. masha\n11. KAKERU\n12. Kurokawa Otogi\n13. Teiotei Teio\n\n**Volume 4**\n**Cover**: [Cool-kyou Shinja](https://mangadex.org/author/9df2ffe2-1b7f-4619-93e1-c97aa0f1c0d0)\n\n**Author list**:\n1. Fujisawa Kamiya\n2. Hiyama Daisuke\n3. Teiotei Teio\n4. 221\n5. Kimura Mitsuhiro\n6. AHOBAKA\n7. Watarai Kou\n8. Yoshikita Popuri\n9. Amano Shuninta\n10. Shake O\n11. Hoppege\n12. Takatsu (as Takatsu Keita)\n13. Kazama Ayami\n14. GUNP\n\n**Volume 5**\n**Cover**: [Cool-kyou Shinja](https://mangadex.org/author/9df2ffe2-1b7f-4619-93e1-c97aa0f1c0d0)\n\n**Author list**:\n1. Arita Imari\n2. Itou Hachi\n3. Sakurai Norio\n4. Kawamura Taku\n5. Kafun\n6. Fujisawa Kamiya\n7. Jouyama Yui\n8. Tachi\n9. masha\n10. GUNP\n11. Yoshimoto Masume\n12. Yoshikita Popuri\n13. Mizu Asato\n14. Shake O \n15. Kawai Rou",
+  "authors": [],
+  "artists": [],
+  "year": 2017,
+  "tags": [
+    {
+      "id": "2d1f5d56-a1e5-4d0d-a961-2193588b08ec",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Loli"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "51d83883-4103-437c-b4b1-731cb73d786c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Anthology"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "92d6d951-ca5e-429c-ac78-451071cbf064",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Office Workers"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "dd1f77c5-dea9-4e2b-97ae-224af09caf99",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Monster Girls"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "suggestive",
+  "mangaMDId": "f2343565-30fc-4a47-bf48-3a99019a0cf4"
+}

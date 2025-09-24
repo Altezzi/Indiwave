@@ -1,0 +1,64 @@
+{
+  "title": "All Out!!",
+  "description": "Gion Kenji is short and perpetually pissed off about it. Iwashimizu Sumiaki is tall but timid. Although it's bullies that bring this unlikely pair together on the first day of high school, it's the rugby club that will make them friends.  \n  \nSee [AnimeNewsNetwork](https://www.animenewsnetwork.com/encyclopedia/anime.php?id=17826) for the anime.",
+  "authors": [],
+  "artists": [],
+  "year": 2012,
+  "tags": [
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sports"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "dea1fb8b-c56d-4f1d-a78a-86b9aebc4cf5"
+}

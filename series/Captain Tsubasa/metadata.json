@@ -1,0 +1,129 @@
+{
+  "title": "Captain Tsubasa",
+  "description": "11-year-old Tsubasa Ohzora transfers to his new school where he quickly becomes the star of the school's soccer team. His Brazilian coach, Roberto Hongo, notices the potential of the young athlete and soon offers him a chance to come with him to Brazil. Young Tsubasa trains more and more and is with each passing game more confident in his abilities. Old enemies become his friends and the World Cup seems closer and closer for him.\n\n---\nOfficial Release:\n- Indonesian release by Elex Media",
+  "authors": [],
+  "artists": [],
+  "year": 1981,
+  "tags": [
+    {
+      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Thriller"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Survival"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sports"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "da2d50ca-3018-4cc0-ac7a-6b7d472a29ea",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Delinquents"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "94be07be-2a8f-4557-a575-7a26a8a6194e"
+}

@@ -1,70 +1,77 @@
 {
   "title": "Komi Can't Communicate (Fan-Colored)",
-  "mangaMDId": "fb569d12-1e00-47e3-86cd-793b4eae715c",
   "description": "Komi-san is a beautiful and admirable girl that no one can take their eyes off of. Almost the whole school sees her as the cold beauty that's out of their league, but Tadano Hitohito knows the truth: she's just really bad at communicating with others.\n\nKomi-san, who wishes to fix this bad habit of hers, tries to improve it with the help of Tadano-kun by achieving her goal of having 100 friends.",
-  "authors": [
-    "Oda Tomohito"
-  ],
-  "artists": [
-    "Oda Tomohito"
-  ],
+  "authors": [],
+  "artists": [],
+  "year": 2025,
   "tags": [
-    "Romance",
-    "Comedy",
-    "Fan Colored",
-    "School Life",
-    "Slice of Life"
-  ],
-  "status": "completed",
-  "year": null,
-  "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
     {
-      "ja-ro": "Comi-san ha Comyusho Desu."
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "en": "Komi-san Can't Communicate."
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "en": "Komi-san Has a Communication Disorder."
+      "id": "7b2ce280-79ef-4c09-9b58-12b7c23a9b78",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fan Colored"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "ja-ro": "Komi-san wa Komyushou Desu"
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "ja-ro": "Komi-san wa, Communication Shougai desu."
-    },
-    {
-      "ja-ro": "Komi-san wa, Comyushou desu."
-    },
-    {
-      "ja-ro": "Komi-san wa, Komyushou desu."
-    },
-    {
-      "en": "Miss Komi Is Bad at Communication."
-    },
-    {
-      "ru": "У Коми-сан проблемы с общением"
-    },
-    {
-      "th": "โฉมงามพูดไม่เก่งกับผองเพื่อนไม่เต็มเต็ง"
-    },
-    {
-      "zh": "古見さんは、コミュ症です。"
-    },
-    {
-      "zh-hk": "古見同學有交流障礙症"
-    },
-    {
-      "ko": "코미 양은, 커뮤증이에요"
-    },
-    {
-      "ja-ro": "Komi-san wa Komyushou Desu."
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     }
   ],
-  "createdAt": "2025-09-23T07:41:02.841Z",
-  "updatedAt": "2025-09-23T07:41:02.841Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Komi Can't Communicate (Fan-Colored)"
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "fb569d12-1e00-47e3-86cd-793b4eae715c"
 }

@@ -1,0 +1,64 @@
+{
+  "title": "Toaru Kagaku no Railgun Gaiden - Astral Buddy",
+  "description": "Shokuhou Misaki's clique is, of course, made out of only middle school girls from Tokiwadai.  \nThe ringlet curl girl of Shokuhou's clique—Hokaze Junko. This girl is the owner of the Level 4 ability Rampage Dress…  \n  \nThe events of the manga feature Hokaze Junko, a prominent girl in Shokuhou Misaki's clique previously referred to as the ringlet curl girl, as the main character as she gets involved in an incident that takes place alongside the Dream Ranker Arc in the parent series.  \n\n\n---",
+  "authors": [],
+  "artists": [],
+  "year": 2017,
+  "tags": [
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Supernatural"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "e10c02da-e7a3-40e2-8b3d-c6f769d4618c"
+}

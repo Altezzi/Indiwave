@@ -1,0 +1,77 @@
+{
+  "title": "Hai to Gensou no Grimgar",
+  "description": "Living isn't easy.  \n  \nWhen Haruhito awakens, he's in the dark. He doesn't know where he is, why is he here, and where he came from. Around him there are several men and women who have the same circumstances.  \n  \nTogether, they advance forward away from the darkness, and a world they've never seen before called \"Grimgar\" spreads out before them.  \n  \nMemories, money, special powers — this is the reality we who have none of those things have obtained.",
+  "authors": [],
+  "artists": [],
+  "year": 2015,
+  "tags": [
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adaptation"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "c7dc4c1f-1758-4f04-bec4-0ca82ed89dc9"
+}

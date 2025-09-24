@@ -1,0 +1,155 @@
+{
+  "title": "The Reincarnated King of Fists",
+  "description": "In a world where humans enslave non-human species, the powerful wizard Leppenhardt creates an empire to safeguard these beings. However, his reign ends when he's defeated by the brutally strong Tesron, the \"King of Fists.\" \n\nBut death isn’t the end, because Leppenhardt awakens in Tesron's young body! \n\nNow armed with incredible strength and a new identity, he sets off to free the non-human races again. Can the new King of Fists reshape the world for all, or will his second chance slip away?",
+  "authors": [],
+  "artists": [],
+  "year": 2024,
+  "tags": [
+    {
+      "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Reincarnation"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "292e862b-2d17-4062-90a2-0356caa4ae27",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Time Travel"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3e2b8dae-350e-4ab8-a8ce-016e844b9f0d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Long Strip"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "799c202e-7daa-44eb-9cf7-8a3c0441531e",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Martial Arts"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Magic"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Web Comic"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adaptation"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Full Color"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "ongoing",
+  "contentRating": "safe",
+  "mangaMDId": "00296c8d-a815-4fdd-b4b8-c79c550ee875"
+}

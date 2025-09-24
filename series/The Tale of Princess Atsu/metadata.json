@@ -1,0 +1,38 @@
+{
+  "title": "The Tale of Princess Atsu",
+  "description": "Chaos reigns as the curtain descends on the age of the samurai. Atsuhime, born to the Satsuma branch of the Shimazu clan is to wed Iesada Tokugawa, the 13th shogun. However, soon after their marriage, Atsuhime’s beloved husband dies, leaving her to defend the clan as she is tossed about by the waves of history. Watch as this exceptional woman from Satsuma lives out a trouble-filled life while resolutely moving forward no matter what in this moving historical comic!",
+  "authors": [],
+  "artists": [],
+  "year": 2008,
+  "tags": [
+    {
+      "id": "33771934-028e-4cb3-8744-691e866a923e",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Historical"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "2ef0396d-c74e-4c76-b4a1-2eb8c4481eea"
+}

@@ -1,0 +1,168 @@
+{
+  "title": "Black Paradox",
+  "description": "Four people intent on killing themselves meet through the suicide website Black Paradox: Maruso, a nurse who despairs about the future; Taburo, a man who is tortured by his doppelganger; Pii-tan, an engineer with his own robot clone; and Baracchi, a woman who agonizes about the birthmark on her face.\n\nThey wander together in search of the perfect death, fatefully opening a door that leads them to a rather bizarre destiny…\n\n[Official English](https://www.viz.com/read/manga/junji-ito/product/7231)",
+  "authors": [],
+  "artists": [],
+  "year": 2009,
+  "tags": [
+    {
+      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Thriller"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Monsters"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Survival"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b1e97889-25b4-4258-b28b-cd7f4d28ea9b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Philosophical"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdad7e68-1419-41dd-bdce-27753074a640",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Horror"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Supernatural"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "ee968100-4191-4968-93d3-f82d72be7e46",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Mystery"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Tragedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "41833997-4ce8-4154-808b-7b1602569e80"
+}

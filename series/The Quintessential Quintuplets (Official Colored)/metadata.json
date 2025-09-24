@@ -1,50 +1,90 @@
 {
   "title": "The Quintessential Quintuplets (Official Colored)",
-  "mangaMDId": "01f6270d-95a5-4ec6-a2aa-491bcd90a321",
   "description": "A high school romantic comedy with five times the cute girls! A high school boy must work part-time to help five sisters study so they can graduate, but the only thing these quintuplets have in common is that they all hate studying!\n\nFive girls who want to do anything but study, and their tutor: a high school boy who’s got book smarts and not much else. Futaro Uesugi took the tutoring gig because he was desperate for cash, but when his students—the five beautiful daughters of a wealthy businessman—find five times the excuses to slack off, what can he do?! At this rate, the sisters won’t graduate, so if he wants to get paid, Futaro must think of a plan to suit each of them… Which feels hopeless when five out of five of them think he’s a loser!",
-  "authors": [
-    "Haruba Negi"
-  ],
-  "artists": [
-    "Haruba Negi"
-  ],
-  "tags": [
-    "Official Colored",
-    "Romance",
-    "Comedy",
-    "Harem",
-    "Drama",
-    "School Life"
-  ],
-  "status": "completed",
+  "authors": [],
+  "artists": [],
   "year": 2020,
-  "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
+  "tags": [
     {
-      "en": "The Quintessential Quintuplets - Full Color Edition"
+      "id": "320831a8-4026-470b-94f6-8353740e6f04",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Official Colored"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "ja": "五等分の花嫁 フルカラー版"
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "en": "5-toubun no Hanayome (Official Colored)"
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "en": "Gotoubun no Hanayome (Official Colored)"
+      "id": "aafb99c1-7f60-43fa-b75f-fc9502ce29c7",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Harem"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "en": "The Five Wedded Brides (Official Colored)"
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "uz": "Besh Kelin (Official Colored)"
-    },
-    {
-      "vi": "Nhà có 5 nàng dâu (Official Colored)"
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
     }
   ],
-  "createdAt": "2025-09-23T07:41:01.896Z",
-  "updatedAt": "2025-09-23T07:41:01.896Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\The Quintessential Quintuplets (Official Colored)"
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "01f6270d-95a5-4ec6-a2aa-491bcd90a321"
 }

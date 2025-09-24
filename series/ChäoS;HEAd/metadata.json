@@ -1,0 +1,77 @@
+{
+  "title": "ChäoS;HEAd",
+  "description": "Takumi is a high school student. He is withdrawn and is not interested in 3D things. In his town, a mysterious serial murder case happens and people get panicked. One day, when he chats on the internet, a man suddenly contacts him and gives him an URL. He goes to the website and finds a blog image that suggests a next murder case… On the next day, it really happens… Could he be really the one responsible? And where is the D-sword that he is supposed to find?",
+  "authors": [],
+  "artists": [],
+  "year": 2025,
+  "tags": [
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "aafb99c1-7f60-43fa-b75f-fc9502ce29c7",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Harem"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdad7e68-1419-41dd-bdce-27753074a640",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Horror"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "ee968100-4191-4968-93d3-f82d72be7e46",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Mystery"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "5f518b39-298d-430c-89ae-963aba99928d"
+}

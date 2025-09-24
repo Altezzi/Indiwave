@@ -1,0 +1,64 @@
+{
+  "title": "Servant X Service",
+  "description": "By the author of \"Working!!\", this 4-koma features the staff of the health and welfare section of the ward office of a certain city. Newcomers Hasebe Yutaka, Yamagami, Miyoshi Saya, and their supervisor Ichimiya Taishi go through the everyday quirks of working at their office.",
+  "authors": [],
+  "artists": [],
+  "year": 2007,
+  "tags": [
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b11fda93-8f1d-4bef-b2ed-8803d3733170",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "4-Koma"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "1300f427-ce73-4314-952a-822604440214"
+}

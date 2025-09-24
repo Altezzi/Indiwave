@@ -1,47 +1,129 @@
 {
   "title": "Kengan Asura",
-  "mangaMDId": "885bed69-7d08-47a8-b25c-a37759c97c5f",
   "description": "Since the Edo periods of Japan, gladiator arenas exist in certain areas. In these arenas, wealthy business owners and merchants hire gladiators to fight in unarmed combat where winner takes all. Tokita Ohma, nicknamed \"Asura\", joins these arenas and devastates his opponents. His spectacular ability to crush his enemies catches the attention of the big business owners, including the Nogi Group chairman, Nogi Hideki.  \n  \nCompleted on 23 August 2018 with 236 chapters and 27 volumes (and a Volume 0).",
-  "authors": [
-    "Sandrovich Yabako"
-  ],
-  "artists": [
-    "Daromeon"
-  ],
-  "tags": [
-    "Thriller",
-    "Action",
-    "Psychological",
-    "Comedy",
-    "Crime",
-    "Sports",
-    "Martial Arts",
-    "Gore",
-    "Drama"
-  ],
-  "status": "completed",
+  "authors": [],
+  "artists": [],
   "year": 2012,
-  "contentRating": "suggestive",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
+  "tags": [
     {
-      "ru": "Кэнган Асура"
+      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Thriller"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "ja": "ケンガンアシュラ"
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "zh": "拳愿阿修罗"
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "fr": "Kengan Ashura"
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     },
     {
-      "en": "Kengan Ashura"
+      "id": "5ca48985-9a9d-4bd8-be29-80dc0303db72",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Crime"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sports"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "799c202e-7daa-44eb-9cf7-8a3c0441531e",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Martial Arts"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Gore"
+        },
+        "description": {},
+        "group": "content",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
     }
   ],
-  "createdAt": "2025-09-23T04:44:33.525Z",
-  "updatedAt": "2025-09-23T04:44:33.525Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Kengan Asura"
+  "status": "completed",
+  "contentRating": "suggestive",
+  "mangaMDId": "885bed69-7d08-47a8-b25c-a37759c97c5f"
 }

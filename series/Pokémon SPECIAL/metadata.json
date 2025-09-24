@@ -1,0 +1,246 @@
+{
+  "title": "Pokémon SPECIAL",
+  "description": "Pokémon Adventures follows the story of the original Game Boy game, with all the Gym Leaders, places and opponents. There's plenty of action as these trainers explore forests, jungles, cities and caves in search of Pokémon and adventure… sometimes working together, sometimes on their own! But can they foil the schemes of Team Rocket, a mysterious group of villains who want to use Pokémon for evil?  \n  \nChapter 001 - Chapter 40 - Red, Green & Blue Arc\nChapter 041 - Chapter 90 - Yellow Arc\nChapter 091 - Chapter 180 - Gold, Silver & Crystal Arc\nChapter 181 - Chapter 267 - Ruby & Sapphire Arc\nChapter 268 - Chapter 302 - FireRed & LeafGreen Arc\nChapter 303 - Chapter 337 - Emerald Arc\nChapter 338 - Chapter 416 - Diamond & Pearl Arc\nChapter 417 - Chapter 441 - Platinum Arc\nChapter 442 - Chapter 460 - HeartGold & SoulSilver Arc\nChapter 461 - Chapter 524 - Black & White Arc\nChapter 525 - Chapter 548 - Black & White 2 Arc\nChapter 549 - Chapter 595 - X & Y Arc\nChapter 596 - Chapter 617 - ΩRuby & αSapphire Arc\n\nSun & Moon, Sword & Shield and Scarlet & Violet will be added to this entry.",
+  "authors": [],
+  "artists": [],
+  "year": 1997,
+  "tags": [
+    {
+      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Thriller"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sci-Fi"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Monsters"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3de8c75d-8ee3-48ff-98ee-e20a65c86451",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Animals"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Survival"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sports"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "9438db5a-7e2a-4ac0-b39e-e0d95a34b8a8",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Video Games"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Gore"
+        },
+        "description": {},
+        "group": "content",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "da2d50ca-3018-4cc0-ac7a-6b7d472a29ea",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Delinquents"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adaptation"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Tragedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "ongoing",
+  "contentRating": "safe",
+  "mangaMDId": "47e5c76d-1420-4bfa-a973-90524c9d6f13"
+}

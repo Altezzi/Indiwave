@@ -1,0 +1,103 @@
+{
+  "title": "Gabriel DropOut",
+  "description": "A fallen angel with falling grades! Gabriel White Tenma has descended from heaven to attend high school and guide humanity, but a newly found video game addiction might say otherwise.",
+  "authors": [],
+  "artists": [],
+  "year": 2014,
+  "tags": [
+    {
+      "id": "39730448-9a5f-48a2-85b0-a70db87b1233",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Demons"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Magic"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Supernatural"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "ongoing",
+  "contentRating": "suggestive",
+  "mangaMDId": "74088ca4-48ea-4c09-8df0-2943708b1c0c"
+}

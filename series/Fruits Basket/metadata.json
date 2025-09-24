@@ -1,0 +1,142 @@
+{
+  "title": "Fruits Basket",
+  "description": "Tohru Honda, an orphaned high school girl, is taken in by the wealthy Shigure Sohma when he realizes she has nowhere else to go. However, the Sohma family shares a secret, and it isn't long before Tohru discovers that there's a reason why her classmates, Yuki and Kyo Sohma, never let girls get near them, and never talk about their lives before they lived with Shigure. And before she knows it, Tohru has become so tangled up in the lives of each member of the Sohma family that she couldn't leave even if she wanted to.  \n  \nAs she learns more and more about the truth of the Sohma family and the nature of their secrets, she desperately searches for a way that she can save them. But what can one girl do, especially when it seems that she may have been part of someone's plan all along…  \n  \n[Official English](https://yenpress.com/9780316360166/fruits-basket-collectors-edition-vol-1/)\n\n---\n- **Won the Kodansha Manga Award for Shojo in 2001**\n- **Attained the Guinness World Record for Best-Selling Shojo Manga**",
+  "authors": [],
+  "artists": [],
+  "year": 1998,
+  "tags": [
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "3de8c75d-8ee3-48ff-98ee-e20a65c86451",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Animals"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "65761a2a-415e-47f3-bef2-a9dababba7a6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Reverse Harem"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "School Life"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Supernatural"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Tragedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "e9b1d4ba-b8fb-48c3-8d52-5a4eefd05980"
+}

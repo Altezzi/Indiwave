@@ -1,0 +1,168 @@
+{
+  "title": "Omniscient Reader's Viewpoint (Book Version)",
+  "description": "**AT THAT MOMENT, MY LIFE TOOK ON A DIFFERENT GENRE.**\n\nAs a struggling office worker, Dokja Kim’s sole joy in life is an online novel so obscure that he’s its only reader. Then one day the story comes to an end…and so does the world. People all around the globe suddenly find themselves being massacred by horrific monsters or pitted against each other in sadistic scenarios straight out of the novel. However, only Dokja is aware that this is merely the first chapter of what is to come. Knowing that devastating plot twists are on the horizon, he can no longer afford to sit back as a reader—it’s time for Dokja to step up and write his own destiny!\n\n(Source: [YenPress](https://yenpress.com/series/omniscient-reader-s-viewpoint))",
+  "authors": [],
+  "artists": [],
+  "year": 2025,
+  "tags": [
+    {
+      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Award Winning"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Reincarnation"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Monsters"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Survival"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "9467335a-1b83-4497-9231-765337a00b96",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Post-Apocalyptic"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Magic"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Fantasy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Supernatural"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adaptation"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Full Color"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "ongoing",
+  "contentRating": "safe",
+  "mangaMDId": "46392cb3-a0f8-42e4-b2ac-b89637df56d9"
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Hinamatsuri",
+  "description": "One night, a strange object falls on the head of Nitta, a member of the yakuza. Inside the box is a strange young girl named Hina. She has tremendous supernatural powers, and Nitta finds himself reluctantly taking her in. Her powers can come in handy for his yakuza business, but he also runs the risk of her using them on him! Not to mention, if she doesn't use her powers, she will eventually go berserk and destroy everything around her. Nitta and Hina's strange life together is just beginning…",
+  "authors": [],
+  "artists": [],
+  "year": 2010,
+  "tags": [
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "85daba54-a71c-4554-8a28-9901a8b0afad",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Mafia"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Supernatural"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "8a3d319d-2d10-4364-928c-0f30fd367c24"
+}

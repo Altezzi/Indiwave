@@ -1,0 +1,90 @@
+{
+  "title": "Trigun",
+  "description": "Vash the Stampede is a gunman on the run with a 60 billion double dollar bounty on his head which has made it difficult for him to go anywhere without being chased and shot at. Because of the bounty, every town he ever visit ends up being destroyed because of his pursuers, and miracliously, no one ever gets killed.   \nMeryl and Milly are two insurance agents that have been sent to find Vash the Stampede and keep him under surveillance so no more damage is caused. Meryl, who leads the pair, can't believe that the man they have met can possibly be the legendary gunman.   \nThis spikey haired, gangly, and blonde young man is extremely friendly, a pacifist, hates blood and suicide, absolutely loves donuts, and is a dork and a crybaby…there is no way he could he be Vash the Stampede, a notorious outlaw. However, there's more to Vash than just smiles and doughnuts.",
+  "authors": [],
+  "artists": [],
+  "year": 1997,
+  "tags": [
+    {
+      "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Sci-Fi"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Action"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Comedy"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Adventure"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Supernatural"
+        },
+        "description": {},
+        "group": "theme",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "c43bff07-d61d-4fc8-81ea-967817bb3b96"
+}

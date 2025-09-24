@@ -1,0 +1,77 @@
+{
+  "title": "Orange",
+  "description": "Her name is Orange. She's a young girl in high school, coming of age in the heart of the city. And she has decided she has nothing to live for. Not her shallow friends. Not her parents. Not school. Not even the empty promise of love. Her head filled with morbid fantasies of suicide, Orange finds herself standing at the edge of her rooftop when the drunken, enigmatic young man, Dashu, entered her world changing it forever.  \n  \nA heartbreaking tale of a young woman desperately trying to understand the bewildering world around her, brought to life by the luscious artwork of global manga icon, Benjamin, Orange is a profoundly moving story of loss and redemption.",
+  "authors": [],
+  "artists": [],
+  "year": 2006,
+  "tags": [
+    {
+      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Psychological"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Romance"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Drama"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Slice of Life"
+        },
+        "description": {},
+        "group": "genre",
+        "version": 1
+      },
+      "relationships": []
+    },
+    {
+      "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+      "type": "tag",
+      "attributes": {
+        "name": {
+          "en": "Full Color"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+      },
+      "relationships": []
+    }
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "bd192c60-cfb0-48bd-a116-f11370811d3c"
+}

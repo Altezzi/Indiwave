@@ -3,12 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useSession, signOut } from "next-auth/react";
+// import { useSession, signOut } from "next-auth/react";
 // ThemeToggle removed - using settings page theme system instead
 
 export default function ProfileDropdown() {
   const [isOpen, setIsOpen] = useState(false);
-  const { data: session, status } = useSession();
+  // Temporarily disable session functionality
+  const session = null;
+  const status = "unauthenticated";
   const router = useRouter();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -30,7 +32,9 @@ export default function ProfileDropdown() {
   }, [isOpen]);
 
   const handleSignOut = () => {
-    signOut({ callbackUrl: "/" });
+    // Temporarily disable sign out functionality
+    console.log("Sign out disabled");
+    router.push("/");
     setIsOpen(false);
   };
 

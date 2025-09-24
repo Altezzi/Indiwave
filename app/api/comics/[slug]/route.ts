@@ -146,7 +146,7 @@ export async function GET(
                   id: chapter.id,
                   title: chapter.title,
                   chapterNumber: chapter.chapterNumber || 0,
-                  pages: chapter.pages || 0,
+                  pages: chapter.pages || [],
                 })),
                 libraryCount: 0,
                 createdAt: metadata.createdAt || new Date().toISOString(),

@@ -99,8 +99,8 @@ export async function GET(request: NextRequest) {
     try {
       const dbSeries = await prisma.series.findMany({
         where: { 
-          isPublished: true,
-          seasonNumber: null // Only show main series, not seasons
+          isPublished: true
+          // Removed seasonNumber filter since it's now in the Season model
         },
         include: {
           chapters: {

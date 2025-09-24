@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 
 interface Chapter {
   id: string;
@@ -61,7 +61,9 @@ interface UserUrl {
 export default function SeriesPage() {
   const params = useParams();
   const router = useRouter();
-  const { data: session, status } = useSession();
+  // Temporarily disable session functionality
+  const session = null;
+  const status = "unauthenticated";
   const [comic, setComic] = useState<Comic | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
@@ -96,18 +98,32 @@ export default function SeriesPage() {
 
   const fetchComicData = async (id: string) => {
     try {
-      const response = await fetch(`/api/series/${encodeURIComponent(id)}`);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch comics data: ${response.status}`);
+      // First try to fetch from database (for user-created series)
+      let response = await fetch(`/api/series/${encodeURIComponent(id)}`);
+      
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && data.comic) {
+          setComic(data.comic);
+          return;
+        }
       }
       
-      const data = await response.json();
-      if (data.success && data.comic) {
-        setComic(data.comic);
-      } else {
-        console.error("Series not found with ID:", id);
-        setComic(null);
+      // If not found in database, try to fetch from file-based series (imported series)
+      response = await fetch('/api/comics');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && data.data) {
+          const foundComic = data.data.find((comic: any) => comic.id === id);
+          if (foundComic) {
+            setComic(foundComic);
+            return;
+          }
+        }
       }
+      
+      console.error("Series not found with ID:", id);
+      setComic(null);
     } catch (error) {
       console.error("Error fetching comic:", error);
       setComic(null);
@@ -714,12 +730,21 @@ export default function SeriesPage() {
                     );
                   }
                   
-                  return chaptersToShow.map((chapter, index) => (
+                  return chaptersToShow.map((chapter, index) => {
+                    // Determine the correct route based on series type
+                    const seriesId = selectedSeason && comic.seasons ? 
+                      comic.seasons.find(s => s.seasonNumber === selectedSeason)?.id : 
+                      comic.id;
+                    
+                    // Use /reader route for file-based series (isImported: true), /chapter for database series
+                    const chapterRoute = comic.isImported ? 
+                      `/reader/${seriesId}/${chapter.id}` : 
+                      `/chapter/${seriesId}/${chapter.id}`;
+                    
+                    return (
                     <Link 
                       key={chapter.id}
-                      href={`/chapter/${selectedSeason && comic.seasons ? 
-                        comic.seasons.find(s => s.seasonNumber === selectedSeason)?.id : 
-                        comic.id}/${chapter.id}`}
+                      href={chapterRoute}
                       style={{
                         display: "flex",
                         alignItems: "center",
@@ -753,7 +778,8 @@ export default function SeriesPage() {
                       </div>
                       <span style={{ color: "var(--accent)" }}>→</span>
                     </Link>
-                  ));
+                    );
+                  });
                 })()}
               </div>
             )}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 import ComicCard from "./ComicCard";
 import GenreFilter from "./GenreFilter";
 
@@ -26,7 +26,9 @@ interface LibraryContentProps {
 export default function LibraryContent({ 
   allComics
 }: { allComics: Comic[] }) {
-  const { data: session, status } = useSession();
+  // Temporarily disable session functionality
+  const session = null;
+  const status = "unauthenticated";
   const [selectedGenre, setSelectedGenre] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [mangaPerPage, setMangaPerPage] = useState(24);

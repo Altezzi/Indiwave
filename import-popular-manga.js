@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // Configuration
-const CREATOR_ID = 'cmfujyjpr0000n6owza2pkamk'; // Admin user ID
+const CREATOR_ID = 'cmfx0ertc0000nvvdctg5dnfa'; // Admin user ID
 
 // Popular manga titles to import
 const POPULAR_MANGA = [

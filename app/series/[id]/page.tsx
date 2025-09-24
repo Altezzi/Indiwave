@@ -78,58 +78,16 @@ export default function SeriesPage() {
 
   const fetchComicData = async (id: string) => {
     try {
-      const response = await fetch("/api/comics");
+      const response = await fetch(`/api/series/${encodeURIComponent(id)}`);
       if (!response.ok) {
         throw new Error(`Failed to fetch comics data: ${response.status}`);
       }
       
       const data = await response.json();
-      if (!data.comics) {
-        throw new Error("Invalid comics data response");
-      }
-      
-      // Try multiple matching strategies to find the series
-      let foundComic = data.comics.find((c: any) => c.id === id);
-      
-      if (!foundComic) {
-        // Try with URL decoding
-        const decodedId = decodeURIComponent(id);
-        foundComic = data.comics.find((c: any) => c.id === decodedId);
-      }
-      
-      if (!foundComic) {
-        // Try case-insensitive match
-        foundComic = data.comics.find((c: any) => c.id.toLowerCase() === id.toLowerCase());
-      }
-      
-      if (!foundComic) {
-        // Try partial match
-        foundComic = data.comics.find((c: any) => 
-          c.id.toLowerCase().includes(id.toLowerCase()) || 
-          id.toLowerCase().includes(c.id.toLowerCase())
-        );
-      }
-      
-      if (foundComic) {
-        // Convert manga data to comic format for compatibility
-        const comic = {
-          id: foundComic.id,
-          title: foundComic.title,
-          cover: foundComic.coverUrl,
-          author: foundComic.authors?.join(', ') || '',
-          artist: foundComic.artists?.join(', ') || '',
-          year: foundComic.year,
-          tags: foundComic.tags || [],
-          description: foundComic.description,
-          status: foundComic.status,
-          contentRating: foundComic.contentRating,
-          totalChapters: foundComic.totalChapters,
-          source: foundComic.source,
-          chapters: [] // Initialize empty chapters array
-        };
-        setComic(comic);
+      if (data.success && data.comic) {
+        setComic(data.comic);
       } else {
-        // Series not found - stay on page and show error
+        console.error("Series not found with ID:", id);
         setComic(null);
       }
     } catch (error) {

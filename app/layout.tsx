@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     // Fetch comics data for search
     const fetchComics = async () => {
       try {
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3003";
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
         const res = await fetch(`${baseUrl}/api/comics`, { cache: "no-store" });
         if (res.ok) {
           const comicsData = await res.json();
@@ -29,18 +29,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             const comics = comicsData.comics.map((comic: any) => ({
               id: String(comic.id || ''),
               title: String(comic.title || ''),
+              series: String(comic.series || comic.title || ''),
               cover: String(comic.cover || ''),
               coverImage: String(comic.cover || ''),
               author: String(comic.author || ''),
               artist: String(comic.artist || ''),
               year: comic.year || 0,
-              tags: Array.isArray(comic.tags) ? comic.tags : [],
+              tags: Array.isArray(comic.tags) ? comic.tags : (typeof comic.tags === 'string' ? comic.tags.split(',').map(tag => tag.trim()) : []),
               description: String(comic.description || ''),
               status: String(comic.status || ''),
               contentRating: String(comic.contentRating || ''),
               totalChapters: comic.totalChapters || 0,
               source: String(comic.source || '')
             }));
+            console.log('Loaded comics for search:', comics.length);
             setComics(comics);
           }
         }

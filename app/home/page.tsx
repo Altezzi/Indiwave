@@ -5,6 +5,7 @@ import LatestChapterCard from "../../components/LatestChapterCard";
 import { CoverFallbackProvider } from "../../components/CoverFallbackProvider";
 import HomeSection from "../../components/HomeSection";
 import LibraryLayout from "../../components/LibraryLayout";
+import { getSeriesFromDatabase } from "../../lib/database";
 
 // Force fresh data on every request
 export const revalidate = 0;

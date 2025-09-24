@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 export async function GET(request: NextRequest) {
   try {
@@ -91,8 +94,80 @@ export async function GET(request: NextRequest) {
       console.warn('Could not read static comics file:', error);
     }
 
-    // Combine all comics (purely file-based)
-    let allComics = [...staticComics, ...seriesFromFolders];
+    // Fetch series from database
+    let seriesFromDatabase: any[] = [];
+    try {
+      const dbSeries = await prisma.series.findMany({
+        where: { isPublished: true },
+        include: {
+          chapters: {
+            select: {
+              id: true,
+              title: true,
+              chapterNumber: true,
+              pages: true,
+              isPublished: true,
+              createdAt: true
+            },
+            orderBy: {
+              chapterNumber: 'asc'
+            }
+          },
+          creator: {
+            select: {
+              id: true,
+              name: true,
+              username: true
+            }
+          }
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      });
+
+      // Transform database series to comic format
+      seriesFromDatabase = dbSeries.map(series => ({
+        id: series.id,
+        title: series.title,
+        series: series.title,
+        description: series.description || '',
+        cover: series.coverImage || '/placeholder-cover.jpg',
+        coverImage: series.coverImage || '/placeholder-cover.jpg',
+        author: series.authors || '',
+        artist: series.artists || '',
+        authors: series.authors ? [series.authors] : [],
+        artists: series.artists ? [series.artists] : [],
+        year: series.mangaMDYear || new Date().getFullYear(),
+        tags: series.tags ? series.tags.split(',').map(tag => tag.trim()) : [],
+        mangaMDStatus: series.mangaMDStatus || 'ongoing',
+        status: series.mangaMDStatus || 'ongoing',
+        isImported: series.isImported,
+        contentRating: series.contentRating || 'safe',
+        creator: {
+          id: series.creator.id,
+          name: series.creator.name || 'Unknown',
+          username: series.creator.username || 'unknown'
+        },
+        chapters: series.chapters.map(chapter => ({
+          id: chapter.id,
+          title: chapter.title,
+          chapterNumber: chapter.chapterNumber,
+          pages: chapter.pages ? chapter.pages.split(',').length : 0,
+          isPublished: chapter.isPublished,
+          createdAt: chapter.createdAt
+        })),
+        totalChapters: series.chapters.length,
+        libraryCount: 0,
+        createdAt: series.createdAt,
+        updatedAt: series.updatedAt,
+      }));
+    } catch (dbError) {
+      console.warn('Error fetching series from database:', dbError);
+    }
+
+    // Use database series if available, otherwise fall back to file-based
+    let allComics = seriesFromDatabase.length > 0 ? seriesFromDatabase : [...staticComics, ...seriesFromFolders];
 
     // Sort by creation date (newest first)
     allComics.sort((a, b) => {
@@ -121,5 +196,7 @@ export async function GET(request: NextRequest) {
       { error: 'Internal server error' },
       { status: 500 }
     );
+  } finally {
+    await prisma.$disconnect();
   }
 }

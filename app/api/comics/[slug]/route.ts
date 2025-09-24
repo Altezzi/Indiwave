@@ -1,15 +1,98 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { comicId: string } }
+  { params }: { params: { slug: string } }
 ) {
   try {
-    const { comicId } = params;
+    const { slug } = params;
 
-    // First, try to find in series folders
+    // First, try to find in database
+    try {
+      const dbSeries = await prisma.series.findFirst({
+        where: { 
+          OR: [
+            { id: slug },
+            { title: { contains: slug, mode: 'insensitive' } }
+          ],
+          isPublished: true
+        },
+        include: {
+          chapters: {
+            select: {
+              id: true,
+              title: true,
+              chapterNumber: true,
+              pages: true,
+              isPublished: true,
+              createdAt: true
+            },
+            orderBy: {
+              chapterNumber: 'asc'
+            }
+          },
+          creator: {
+            select: {
+              id: true,
+              name: true,
+              username: true
+            }
+          }
+        }
+      });
+
+      if (dbSeries) {
+        // Transform to comic format
+        const comic = {
+          id: dbSeries.id,
+          title: dbSeries.title,
+          series: dbSeries.title,
+          description: dbSeries.description || '',
+          cover: dbSeries.coverImage || '/placeholder-cover.jpg',
+          coverImage: dbSeries.coverImage || '/placeholder-cover.jpg',
+          author: dbSeries.authors || '',
+          artist: dbSeries.artists || '',
+          authors: dbSeries.authors ? [dbSeries.authors] : [],
+          artists: dbSeries.artists ? [dbSeries.artists] : [],
+          year: dbSeries.mangaMDYear || new Date().getFullYear(),
+          tags: dbSeries.tags ? dbSeries.tags.split(',').map(tag => tag.trim()) : [],
+          mangaMDStatus: dbSeries.mangaMDStatus || 'ongoing',
+          status: dbSeries.mangaMDStatus || 'ongoing',
+          isImported: dbSeries.isImported,
+          contentRating: dbSeries.contentRating || 'safe',
+          creator: {
+            id: dbSeries.creator.id,
+            name: dbSeries.creator.name || 'Unknown',
+            username: dbSeries.creator.username || 'unknown'
+          },
+          chapters: dbSeries.chapters.map(chapter => ({
+            id: chapter.id,
+            title: chapter.title,
+            chapterNumber: chapter.chapterNumber,
+            pages: chapter.pages ? chapter.pages.split(',').length : 0,
+            isPublished: chapter.isPublished,
+            createdAt: chapter.createdAt
+          })),
+          totalChapters: dbSeries.chapters.length,
+          libraryCount: 0,
+          createdAt: dbSeries.createdAt,
+          updatedAt: dbSeries.updatedAt,
+        };
+
+        return NextResponse.json({
+          comic: comic
+        });
+      }
+    } catch (dbError) {
+      console.warn('Error fetching from database:', dbError);
+    }
+
+    // Fallback: try to find in series folders
     const seriesDir = path.join(process.cwd(), 'series');
     let comicFromFolder = null;
 
@@ -30,7 +113,7 @@ export async function GET(
             const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
             
             // Check if this is the comic we're looking for
-            if (metadata.mangaMDId === comicId || folderName === comicId) {
+            if (metadata.mangaMDId === slug || folderName === slug) {
               // Read chapters if available
               let chapters = [];
               if (fs.existsSync(chaptersPath)) {
@@ -43,8 +126,8 @@ export async function GET(
                 title: metadata.title,
                 series: metadata.title,
                 description: metadata.description || '',
-              cover: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
-              coverImage: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
+                cover: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
+                coverImage: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
                 author: metadata.authors?.[0] || '',
                 artist: metadata.artists?.[0] || '',
                 authors: metadata.authors || [],
@@ -93,7 +176,7 @@ export async function GET(
       const staticComics = Array.isArray(parsedData) ? parsedData : parsedData.comics || [];
       
       const staticComic = staticComics.find((comic: any) => 
-        comic.id === comicId || comic.mangaMDId === comicId
+        comic.id === slug || comic.mangaMDId === slug
       );
       
       if (staticComic) {
@@ -117,5 +200,7 @@ export async function GET(
       { error: 'Internal server error' },
       { status: 500 }
     );
+  } finally {
+    await prisma.$disconnect();
   }
 }

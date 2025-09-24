@@ -1,33 +1,29 @@
-import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+const globalForPrisma = globalThis as unknown as {
+  prisma: PrismaClient | undefined;
+};
 
-type Params = { params: { slug: string } };
+export const prisma = globalForPrisma.prisma ?? new PrismaClient();
 
-export async function GET(_req: Request, { params }: Params) {
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export async function getSeriesFromDatabase() {
   try {
-    console.log('Series API called with slug:', params.slug);
-    
-    const series = await prisma.series.findFirst({
-      where: { 
-        id: params.slug, // Use ID directly since we don't have slug field
-        isPublished: true
-      },
-      include: { 
-        chapters: { 
-          where: { isPublished: true },
-          orderBy: { chapterNumber: 'asc' },
+    const series = await prisma.series.findMany({
+      where: { isPublished: true },
+      include: {
+        chapters: {
           select: {
             id: true,
             title: true,
             chapterNumber: true,
             pages: true,
             isPublished: true,
-            createdAt: true,
-            mangaMDChapterTitle: true,
-            mangaMDChapterNumber: true,
-            mangaMDPages: true
+            createdAt: true
+          },
+          orderBy: {
+            chapterNumber: 'asc'
           }
         },
         creator: {
@@ -38,14 +34,13 @@ export async function GET(_req: Request, { params }: Params) {
           }
         }
       },
+      orderBy: {
+        createdAt: 'desc'
+      }
     });
-    
-    if (!series) {
-      return new NextResponse('Series not found', { status: 404 });
-    }
 
     // Transform to comic format for compatibility
-    const comic = {
+    return series.map(series => ({
       id: series.id,
       title: series.title,
       series: series.title,
@@ -73,30 +68,15 @@ export async function GET(_req: Request, { params }: Params) {
         chapterNumber: chapter.chapterNumber,
         pages: chapter.pages ? chapter.pages.split(',').length : 0,
         isPublished: chapter.isPublished,
-        createdAt: chapter.createdAt,
-        mangaMDChapterTitle: chapter.mangaMDChapterTitle,
-        mangaMDChapterNumber: chapter.mangaMDChapterNumber,
-        mangaMDPages: chapter.mangaMDPages
+        createdAt: chapter.createdAt
       })),
       totalChapters: series.chapters.length,
       libraryCount: 0,
       createdAt: series.createdAt,
       updatedAt: series.updatedAt,
-    };
-    
-    return NextResponse.json({
-      success: true,
-      comic: comic
-    });
+    }));
   } catch (error) {
-    console.error('Error fetching series:', error);
-    return NextResponse.json(
-      { 
-        success: false,
-        error: 'Failed to fetch series',
-        details: error instanceof Error ? error.message : 'Unknown error'
-      },
-      { status: 500 }
-    );
+    console.error('Error fetching series from database:', error);
+    return [];
   }
 }

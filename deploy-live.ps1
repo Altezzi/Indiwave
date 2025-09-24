@@ -39,3 +39,4 @@ if ($containers -match "Up") {
     Write-Host "❌ Deployment failed. Check logs with:" -ForegroundColor Red
     Write-Host "docker-compose -f docker-compose.live.yml logs" -ForegroundColor Red
 }
+

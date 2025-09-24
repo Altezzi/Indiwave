@@ -72,8 +72,7 @@ model User {
   accounts        Account[]
   sessions        Session[]
   auditLogs       AuditLog[]
-  createdSeries   Series[]       // Series created by user
-  createdChapters Chapter[]      // Chapters created by user
+  createdSeries   Series[]       // Changed from createdChapters
   comments        Comment[]
   creatorClaims   CreatorClaim[]
   libraryEntries  LibraryEntry[]
@@ -119,39 +118,12 @@ model Series {
   isImported     Boolean        @default(false)
 
   // Relationships
-  chapters       Chapter[]      // New relationship to chapters
   creatorClaims  CreatorClaim[]
   libraryEntries LibraryEntry[]
   ratings        Rating[]
   userUrls       UserUrl[]
 
   @@map("series")
-}
-
-// New Chapter model for individual chapters within series
-model Chapter {
-  id            String    @id @default(cuid())
-  title         String
-  chapterNumber Int
-  pages         String?   // Chapter pages/content
-  isPublished   Boolean   @default(false)
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  seriesId      String    // Points to the parent Series
-  creatorId     String
-  creator       User      @relation(fields: [creatorId], references: [id])
-  series        Series    @relation(fields: [seriesId], references: [id], onDelete: Cascade)
-  comments      Comment[]
-  
-  // MangaDex import fields
-  mangaMDChapterId       String?
-  mangaMDChapterTitle    String?
-  mangaMDChapterNumber   Float?
-  mangaMDPages           Int?
-  mangaMDTranslatedLanguage String?
-  mangaMDPublishAt       DateTime?
-
-  @@map("chapters")
 }
 
 model Comment {
@@ -161,10 +133,8 @@ model Comment {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   userId    String
-  seriesId  String?  // Optional - for series-level comments
-  chapterId String?  // Optional - for chapter-level comments
-  series    Series?  @relation(fields: [seriesId], references: [id], onDelete: Cascade)
-  chapter   Chapter? @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  seriesId  String
+  series    Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
   user      User     @relation(fields: [userId], references: [id])
 
   @@map("comments")

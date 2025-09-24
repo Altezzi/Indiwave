@@ -10,6 +10,11 @@ import path from 'path';
 // Force fresh data on every request
 export const revalidate = 0;
 
+function getBaseUrl() {
+  const envUrl = process.env.VERCEL_URL || process.env.DEPLOY_PRIME_URL;
+  return envUrl?.startsWith("http") ? envUrl : "http://localhost:3000";
+}
+
 type Comic = {
   id: string;
   title: string;
@@ -23,65 +28,50 @@ type Comic = {
 };
 
 async function getAllComics(): Promise<Comic[]> {
-  // Read series from series folders
-  const seriesDir = path.join(process.cwd(), 'series');
-  const comics: Comic[] = [];
+  const origin = getBaseUrl();
 
-  if (!fs.existsSync(seriesDir)) {
-    return comics;
-  }
-
-  const seriesFolders = fs.readdirSync(seriesDir)
-    .filter(item => {
-      const itemPath = path.join(seriesDir, item);
-      return fs.statSync(itemPath).isDirectory();
+  try {
+    // Use the comics API (same as home page)
+    const res = await fetch(`${origin}/api/comics`, {
+      cache: 'no-store',
     });
 
-  for (const folderName of seriesFolders) {
-    const seriesFolder = path.join(seriesDir, folderName);
-    const metadataPath = path.join(seriesFolder, 'metadata.json');
-    const chaptersPath = path.join(seriesFolder, 'chapters.json');
-    
-    if (fs.existsSync(metadataPath)) {
-      try {
-        const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
-        
-        // Read chapters if available
-        let chapters = [];
-        if (fs.existsSync(chaptersPath)) {
-          chapters = JSON.parse(fs.readFileSync(chaptersPath, 'utf8'));
-        }
-
-        // Transform to comic format
-        const comic: Comic = {
-          id: metadata.mangaMDId || folderName,
-          title: metadata.title,
-          cover: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
-          coverImage: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
-          author: metadata.authors?.[0] || '',
-          artist: metadata.artists?.[0] || '',
-          authors: metadata.authors || [],
-          artists: metadata.artists || [],
-          year: metadata.year || new Date().getFullYear(),
-          tags: metadata.tags || [],
-          status: metadata.status || 'ongoing',
-          contentRating: metadata.contentRating || 'safe',
-          totalChapters: chapters.length,
-          source: 'Local Files',
-          chapters: chapters
-        };
-
-        comics.push(comic);
-      } catch (error) {
-        console.error(`Error processing ${folderName}:`, error);
-      }
+    if (!res.ok) {
+      console.error('Failed to fetch comics data:', res.status);
+      return [];
     }
+
+    const comicsData = await res.json();
+    
+    if (comicsData.comics) {
+      // Convert comics data to the expected format
+      const comics: Comic[] = comicsData.comics.map((comic: any) => ({
+        id: String(comic.id || ''),
+        title: String(comic.title || ''),
+        cover: String(comic.cover || ''),
+        coverImage: String(comic.cover || ''),
+        author: String(comic.author || ''),
+        artist: String(comic.artist || ''),
+        authors: comic.authors || [],
+        artists: comic.artists || [],
+        year: comic.year || 0,
+        tags: Array.isArray(comic.tags) ? comic.tags : [],
+        description: String(comic.description || ''),
+        status: String(comic.status || ''),
+        contentRating: String(comic.contentRating || 'safe'),
+        totalChapters: comic.totalChapters || 0,
+        source: 'database',
+        chapters: comic.chapters || []
+      }));
+
+      return comics;
+    }
+
+    return [];
+  } catch (error) {
+    console.error('Error fetching comics:', error);
+    return [];
   }
-
-  // Sort by title
-  comics.sort((a, b) => a.title.localeCompare(b.title));
-
-  return comics;
 }
 
 export default async function LibraryPage({

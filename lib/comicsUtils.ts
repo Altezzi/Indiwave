@@ -82,3 +82,4 @@ export async function getAllComics(): Promise<Comic[]> {
 
   return comics;
 }
+

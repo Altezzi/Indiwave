@@ -18,6 +18,20 @@ services:
     networks:
       - indiwave-network
 
+  # Portainer for container management
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    ports:
+      - "9000:9000"
+      - "9443:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    restart: unless-stopped
+    networks:
+      - indiwave-network
+
   # Optional: Add a PostgreSQL database for production use
   # postgres:
   #   image: postgres:15
@@ -38,5 +52,7 @@ networks:
   indiwave-network:
     driver: bridge
 
-# volumes:
+volumes:
+  portainer_data:
+    driver: local
 #   postgres_data:

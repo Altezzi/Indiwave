@@ -51,3 +51,4 @@ Write-Host "`n📋 Useful commands:" -ForegroundColor White
 Write-Host "  View logs: docker-compose -f docker-compose.live.yml logs -f" -ForegroundColor Gray
 Write-Host "  Stop services: docker-compose -f docker-compose.live.yml down" -ForegroundColor Gray
 Write-Host "  Restart: docker-compose -f docker-compose.live.yml restart" -ForegroundColor Gray
+

@@ -39,3 +39,4 @@ else
     echo "❌ Deployment failed. Check logs with:"
     echo "docker-compose -f docker-compose.live.yml logs"
 fi
+

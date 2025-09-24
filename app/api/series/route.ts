@@ -1,52 +1,105 @@
-import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { NextRequest, NextResponse } from 'next/server';
+import { PrismaClient } from '@prisma/client';
 
-export async function GET(req: Request) {
+const prisma = new PrismaClient();
+
+export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(req.url);
-    const q = searchParams.get('q') ?? '';
-    const page = Number(searchParams.get('page') ?? 1);
-    const pageSize = Number(searchParams.get('pageSize') ?? 24);
+    // Get query parameters
+    const { searchParams } = new URL(request.url);
+    const limitParam = searchParams.get('limit');
+    const limit = limitParam ? parseInt(limitParam) : null;
+    const offset = parseInt(searchParams.get('offset') || '0');
 
-    const where = q
-      ? {
-          OR: [
-            { title: { contains: q, mode: 'insensitive' } },
-            { tags: { contains: q, mode: 'insensitive' } },
-            { authors: { contains: q, mode: 'insensitive' } }
-          ],
-        }
-      : {};
-
-    const [items, total] = await Promise.all([
-      prisma.series.findMany({
-        where: {
-          ...where,
-          isPublished: true // Only show published series
+    // Fetch series from database
+    const series = await prisma.series.findMany({
+      take: limit || undefined,
+      skip: offset,
+      include: {
+        chapters: {
+          select: {
+            id: true,
+            title: true,
+            chapterNumber: true,
+            pages: true,
+            isPublished: true,
+            createdAt: true
+          },
+          orderBy: {
+            chapterNumber: 'asc'
+          }
         },
-        orderBy: { updatedAt: 'desc' },
-        skip: (page - 1) * pageSize,
-        take: pageSize,
-        include: {
-          _count: {
-            select: { chapters: true }
+        creator: {
+          select: {
+            id: true,
+            name: true,
+            username: true
           }
         }
-      }),
-      prisma.series.count({ 
-        where: {
-          ...where,
-          isPublished: true
-        }
-      }),
-    ]);
+      },
+      orderBy: {
+        createdAt: 'desc'
+      }
+    });
 
-    return NextResponse.json({ items, total, page, pageSize });
+    // Transform to comic format for compatibility
+    const comics = series.map(series => ({
+      id: series.id,
+      title: series.title,
+      series: series.title,
+      description: series.description || '',
+      cover: series.coverImage || '/placeholder-cover.jpg',
+      coverImage: series.coverImage || '/placeholder-cover.jpg',
+      author: series.authors || '',
+      artist: series.artists || '',
+      authors: series.authors ? [series.authors] : [],
+      artists: series.artists ? [series.artists] : [],
+      year: series.mangaMDYear || new Date().getFullYear(),
+      tags: series.tags ? series.tags.split(',').map(tag => tag.trim()) : [],
+      mangaMDStatus: series.mangaMDStatus || 'ongoing',
+      status: series.mangaMDStatus || 'ongoing',
+      isImported: series.isImported,
+      contentRating: series.contentRating || 'safe',
+      creator: {
+        id: series.creator.id,
+        name: series.creator.name || 'Unknown',
+        username: series.creator.username || 'unknown'
+      },
+      chapters: series.chapters.map(chapter => ({
+        id: chapter.id,
+        title: chapter.title,
+        chapterNumber: chapter.chapterNumber,
+        pages: chapter.pages ? chapter.pages.split(',').length : 0,
+        isPublished: chapter.isPublished,
+        createdAt: chapter.createdAt
+      })),
+      totalChapters: series.chapters.length,
+      libraryCount: 0,
+      createdAt: series.createdAt,
+      updatedAt: series.updatedAt,
+    }));
+
+    return NextResponse.json({
+      success: true,
+      data: comics,
+      pagination: {
+        limit,
+        offset,
+        total: comics.length,
+      }
+    });
+
   } catch (error) {
-    console.error('Error fetching series:', error);
+    console.error('Error fetching series from database:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch series' },
+      { 
+        success: false,
+        error: 'Internal server error',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      },
       { status: 500 }
     );
+  } finally {
+    await prisma.$disconnect();
   }
 }

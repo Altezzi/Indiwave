@@ -3,9 +3,9 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // Configuration
-const CREATOR_ID = 'cmfujyjpr0000n6owza2pkamk'; // Admin user ID
+const CREATOR_ID = 'cmfx1d8vd0000pzg0xqtyiko4'; // Admin user ID
 const BATCH_SIZE = 5; // Process 5 manga at a time
-const MAX_MANGA_TO_IMPORT = 100; // Limit to prevent overwhelming
+const MAX_MANGA_TO_IMPORT = 200; // Increased limit to get all manga
 
 // Popular manga titles to import
 const POPULAR_MANGA = [

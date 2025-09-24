@@ -83,7 +83,7 @@ model User {
   @@map("users")
 }
 
-// This is now the main Series model (formerly Chapter)
+// Main Series model
 model Series {
   id            String    @id @default(cuid())
   title         String
@@ -104,7 +104,7 @@ model Series {
   mangaMDTranslatedLanguage String?
   mangaMDPublishAt       DateTime?
 
-  // Series metadata (moved from old Series model)
+  // Series metadata
   description    String?
   coverImage     String?
   mangaMDId      String?        @unique
@@ -118,8 +118,14 @@ model Series {
   altTitles      String?
   isImported     Boolean        @default(false)
 
+  // Season system
+  seasonNumber   Int?           // null for main series, 1,2,3... for seasons
+  parentSeriesId String?        // null for main series, points to parent for seasons
+  parentSeries   Series?        @relation("SeriesSeasons", fields: [parentSeriesId], references: [id])
+  seasons        Series[]       @relation("SeriesSeasons")
+
   // Relationships
-  chapters       Chapter[]      // New relationship to chapters
+  chapters       Chapter[]      // Chapters within this series/season
   creatorClaims  CreatorClaim[]
   libraryEntries LibraryEntry[]
   ratings        Rating[]

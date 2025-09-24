@@ -9,6 +9,20 @@ interface Chapter {
   id: string;
   title: string;
   pages: string[];
+  chapterNumber: number;
+  isPublished: boolean;
+  createdAt: string;
+}
+
+interface Season {
+  id: string;
+  title: string;
+  seasonNumber: number;
+  coverImage: string;
+  description: string;
+  createdAt: string;
+  chapters: Chapter[];
+  totalChapters: number;
 }
 
 interface Comic {
@@ -22,6 +36,8 @@ interface Comic {
   author: string;
   artist: string;
   chapters: Chapter[];
+  seasons: Season[];
+  totalSeasons: number;
 }
 
 interface Comment {
@@ -58,6 +74,8 @@ export default function SeriesPage() {
   const [communityRating, setCommunityRating] = useState<number | null>(null);
   const [isFollowing, setIsFollowing] = useState(false);
   const [isLoadingFollow, setIsLoadingFollow] = useState(false);
+  const [selectedSeason, setSelectedSeason] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<'chapters' | 'seasons'>('chapters');
 
   useEffect(() => {
     if (params.id) {
@@ -584,50 +602,284 @@ export default function SeriesPage() {
             padding: "24px",
             border: "1px solid rgba(138, 180, 255, 0.1)"
           }}>
-            <h2 style={{ 
-              fontSize: "20px", 
-              fontWeight: "600", 
-              margin: "0 0 20px 0",
-              color: "var(--fg)"
+            {/* Tab Navigation */}
+            <div style={{ 
+              display: "flex", 
+              gap: "8px", 
+              marginBottom: "24px",
+              borderBottom: "1px solid var(--border)",
+              alignItems: "center"
             }}>
-              Chapters ({comic.chapters.length})
-            </h2>
-            
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              {comic.chapters.map((chapter, index) => (
-                <Link 
-                  key={chapter.id}
-                  href={`/chapter/${comic.id}/${chapter.id}`}
+              <button
+                onClick={() => setActiveTab('chapters')}
+                style={{
+                  padding: "12px 20px",
+                  background: activeTab === 'chapters' ? "var(--accent)" : "transparent",
+                  color: activeTab === 'chapters' ? "white" : "var(--fg)",
+                  border: "none",
+                  borderRadius: "8px 8px 0 0",
+                  cursor: "pointer",
+                  fontWeight: "500",
+                  transition: "all 0.2s ease"
+                }}
+              >
+                Chapters ({(() => {
+                  if (selectedSeason && comic.seasons) {
+                    const selectedSeasonData = comic.seasons.find(s => s.seasonNumber === selectedSeason);
+                    return selectedSeasonData ? selectedSeasonData.chapters.length : 0;
+                  }
+                  return comic.chapters.length;
+                })()})
+              </button>
+              
+              {/* Season Dropdown for Chapters Tab */}
+              {activeTab === 'chapters' && comic.seasons && comic.seasons.length > 0 && (
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginLeft: "16px" }}>
+                  <label style={{ 
+                    fontSize: "14px", 
+                    color: "var(--fg)", 
+                    fontWeight: "500" 
+                  }}>
+                    Season:
+                  </label>
+                  <select
+                    value={selectedSeason || ''}
+                    onChange={(e) => setSelectedSeason(e.target.value ? parseInt(e.target.value) : null)}
+                    style={{
+                      padding: "6px 12px",
+                      borderRadius: "6px",
+                      border: "1px solid var(--border)",
+                      background: "var(--bg)",
+                      color: "var(--fg)",
+                      fontSize: "14px",
+                      minWidth: "150px"
+                    }}
+                  >
+                    <option value="">All Seasons</option>
+                    {comic.seasons.map((season) => (
+                      <option key={season.id} value={season.seasonNumber}>
+                        Season {season.seasonNumber}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
+              
+              {comic.seasons && comic.seasons.length > 0 && (
+                <button
+                  onClick={() => setActiveTab('seasons')}
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    padding: "16px",
-                    background: "var(--border)",
-                    borderRadius: "8px",
-                    textDecoration: "none",
-                    color: "var(--fg)",
-                    transition: "background 0.2s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "rgba(138, 180, 255, 0.1)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "var(--border)";
+                    padding: "12px 20px",
+                    background: activeTab === 'seasons' ? "var(--accent)" : "transparent",
+                    color: activeTab === 'seasons' ? "white" : "var(--fg)",
+                    border: "none",
+                    borderRadius: "8px 8px 0 0",
+                    cursor: "pointer",
+                    fontWeight: "500",
+                    transition: "all 0.2s ease"
                   }}
                 >
-                  <div>
-                    <div style={{ fontWeight: "500", marginBottom: "4px" }}>
-                      {chapter.title}
-                    </div>
-                    <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
-                      {chapter.pages.length} pages
-                    </div>
-                  </div>
-                  <span style={{ color: "var(--accent)" }}>→</span>
-                </Link>
-              ))}
+                  Seasons ({comic.seasons.length})
+                </button>
+              )}
             </div>
+
+            {/* Tab Content */}
+            {activeTab === 'chapters' && (
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {(() => {
+                  // Get chapters to display based on selected season
+                  let chaptersToShow = [];
+                  
+                  if (selectedSeason && comic.seasons) {
+                    // Show chapters from selected season
+                    const selectedSeasonData = comic.seasons.find(s => s.seasonNumber === selectedSeason);
+                    if (selectedSeasonData) {
+                      chaptersToShow = selectedSeasonData.chapters || [];
+                    }
+                  } else {
+                    // Show all chapters from main series
+                    chaptersToShow = comic.chapters || [];
+                  }
+                  
+                  if (chaptersToShow.length === 0) {
+                    return (
+                      <div style={{ 
+                        textAlign: "center", 
+                        padding: "40px", 
+                        color: "var(--muted-foreground)" 
+                      }}>
+                        {selectedSeason ? `No chapters found for Season ${selectedSeason}` : "No chapters available"}
+                      </div>
+                    );
+                  }
+                  
+                  return chaptersToShow.map((chapter, index) => (
+                    <Link 
+                      key={chapter.id}
+                      href={`/chapter/${selectedSeason && comic.seasons ? 
+                        comic.seasons.find(s => s.seasonNumber === selectedSeason)?.id : 
+                        comic.id}/${chapter.id}`}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        padding: "16px",
+                        background: "var(--border)",
+                        borderRadius: "8px",
+                        textDecoration: "none",
+                        color: "var(--fg)",
+                        transition: "background 0.2s ease"
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "rgba(138, 180, 255, 0.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "var(--border)";
+                      }}
+                    >
+                      <div>
+                        <div style={{ fontWeight: "500", marginBottom: "4px" }}>
+                          {chapter.title}
+                        </div>
+                        <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
+                          Chapter {chapter.chapterNumber} • {chapter.pages ? chapter.pages.length : 0} pages
+                          {selectedSeason && (
+                            <span style={{ marginLeft: "8px", color: "var(--accent)" }}>
+                              • Season {selectedSeason}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <span style={{ color: "var(--accent)" }}>→</span>
+                    </Link>
+                  ));
+                })()}
+              </div>
+            )}
+
+            {activeTab === 'seasons' && comic.seasons && comic.seasons.length > 0 && (
+              <div>
+                {/* Season Selector */}
+                <div style={{ marginBottom: "20px" }}>
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "8px", 
+                    fontWeight: "500",
+                    color: "var(--fg)"
+                  }}>
+                    Select Season:
+                  </label>
+                  <select
+                    value={selectedSeason || ''}
+                    onChange={(e) => setSelectedSeason(e.target.value ? parseInt(e.target.value) : null)}
+                    style={{
+                      padding: "8px 12px",
+                      borderRadius: "6px",
+                      border: "1px solid var(--border)",
+                      background: "var(--bg)",
+                      color: "var(--fg)",
+                      fontSize: "14px",
+                      minWidth: "200px"
+                    }}
+                  >
+                    <option value="">All Seasons</option>
+                    {comic.seasons.map((season) => (
+                      <option key={season.id} value={season.seasonNumber}>
+                        Season {season.seasonNumber} - {season.title}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Season Content */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                  {comic.seasons
+                    .filter(season => !selectedSeason || season.seasonNumber === selectedSeason)
+                    .map((season) => (
+                    <div key={season.id} style={{
+                      background: "var(--border)",
+                      borderRadius: "12px",
+                      padding: "16px",
+                      border: "1px solid rgba(138, 180, 255, 0.1)"
+                    }}>
+                      <div style={{ 
+                        display: "flex", 
+                        alignItems: "center", 
+                        gap: "12px", 
+                        marginBottom: "12px" 
+                      }}>
+                        <img 
+                          src={season.coverImage} 
+                          alt={season.title}
+                          style={{
+                            width: "60px",
+                            height: "80px",
+                            objectFit: "cover",
+                            borderRadius: "6px"
+                          }}
+                        />
+                        <div>
+                          <h3 style={{ 
+                            margin: "0 0 4px 0", 
+                            fontSize: "16px", 
+                            fontWeight: "600",
+                            color: "var(--fg)"
+                          }}>
+                            Season {season.seasonNumber}
+                          </h3>
+                          <p style={{ 
+                            margin: "0", 
+                            fontSize: "14px", 
+                            color: "var(--muted-foreground)" 
+                          }}>
+                            {season.totalChapters} chapters
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {season.chapters.length > 0 && (
+                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                          {season.chapters.map((chapter) => (
+                            <Link 
+                              key={chapter.id}
+                              href={`/chapter/${season.id}/${chapter.id}`}
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                padding: "12px",
+                                background: "rgba(var(--bg-rgb, 18, 18, 18), 0.6)",
+                                borderRadius: "6px",
+                                textDecoration: "none",
+                                color: "var(--fg)",
+                                transition: "background 0.2s ease"
+                              }}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.background = "rgba(138, 180, 255, 0.1)";
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.background = "rgba(var(--bg-rgb, 18, 18, 18), 0.6)";
+                              }}
+                            >
+                              <div>
+                                <div style={{ fontWeight: "500", fontSize: "14px" }}>
+                                  {chapter.title}
+                                </div>
+                                <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
+                                  Chapter {chapter.chapterNumber}
+                                </div>
+                              </div>
+                              <span style={{ color: "var(--accent)" }}>→</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

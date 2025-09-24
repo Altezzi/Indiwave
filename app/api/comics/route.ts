@@ -98,7 +98,10 @@ export async function GET(request: NextRequest) {
     let seriesFromDatabase: any[] = [];
     try {
       const dbSeries = await prisma.series.findMany({
-        where: { isPublished: true },
+        where: { 
+          isPublished: true,
+          seasonNumber: null // Only show main series, not seasons
+        },
         include: {
           chapters: {
             select: {
@@ -111,6 +114,30 @@ export async function GET(request: NextRequest) {
             },
             orderBy: {
               chapterNumber: 'asc'
+            }
+          },
+          seasons: {
+            where: { isPublished: true },
+            orderBy: { seasonNumber: 'asc' },
+            select: {
+              id: true,
+              title: true,
+              seasonNumber: true,
+              coverImage: true,
+              description: true,
+              createdAt: true,
+              chapters: {
+                where: { isPublished: true },
+                orderBy: { chapterNumber: 'asc' },
+                select: {
+                  id: true,
+                  title: true,
+                  chapterNumber: true,
+                  pages: true,
+                  isPublished: true,
+                  createdAt: true
+                }
+              }
             }
           },
           creator: {
@@ -157,7 +184,25 @@ export async function GET(request: NextRequest) {
           isPublished: chapter.isPublished,
           createdAt: chapter.createdAt
         })),
+        seasons: series.seasons.map(season => ({
+          id: season.id,
+          title: season.title,
+          seasonNumber: season.seasonNumber,
+          coverImage: season.coverImage || '/placeholder-cover.jpg',
+          description: season.description || '',
+          createdAt: season.createdAt,
+          chapters: season.chapters.map(chapter => ({
+            id: chapter.id,
+            title: chapter.title,
+            chapterNumber: chapter.chapterNumber,
+            pages: chapter.pages ? chapter.pages.split(',').length : 0,
+            isPublished: chapter.isPublished,
+            createdAt: chapter.createdAt
+          })),
+          totalChapters: season.chapters.length
+        })),
         totalChapters: series.chapters.length,
+        totalSeasons: series.seasons.length,
         libraryCount: 0,
         createdAt: series.createdAt,
         updatedAt: series.updatedAt,

@@ -87,11 +87,12 @@ export default function LibraryContent({
           ];
           
           // Check if any of the comic's tags match explicit content tags (case insensitive)
-          const hasExplicitContent = comic.tags.some(tag => 
-            explicitTags.some(explicitTag => 
-              tag.toLowerCase().includes(explicitTag.toLowerCase())
-            )
-          );
+          const hasExplicitContent = comic.tags && Array.isArray(comic.tags) && comic.tags.some(tag => {
+            const tagString = typeof tag === 'string' ? tag : String(tag);
+            return explicitTags.some(explicitTag => 
+              tagString.toLowerCase().includes(explicitTag.toLowerCase())
+            );
+          });
           
           if (hasExplicitContent) return false;
         }

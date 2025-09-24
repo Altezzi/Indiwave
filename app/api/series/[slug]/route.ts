@@ -30,6 +30,30 @@ export async function GET(_req: Request, { params }: Params) {
             mangaMDPages: true
           }
         },
+        seasons: {
+          where: { isPublished: true },
+          orderBy: { seasonNumber: 'asc' },
+          select: {
+            id: true,
+            title: true,
+            seasonNumber: true,
+            coverImage: true,
+            description: true,
+            createdAt: true,
+            chapters: {
+              where: { isPublished: true },
+              orderBy: { chapterNumber: 'asc' },
+              select: {
+                id: true,
+                title: true,
+                chapterNumber: true,
+                pages: true,
+                isPublished: true,
+                createdAt: true
+              }
+            }
+          }
+        },
         creator: {
           select: {
             id: true,
@@ -78,7 +102,25 @@ export async function GET(_req: Request, { params }: Params) {
         mangaMDChapterNumber: chapter.mangaMDChapterNumber,
         mangaMDPages: chapter.mangaMDPages
       })),
+      seasons: series.seasons.map(season => ({
+        id: season.id,
+        title: season.title,
+        seasonNumber: season.seasonNumber,
+        coverImage: season.coverImage || '/placeholder-cover.jpg',
+        description: season.description || '',
+        createdAt: season.createdAt,
+        chapters: season.chapters.map(chapter => ({
+          id: chapter.id,
+          title: chapter.title,
+          chapterNumber: chapter.chapterNumber,
+          pages: chapter.pages ? chapter.pages.split(',').length : 0,
+          isPublished: chapter.isPublished,
+          createdAt: chapter.createdAt
+        })),
+        totalChapters: season.chapters.length
+      })),
       totalChapters: series.chapters.length,
+      totalSeasons: series.seasons.length,
       libraryCount: 0,
       createdAt: series.createdAt,
       updatedAt: series.updatedAt,

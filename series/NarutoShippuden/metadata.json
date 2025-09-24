@@ -1,0 +1,21 @@
+{
+  "title": "Naruto Shippuden",
+  "description": "The continuation of Naruto, following his teenage years.",
+  "authors": [
+    "Masashi Kishimoto"
+  ],
+  "artists": [
+    "Masashi Kishimoto"
+  ],
+  "year": 2007,
+  "tags": [
+    "action",
+    "adventure",
+    "shounen",
+    "ninja"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_narutoshippuden",
+  "mangaMDStatus": "completed"
+}

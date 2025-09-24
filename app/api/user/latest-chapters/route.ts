@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
           series: series.title,
           seriesId: series.id,
           chapterNumber: series.chapters[0].chapterNumber,
-          coverImage: series.coverImage || '/placeholder-cover.jpg',
+          coverImage: series.coverImage || null,
           pages: series.chapters[0].pages ? series.chapters[0].pages.split(',').length : 0,
           createdAt: series.chapters[0].createdAt,
           isFromSeason: false
@@ -91,7 +91,7 @@ export async function GET(request: NextRequest) {
             seasonTitle: season.title,
             seasonNumber: season.seasonNumber,
             chapterNumber: season.chapters[0].chapterNumber,
-            coverImage: series.coverImage || '/placeholder-cover.jpg',
+            coverImage: series.coverImage || null,
             pages: season.chapters[0].pages ? season.chapters[0].pages.split(',').length : 0,
             createdAt: season.chapters[0].createdAt,
             isFromSeason: true

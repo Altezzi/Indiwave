@@ -1,0 +1,21 @@
+{
+  "title": "Fairy Tail",
+  "description": "A young wizard joins a guild and goes on magical adventures.",
+  "authors": [
+    "Hiro Mashima"
+  ],
+  "artists": [
+    "Hiro Mashima"
+  ],
+  "year": 2006,
+  "tags": [
+    "action",
+    "adventure",
+    "shounen",
+    "fantasy"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_fairytail",
+  "mangaMDStatus": "completed"
+}

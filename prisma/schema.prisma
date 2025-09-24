@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:C:/Users/sfgch/Documents/GitHub/Indiwave/prisma/data/prod.db"
+  url      = "file:./prod.db"
 }
 
 model Account {

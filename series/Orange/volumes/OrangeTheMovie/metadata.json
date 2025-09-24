@@ -1,0 +1,21 @@
+{
+  "title": "Orange: The Movie",
+  "description": "The animated adaptation of Orange.",
+  "authors": [
+    "Ichigo Takano"
+  ],
+  "artists": [
+    "Ichigo Takano"
+  ],
+  "year": 2016,
+  "tags": [
+    "romance",
+    "drama",
+    "shoujo",
+    "supernatural"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_orangethemovie",
+  "mangaMDStatus": "completed"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Prince of Tennis",
+  "description": "A tennis prodigy joins his school's tennis team.",
+  "authors": [
+    "Takeshi Konomi"
+  ],
+  "artists": [
+    "Takeshi Konomi"
+  ],
+  "year": 1999,
+  "tags": [
+    "sports",
+    "action",
+    "shounen",
+    "tennis"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_princeoftennis",
+  "mangaMDStatus": "completed"
+}

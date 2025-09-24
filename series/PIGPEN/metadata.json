@@ -1,60 +1,21 @@
 {
-  "title": "PIGPEN",
-  "mangaMDId": "3080a5e2-abc1-4682-92f5-7429428bc198",
-  "description": "The protagonist finds himself adrift on an uninhabited island, where a mysterious family appears before him.  \n\n---\nFrom the author of [Bastard](https://www.webtoons.com/en/thriller/bastard/list?title_no=485) and [Sweet Home](https://www.webtoons.com/en/thriller/sweethome/list?title_no=1285)  \n\n  \n- [Unofficial Subreddit](https://www.reddit.com/r/PigpenManhwa/)  \n- [Official Indonesian Translation](https://www.webtoons.com/id/horror/pigpen/list?title_no=1751&page=1)",
+  "title": "Pigpen",
+  "description": "A manhwa about a man trapped in a mysterious facility.",
   "authors": [
-    "Carnby Kim (김칸비)"
+    "Kim Carnby"
   ],
   "artists": [
-    "Cheon Beomsik (천범식)"
+    "Kim Carnby"
   ],
+  "year": 2019,
   "tags": [
-    "Thriller",
-    "Action",
-    "Psychological",
-    "Long Strip",
-    "Survival",
-    "Horror",
-    "Web Comic",
-    "Mystery",
-    "Full Color",
-    "Tragedy"
+    "horror",
+    "thriller",
+    "seinen",
+    "psychological"
   ],
   "status": "completed",
-  "year": 2019,
   "contentRating": "safe",
-  "coverImage": "cover.png",
-  "altTitles": [
-    {
-      "pl": "Chlew"
-    },
-    {
-      "ko-ro": "Dwaejiuri"
-    },
-    {
-      "fr": "La Porcherie"
-    },
-    {
-      "fr": "Porcherie"
-    },
-    {
-      "zh": "豬窩"
-    },
-    {
-      "ko": "돼지우리"
-    },
-    {
-      "pt-br": "Chiqueiro"
-    },
-    {
-      "uk": "Свинарник"
-    },
-    {
-      "pt-br": "Matadouro"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:44.872Z",
-  "updatedAt": "2025-09-23T04:55:44.872Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\PIGPEN"
+  "mangaMDId": "series_pigpen",
+  "mangaMDStatus": "completed"
 }

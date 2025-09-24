@@ -159,8 +159,8 @@ export async function GET(request: NextRequest) {
         title: series.title,
         series: series.title,
         description: series.description || '',
-        cover: series.coverImage || '/placeholder-cover.jpg',
-        coverImage: series.coverImage || '/placeholder-cover.jpg',
+        cover: series.coverImage || null,
+        coverImage: series.coverImage || null,
         author: series.authors || '',
         artist: series.artists || '',
         authors: series.authors ? [series.authors] : [],
@@ -188,7 +188,7 @@ export async function GET(request: NextRequest) {
           id: season.id,
           title: season.title,
           seasonNumber: season.seasonNumber,
-          coverImage: season.coverImage || '/placeholder-cover.jpg',
+          coverImage: series.coverImage || null, // Use parent series cover or null
           description: season.description || '',
           createdAt: season.createdAt,
           chapters: season.chapters.map(chapter => ({

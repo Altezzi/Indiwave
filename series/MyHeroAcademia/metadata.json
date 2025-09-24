@@ -1,0 +1,21 @@
+{
+  "title": "My Hero Academia",
+  "description": "In a world where most people have superpowers, a boy without powers dreams of becoming a hero.",
+  "authors": [
+    "Kohei Horikoshi"
+  ],
+  "artists": [
+    "Kohei Horikoshi"
+  ],
+  "year": 2014,
+  "tags": [
+    "action",
+    "adventure",
+    "shounen",
+    "superhero"
+  ],
+  "status": "ongoing",
+  "contentRating": "safe",
+  "mangaMDId": "series_myheroacademia",
+  "mangaMDStatus": "ongoing"
+}

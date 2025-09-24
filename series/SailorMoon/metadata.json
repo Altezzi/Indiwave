@@ -1,0 +1,21 @@
+{
+  "title": "Sailor Moon",
+  "description": "A young girl discovers she is a magical warrior destined to save the world.",
+  "authors": [
+    "Naoko Takeuchi"
+  ],
+  "artists": [
+    "Naoko Takeuchi"
+  ],
+  "year": 1991,
+  "tags": [
+    "romance",
+    "action",
+    "shoujo",
+    "magical-girl"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_sailormoon",
+  "mangaMDStatus": "completed"
+}

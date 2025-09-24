@@ -1,0 +1,21 @@
+{
+  "title": "Captain Tsubasa: The Movie",
+  "description": "A Captain Tsubasa movie with new soccer adventures.",
+  "authors": [
+    "Yoichi Takahashi"
+  ],
+  "artists": [
+    "Yoichi Takahashi"
+  ],
+  "year": 1985,
+  "tags": [
+    "sports",
+    "action",
+    "shounen",
+    "soccer"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_captaintsubasathemovie",
+  "mangaMDStatus": "completed"
+}

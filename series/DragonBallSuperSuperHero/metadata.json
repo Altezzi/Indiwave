@@ -1,0 +1,21 @@
+{
+  "title": "Dragon Ball Super: Super Hero",
+  "description": "A Dragon Ball Super movie featuring Gohan and Piccolo.",
+  "authors": [
+    "Akira Toriyama"
+  ],
+  "artists": [
+    "Akira Toriyama"
+  ],
+  "year": 2022,
+  "tags": [
+    "action",
+    "adventure",
+    "shounen",
+    "supernatural"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_dragonballsupersuperhero",
+  "mangaMDStatus": "completed"
+}

@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
       seasonTitle: chapter.season?.title,
       seasonNumber: chapter.season?.seasonNumber,
       chapterNumber: chapter.chapterNumber,
-      coverImage: chapter.series?.coverImage || '/placeholder-cover.jpg',
+      coverImage: chapter.series?.coverImage || null,
       authors: chapter.series?.authors || '',
       artists: chapter.series?.artists || '',
       pages: chapter.pages ? chapter.pages.split(',').length : 0,

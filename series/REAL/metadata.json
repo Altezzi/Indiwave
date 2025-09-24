@@ -1,90 +1,20 @@
 {
-  "title": "REAL",
-  "description": "Nomiya Tomomi, a high school drop-out who wants to devote his life to helping Natsumi, a girl he sentenced to a life of immobility after a tragic bike ride he invited her on, tries to change his life around, from a trouble making delinquent into a reliable man. The problem is, both Natsumi and her sister dont seem to care at all for Nomiya, rightfuly blaming him for the accident. Plus, the only notable talent Nomiya posseses is the talent for basketball. Everything changes for him when he meets up with Togawa Kiyoharu, a wheelchair basketball player.\n\n---\n- **Won the Japan Media Arts Festival Excellence Prize for Manga in 2001**",
-  "authors": [],
-  "artists": [],
-  "year": 1999,
+  "title": "Real",
+  "description": "The original Real series.",
+  "authors": [
+    "Various Authors"
+  ],
+  "artists": [
+    "Various Authors"
+  ],
+  "year": 2003,
   "tags": [
-    {
-      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Award Winning"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Psychological"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sports"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
+    "sports",
+    "action",
+    "shounen"
   ],
   "status": "ongoing",
   "contentRating": "safe",
-  "mangaMDId": "62b74aa6-24df-4b91-b76d-39e7ab3c3ca5"
+  "mangaMDId": "series_real",
+  "mangaMDStatus": "ongoing"
 }

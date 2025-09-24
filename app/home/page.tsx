@@ -2,7 +2,6 @@ import Link from "next/link";
 import ComicCard from "../../components/ComicCard";
 import FollowedMangaCard from "../../components/FollowedMangaCard";
 import LatestChapterCard from "../../components/LatestChapterCard";
-import { CoverFallbackProvider } from "../../components/CoverFallbackProvider";
 import HomeSection from "../../components/HomeSection";
 import LibraryLayout from "../../components/LibraryLayout";
 import { getSeriesFromDatabase } from "../../lib/database";
@@ -158,8 +157,8 @@ async function getLatestManga(): Promise<Comic[]> {
         id: manga.id,
         title: manga.title,
         series: manga.title,
-        cover: manga.coverImage || '/placeholder-cover.jpg',
-        coverImage: manga.coverImage || '/placeholder-cover.jpg',
+        cover: manga.coverImage || null,
+        coverImage: manga.coverImage || null,
         author: manga.authors?.[0] || '',
         artist: manga.artists?.[0] || '',
         authors: manga.authors || [],
@@ -217,8 +216,7 @@ export default async function HomePage() {
       />
 
       {/* Content Container */}
-      <CoverFallbackProvider>
-        <LibraryLayout>
+      <LibraryLayout>
         {/* Latest Followed Series Section */}
         {followedManga.length > 0 && (
           <HomeSection
@@ -360,7 +358,6 @@ export default async function HomePage() {
           </Link>
         </div>
         </LibraryLayout>
-      </CoverFallbackProvider>
     </div>
   );
 }

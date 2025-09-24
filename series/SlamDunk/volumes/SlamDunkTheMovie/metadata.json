@@ -1,0 +1,21 @@
+{
+  "title": "Slam Dunk: The Movie",
+  "description": "A Slam Dunk movie with new basketball adventures.",
+  "authors": [
+    "Takehiko Inoue"
+  ],
+  "artists": [
+    "Takehiko Inoue"
+  ],
+  "year": 1994,
+  "tags": [
+    "sports",
+    "comedy",
+    "shounen",
+    "basketball"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_slamdunkthemovie",
+  "mangaMDStatus": "completed"
+}

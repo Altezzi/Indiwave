@@ -1,0 +1,21 @@
+{
+  "title": "Macross",
+  "description": "Humanity fights against alien invaders using transforming mechs.",
+  "authors": [
+    "Shoji Kawamori"
+  ],
+  "artists": [
+    "Shoji Kawamori"
+  ],
+  "year": 1982,
+  "tags": [
+    "action",
+    "sci-fi",
+    "shounen",
+    "mecha"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_macross",
+  "mangaMDStatus": "completed"
+}

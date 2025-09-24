@@ -1,0 +1,21 @@
+{
+  "title": "Trigun: The Movie",
+  "description": "A Trigun movie with new western adventures.",
+  "authors": [
+    "Yasuhiro Nightow"
+  ],
+  "artists": [
+    "Yasuhiro Nightow"
+  ],
+  "year": 2010,
+  "tags": [
+    "action",
+    "sci-fi",
+    "shounen",
+    "western"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_trigunthemovie",
+  "mangaMDStatus": "completed"
+}

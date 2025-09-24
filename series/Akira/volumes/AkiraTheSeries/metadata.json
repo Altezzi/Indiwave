@@ -1,0 +1,21 @@
+{
+  "title": "Akira: The Series",
+  "description": "An Akira series with new cyberpunk adventures.",
+  "authors": [
+    "Katsuhiro Otomo"
+  ],
+  "artists": [
+    "Katsuhiro Otomo"
+  ],
+  "year": 1988,
+  "tags": [
+    "action",
+    "sci-fi",
+    "seinen",
+    "cyberpunk"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_akiratheseries",
+  "mangaMDStatus": "completed"
+}

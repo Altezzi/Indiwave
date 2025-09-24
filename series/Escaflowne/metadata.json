@@ -1,19 +1,21 @@
 {
   "title": "Escaflowne",
-  "description": "An exciting manga series: Escaflowne",
+  "description": "A high school girl is transported to a fantasy world with mechs.",
   "authors": [
-    "Unknown Author"
+    "Hajime Yatate"
   ],
   "artists": [
-    "Unknown Artist"
+    "Hajime Yatate"
   ],
-  "year": 2022,
+  "year": 1994,
   "tags": [
     "action",
-    "adventure",
-    "fantasy"
+    "sci-fi",
+    "shoujo",
+    "mecha"
   ],
-  "status": "ongoing",
+  "status": "completed",
   "contentRating": "safe",
-  "mangaMDId": "series_escaflowne_1758674130841_346axoshn"
+  "mangaMDId": "series_escaflowne",
+  "mangaMDStatus": "completed"
 }

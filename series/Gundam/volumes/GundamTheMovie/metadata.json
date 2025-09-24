@@ -1,0 +1,21 @@
+{
+  "title": "Gundam: The Movie",
+  "description": "A Gundam movie with new mecha adventures.",
+  "authors": [
+    "Yoshiyuki Tomino"
+  ],
+  "artists": [
+    "Yoshiyuki Tomino"
+  ],
+  "year": 1981,
+  "tags": [
+    "action",
+    "sci-fi",
+    "shounen",
+    "mecha"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_gundamthemovie",
+  "mangaMDStatus": "completed"
+}

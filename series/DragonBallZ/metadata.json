@@ -1,0 +1,21 @@
+{
+  "title": "Dragon Ball Z",
+  "description": "The continuation of Dragon Ball, following Goku's adventures as an adult.",
+  "authors": [
+    "Akira Toriyama"
+  ],
+  "artists": [
+    "Akira Toriyama"
+  ],
+  "year": 1988,
+  "tags": [
+    "action",
+    "adventure",
+    "shounen",
+    "supernatural"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_dragonballz",
+  "mangaMDStatus": "completed"
+}

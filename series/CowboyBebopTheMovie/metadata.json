@@ -1,0 +1,21 @@
+{
+  "title": "Cowboy Bebop: The Movie",
+  "description": "A Cowboy Bebop movie with new space adventures.",
+  "authors": [
+    "Yutaka Nanten"
+  ],
+  "artists": [
+    "Yutaka Nanten"
+  ],
+  "year": 2001,
+  "tags": [
+    "action",
+    "sci-fi",
+    "seinen",
+    "space"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_cowboybebopthemovie",
+  "mangaMDStatus": "completed"
+}

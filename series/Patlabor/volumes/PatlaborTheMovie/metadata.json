@@ -1,0 +1,21 @@
+{
+  "title": "Patlabor: The Movie",
+  "description": "A Patlabor movie with new mecha adventures.",
+  "authors": [
+    "Masami Yuki"
+  ],
+  "artists": [
+    "Masami Yuki"
+  ],
+  "year": 1989,
+  "tags": [
+    "action",
+    "sci-fi",
+    "seinen",
+    "mecha"
+  ],
+  "status": "completed",
+  "contentRating": "safe",
+  "mangaMDId": "series_patlaborthemovie",
+  "mangaMDStatus": "completed"
+}

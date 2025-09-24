@@ -53,62 +53,38 @@ async function main() {
     const title = raw.title || folderName;
     const slug = generateSlug(title);
     const description = raw.description || null;
-    const coverImage = raw.cover || raw.coverImage || null;
+    // Check if cover image exists and set proper path
+    let coverImage = null;
+    if (raw.cover || raw.coverImage) {
+      const coverFileName = raw.cover || raw.coverImage;
+      const coverPath = path.join(SERIES_DIR, folderName, coverFileName);
+      if (fs.existsSync(coverPath)) {
+        coverImage = `/api/series-covers/${encodeURIComponent(folderName)}/${coverFileName}`;
+      }
+    }
     const authors = Array.isArray(raw.authors) ? raw.authors.join(', ') : raw.author || null;
     const tags = Array.isArray(raw.tags) ? raw.tags.join(',') : raw.tags || null;
     const mangaMDId = raw.id || null;
     const mangaMDStatus = raw.status || null;
     const contentRating = raw.contentRating || 'safe';
 
-    // Check if series already exists
-    const existingSeries = await prisma.series.findFirst({
-      where: {
-        OR: [
-          { title: title },
-          { mangaMDId: mangaMDId }
-        ]
+    // Always create new series (don't update existing ones)
+    await prisma.series.create({
+      data: { 
+        title, 
+        description, 
+        coverImage, 
+        authors, 
+        tags,
+        mangaMDId,
+        mangaMDStatus,
+        contentRating,
+        isImported: true,
+        isPublished: true,
+        creatorId: adminUser.id
       }
     });
-
-    if (existingSeries) {
-      // Update existing series
-      await prisma.series.update({
-        where: { id: existingSeries.id },
-        data: { 
-          slug,
-          title, 
-          description, 
-          coverImage, 
-          authors, 
-          tags,
-          mangaMDId,
-          mangaMDStatus,
-          contentRating,
-          isImported: true,
-          isPublished: true
-        }
-      });
-      console.log(`✅ Updated: ${title}`);
-    } else {
-      // Create new series
-      await prisma.series.create({
-        data: { 
-          slug,
-          title, 
-          description, 
-          coverImage, 
-          authors, 
-          tags,
-          mangaMDId,
-          mangaMDStatus,
-          contentRating,
-          isImported: true,
-          isPublished: true,
-          creatorId: adminUser.id
-        }
-      });
-      console.log(`🆕 Created: ${title}`);
-    }
+    console.log(`🆕 Created: ${title}`);
   }
 
   console.log('Import complete.');

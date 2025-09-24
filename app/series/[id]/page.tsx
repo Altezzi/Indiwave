@@ -79,6 +79,7 @@ export default function SeriesPage() {
   const [selectedSeason, setSelectedSeason] = useState<number | null>(null);
   const [chapterOrder, setChapterOrder] = useState<'asc' | 'desc'>('asc'); // 'asc' = first chapter first, 'desc' = last chapter first
   const [activeTab, setActiveTab] = useState<'chapters'>('chapters');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (params.id) {
@@ -407,7 +408,72 @@ export default function SeriesPage() {
         </Link>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 400px", gap: "32px" }}>
+      {/* Mobile Menu Button - Only visible on small screens */}
+      <div style={{ 
+        display: "none", 
+        position: "fixed", 
+        top: "20px", 
+        right: "20px", 
+        zIndex: 1000,
+        "@media (max-width: 768px)": { display: "block" }
+      }}>
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{
+            background: "var(--accent)",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            padding: "12px",
+            cursor: "pointer",
+            fontSize: "16px",
+            fontWeight: "500",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)"
+          }}
+        >
+          📖 Where to Read
+        </button>
+      </div>
+
+      {/* Desktop Reading Sites Button - Only visible on larger screens */}
+      <div style={{ 
+        display: "none", 
+        position: "fixed", 
+        top: "420px", 
+        right: "20px", 
+        zIndex: 1000,
+        "@media (min-width: 769px)": { display: "block" }
+      }}>
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{
+            background: "var(--accent)",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            padding: "12px 16px",
+            cursor: "pointer",
+            fontSize: "14px",
+            fontWeight: "500",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+            writingMode: "vertical-rl",
+            textOrientation: "mixed"
+          }}
+        >
+          📖 Where to Read
+        </button>
+      </div>
+
+      <div style={{ 
+        display: "grid", 
+        gridTemplateColumns: "1fr 400px", 
+        gap: "32px", 
+        alignItems: "start",
+        "@media (max-width: 768px)": { 
+          gridTemplateColumns: "1fr",
+          gap: "24px"
+        }
+      }}>
         {/* Main Content */}
         <div>
           {/* Series Header */}
@@ -975,8 +1041,10 @@ export default function SeriesPage() {
           </div>
         </div>
 
-        {/* Sidebar */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+        {/* Sidebar - Hidden on both mobile and desktop (replaced by button) */}
+        <div style={{ 
+          display: "none"
+        }}>
           {/* Where to Read Section */}
           {(
             <div style={{ 
@@ -1160,24 +1228,167 @@ export default function SeriesPage() {
             </div>
           )}
 
-          {/* Comments Section */}
-          <div style={{ 
-            background: "rgba(var(--bg-rgb, 18, 18, 18), 0.6)",
-            borderRadius: "16px",
-            padding: "24px",
-            border: "1px solid rgba(138, 180, 255, 0.1)",
-            height: "fit-content"
-          }}>
-            <h2 style={{ 
-              fontSize: "20px", 
-              fontWeight: "600", 
-              margin: "0 0 20px 0",
-              color: "var(--fg)"
-            }}>
-              Discussion ({comments.length})
-            </h2>
+        </div>
+      </div>
 
-          {/* Add Comment */}
+      {/* Reading Sites Overlay Menu */}
+      {isMobileMenuOpen && (
+        <div style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: "rgba(0, 0, 0, 0.8)",
+          zIndex: 1001,
+          display: "flex",
+          justifyContent: "flex-end"
+        }}>
+          <div style={{
+            background: "var(--bg)",
+            width: "300px",
+            height: "100%",
+            padding: "24px",
+            overflowY: "auto",
+            borderLeft: "1px solid var(--border)"
+          }}>
+            {/* Close Button */}
+            <div style={{ 
+              display: "flex", 
+              justifyContent: "space-between", 
+              alignItems: "center", 
+              marginBottom: "24px" 
+            }}>
+              <h2 style={{ 
+                fontSize: "20px", 
+                fontWeight: "600", 
+                margin: 0, 
+                color: "var(--fg)" 
+              }}>
+                Where to Read
+              </h2>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  color: "var(--fg)",
+                  fontSize: "24px",
+                  cursor: "pointer",
+                  padding: "4px"
+                }}
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Where to Read Content - Same as sidebar */}
+            <div style={{ marginBottom: "24px" }}>
+              {/* Default Reading Options */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                <a
+                  href={`https://mangadex.org/title/${comic?.id || ''}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--accent)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500"
+                  }}
+                >
+                  📚 Read on MangaDex
+                </a>
+                <a
+                  href={`https://mangakakalot.com/search/story/${encodeURIComponent(comic?.title || '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--accent)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500"
+                  }}
+                >
+                  🔍 Search on MangaKakalot
+                </a>
+                <a
+                  href={`https://mangasee123.com/search/?name=${encodeURIComponent(comic?.title || '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--accent)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500"
+                  }}
+                >
+                  🔍 Search on MangaSee
+                </a>
+                <button
+                  onClick={() => setShowUrlForm(true)}
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--border)",
+                    color: "var(--fg)",
+                    border: "none",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    cursor: "pointer"
+                  }}
+                >
+                  ➕ Add Reading Option
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Comments Section - Mobile (moved to bottom) */}
+      <div style={{ 
+        display: "none",
+        "@media (max-width: 768px)": { display: "block" },
+        marginTop: "32px"
+      }}>
+        <div style={{ 
+          background: "rgba(var(--bg-rgb, 18, 18, 18), 0.6)",
+          borderRadius: "16px",
+          padding: "24px",
+          border: "1px solid rgba(138, 180, 255, 0.1)"
+        }}>
+          <h2 style={{ 
+            fontSize: "20px", 
+            fontWeight: "600", 
+            margin: "0 0 20px 0",
+            color: "var(--fg)"
+          }}>
+            Discussion ({comments.length})
+          </h2>
+
+          {/* Add Comment Form */}
           {session?.user ? (
             <div style={{ marginBottom: "24px" }}>
               <textarea
@@ -1186,10 +1397,10 @@ export default function SeriesPage() {
                 placeholder="Share your thoughts about this series..."
                 style={{
                   width: "100%",
-                  minHeight: "80px",
+                  minHeight: "100px",
                   padding: "12px",
-                  border: "1px solid var(--border)",
                   borderRadius: "8px",
+                  border: "1px solid var(--border)",
                   background: "var(--bg)",
                   color: "var(--fg)",
                   fontSize: "14px",
@@ -1202,14 +1413,13 @@ export default function SeriesPage() {
                 disabled={!newComment.trim()}
                 style={{
                   padding: "8px 16px",
-                  background: "var(--accent)",
-                  color: "white",
+                  background: newComment.trim() ? "var(--accent)" : "var(--border)",
+                  color: newComment.trim() ? "white" : "var(--muted-foreground)",
                   border: "none",
                   borderRadius: "6px",
-                  fontSize: "14px",
-                  fontWeight: "500",
                   cursor: newComment.trim() ? "pointer" : "not-allowed",
-                  opacity: newComment.trim() ? 1 : 0.5
+                  fontSize: "14px",
+                  fontWeight: "500"
                 }}
               >
                 Post Comment
@@ -1217,18 +1427,19 @@ export default function SeriesPage() {
             </div>
           ) : (
             <div style={{ 
-              marginBottom: "24px",
-              padding: "16px",
-              background: "var(--border)",
-              borderRadius: "8px",
-              textAlign: "center"
+              background: "var(--border)", 
+              padding: "16px", 
+              borderRadius: "8px", 
+              textAlign: "center",
+              marginBottom: "24px"
             }}>
-              <p style={{ margin: "0 0 12px 0", color: "var(--muted-foreground)" }}>
+              <p style={{ margin: "0 0 12px 0", color: "var(--fg)" }}>
                 Sign in to join the discussion
               </p>
               <Link 
-                href="/sign-in"
+                href="/auth/signin" 
                 style={{
+                  display: "inline-block",
                   padding: "8px 16px",
                   background: "var(--accent)",
                   color: "white",
@@ -1256,46 +1467,42 @@ export default function SeriesPage() {
             ) : (
               comments.map((comment) => (
                 <div key={comment.id} style={{
-                  padding: "16px",
                   background: "var(--border)",
-                  borderRadius: "8px"
+                  padding: "16px",
+                  borderRadius: "8px",
+                  border: "1px solid rgba(138, 180, 255, 0.1)"
                 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
-                    <div style={{
-                      width: "32px",
-                      height: "32px",
-                      borderRadius: "50%",
-                      background: "var(--accent)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "12px",
-                      fontWeight: "600"
+                  <div style={{ 
+                    display: "flex", 
+                    justifyContent: "space-between", 
+                    alignItems: "center", 
+                    marginBottom: "8px" 
+                  }}>
+                    <span style={{ 
+                      fontWeight: "500", 
+                      color: "var(--fg)",
+                      fontSize: "14px"
                     }}>
-                      {comment.userName.charAt(0).toUpperCase()}
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: "500", fontSize: "14px", color: "var(--fg)" }}>
-                        {comment.userName}
-                      </div>
-                      <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
-                        {new Date(comment.createdAt).toLocaleDateString()}
-                      </div>
-                    </div>
+                      {comment.user?.name || "Anonymous"}
+                    </span>
+                    <span style={{ 
+                      fontSize: "12px", 
+                      color: "var(--muted-foreground)" 
+                    }}>
+                      {new Date(comment.createdAt).toLocaleDateString()}
+                    </span>
                   </div>
                   <p style={{ 
-                    margin: "0", 
-                    color: "var(--muted-foreground)",
-                    fontSize: "14px",
-                    lineHeight: "1.5"
+                    margin: 0, 
+                    color: "var(--fg)", 
+                    lineHeight: "1.5",
+                    fontSize: "14px"
                   }}>
                     {comment.content}
                   </p>
                 </div>
               ))
             )}
-          </div>
           </div>
         </div>
       </div>

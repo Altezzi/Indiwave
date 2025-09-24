@@ -71,7 +71,7 @@ export default function ComicCard({ comic }: ComicCardProps) {
   const isPlaceholder = coverImage === '/placeholder.svg';
   const isLocalCover = coverImage && coverImage.startsWith('/covers/');
   const isMangaDexUrl = coverImage && coverImage.startsWith('https://uploads.mangadex.org/');
-  const shouldShowPlaceholder = isPlaceholder;
+  const shouldShowPlaceholder = !coverImage || isPlaceholder;
   
   
   // Get year info

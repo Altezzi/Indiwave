@@ -20,11 +20,31 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     // Fetch comics data for search
     const fetchComics = async () => {
       try {
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3003";
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
         const res = await fetch(`${baseUrl}/api/comics`, { cache: "no-store" });
         if (res.ok) {
-          const data = await res.json();
-          setComics(data.comics || []);
+          const comicsData = await res.json();
+          if (comicsData.comics) {
+            // Convert comics data to the expected format
+            const comics = comicsData.comics.map((comic: any) => ({
+              id: String(comic.id || ''),
+              title: String(comic.title || ''),
+              series: String(comic.series || comic.title || ''),
+              cover: String(comic.cover || ''),
+              coverImage: String(comic.cover || ''),
+              author: String(comic.author || ''),
+              artist: String(comic.artist || ''),
+              year: comic.year || 0,
+              tags: Array.isArray(comic.tags) ? comic.tags : (typeof comic.tags === 'string' ? comic.tags.split(',').map(tag => tag.trim()) : []),
+              description: String(comic.description || ''),
+              status: String(comic.status || ''),
+              contentRating: String(comic.contentRating || ''),
+              totalChapters: comic.totalChapters || 0,
+              source: String(comic.source || '')
+            }));
+            console.log('Loaded comics for search:', comics.length);
+            setComics(comics);
+          }
         }
       } catch (error) {
         console.error("Failed to fetch comics for search:", error);
@@ -36,6 +56,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+        <title>indiwave</title>
+      </head>
       <body>
         <Providers>
           <Header 
@@ -60,7 +84,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             {children}
           </main>
           <footer className="footer">© 2025 indiwave — public domain & creator-authorized only</footer>
-
         </Providers>
       </body>
     </html>

@@ -1,0 +1,25 @@
+{
+  "title": "Metropolis",
+  "description": "Robots and humans clash in a futuristic city",
+  "author": "Osamu Tezuka",
+  "artist": "Osamu Tezuka",
+  "publisher": "Kobunsha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "82f660d0-bf1c-4aef-9adb-fba7e2a90865",
+  "createdAt": "2025-09-24T16:56:17.971Z",
+  "updatedAt": "2025-09-24T21:19:43.436Z",
+  "totalChapters": 1,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.286Z",
+  "chapterSources": {
+    "kitsu": 1,
+    "anilist": 1,
+    "mangadex": 286
+  },
+  "chapterVerifiedAt": "2025-09-24T21:19:43.436Z"
+}

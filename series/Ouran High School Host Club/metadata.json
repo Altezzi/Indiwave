@@ -1,0 +1,26 @@
+{
+  "title": "Ouran High School Host Club",
+  "description": "A girl accidentally joins a host club",
+  "author": "Bisco Hatori",
+  "artist": "Bisco Hatori",
+  "publisher": "Hakusensha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "661a792b-6729-4f54-af20-4108db55ccf4",
+  "createdAt": "2025-09-24T17:59:22.110Z",
+  "updatedAt": "2025-09-24T21:31:16.517Z",
+  "totalChapters": 87,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.068Z",
+  "chapterSources": {
+    "jikan": 87,
+    "kitsu": 87,
+    "anilist": 97,
+    "mangadex": 83
+  },
+  "chapterVerifiedAt": "2025-09-24T21:31:16.517Z"
+}

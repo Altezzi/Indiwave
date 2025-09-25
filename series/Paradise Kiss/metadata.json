@@ -1,0 +1,25 @@
+{
+  "title": "Paradise Kiss",
+  "description": "A high school student becomes a model for fashion students",
+  "author": "Ai Yazawa",
+  "artist": "Ai Yazawa",
+  "publisher": "Shodensha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "8968136d-1f99-49b4-b771-fc43a32ffae8",
+  "createdAt": "2025-09-24T17:59:06.399Z",
+  "updatedAt": "2025-09-24T20:21:38.027Z",
+  "totalChapters": 48,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.179Z",
+  "chapterSources": {
+    "anilist": 48,
+    "mangadex": 20,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:21:38.027Z"
+}

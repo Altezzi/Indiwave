@@ -1,0 +1,25 @@
+{
+  "title": "Stone Ocean",
+  "description": "Jojo's Bizarre Adventure Part 6",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "72d1ae71-4391-4bb2-9f39-784af3cc3c71",
+  "createdAt": "2025-09-24T18:05:58.001Z",
+  "updatedAt": "2025-09-24T20:25:34.685Z",
+  "totalChapters": 158,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.034Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 158,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:34.685Z"
+}

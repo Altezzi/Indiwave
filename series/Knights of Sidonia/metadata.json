@@ -1,0 +1,25 @@
+{
+  "title": "Knights of Sidonia",
+  "description": "Humanity fights alien creatures from giant robots",
+  "author": "Tsutomu Nihei",
+  "artist": "Tsutomu Nihei",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "82d1553b-84a1-4baf-9e14-8ac72f034aab",
+  "createdAt": "2025-09-24T17:58:49.593Z",
+  "updatedAt": "2025-09-24T20:16:02.456Z",
+  "totalChapters": 78,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.078Z",
+  "chapterSources": {
+    "anilist": 78,
+    "mangadex": 78,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:02.456Z"
+}

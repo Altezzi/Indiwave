@@ -1,0 +1,24 @@
+{
+  "title": "Donkey Kong",
+  "description": "The ape's adventures with his friends",
+  "author": "Shigeru Miyamoto",
+  "artist": "Various",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d1066b59-9813-47a1-947e-68dfc61ded75",
+  "createdAt": "2025-09-24T18:10:40.201Z",
+  "updatedAt": "2025-09-24T20:52:51.668Z",
+  "totalChapters": 37,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.270Z",
+  "chapterSources": {
+    "jikan": 37,
+    "anilist": 16
+  },
+  "chapterVerifiedAt": "2025-09-24T20:52:51.668Z"
+}

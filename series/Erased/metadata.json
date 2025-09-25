@@ -1,0 +1,25 @@
+{
+  "title": "Erased",
+  "description": "A man travels back in time to prevent a murder",
+  "author": "Kei Sanbe",
+  "artist": "Kei Sanbe",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "05f12e6c-f37a-4731-915d-54494689d024",
+  "createdAt": "2025-09-24T16:55:52.491Z",
+  "updatedAt": "2025-09-24T20:11:57.136Z",
+  "totalChapters": 49,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.712Z",
+  "chapterSources": {
+    "anilist": 49,
+    "mangadex": 1,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:11:57.136Z"
+}

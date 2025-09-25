@@ -1,0 +1,25 @@
+{
+  "title": "JoJolion",
+  "description": "Jojo's Bizarre Adventure Part 8",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7a9d76c3-42b9-4bcf-81d7-ad307d2ea971",
+  "createdAt": "2025-09-24T18:06:00.505Z",
+  "updatedAt": "2025-09-24T20:15:11.591Z",
+  "totalChapters": 110,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.029Z",
+  "chapterSources": {
+    "anilist": 110,
+    "mangadex": 110,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:15:11.591Z"
+}

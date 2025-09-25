@@ -1,29 +1,23 @@
 {
   "title": "Chainsaw Man",
-  "mangaMDId": "a77742b1-befd-49a4-bff5-1ad4e6b0ef7b",
-  "description": "Broke young man + chainsaw dog demon = Chainsaw Man!  \n  \nThe name says it all! Denji's life of poverty is changed forever when he merges with his pet chainsaw dog, Pochita! Now he's living in the big city and an official Devil Hunter. But he's got a lot to learn about his new job and chainsaw powers!",
-  "authors": [
-    "Fujimoto Tatsuki"
-  ],
-  "artists": [
-    "Fujimoto Tatsuki"
-  ],
-  "tags": [
-    "Award Winning",
-    "Monsters",
-    "Action",
-    "Demons",
-    "Comedy",
-    "Gore",
-    "Horror",
-    "Supernatural"
-  ],
-  "status": "ongoing",
-  "year": 2018,
-  "contentRating": "suggestive",
+  "description": "A young man becomes a devil hunter",
+  "author": "Tatsuki Fujimoto",
+  "artist": "Tatsuki Fujimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 50,
-  "createdAt": "2025-09-22T05:15:04.237Z",
-  "updatedAt": "2025-09-22T05:24:13.958Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "a77742b1-befd-49a4-bff5-1ad4e6b0ef7b",
+  "createdAt": "2025-09-24T16:52:17.520Z",
+  "updatedAt": "2025-09-24T20:47:24.577Z",
+  "totalChapters": 97,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.162Z",
+  "chapterSources": {
+    "kitsu": 97
+  },
+  "chapterVerifiedAt": "2025-09-24T20:47:24.577Z"
 }

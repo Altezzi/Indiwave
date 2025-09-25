@@ -1,0 +1,25 @@
+{
+  "title": "Ghost in the Shell",
+  "description": "Cyborg police officers fight cybercrime in future Japan",
+  "author": "Masamune Shirow",
+  "artist": "Masamune Shirow",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "ff442aab-7908-40bc-8d10-93c6bb318466",
+  "createdAt": "2025-09-24T16:55:58.070Z",
+  "updatedAt": "2025-09-24T20:13:11.084Z",
+  "totalChapters": 11,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.431Z",
+  "chapterSources": {
+    "anilist": 11,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:11.084Z"
+}

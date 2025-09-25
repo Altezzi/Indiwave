@@ -1,0 +1,25 @@
+{
+  "title": "Look Back: The First Years",
+  "description": "Fujino's early years as a manga artist",
+  "author": "Tatsuki Fujimoto",
+  "artist": "Tatsuki Fujimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "ba7908db-5c9e-4f78-9fc1-3b3581f752e9",
+  "createdAt": "2025-09-24T18:20:18.212Z",
+  "updatedAt": "2025-09-24T21:13:58.247Z",
+  "totalChapters": 18,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.691Z",
+  "chapterSources": {
+    "jikan": 32,
+    "kitsu": 8,
+    "anilist": 18
+  },
+  "chapterVerifiedAt": "2025-09-24T21:13:58.247Z"
+}

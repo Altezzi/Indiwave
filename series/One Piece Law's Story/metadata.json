@@ -1,0 +1,25 @@
+{
+  "title": "One Piece: Law's Story",
+  "description": "Trafalgar Law's backstory and alliance with Luffy",
+  "author": "Eiichiro Oda",
+  "artist": "Tatsuya Hamazaki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "470ac1ec-c3dd-4dc2-9e5d-0104600ed1a5",
+  "createdAt": "2025-09-24T17:03:58.173Z",
+  "updatedAt": "2025-09-24T20:20:50.321Z",
+  "totalChapters": 5,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:23.408Z",
+  "chapterSources": {
+    "anilist": 5,
+    "mangadex": 4,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:50.321Z"
+}

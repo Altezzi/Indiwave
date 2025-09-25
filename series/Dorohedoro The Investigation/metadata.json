@@ -1,0 +1,26 @@
+{
+  "title": "Dorohedoro: The Investigation",
+  "description": "Caiman investigates his past",
+  "author": "Q Hayashida",
+  "artist": "Q Hayashida",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "34f45c13-2b78-4900-8af2-d0bb551101f4",
+  "createdAt": "2025-09-24T18:20:13.195Z",
+  "updatedAt": "2025-09-24T20:54:01.708Z",
+  "totalChapters": 167,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.597Z",
+  "chapterSources": {
+    "jikan": 3,
+    "kitsu": 167,
+    "anilist": 191,
+    "mangadex": 167
+  },
+  "chapterVerifiedAt": "2025-09-24T20:54:01.708Z"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Spirited Away: The First Years",
+  "description": "Chihiro's early years in the spirit world",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": null,
+  "createdAt": "2025-09-24T18:33:20.206Z",
+  "updatedAt": "2025-09-24T20:25:20.465Z",
+  "sources": [
+    "anilist"
+  ],
+  "totalChapters": 7,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.855Z",
+  "chapterSources": {
+    "anilist": 7,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:20.465Z"
+}

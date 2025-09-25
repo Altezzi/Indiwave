@@ -1,0 +1,25 @@
+{
+  "title": "Scrapped Princess",
+  "description": "A girl with a terrible fate",
+  "author": "Ichiro Sakaki",
+  "artist": "Nakayohi Mogudan",
+  "publisher": "Fujimi Shobo",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "3a92902b-40e3-4909-bd08-5288e0c99a11",
+  "createdAt": "2025-09-24T18:08:17.094Z",
+  "updatedAt": "2025-09-24T20:24:00.190Z",
+  "totalChapters": 16,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.578Z",
+  "chapterSources": {
+    "anilist": 16,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:00.190Z"
+}

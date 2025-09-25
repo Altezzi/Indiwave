@@ -1,0 +1,25 @@
+{
+  "title": "Level E",
+  "description": "Aliens living on Earth cause various problems",
+  "author": "Yoshihiro Togashi",
+  "artist": "Yoshihiro Togashi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "55a1aba6-967c-4967-a1d0-ad0f52332be0",
+  "createdAt": "2025-09-24T17:05:37.029Z",
+  "updatedAt": "2025-09-24T20:16:33.768Z",
+  "totalChapters": 16,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.521Z",
+  "chapterSources": {
+    "anilist": 16,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:33.767Z"
+}

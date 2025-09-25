@@ -1,0 +1,25 @@
+{
+  "title": "Patlabor",
+  "description": "Police use giant robots",
+  "author": "Masami Yuki",
+  "artist": "Masami Yuki",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "ef92e9c2-230d-4ff5-b563-ec80b7015cbc",
+  "createdAt": "2025-09-24T18:08:35.815Z",
+  "updatedAt": "2025-09-24T20:21:41.967Z",
+  "totalChapters": 20,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.219Z",
+  "chapterSources": {
+    "anilist": 8,
+    "mangadex": 20,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:21:41.967Z"
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Horimiya",
+  "description": "A popular girl and a quiet boy's relationship",
+  "author": "Hero",
+  "artist": "Daisuke Hagiwara",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [
+    "Romance",
+    "Slice of Life",
+    "Shounen"
+  ],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "4ec3e6b3-18bf-4964-9c87-1f287d3398f4",
+  "createdAt": "2025-09-24T19:30:04.023Z",
+  "updatedAt": "2025-09-24T20:14:28.827Z",
+  "totalChapters": 152,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.573Z",
+  "chapterSources": {
+    "anilist": 152,
+    "mangadex": 140,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:28.827Z"
+}

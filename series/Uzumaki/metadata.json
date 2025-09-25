@@ -1,0 +1,25 @@
+{
+  "title": "Uzumaki",
+  "description": "A town becomes obsessed with spirals",
+  "author": "Junji Ito",
+  "artist": "Junji Ito",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "f4cfbb1c-766e-49db-ae80-1a5db3cbcc1b",
+  "createdAt": "2025-09-24T17:59:26.649Z",
+  "updatedAt": "2025-09-24T20:30:18.547Z",
+  "totalChapters": 20,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.221Z",
+  "chapterSources": {
+    "anilist": 20,
+    "mangadex": 19,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:30:18.547Z"
+}

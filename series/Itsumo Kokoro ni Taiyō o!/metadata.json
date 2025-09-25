@@ -1,0 +1,23 @@
+{
+  "title": "Itsumo Kokoro ni Taiyō o!",
+  "description": "A story about family and personal growth",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "1271e158-d022-4b3f-adfc-4e8acd01a5c6",
+  "createdAt": "2025-09-24T17:07:31.604Z",
+  "updatedAt": "2025-09-24T21:07:48.836Z",
+  "totalChapters": 27,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.982Z",
+  "chapterSources": {
+    "jikan": 27
+  },
+  "chapterVerifiedAt": "2025-09-24T21:07:48.836Z"
+}

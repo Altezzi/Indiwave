@@ -1,0 +1,25 @@
+{
+  "title": "Kuroko's Basketball",
+  "description": "A high school basketball team with extraordinary players",
+  "author": "Tadatoshi Fujimaki",
+  "artist": "Tadatoshi Fujimaki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f8e41a48-5ca9-41e3-94a7-a1379a4fda62",
+  "createdAt": "2025-09-24T17:07:03.231Z",
+  "updatedAt": "2025-09-24T20:16:16.491Z",
+  "totalChapters": 276,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.292Z",
+  "chapterSources": {
+    "anilist": 276,
+    "mangadex": 275,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:16.491Z"
+}

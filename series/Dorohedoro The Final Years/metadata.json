@@ -1,0 +1,26 @@
+{
+  "title": "Dorohedoro: The Final Years",
+  "description": "Caiman's final years in the Hole",
+  "author": "Q Hayashida",
+  "artist": "Q Hayashida",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "28bf349e-41e5-4443-84f0-f0581752519b",
+  "createdAt": "2025-09-24T18:20:13.867Z",
+  "updatedAt": "2025-09-24T20:53:43.779Z",
+  "totalChapters": 167,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.486Z",
+  "chapterSources": {
+    "jikan": 1,
+    "kitsu": 167,
+    "anilist": 191,
+    "mangadex": 167
+  },
+  "chapterVerifiedAt": "2025-09-24T20:53:43.779Z"
+}

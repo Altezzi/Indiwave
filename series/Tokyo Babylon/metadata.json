@@ -1,0 +1,25 @@
+{
+  "title": "Tokyo Babylon",
+  "description": "An onmyoji protects Tokyo from supernatural threats",
+  "author": "CLAMP",
+  "artist": "CLAMP",
+  "publisher": "Shinshokan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "a206e5f2-74d9-4d6a-a0ff-1b50559c4822",
+  "createdAt": "2025-09-24T18:05:34.830Z",
+  "updatedAt": "2025-09-24T20:29:32.201Z",
+  "totalChapters": 11,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.597Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 11,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:29:32.201Z"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Nichijou",
+  "description": "The surreal daily life of high school students",
+  "author": "Keiichi Arawi",
+  "artist": "Keiichi Arawi",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "d719e0e6-9086-48eb-b609-601613ea38da",
+  "createdAt": "2025-09-24T17:36:06.469Z",
+  "updatedAt": "2025-09-24T21:26:30.655Z",
+  "totalChapters": 12,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.968Z",
+  "chapterSources": {
+    "anilist": 12
+  },
+  "chapterVerifiedAt": "2025-09-24T21:26:30.655Z"
+}

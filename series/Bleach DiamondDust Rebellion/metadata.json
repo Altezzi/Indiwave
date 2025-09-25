@@ -1,0 +1,24 @@
+{
+  "title": "Bleach: DiamondDust Rebellion",
+  "description": "Ichigo investigates a rebellion in Soul Society",
+  "author": "Tite Kubo",
+  "artist": "Tite Kubo",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a460ab18-22c1-47eb-a08a-9ee85fe37ec8",
+  "createdAt": "2025-09-24T18:19:18.923Z",
+  "updatedAt": "2025-09-24T20:44:18.140Z",
+  "totalChapters": 706,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:04.850Z",
+  "chapterSources": {
+    "jikan": 705,
+    "kitsu": 706
+  },
+  "chapterVerifiedAt": "2025-09-24T20:44:18.140Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "One Piece Real",
+  "description": "Monkey D. Luffy sets out on an adventure to become the Pirate King",
+  "author": "Eiichiro Oda",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [
+    "Adventure",
+    "Action",
+    "Comedy"
+  ],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": null,
+  "source": "manual",
+  "createdAt": "2025-09-24T16:03:13.539Z",
+  "updatedAt": "2025-09-24T21:28:59.861Z",
+  "totalChapters": 160,
+  "chapterSource": "kitsu",
+  "chapterSources": {
+    "kitsu": 160,
+    "anilist": 1
+  },
+  "chapterVerifiedAt": "2025-09-24T21:28:59.861Z"
+}

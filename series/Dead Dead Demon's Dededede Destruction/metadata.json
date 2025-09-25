@@ -1,0 +1,26 @@
+{
+  "title": "Dead Dead Demon's Dededede Destruction",
+  "description": "Alien invasion meets slice of life",
+  "author": "Inio Asano",
+  "artist": "Inio Asano",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "fc7f2c19-0a26-4d89-9505-332fcb7d60c6",
+  "createdAt": "2025-09-24T18:00:41.993Z",
+  "updatedAt": "2025-09-24T20:50:47.799Z",
+  "totalChapters": 101,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.454Z",
+  "chapterSources": {
+    "jikan": 101,
+    "kitsu": 100,
+    "anilist": 101,
+    "mangadex": 100
+  },
+  "chapterVerifiedAt": "2025-09-24T20:50:47.799Z"
+}

@@ -1,23 +1,25 @@
 {
-  "title": "JoJo's Bizarre Adventure - Excalibur",
-  "mangaMDId": "46080b27-e907-4832-bdd9-c0633a774009",
-  "description": "",
-  "authors": [
-    "Tojo Saka"
-  ],
-  "artists": [
-    "Tojo Saka"
-  ],
-  "tags": [
-    "Boys' Love",
-    "Doujinshi"
-  ],
-  "status": "completed",
-  "year": null,
+  "title": "JoJo's Bizarre Adventure",
+  "description": "A multigenerational tale of the Joestar family",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:16:44.607Z",
-  "updatedAt": "2025-09-22T05:24:47.344Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "80cda3ff-d08a-4797-8f83-0f6ef538c3a2",
+  "createdAt": "2025-09-24T16:54:01.942Z",
+  "updatedAt": "2025-09-24T21:07:55.857Z",
+  "totalChapters": 82,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.012Z",
+  "chapterSources": {
+    "jikan": 82,
+    "kitsu": 95,
+    "anilist": 80
+  },
+  "chapterVerifiedAt": "2025-09-24T21:07:55.857Z"
 }

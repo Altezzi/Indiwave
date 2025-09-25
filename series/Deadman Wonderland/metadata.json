@@ -1,0 +1,26 @@
+{
+  "title": "Deadman Wonderland",
+  "description": "A boy is wrongly convicted and sent to a prison theme park",
+  "author": "Jinsei Kataoka",
+  "artist": "Kazuma Kondou",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b96e5e23-0017-4e89-a582-ddaa261bd21d",
+  "createdAt": "2025-09-24T18:02:39.225Z",
+  "updatedAt": "2025-09-24T20:50:52.569Z",
+  "totalChapters": 58,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.468Z",
+  "chapterSources": {
+    "jikan": 58,
+    "kitsu": 58,
+    "anilist": 58,
+    "mangadex": 57
+  },
+  "chapterVerifiedAt": "2025-09-24T20:50:52.569Z"
+}

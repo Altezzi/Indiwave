@@ -1,0 +1,25 @@
+{
+  "title": "Haikyu!!",
+  "description": "A short volleyball player's journey to greatness",
+  "author": "Haruichi Furudate",
+  "artist": "Haruichi Furudate",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e4573044-ca38-4b83-bcc5-9e3a7c0b764b",
+  "createdAt": "2025-09-24T16:54:45.944Z",
+  "updatedAt": "2025-09-24T20:14:01.612Z",
+  "totalChapters": 404,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.765Z",
+  "chapterSources": {
+    "anilist": 404,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:01.612Z"
+}

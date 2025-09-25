@@ -1,0 +1,25 @@
+{
+  "title": "Major",
+  "description": "A boy's journey from Little League to Major League Baseball",
+  "author": "Takuya Mitsuda",
+  "artist": "Takuya Mitsuda",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "2bbb5a19-b25f-46fa-b5d3-0ead0f8572fe",
+  "createdAt": "2025-09-24T17:07:15.907Z",
+  "updatedAt": "2025-09-24T21:16:31.160Z",
+  "totalChapters": 747,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.857Z",
+  "chapterSources": {
+    "jikan": 747,
+    "kitsu": 155,
+    "anilist": 747
+  },
+  "chapterVerifiedAt": "2025-09-24T21:16:31.160Z"
+}

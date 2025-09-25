@@ -1,0 +1,25 @@
+{
+  "title": "Hikaru no Go",
+  "description": "A boy learns the ancient game of Go",
+  "author": "Yumi Hotta",
+  "artist": "Takeshi Obata",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "17dcd7da-7692-420f-b813-a92159def4be",
+  "createdAt": "2025-09-24T18:03:44.589Z",
+  "updatedAt": "2025-09-24T20:14:22.573Z",
+  "totalChapters": 197,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.497Z",
+  "chapterSources": {
+    "anilist": 197,
+    "mangadex": 189,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:22.573Z"
+}

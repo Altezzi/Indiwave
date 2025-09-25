@@ -1,85 +1,125 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../../../lib/auth";
-import { prisma } from "../../../../lib/prisma";
+import { NextRequest, NextResponse } from 'next/server';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 export async function GET(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-    
-    if (!session?.user?.id) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    const { searchParams } = new URL(request.url);
+    const userId = searchParams.get('userId');
+    const limit = parseInt(searchParams.get('limit') || '10');
+
+    if (!userId) {
+      return NextResponse.json(
+        { 
+          success: false,
+          error: 'User ID is required'
+        },
+        { status: 400 }
+      );
     }
 
-    // Get user's followed manga with their latest chapters
-    const followedManga = await prisma.libraryEntry.findMany({
-      where: {
-        userId: session.user.id,
-      },
+    // Get user's library entries to find followed series
+    const libraryEntries = await prisma.libraryEntry.findMany({
+      where: { userId },
       include: {
         series: {
           include: {
             chapters: {
-              orderBy: {
-                createdAt: 'desc'
-              },
-              take: 3, // Get the 3 most recent chapters
+              where: { isPublished: true },
+              orderBy: { createdAt: 'desc' },
+              take: 1,
               select: {
                 id: true,
                 title: true,
                 chapterNumber: true,
-                createdAt: true,
-                mangaMDChapterTitle: true,
-                mangaMDChapterNumber: true,
-                mangaMDPublishAt: true,
+                pages: true,
+                createdAt: true
+              }
+            },
+            seasons: {
+              include: {
+                chapters: {
+                  where: { isPublished: true },
+                  orderBy: { createdAt: 'desc' },
+                  take: 1,
+                  select: {
+                    id: true,
+                    title: true,
+                    chapterNumber: true,
+                    pages: true,
+                    createdAt: true
+                  }
+                }
               }
             }
           }
         }
-      },
-      orderBy: {
-        createdAt: 'desc'
       }
     });
 
-    // Transform the data to include latest chapters
-    const latestChapters = followedManga.flatMap(entry => {
-      return entry.series.chapters.map(chapter => ({
-        id: chapter.id,
-        title: chapter.title,
-        chapterNumber: chapter.chapterNumber,
-        mangaMDChapterTitle: chapter.mangaMDChapterTitle,
-        mangaMDChapterNumber: chapter.mangaMDChapterNumber,
-        createdAt: chapter.createdAt,
-        mangaMDPublishAt: chapter.mangaMDPublishAt,
-        series: {
-          id: entry.series.id,
-          title: entry.series.title,
-          coverImage: entry.series.coverImage,
-          description: entry.series.description,
-          tags: entry.series.tags,
-          author: entry.series.authors,
-          artist: entry.series.artists,
-          year: entry.series.year,
-          mangaMDStatus: entry.series.mangaMDStatus,
+    // Collect latest chapters from followed series
+    const latestChapters = [];
+    
+    for (const entry of libraryEntries) {
+      const series = entry.series;
+      
+      // Add latest chapter from main series
+      if (series.chapters.length > 0) {
+        latestChapters.push({
+          id: series.chapters[0].id,
+          title: series.chapters[0].title,
+          series: series.title,
+          seriesId: series.id,
+          chapterNumber: series.chapters[0].chapterNumber,
+          coverImage: series.coverImage || null,
+          pages: series.chapters[0].pages ? series.chapters[0].pages.split(',').length : 0,
+          createdAt: series.chapters[0].createdAt,
+          isFromSeason: false
+        });
+      }
+      
+      // Add latest chapters from seasons
+      for (const season of series.seasons) {
+        if (season.chapters.length > 0) {
+          latestChapters.push({
+            id: season.chapters[0].id,
+            title: season.chapters[0].title,
+            series: series.title,
+            seriesId: series.id,
+            seasonId: season.id,
+            seasonTitle: season.title,
+            seasonNumber: season.seasonNumber,
+            chapterNumber: season.chapters[0].chapterNumber,
+            coverImage: series.coverImage || null,
+            pages: season.chapters[0].pages ? season.chapters[0].pages.split(',').length : 0,
+            createdAt: season.chapters[0].createdAt,
+            isFromSeason: true
+          });
         }
-      }));
-    });
+      }
+    }
 
-    // Sort by creation date (newest first) and limit to 10
-    const sortedChapters = latestChapters
-      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-      .slice(0, 10);
+    // Sort by creation date and limit results
+    latestChapters.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    const limitedChapters = latestChapters.slice(0, limit);
 
-    return NextResponse.json({ 
-      latestChapters: sortedChapters 
+    return NextResponse.json({
+      success: true,
+      data: limitedChapters
     });
 
   } catch (error) {
-    console.error("Error fetching latest chapters:", error);
+    console.error('Error fetching user latest chapters:', error);
     return NextResponse.json(
-      { error: "Failed to fetch latest chapters" },
+      { 
+        success: false,
+        error: 'Internal server error',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      },
       { status: 500 }
     );
+  } finally {
+    await prisma.$disconnect();
   }
 }

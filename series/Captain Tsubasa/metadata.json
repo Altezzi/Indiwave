@@ -1,0 +1,26 @@
+{
+  "title": "Captain Tsubasa",
+  "description": "A boy dreams of becoming the world's greatest soccer player",
+  "author": "Yoichi Takahashi",
+  "artist": "Yoichi Takahashi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "94be07be-2a8f-4557-a575-7a26a8a6194e",
+  "createdAt": "2025-09-24T17:07:13.043Z",
+  "updatedAt": "2025-09-24T20:46:14.018Z",
+  "totalChapters": 114,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.113Z",
+  "chapterSources": {
+    "jikan": 114,
+    "kitsu": 114,
+    "anilist": 356,
+    "mangadex": 114
+  },
+  "chapterVerifiedAt": "2025-09-24T20:46:14.018Z"
+}

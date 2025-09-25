@@ -1,0 +1,26 @@
+{
+  "title": "Honey and Clover",
+  "description": "Art students navigate college and relationships",
+  "author": "Chica Umino",
+  "artist": "Chica Umino",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8d64bbc5-b1a7-4346-b233-4b81952945e9",
+  "createdAt": "2025-09-24T17:59:11.321Z",
+  "updatedAt": "2025-09-24T21:05:28.906Z",
+  "totalChapters": 71,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.527Z",
+  "chapterSources": {
+    "jikan": 71,
+    "kitsu": 71,
+    "anilist": 75,
+    "mangadex": 64
+  },
+  "chapterVerifiedAt": "2025-09-24T21:05:28.906Z"
+}

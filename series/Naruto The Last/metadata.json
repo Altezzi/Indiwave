@@ -1,0 +1,26 @@
+{
+  "title": "Naruto: The Last",
+  "description": "Naruto's final mission before becoming Hokage",
+  "author": "Masashi Kishimoto",
+  "artist": "Masashi Kishimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "0d15cc4b-232a-4a33-9d1e-aa31bde4bef3",
+  "createdAt": "2025-09-24T18:19:06.906Z",
+  "updatedAt": "2025-09-24T21:25:46.158Z",
+  "totalChapters": 6,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.376Z",
+  "chapterSources": {
+    "jikan": 5,
+    "kitsu": 5,
+    "anilist": 6,
+    "mangadex": 11
+  },
+  "chapterVerifiedAt": "2025-09-24T21:25:46.158Z"
+}

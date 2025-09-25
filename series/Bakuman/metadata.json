@@ -1,0 +1,25 @@
+{
+  "title": "Bakuman",
+  "description": "Two friends aim to become the best manga creators",
+  "author": "Tsugumi Ohba",
+  "artist": "Takeshi Obata",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "fa3e0b2f-4e1f-48ee-9af0-1de9dc28ca51",
+  "createdAt": "2025-09-24T16:57:02.145Z",
+  "updatedAt": "2025-09-24T20:06:50.614Z",
+  "totalChapters": 176,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.304Z",
+  "chapterSources": {
+    "anilist": 176,
+    "mangadex": 176,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:50.614Z"
+}

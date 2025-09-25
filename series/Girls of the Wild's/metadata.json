@@ -1,0 +1,25 @@
+{
+  "title": "Girls of the Wild's",
+  "description": "A boy attends an all-girls fighting school",
+  "author": "Hun",
+  "artist": "Zhena",
+  "publisher": "Naver",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "136a8c13-cf72-427a-8d76-23f1bf070c0e",
+  "createdAt": "2025-09-24T18:02:15.487Z",
+  "updatedAt": "2025-09-24T20:13:17.524Z",
+  "totalChapters": 260,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.480Z",
+  "chapterSources": {
+    "anilist": 260,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:17.524Z"
+}

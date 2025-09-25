@@ -1,0 +1,25 @@
+{
+  "title": "Love Hina",
+  "description": "A boy accidentally becomes the manager of an all-girls dormitory",
+  "author": "Ken Akamatsu",
+  "artist": "Ken Akamatsu",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "5a3d1fa1-14f0-40c5-82e8-f4eac67ae4aa",
+  "createdAt": "2025-09-24T17:05:13.800Z",
+  "updatedAt": "2025-09-24T21:15:01.493Z",
+  "totalChapters": 120,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.598Z",
+  "chapterSources": {
+    "jikan": 120,
+    "kitsu": 276,
+    "anilist": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T21:15:01.493Z"
+}

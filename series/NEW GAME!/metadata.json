@@ -1,0 +1,25 @@
+{
+  "title": "New Game!",
+  "description": "A girl starts working at a video game company",
+  "author": "Shoutarou Tokunou",
+  "artist": "Shoutarou Tokunou",
+  "publisher": "Houbunsha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "418f03bc-3e57-4ecf-b081-495a9e879cd1",
+  "createdAt": "2025-09-24T17:36:18.210Z",
+  "updatedAt": "2025-09-24T21:26:13.937Z",
+  "totalChapters": 165,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.748Z",
+  "chapterSources": {
+    "jikan": 165,
+    "kitsu": 66,
+    "anilist": 181
+  },
+  "chapterVerifiedAt": "2025-09-24T21:26:13.937Z"
+}

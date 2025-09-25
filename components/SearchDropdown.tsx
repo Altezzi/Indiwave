@@ -33,6 +33,8 @@ export default function SearchDropdown({ comics, isOpen, onClose }: SearchDropdo
       return;
     }
 
+    console.log('Searching for:', searchTerm, 'in', comics.length, 'comics');
+    
     const filtered = comics.filter(comic => 
       comic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       comic.series.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -41,6 +43,7 @@ export default function SearchDropdown({ comics, isOpen, onClose }: SearchDropdo
       (comic.artist && comic.artist.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     
+    console.log('Found', filtered.length, 'results');
     setFilteredComics(filtered.slice(0, 6)); // Limit to 6 results
   }, [searchTerm, comics]);
 
@@ -118,7 +121,7 @@ export default function SearchDropdown({ comics, isOpen, onClose }: SearchDropdo
                   {filteredComics.map((comic) => (
                     <Link 
                       key={comic.id} 
-                      href={`/comic/${comic.id}`}
+                      href={`/series/${comic.id}`}
                       onClick={onClose}
                       style={{
                         display: "flex",

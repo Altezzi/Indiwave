@@ -1,0 +1,19 @@
+{
+  "title": "Super Mario",
+  "description": "The plumber's adventures in the Mushroom Kingdom",
+  "author": "Shigeru Miyamoto",
+  "artist": "Various",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "961fc3c4-b273-43ba-89bb-cc805735a136",
+  "createdAt": "2025-09-24T18:10:32.381Z",
+  "updatedAt": "2025-09-24T20:00:28.144Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.144Z"
+}

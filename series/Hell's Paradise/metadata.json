@@ -1,29 +1,25 @@
 {
-  "title": "Hell’s Paradise: Jigokuraku",
-  "mangaMDId": "cb77e4a6-3921-43b9-9d64-7d78cd3205ce",
-  "description": "Gabimaru the Empty, a former ninja assassin feared as a heartless husk of a man, spends his days on death row wondering when an executioner skilled enough to so much as harm him will arrive, as he thinks nothing of seeing an end to his meaningless existence… Or so he thought. \nThen the lady executioner, Asaemon the Beheader, rekindles his hope with an astounding proposition. \nIf he ever wishes to see his beloved wife again, he must embark under the auspices of the shogunate on a perilous voyage to the mysterious mystic island said to house the elixir of immortality. \nShould he be the one among many rival death-row fiends and scoundrels to find the elixir, he'll earn a full exoneration, and, more importantly, a chance at an ordinary married life with the light of his life: the woman who made the world seem not so ugly. \nWhat awaits them is a journey like no other!\n___\n**Official English Volumes:** [VIZ](https://www.viz.com/shonenjump/chapters/hells-paradise-jigokuraku)",
-  "authors": [
-    "Kaku Yuuji"
-  ],
-  "artists": [
-    "Kaku Yuuji"
-  ],
-  "tags": [
-    "Historical",
-    "Action",
-    "Samurai",
-    "Adventure",
-    "Gore",
-    "Drama",
-    "Fantasy",
-    "Supernatural"
-  ],
-  "status": "completed",
-  "year": 2018,
-  "contentRating": "suggestive",
+  "title": "Hell's Paradise",
+  "description": "A ninja sentenced to death seeks immortality",
+  "author": "Yuji Kaku",
+  "artist": "Yuji Kaku",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 3,
-  "createdAt": "2025-09-22T05:17:04.062Z",
-  "updatedAt": "2025-09-22T05:24:39.835Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "cb77e4a6-3921-43b9-9d64-7d78cd3205ce",
+  "createdAt": "2025-09-24T16:54:15.607Z",
+  "updatedAt": "2025-09-24T20:14:09.647Z",
+  "totalChapters": 127,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.393Z",
+  "chapterSources": {
+    "anilist": 127,
+    "mangadex": 127,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:09.647Z"
 }

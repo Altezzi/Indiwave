@@ -1,0 +1,25 @@
+{
+  "title": "Biomega: The Investigation",
+  "description": "Zoan investigates the zombie apocalypse",
+  "author": "Tsutomu Nihei",
+  "artist": "Tsutomu Nihei",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "5bdb093f-9707-4a30-b02e-c8b66554ecf0",
+  "createdAt": "2025-09-24T18:20:11.070Z",
+  "updatedAt": "2025-09-24T20:08:00.411Z",
+  "totalChapters": 42,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.972Z",
+  "chapterSources": {
+    "anilist": 42,
+    "mangadex": 42,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:00.411Z"
+}

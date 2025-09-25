@@ -1,0 +1,26 @@
+{
+  "title": "Blame!: The Final Years",
+  "description": "Killy's final years in the megastructure",
+  "author": "Tsutomu Nihei",
+  "artist": "Tsutomu Nihei",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "28bf349e-41e5-4443-84f0-f0581752519b",
+  "createdAt": "2025-09-24T18:20:06.457Z",
+  "updatedAt": "2025-09-24T20:43:41.655Z",
+  "totalChapters": 66,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:04.191Z",
+  "chapterSources": {
+    "jikan": 23,
+    "kitsu": 23,
+    "anilist": 66,
+    "mangadex": 102
+  },
+  "chapterVerifiedAt": "2025-09-24T20:43:41.655Z"
+}

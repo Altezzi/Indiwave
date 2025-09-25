@@ -1,0 +1,25 @@
+{
+  "title": "Monster: The Investigation",
+  "description": "Tenma investigates Johan's past",
+  "author": "Naoki Urasawa",
+  "artist": "Naoki Urasawa",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "136a8c13-cf72-427a-8d76-23f1bf070c0e",
+  "createdAt": "2025-09-24T18:19:40.536Z",
+  "updatedAt": "2025-09-24T21:22:13.688Z",
+  "totalChapters": 31,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.853Z",
+  "chapterSources": {
+    "jikan": 31,
+    "kitsu": 31,
+    "anilist": 18
+  },
+  "chapterVerifiedAt": "2025-09-24T21:22:13.688Z"
+}

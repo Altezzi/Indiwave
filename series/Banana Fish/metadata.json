@@ -1,0 +1,25 @@
+{
+  "title": "Banana Fish",
+  "description": "A gang leader uncovers a government conspiracy",
+  "author": "Akimi Yoshida",
+  "artist": "Akimi Yoshida",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "9a502e35-1051-4e4c-b055-5ab211954fa4",
+  "createdAt": "2025-09-24T18:03:31.294Z",
+  "updatedAt": "2025-09-24T20:06:54.458Z",
+  "totalChapters": 110,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.418Z",
+  "chapterSources": {
+    "anilist": 110,
+    "mangadex": 103,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:54.458Z"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Dragon Ball: The Path to Power",
+  "description": "A retelling of Goku's early adventures",
+  "author": "Akira Toriyama",
+  "artist": "Akira Toriyama",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "4bb7eac3-da10-4873-ae04-1157dc08b22d",
+  "createdAt": "2025-09-24T17:03:58.721Z",
+  "updatedAt": "2025-09-24T20:54:50.441Z",
+  "totalChapters": 13,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:09.805Z",
+  "chapterSources": {
+    "jikan": 13
+  },
+  "chapterVerifiedAt": "2025-09-24T20:54:50.441Z"
+}

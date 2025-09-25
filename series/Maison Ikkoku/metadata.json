@@ -1,0 +1,26 @@
+{
+  "title": "Maison Ikkoku",
+  "description": "A college student falls in love with his landlady",
+  "author": "Rumiko Takahashi",
+  "artist": "Rumiko Takahashi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "30d9cbf7-b78b-4266-b404-21207ba93ec6",
+  "createdAt": "2025-09-24T17:05:27.611Z",
+  "updatedAt": "2025-09-24T21:16:25.788Z",
+  "totalChapters": 162,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.835Z",
+  "chapterSources": {
+    "jikan": 162,
+    "kitsu": 162,
+    "anilist": 162,
+    "mangadex": 161
+  },
+  "chapterVerifiedAt": "2025-09-24T21:16:25.788Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Battle Tendency",
+  "description": "Jojo's Bizarre Adventure Part 2",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "3148976a-e0b0-4a9c-a1eb-58783a11ff99",
+  "createdAt": "2025-09-24T18:06:08.718Z",
+  "updatedAt": "2025-09-24T20:07:11.279Z",
+  "totalChapters": 69,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.810Z",
+  "chapterSources": {
+    "anilist": 69,
+    "mangadex": 69,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:07:11.279Z"
+}

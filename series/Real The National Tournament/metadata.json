@@ -1,0 +1,25 @@
+{
+  "title": "Real: The National Tournament",
+  "description": "Takahashi competes in the national wheelchair basketball tournament",
+  "author": "Takehiko Inoue",
+  "artist": "Takehiko Inoue",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "36cf8f19-ce18-486d-9d92-2055c89ec410",
+  "createdAt": "2025-09-24T18:19:36.751Z",
+  "updatedAt": "2025-09-24T20:23:15.908Z",
+  "totalChapters": 11,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.987Z",
+  "chapterSources": {
+    "anilist": 11,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:15.908Z"
+}

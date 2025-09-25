@@ -1,0 +1,27 @@
+{
+  "title": "Villain to Kill",
+  "description": "A hero reincarnates as a villain to save the world",
+  "author": "Park Sung-woo",
+  "artist": "Min Kyu",
+  "publisher": "Naver",
+  "publisherLinks": [],
+  "tags": [
+    "Action",
+    "Fantasy",
+    "Manhwa"
+  ],
+  "contentRating": "mature",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "sources": [
+    "anilist",
+    "mangadex"
+  ],
+  "aniListId": 130149,
+  "mangaDexId": "94e6f5a4-a215-4f5b-ae82-febc560be66d",
+  "createdAt": "2025-09-24T19:33:16.509Z",
+  "updatedAt": "2025-09-24T20:00:31.695Z",
+  "totalChapters": 100,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.695Z"
+}

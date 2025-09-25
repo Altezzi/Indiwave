@@ -1,0 +1,25 @@
+{
+  "title": "Master Keaton",
+  "description": "An archaeologist solves mysteries",
+  "author": "Naoki Urasawa",
+  "artist": "Naoki Urasawa",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b965ba5a-52a3-42c0-b16e-bbea1ee4b8cc",
+  "createdAt": "2025-09-24T18:00:33.515Z",
+  "updatedAt": "2025-09-24T20:17:51.734Z",
+  "totalChapters": 144,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.079Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 144,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:17:51.734Z"
+}

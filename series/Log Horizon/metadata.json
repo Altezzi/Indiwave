@@ -1,0 +1,25 @@
+{
+  "title": "Log Horizon",
+  "description": "Players trapped in an MMORPG work to build a new society",
+  "author": "Mamare Touno",
+  "artist": "Kazuhiro Hara",
+  "publisher": "Enterbrain",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "30e87bb0-a39d-443c-a757-9dcbc392d861",
+  "createdAt": "2025-09-24T16:55:33.801Z",
+  "updatedAt": "2025-09-24T20:16:47.487Z",
+  "totalChapters": 67,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.619Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 67,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:47.487Z"
+}

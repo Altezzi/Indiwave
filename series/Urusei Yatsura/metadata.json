@@ -1,0 +1,25 @@
+{
+  "title": "Urusei Yatsura",
+  "description": "An alien girl comes to Earth and causes chaos",
+  "author": "Rumiko Takahashi",
+  "artist": "Rumiko Takahashi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6b9206b3-5c0f-4cf8-a0cc-d2c9e1aa4df9",
+  "createdAt": "2025-09-24T17:05:30.324Z",
+  "updatedAt": "2025-09-24T20:30:16.583Z",
+  "totalChapters": 366,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.205Z",
+  "chapterSources": {
+    "anilist": 366,
+    "mangadex": 366,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:30:16.583Z"
+}

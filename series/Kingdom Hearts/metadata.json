@@ -1,0 +1,25 @@
+{
+  "title": "Kingdom Hearts",
+  "description": "Disney and Final Fantasy crossover",
+  "author": "Tetsuya Nomura",
+  "artist": "Shiro Amano",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "2e0d9aa4-e652-4cdc-8d64-b87a74a62d29",
+  "createdAt": "2025-09-24T18:08:04.472Z",
+  "updatedAt": "2025-09-24T20:15:56.560Z",
+  "totalChapters": 43,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.026Z",
+  "chapterSources": {
+    "anilist": 43,
+    "mangadex": 40,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:15:56.560Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "NieR: Automata",
+  "description": "Androids fight for humanity",
+  "author": "Yoko Taro",
+  "artist": "Jun Eishima",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "90da6e38-3844-46d9-bec2-a7d621c8519d",
+  "createdAt": "2025-09-24T18:10:47.825Z",
+  "updatedAt": "2025-09-24T21:26:36.976Z",
+  "totalChapters": 20,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.993Z",
+  "chapterSources": {
+    "jikan": 30,
+    "kitsu": 20,
+    "anilist": 12
+  },
+  "chapterVerifiedAt": "2025-09-24T21:26:36.976Z"
+}

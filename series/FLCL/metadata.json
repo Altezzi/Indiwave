@@ -1,0 +1,26 @@
+{
+  "title": "FLCL",
+  "description": "A boy's coming of age with robots and rock music",
+  "author": "Gainax",
+  "artist": "Hajime Ueda",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8f0356e5-5aae-498d-af86-4834ded28294",
+  "createdAt": "2025-09-24T18:00:45.969Z",
+  "updatedAt": "2025-09-24T20:59:07.798Z",
+  "totalChapters": 15,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.182Z",
+  "chapterSources": {
+    "jikan": 15,
+    "kitsu": 15,
+    "anilist": 15,
+    "mangadex": 7
+  },
+  "chapterVerifiedAt": "2025-09-24T20:59:07.798Z"
+}

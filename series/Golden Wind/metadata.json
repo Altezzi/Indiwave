@@ -1,0 +1,25 @@
+{
+  "title": "Golden Wind",
+  "description": "Jojo's Bizarre Adventure Part 5",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "2725e983-81c3-4a62-8e97-5027c5996c2b",
+  "createdAt": "2025-09-24T18:06:03.482Z",
+  "updatedAt": "2025-09-24T20:13:28.542Z",
+  "totalChapters": 155,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.595Z",
+  "chapterSources": {
+    "anilist": 10,
+    "mangadex": 155,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:28.542Z"
+}

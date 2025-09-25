@@ -1,0 +1,25 @@
+{
+  "title": "Doraemon",
+  "description": "A robotic cat from the future helps a lazy boy",
+  "author": "Fujiko F. Fujio",
+  "artist": "Fujiko F. Fujio",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "47dc4da4-ec9c-4dbf-a035-298cc3207f2f",
+  "createdAt": "2025-09-24T16:56:10.345Z",
+  "updatedAt": "2025-09-24T20:10:47.372Z",
+  "totalChapters": 821,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.287Z",
+  "chapterSources": {
+    "anilist": 821,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:10:47.372Z"
+}

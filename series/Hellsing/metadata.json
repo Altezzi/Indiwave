@@ -1,0 +1,26 @@
+{
+  "title": "Hellsing",
+  "description": "A vampire organization fights supernatural threats",
+  "author": "Kouta Hirano",
+  "artist": "Kouta Hirano",
+  "publisher": "Shonen Gahosha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6fcfaa0e-6023-403e-97f9-5301dd3c258c",
+  "createdAt": "2025-09-24T17:59:33.665Z",
+  "updatedAt": "2025-09-24T21:04:53.661Z",
+  "totalChapters": 92,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.426Z",
+  "chapterSources": {
+    "jikan": 1,
+    "kitsu": 92,
+    "anilist": 1,
+    "mangadex": 95
+  },
+  "chapterVerifiedAt": "2025-09-24T21:04:53.661Z"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Dragon Ball Z",
+  "description": "Goku protects Earth from powerful enemies",
+  "author": "Akira Toriyama",
+  "artist": "Akira Toriyama",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "4bb7eac3-da10-4873-ae04-1157dc08b22d",
+  "createdAt": "2025-09-24T18:17:20.972Z",
+  "updatedAt": "2025-09-24T20:00:09.981Z",
+  "totalChapters": 520,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:09.981Z"
+}

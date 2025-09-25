@@ -1,0 +1,25 @@
+{
+  "title": "Doraemon: The First Years",
+  "description": "Doraemon's early years with Nobita",
+  "author": "Fujiko F. Fujio",
+  "artist": "Fujiko F. Fujio",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6639a7a2-5d10-4ffa-a93f-e93367c3b945",
+  "createdAt": "2025-09-24T18:33:49.381Z",
+  "updatedAt": "2025-09-24T20:10:52.644Z",
+  "totalChapters": 821,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.313Z",
+  "chapterSources": {
+    "anilist": 821,
+    "mangadex": 6,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:10:52.644Z"
+}

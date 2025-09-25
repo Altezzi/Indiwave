@@ -1,0 +1,25 @@
+{
+  "title": "Short Program",
+  "description": "A collection of short stories about youth and sports",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "578f47b3-348b-48d8-9342-4718828a48c4",
+  "createdAt": "2025-09-24T17:07:40.473Z",
+  "updatedAt": "2025-09-24T20:24:26.786Z",
+  "totalChapters": 32,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.811Z",
+  "chapterSources": {
+    "anilist": 32,
+    "mangadex": 6,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:26.786Z"
+}

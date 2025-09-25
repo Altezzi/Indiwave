@@ -1,0 +1,25 @@
+{
+  "title": "Shotgun Boy",
+  "description": "A boy with a shotgun fights zombies",
+  "author": "Kim Carnby",
+  "artist": "Hwang Young-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e8c8bc87-0b71-4893-9940-3fbd4bfd386b",
+  "createdAt": "2025-09-24T18:26:55.743Z",
+  "updatedAt": "2025-09-24T20:24:28.952Z",
+  "totalChapters": 69,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.831Z",
+  "chapterSources": {
+    "anilist": 69,
+    "mangadex": 68,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:28.952Z"
+}

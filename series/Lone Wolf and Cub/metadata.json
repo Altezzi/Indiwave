@@ -1,0 +1,25 @@
+{
+  "title": "Lone Wolf and Cub",
+  "description": "A ronin and his son seek vengeance",
+  "author": "Kazuo Koike",
+  "artist": "Goseki Kojima",
+  "publisher": "Futabasha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "991e9f15-8368-4843-a78a-5605918f9c3e",
+  "createdAt": "2025-09-24T18:03:48.520Z",
+  "updatedAt": "2025-09-24T20:16:49.481Z",
+  "totalChapters": 142,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.639Z",
+  "chapterSources": {
+    "anilist": 142,
+    "mangadex": 4,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:49.481Z"
+}

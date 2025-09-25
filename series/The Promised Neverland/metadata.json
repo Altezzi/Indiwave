@@ -1,36 +1,19 @@
 {
   "title": "The Promised Neverland",
-  "mangaMDId": "46e9cae5-4407-4576-9b9e-4c517ae9298e",
-  "description": "At Grace Field House, life couldn't be better for the orphans! Though they have no parents, together with the other kids and a kind \"Mama\" who cares for them, they form one big, happy family. No child is ever overlooked, especially since they are all adopted by the age of 12. Their daily lives involve rigorous tests, but afterwards, they are allowed to play outside.   \n  \nThere is only one rule they must obey: do not leave the orphanage. But one day, two top-scoring orphans, Emma and Norman, venture past the gate and unearth the horrifying reality behind their entire existence: they are all livestock, and their orphanage is a farm to cultivate food for a mysterious race of demons. With only a few months left to pull off an escape plan, the children must somehow change their predetermined fate.  \n\n---\nOfficial Release:\n- Indonesian release by Elex Media as **The Promised Neverland** (2019)",
-  "authors": [
-    "Shirai Kaiu"
-  ],
-  "artists": [
-    "Demizu Posuka"
-  ],
-  "tags": [
-    "Thriller",
-    "Award Winning",
-    "Action",
-    "Demons",
-    "Psychological",
-    "Comedy",
-    "Survival",
-    "Adventure",
-    "Gore",
-    "Drama",
-    "Horror",
-    "Slice of Life",
-    "Supernatural",
-    "Mystery",
-    "Tragedy"
-  ],
-  "status": "completed",
-  "year": 2016,
+  "description": "Orphaned children discover the dark truth about their home",
+  "author": "Kaiu Shirai",
+  "artist": "Posuka Demizu",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 3,
-  "createdAt": "2025-09-22T05:15:33.258Z",
-  "updatedAt": "2025-09-22T05:25:48.601Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "46e9cae5-4407-4576-9b9e-4c517ae9298e",
+  "createdAt": "2025-09-24T16:53:55.719Z",
+  "updatedAt": "2025-09-24T20:00:29.982Z",
+  "totalChapters": 181,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.982Z"
 }

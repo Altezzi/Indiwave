@@ -1,0 +1,25 @@
+{
+  "title": "Umineko When They Cry",
+  "description": "Murder mystery on a secluded island",
+  "author": "Ryukishi07",
+  "artist": "Jiro Suzuki",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "cbc33410-6934-4ea0-9f00-731df27c55b2",
+  "createdAt": "2025-09-24T18:03:59.008Z",
+  "updatedAt": "2025-09-24T20:30:00.397Z",
+  "totalChapters": 10,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.108Z",
+  "chapterSources": {
+    "anilist": 10,
+    "mangadex": 9,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:30:00.397Z"
+}

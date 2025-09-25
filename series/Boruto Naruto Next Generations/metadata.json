@@ -1,0 +1,25 @@
+{
+  "title": "Boruto: Naruto Next Generations",
+  "description": "Naruto's son faces new challenges as a ninja",
+  "author": "Masashi Kishimoto",
+  "artist": "Mikio Ikemoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "46e530ce-0766-4cbd-b005-5e6fb0ba5e71",
+  "createdAt": "2025-09-24T16:57:10.536Z",
+  "updatedAt": "2025-09-24T20:08:42.285Z",
+  "totalChapters": 81,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.013Z",
+  "chapterSources": {
+    "anilist": 81,
+    "mangadex": 80,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:42.285Z"
+}

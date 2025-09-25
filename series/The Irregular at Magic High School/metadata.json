@@ -1,0 +1,25 @@
+{
+  "title": "The Irregular at Magic High School",
+  "description": "A boy with no magic attends a magic high school",
+  "author": "Tsutomu Satou",
+  "artist": "Kana Ishida",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "466eec75-4148-41c9-a0e7-0853ced19c00",
+  "createdAt": "2025-09-24T17:35:10.061Z",
+  "updatedAt": "2025-09-24T20:27:51.972Z",
+  "totalChapters": 243,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.415Z",
+  "chapterSources": {
+    "anilist": 243,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:27:51.972Z"
+}

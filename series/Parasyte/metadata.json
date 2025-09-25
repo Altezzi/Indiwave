@@ -1,32 +1,25 @@
 {
   "title": "Parasyte",
-  "mangaMDId": "07823fcd-f2c9-458c-9824-3eae62b2a006",
-  "description": "They arrive in silence and darkness. They descend from the skies. They have a hunger for human flesh. They are everywhere. They are parasites, alien creatures who must invade - and take control of - a human host to survive. And once they have infected their victims, they can assume any deadly form they choose: monsters with giant teeth, winged demons, creatures with blades for hands. But most have chosen to conceal their lethal purpose behind ordinary human faces. So no one knows their secret - except an ordinary high school student. Shin is battling for control of his own body against an alien parasite, but can he find a way to warn humanity of the horrors to come?\n\n[Alternate Official English](https://kodansha.us/series/parasyte/)\n\n---\n- **Won the Kodansha Manga Award for General Manga in 1993**\n- **Won the Seiun Award for Best Comic in 1996**",
-  "authors": [
-    "Iwaaki Hitoshi"
-  ],
-  "artists": [
-    "Iwaaki Hitoshi"
-  ],
-  "tags": [
-    "Award Winning",
-    "Monsters",
-    "Action",
-    "Psychological",
-    "Romance",
-    "Gore",
-    "Drama",
-    "School Life",
-    "Horror",
-    "Aliens",
-    "Mystery"
-  ],
-  "status": "completed",
-  "year": 1988,
+  "description": "Alien parasites take over human hosts",
+  "author": "Hitoshi Iwaaki",
+  "artist": "Hitoshi Iwaaki",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 2,
-  "createdAt": "2025-09-22T05:16:20.550Z",
-  "updatedAt": "2025-09-22T05:25:20.285Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "07823fcd-f2c9-458c-9824-3eae62b2a006",
+  "createdAt": "2025-09-24T17:59:39.192Z",
+  "updatedAt": "2025-09-24T20:21:40.083Z",
+  "totalChapters": 64,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.199Z",
+  "chapterSources": {
+    "anilist": 64,
+    "mangadex": 64,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:21:40.083Z"
 }

@@ -1,0 +1,25 @@
+{
+  "title": "The Legend of Zelda: Twilight Princess",
+  "description": "Link transforms between human and wolf",
+  "author": "Shigeru Miyamoto",
+  "artist": "Akira Himekawa",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8fe35785-803d-461d-abad-73cf2f81ca4b",
+  "createdAt": "2025-09-24T18:10:27.087Z",
+  "updatedAt": "2025-09-24T20:28:04.933Z",
+  "totalChapters": 58,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.558Z",
+  "chapterSources": {
+    "anilist": 58,
+    "mangadex": 58,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:28:04.933Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Oshi no Ko",
+  "description": "A doctor is reincarnated as the son of an idol",
+  "author": "Aka Akasaka",
+  "artist": "Mengo Yokoyari",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "831b12b8-2d0e-4397-8719-1efee4c32f40",
+  "createdAt": "2025-09-24T17:42:21.629Z",
+  "updatedAt": "2025-09-24T21:30:24.467Z",
+  "totalChapters": 168,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:24.984Z",
+  "chapterSources": {
+    "jikan": 168,
+    "kitsu": 168,
+    "anilist": 7
+  },
+  "chapterVerifiedAt": "2025-09-24T21:30:24.467Z"
+}

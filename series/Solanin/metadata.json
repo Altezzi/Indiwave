@@ -1,0 +1,25 @@
+{
+  "title": "Solanin",
+  "description": "Young adults struggle with post-graduation life",
+  "author": "Inio Asano",
+  "artist": "Inio Asano",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "a42db50d-20df-4f33-bddc-fe990df9c231",
+  "createdAt": "2025-09-24T18:00:38.004Z",
+  "updatedAt": "2025-09-24T20:25:00.839Z",
+  "totalChapters": 30,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.483Z",
+  "chapterSources": {
+    "anilist": 30,
+    "mangadex": 29,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:00.839Z"
+}

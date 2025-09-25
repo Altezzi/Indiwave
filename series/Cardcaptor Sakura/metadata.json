@@ -1,0 +1,26 @@
+{
+  "title": "Cardcaptor Sakura",
+  "description": "A girl captures magical cards that escaped from a book",
+  "author": "CLAMP",
+  "artist": "CLAMP",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "78218ec5-b7ea-4c03-accd-df98c3d8e350",
+  "createdAt": "2025-09-24T16:57:24.098Z",
+  "updatedAt": "2025-09-24T20:46:18.905Z",
+  "totalChapters": 50,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.128Z",
+  "chapterSources": {
+    "jikan": 50,
+    "kitsu": 50,
+    "anilist": 50,
+    "mangadex": 80
+  },
+  "chapterVerifiedAt": "2025-09-24T20:46:18.905Z"
+}

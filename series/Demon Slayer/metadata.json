@@ -1,0 +1,23 @@
+{
+  "title": "Demon Slayer",
+  "description": "A young boy becomes a demon slayer to save his sister",
+  "author": "Koyoharu Gotouge",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "createdAt": "2025-09-24T15:54:46.347Z",
+  "updatedAt": "2025-09-24T20:51:16.115Z",
+  "mangaDexId": "789642f8-ca89-4e4e-8f7b-eee4d17ea08b",
+  "totalChapters": 207,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.569Z",
+  "chapterSources": {
+    "jikan": 207,
+    "kitsu": 207,
+    "mangadex": 205
+  },
+  "chapterVerifiedAt": "2025-09-24T20:51:16.115Z"
+}

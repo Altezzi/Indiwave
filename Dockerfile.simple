@@ -1,0 +1,39 @@
+FROM node:20-alpine
+
+# Install git for cloning repositories
+RUN apk add --no-cache git
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Copy Prisma schema
+COPY prisma ./prisma
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Generate Prisma client
+RUN npx prisma generate
+
+# Set environment variables
+ARG NEXT_PUBLIC_GOOGLE_CLIENT_ID
+ENV NEXT_PUBLIC_GOOGLE_CLIENT_ID=$NEXT_PUBLIC_GOOGLE_CLIENT_ID
+
+# Build the application with minimal configuration
+RUN npm run build:no-check
+
+# Verify build exists
+RUN ls -la .next/
+
+# Expose port
+EXPOSE 3000
+
+# Start the application
+CMD ["npm", "start"]
+

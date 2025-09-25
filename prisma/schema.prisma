@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./dev.db"
+  url      = env("DATABASE_URL")
 }
 
 model Account {
@@ -68,69 +68,96 @@ model User {
   updatedAt       DateTime       @updatedAt
   profilePicture  String?
   cropSettings    String?
+  themePreference String?        @default("default")
   accounts        Account[]
   sessions        Session[]
   auditLogs       AuditLog[]
-  createdChapters Chapter[]
+  createdSeries   Series[]       // Series created by user
+  createdVolumes  Volume[]       // Volumes created by user
+  createdChapters Chapter[]      // Chapters created by user
   comments        Comment[]
   creatorClaims   CreatorClaim[]
   libraryEntries  LibraryEntry[]
-  createdSeries   Series[]
-  userUrls        UserUrl[]
   ratings         Rating[]
+  userUrls        UserUrl[]
 
   @@map("users")
 }
 
+// Main Series model - simplified and clean
 model Series {
-  id             String         @id @default(cuid())
-  title          String
-  description    String?
-  coverImage     String?
-  isPublished    Boolean        @default(false)
-  createdAt      DateTime       @default(now())
-  updatedAt      DateTime       @updatedAt
-  mangaMDId      String?        @unique
-  mangaMDTitle   String?
-  mangaMDStatus  String?
-  mangaMDYear    Int?
-  contentRating  String?
-  tags           String?
-  authors        String?
-  artists        String?
-  altTitles      String?
-  isImported     Boolean        @default(false)
-  creatorId      String
-  chapters       Chapter[]
-  creatorClaims  CreatorClaim[]
+  id            String    @id @default(cuid())
+  title         String
+  description   String?
+  coverImage    String?
+  isPublished   Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  creatorId     String
+  creator       User      @relation(fields: [creatorId], references: [id])
+  
+  // Series metadata
+  contentRating String?
+  tags          String?
+  authors       String?
+  artists       String?
+  altTitles     String?
+  
+  // Volume relationship
+  volumes       Volume[]
+  
+  // Relationships
+  chapters      Chapter[]      // Chapters within this series/season
+  comments      Comment[]
+  creatorClaims CreatorClaim[]
   libraryEntries LibraryEntry[]
-  ratings        Rating[]
-  creator        User           @relation(fields: [creatorId], references: [id])
+  ratings       Rating[]
+  userUrls      UserUrl[]
 
   @@map("series")
 }
 
+// Volume model for organizing series into volumes
+model Volume {
+  id            String    @id @default(cuid())
+  title         String
+  volumeNumber  Int
+  description   String?
+  coverImage    String?
+  isPublished   Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  // Relationships
+  seriesId      String
+  series        Series    @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  chapters      Chapter[]
+  creatorId     String
+  creator       User      @relation(fields: [creatorId], references: [id])
+
+  @@unique([seriesId, volumeNumber])
+  @@map("volumes")
+}
+
+// Chapter model for individual chapters within series or volumes
 model Chapter {
   id            String    @id @default(cuid())
   title         String
   chapterNumber Int
-  pages         String
+  pages         String?   // Chapter pages/content
   isPublished   Boolean   @default(false)
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
-  seriesId      String
+  
+  // Can belong to either a Series (main series) or a Volume
+  seriesId      String?   // Points to the parent Series (null if belongs to volume)
+  volumeId      String?   // Points to the parent Volume (null if belongs to main series)
+  
   creatorId     String
   creator       User      @relation(fields: [creatorId], references: [id])
-  series        Series    @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  series        Series?   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  volume        Volume?   @relation(fields: [volumeId], references: [id], onDelete: Cascade)
   comments      Comment[]
-  
-  // MangaDex import fields
-  mangaMDChapterId       String?
-  mangaMDChapterTitle    String?
-  mangaMDChapterNumber   Float?
-  mangaMDPages           Int?
-  mangaMDTranslatedLanguage String?
-  mangaMDPublishAt       DateTime?
 
   @@map("chapters")
 }
@@ -142,8 +169,9 @@ model Comment {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   userId    String
-  seriesId  String
-  chapterId String?
+  seriesId  String?  // Optional - for series-level comments
+  chapterId String?  // Optional - for chapter-level comments
+  series    Series?  @relation(fields: [seriesId], references: [id], onDelete: Cascade)
   chapter   Chapter? @relation(fields: [chapterId], references: [id], onDelete: Cascade)
   user      User     @relation(fields: [userId], references: [id])
 
@@ -154,12 +182,12 @@ model UserUrl {
   id        String   @id @default(cuid())
   url       String
   label     String
-  chapterId String?
-  seriesId  String?
+  seriesId  String?  // Points to Series
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  series    Series?  @relation(fields: [seriesId], references: [id], onDelete: Cascade)
 
   @@map("user_urls")
 }
@@ -173,8 +201,8 @@ model LibraryEntry {
   status    String?  @default("READING")
   rating    Int?
   notes     String?
-  series    Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
   user      User     @relation(fields: [userId], references: [id])
+  series    Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
 
   @@unique([userId, seriesId])
   @@map("library_entries")
@@ -187,8 +215,8 @@ model Rating {
   updatedAt DateTime @updatedAt
   userId    String
   seriesId  String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   series    Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id])
 
   @@unique([userId, seriesId])
   @@map("ratings")
@@ -203,8 +231,8 @@ model CreatorClaim {
   updatedAt  DateTime @updatedAt
   claimantId String
   seriesId   String
-  series     Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
   claimant   User     @relation(fields: [claimantId], references: [id])
+  series     Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
 
   @@map("creator_claims")
 }

@@ -1,0 +1,25 @@
+{
+  "title": "Ashita no Joe",
+  "description": "A delinquent becomes a boxer",
+  "author": "Asao Takamori",
+  "artist": "Tetsuya Chiba",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "4ee5e960-6329-4e1d-b038-93e8e0d53589",
+  "createdAt": "2025-09-24T17:59:40.550Z",
+  "updatedAt": "2025-09-24T20:06:29.778Z",
+  "totalChapters": 171,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.752Z",
+  "chapterSources": {
+    "anilist": 171,
+    "mangadex": 111,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:29.778Z"
+}

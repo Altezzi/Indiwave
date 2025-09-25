@@ -1,0 +1,22 @@
+{
+  "title": "Puni Puni Poemy",
+  "description": "Magical girl parody",
+  "author": "Shinichi Watanabe",
+  "artist": "Shinichi Watanabe",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": null,
+  "createdAt": "2025-09-24T18:00:50.088Z",
+  "updatedAt": "2025-09-24T20:00:25.826Z",
+  "sources": [
+    "anilist"
+  ],
+  "totalChapters": 1,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.826Z"
+}

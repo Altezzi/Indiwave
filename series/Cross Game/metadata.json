@@ -1,0 +1,25 @@
+{
+  "title": "Cross Game",
+  "description": "A boy and girl's relationship through baseball",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "64c59add-698a-4260-8671-848356f26eab",
+  "createdAt": "2025-09-24T17:07:18.874Z",
+  "updatedAt": "2025-09-24T20:49:25.535Z",
+  "totalChapters": 170,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.344Z",
+  "chapterSources": {
+    "jikan": 170,
+    "kitsu": 170,
+    "anilist": 170
+  },
+  "chapterVerifiedAt": "2025-09-24T20:49:25.535Z"
+}

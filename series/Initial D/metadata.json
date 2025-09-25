@@ -1,0 +1,29 @@
+{
+  "title": "Initial D",
+  "description": "A delivery driver becomes a street racing legend",
+  "author": "Shuichi Shigeno",
+  "artist": "Shuichi Shigeno",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [
+    "Sports",
+    "Racing",
+    "Seinen"
+  ],
+  "contentRating": "mature",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "0976963e-c0b4-4bdc-abde-831e9cb29cc2",
+  "createdAt": "2025-09-24T19:30:10.732Z",
+  "updatedAt": "2025-09-24T21:07:35.032Z",
+  "totalChapters": 724,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.950Z",
+  "chapterSources": {
+    "jikan": 724,
+    "kitsu": 719,
+    "anilist": 725
+  },
+  "chapterVerifiedAt": "2025-09-24T21:07:35.032Z"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Final Fantasy VII",
+  "description": "The classic RPG in manga form",
+  "author": "Tetsuya Nomura",
+  "artist": "Shiro Amano",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "cabc4093-abbf-4569-8d00-773ad019ee40",
+  "createdAt": "2025-09-24T18:08:07.873Z",
+  "updatedAt": "2025-09-24T20:57:41.582Z",
+  "totalChapters": 19,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.898Z",
+  "chapterSources": {
+    "kitsu": 12,
+    "anilist": 19
+  },
+  "chapterVerifiedAt": "2025-09-24T20:57:41.582Z"
+}

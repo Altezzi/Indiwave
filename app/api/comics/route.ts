@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
 import fs from 'fs';
 import path from 'path';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 export async function GET(request: NextRequest) {
   try {
     // Get query parameters
-    const searchParams = request.nextUrl.searchParams;
-    const includeImported = searchParams.get('includeImported') !== 'false';
+    const { searchParams } = new URL(request.url);
     const limitParam = searchParams.get('limit');
     const limit = limitParam ? parseInt(limitParam) : null; // null means no limit
     const offset = parseInt(searchParams.get('offset') || '0');
@@ -44,8 +45,8 @@ export async function GET(request: NextRequest) {
               title: metadata.title,
               series: metadata.title,
               description: metadata.description || '',
-              cover: `/api/series/${encodeURIComponent(folderName)}/cover.jpg`,
-              coverImage: `/api/series/${encodeURIComponent(folderName)}/cover.jpg`,
+              cover: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
+              coverImage: `/api/series-covers/${encodeURIComponent(folderName)}/cover.jpg`,
               author: metadata.authors?.[0] || '',
               artist: metadata.artists?.[0] || '',
               authors: metadata.authors || [],
@@ -79,73 +80,7 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    // Also get user-created series from database (non-imported)
-    const dbSeries = await prisma.series.findMany({
-      where: {
-        isPublished: true,
-        isImported: false
-      },
-      include: {
-        creator: {
-          select: {
-            id: true,
-            name: true,
-            username: true,
-          }
-        },
-        chapters: {
-          where: { isPublished: true },
-          select: {
-            id: true,
-            title: true,
-            chapterNumber: true,
-          },
-          orderBy: { chapterNumber: 'asc' }
-        },
-        _count: {
-          select: {
-            libraryEntries: true,
-          }
-        }
-      },
-      orderBy: { createdAt: 'desc' },
-    });
-
-    // Transform database series to comic format
-    const dbComics = dbSeries.map(series => ({
-      id: series.id,
-      title: series.title,
-      series: series.title,
-      description: series.description,
-      cover: series.coverImage,
-      coverImage: series.coverImage,
-      author: series.authors ? (() => {
-        try { return JSON.parse(series.authors)[0]; } catch { return undefined; }
-      })() : undefined,
-      artist: series.artists ? (() => {
-        try { return JSON.parse(series.artists)[0]; } catch { return undefined; }
-      })() : undefined,
-      authors: series.authors,
-      artists: series.artists,
-      year: series.mangaMDYear || new Date(series.createdAt).getFullYear(),
-      tags: series.tags ? (() => {
-        try { return JSON.parse(series.tags); } catch { return []; }
-      })() : [],
-      mangaMDStatus: series.mangaMDStatus,
-      isImported: series.isImported,
-      contentRating: series.contentRating,
-      creator: series.creator,
-      chapters: series.chapters.map(chapter => ({
-        id: chapter.id,
-        title: chapter.title,
-        chapterNumber: chapter.chapterNumber,
-        pages: chapter.pages ? (() => {
-          try { return JSON.parse(chapter.pages); } catch { return []; }
-        })() : [],
-      })),
-      libraryCount: series._count.libraryEntries,
-      createdAt: series.createdAt,
-    }));
+    // No database series - purely file-based
 
     // Also get static comics from JSON file
     const comicsJsonPath = path.join(process.cwd(), 'data', 'comics.json');
@@ -159,13 +94,125 @@ export async function GET(request: NextRequest) {
       console.warn('Could not read static comics file:', error);
     }
 
-    // Combine all comics
-    let allComics = [...dbComics, ...staticComics];
-    
-    // Add series from folders if includeImported is true
-    if (includeImported) {
-      allComics = [...allComics, ...seriesFromFolders];
+    // Fetch series from database
+    let seriesFromDatabase: any[] = [];
+    try {
+      const dbSeries = await prisma.series.findMany({
+        where: { 
+          isPublished: true
+          // Removed seasonNumber filter since it's now in the Season model
+        },
+        include: {
+          chapters: {
+            select: {
+              id: true,
+              title: true,
+              chapterNumber: true,
+              pages: true,
+              isPublished: true,
+              createdAt: true
+            },
+            orderBy: {
+              chapterNumber: 'asc'
+            }
+          },
+          volumes: {
+            where: { isPublished: true },
+            orderBy: { volumeNumber: 'asc' },
+            select: {
+              id: true,
+              title: true,
+              volumeNumber: true,
+              coverImage: true,
+              description: true,
+              createdAt: true,
+              chapters: {
+                where: { isPublished: true },
+                orderBy: { chapterNumber: 'asc' },
+                select: {
+                  id: true,
+                  title: true,
+                  chapterNumber: true,
+                  pages: true,
+                  isPublished: true,
+                  createdAt: true
+                }
+              }
+            }
+          },
+          creator: {
+            select: {
+              id: true,
+              name: true,
+              username: true
+            }
+          }
+        },
+        orderBy: {
+          createdAt: 'desc'
+        }
+      });
+
+      // Transform database series to comic format
+      seriesFromDatabase = dbSeries.map(series => ({
+        id: series.id,
+        title: series.title,
+        series: series.title,
+        description: series.description || '',
+        cover: series.coverImage || null,
+        coverImage: series.coverImage || null,
+        author: series.authors || '',
+        artist: series.artists || '',
+        authors: series.authors ? [series.authors] : [],
+        artists: series.artists ? [series.artists] : [],
+        year: series.mangaMDYear || new Date().getFullYear(),
+        tags: series.tags ? series.tags.split(',').map(tag => tag.trim()) : [],
+        mangaMDStatus: series.mangaMDStatus || 'ongoing',
+        status: series.mangaMDStatus || 'ongoing',
+        isImported: series.isImported,
+        contentRating: series.contentRating || 'safe',
+        creator: {
+          id: series.creator.id,
+          name: series.creator.name || 'Unknown',
+          username: series.creator.username || 'unknown'
+        },
+        chapters: series.chapters.map(chapter => ({
+          id: chapter.id,
+          title: chapter.title,
+          chapterNumber: chapter.chapterNumber,
+          pages: chapter.pages ? chapter.pages.split(',').length : 0,
+          isPublished: chapter.isPublished,
+          createdAt: chapter.createdAt
+        })),
+        volumes: series.volumes.map(volume => ({
+          id: volume.id,
+          title: volume.title,
+          volumeNumber: volume.volumeNumber,
+          coverImage: series.coverImage || null, // Use parent series cover or null
+          description: volume.description || '',
+          createdAt: volume.createdAt,
+          chapters: volume.chapters.map(chapter => ({
+            id: chapter.id,
+            title: chapter.title,
+            chapterNumber: chapter.chapterNumber,
+            pages: chapter.pages ? chapter.pages.split(',').length : 0,
+            isPublished: chapter.isPublished,
+            createdAt: chapter.createdAt
+          })),
+          totalChapters: volume.chapters.length
+        })),
+        totalChapters: series.chapters.length,
+        totalVolumes: series.volumes.length,
+        libraryCount: 0,
+        createdAt: series.createdAt,
+        updatedAt: series.updatedAt,
+      }));
+    } catch (dbError) {
+      console.warn('Error fetching series from database:', dbError);
     }
+
+    // Use database series if available, otherwise fall back to file-based
+    let allComics = seriesFromDatabase.length > 0 ? seriesFromDatabase : [...staticComics, ...seriesFromFolders];
 
     // Sort by creation date (newest first)
     allComics.sort((a, b) => {
@@ -194,5 +241,7 @@ export async function GET(request: NextRequest) {
       { error: 'Internal server error' },
       { status: 500 }
     );
+  } finally {
+    await prisma.$disconnect();
   }
 }

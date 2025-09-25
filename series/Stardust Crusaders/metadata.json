@@ -1,0 +1,25 @@
+{
+  "title": "Stardust Crusaders",
+  "description": "Jojo's Bizarre Adventure Part 3",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "0d545e62-d4cd-4e65-a65c-a5c46b794918",
+  "createdAt": "2025-09-24T18:06:07.542Z",
+  "updatedAt": "2025-09-24T20:25:30.742Z",
+  "totalChapters": 152,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.983Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 152,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:30.742Z"
+}

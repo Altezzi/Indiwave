@@ -1,0 +1,25 @@
+{
+  "title": "The Garden of Words",
+  "description": "A high school student and an older woman meet in a garden",
+  "author": "Makoto Shinkai",
+  "artist": "Midori Motohashi",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "56958579-6d1b-4db0-be4f-dd17b828fcf7",
+  "createdAt": "2025-09-24T17:37:27.493Z",
+  "updatedAt": "2025-09-24T20:27:26.966Z",
+  "totalChapters": 12,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.006Z",
+  "chapterSources": {
+    "anilist": 7,
+    "mangadex": 12,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:27:26.966Z"
+}

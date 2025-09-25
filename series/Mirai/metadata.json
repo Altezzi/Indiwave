@@ -1,0 +1,25 @@
+{
+  "title": "Mirai",
+  "description": "A boy travels through time to meet his family members",
+  "author": "Mamoru Hosoda",
+  "artist": "Mamoru Hosoda",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "16c34950-954c-4f0d-808e-d8278a546339",
+  "createdAt": "2025-09-24T17:38:43.524Z",
+  "updatedAt": "2025-09-24T20:18:28.416Z",
+  "totalChapters": 39,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.346Z",
+  "chapterSources": {
+    "anilist": 39,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:18:28.416Z"
+}

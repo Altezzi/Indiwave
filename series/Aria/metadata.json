@@ -1,0 +1,25 @@
+{
+  "title": "Aria",
+  "description": "Gondoliers on Mars in a peaceful future setting",
+  "author": "Kozue Amano",
+  "artist": "Kozue Amano",
+  "publisher": "Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8edf35b1-8948-45df-9971-981094126f48",
+  "createdAt": "2025-09-24T17:58:41.925Z",
+  "updatedAt": "2025-09-24T20:06:27.829Z",
+  "totalChapters": 67,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.682Z",
+  "chapterSources": {
+    "anilist": 67,
+    "mangadex": 60,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:27.829Z"
+}

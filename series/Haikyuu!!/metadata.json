@@ -1,0 +1,25 @@
+{
+  "title": "Haikyuu!!",
+  "description": "High school volleyball team",
+  "author": "Haruichi Furudate",
+  "artist": "Haruichi Furudate",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "c38e3024-3761-48e1-be0b-80ab91cb6d84",
+  "createdAt": "2025-09-24T18:03:41.024Z",
+  "updatedAt": "2025-09-24T20:14:04.110Z",
+  "totalChapters": 1,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.889Z",
+  "chapterSources": {
+    "anilist": 1,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:04.110Z"
+}

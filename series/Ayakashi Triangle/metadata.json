@@ -1,0 +1,25 @@
+{
+  "title": "Ayakashi Triangle",
+  "description": "A boy becomes a girl and must protect his childhood friend",
+  "author": "Kentaro Yabuki",
+  "artist": "Kentaro Yabuki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b49db7e7-0637-462c-9d09-372f5d09de4a",
+  "createdAt": "2025-09-24T17:02:01.624Z",
+  "updatedAt": "2025-09-24T20:06:44.425Z",
+  "totalChapters": 144,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.152Z",
+  "chapterSources": {
+    "anilist": 144,
+    "mangadex": 144,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:44.425Z"
+}

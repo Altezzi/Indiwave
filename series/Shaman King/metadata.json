@@ -1,0 +1,25 @@
+{
+  "title": "Shaman King",
+  "description": "A boy competes in a tournament to become the Shaman King",
+  "author": "Hiroyuki Takei",
+  "artist": "Hiroyuki Takei",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "feffced2-b922-45fc-80c3-c561d643faa4",
+  "createdAt": "2025-09-24T17:06:08.209Z",
+  "updatedAt": "2025-09-24T20:24:11.248Z",
+  "totalChapters": 312,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.689Z",
+  "chapterSources": {
+    "anilist": 312,
+    "mangadex": 68,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:11.248Z"
+}

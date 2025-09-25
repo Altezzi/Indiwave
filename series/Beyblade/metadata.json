@@ -1,0 +1,25 @@
+{
+  "title": "Beyblade",
+  "description": "Kids battle with spinning tops called Beyblades",
+  "author": "Takao Aoki",
+  "artist": "Takao Aoki",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f1845adf-270b-4405-9438-0c56b1b9576c",
+  "createdAt": "2025-09-24T16:57:20.257Z",
+  "updatedAt": "2025-09-24T20:07:41.503Z",
+  "totalChapters": 62,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.885Z",
+  "chapterSources": {
+    "anilist": 62,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:07:41.503Z"
+}

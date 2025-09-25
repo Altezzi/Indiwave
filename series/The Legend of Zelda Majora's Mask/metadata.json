@@ -1,0 +1,25 @@
+{
+  "title": "The Legend of Zelda: Majora's Mask",
+  "description": "Link's adventure in Termina",
+  "author": "Shigeru Miyamoto",
+  "artist": "Akira Himekawa",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f882a5a1-fde4-4d54-ac7d-e759edeb8879",
+  "createdAt": "2025-09-24T18:10:24.039Z",
+  "updatedAt": "2025-09-24T20:28:00.596Z",
+  "totalChapters": 10,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.527Z",
+  "chapterSources": {
+    "anilist": 10,
+    "mangadex": 10,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:28:00.596Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Questism: The Investigation",
+  "description": "A weak boy investigates his past",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "mangadex",
+  "mangaDexId": "bcf927d8-52e3-4d6f-a2da-4eb37abe91c9",
+  "createdAt": "2025-09-24T18:28:08.911Z",
+  "updatedAt": "2025-09-24T20:23:01.526Z",
+  "totalChapters": 174,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.903Z",
+  "chapterSources": {
+    "anilist": 174,
+    "mangadex": 174,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:01.526Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Do Retry",
+  "description": "A boxer returns to the ring after a long hiatus",
+  "author": "Kento Matsuura",
+  "artist": "Kento Matsuura",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "5fc41fd5-db68-420e-9aa8-df3f8607805d",
+  "createdAt": "2025-09-24T17:02:21.063Z",
+  "updatedAt": "2025-09-24T20:10:43.104Z",
+  "totalChapters": 19,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.253Z",
+  "chapterSources": {
+    "anilist": 19,
+    "mangadex": 18,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:10:43.104Z"
+}

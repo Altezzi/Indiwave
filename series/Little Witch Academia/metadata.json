@@ -1,0 +1,25 @@
+{
+  "title": "Little Witch Academia",
+  "description": "A girl attends a school for witches",
+  "author": "Yoh Yoshinari",
+  "artist": "Yoh Yoshinari",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "be47382c-b002-4cc2-8323-bdde4dab5c3f",
+  "createdAt": "2025-09-24T17:36:47.294Z",
+  "updatedAt": "2025-09-24T20:16:37.736Z",
+  "totalChapters": 19,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.563Z",
+  "chapterSources": {
+    "anilist": 19,
+    "mangadex": 5,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:37.736Z"
+}

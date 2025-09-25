@@ -1,0 +1,25 @@
+{
+  "title": "Look Back",
+  "description": "Two girls bond over manga creation",
+  "author": "Tatsuki Fujimoto",
+  "artist": "Tatsuki Fujimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "ba7908db-5c9e-4f78-9fc1-3b3581f752e9",
+  "createdAt": "2025-09-24T18:06:15.611Z",
+  "updatedAt": "2025-09-24T20:16:51.518Z",
+  "totalChapters": 1,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.659Z",
+  "chapterSources": {
+    "anilist": 1,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:51.518Z"
+}

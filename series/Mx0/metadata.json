@@ -1,0 +1,25 @@
+{
+  "title": "Mx0",
+  "description": "A boy accidentally enrolls in a magic school",
+  "author": "Yasuhiro Kano",
+  "artist": "Yasuhiro Kano",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "40129e2b-5197-4767-bea2-f20e7d7133e9",
+  "createdAt": "2025-09-24T17:06:17.096Z",
+  "updatedAt": "2025-09-24T20:19:05.566Z",
+  "totalChapters": 99,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.892Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 99,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:19:05.566Z"
+}

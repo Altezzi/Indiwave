@@ -1,0 +1,25 @@
+{
+  "title": "Billy Bat",
+  "description": "A manga artist uncovers a conspiracy",
+  "author": "Naoki Urasawa",
+  "artist": "Naoki Urasawa",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e5357466-c8a2-4259-9b02-2580185bd2bb",
+  "createdAt": "2025-09-24T18:00:30.818Z",
+  "updatedAt": "2025-09-24T20:07:43.596Z",
+  "totalChapters": 165,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.900Z",
+  "chapterSources": {
+    "anilist": 165,
+    "mangadex": 165,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:07:43.596Z"
+}

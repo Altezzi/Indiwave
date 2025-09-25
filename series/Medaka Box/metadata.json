@@ -1,0 +1,25 @@
+{
+  "title": "Medaka Box",
+  "description": "A perfect student becomes student council president",
+  "author": "Nisio Isin",
+  "artist": "Akira Akatsuki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "881fccb1-e60c-4c82-b64c-28f709545174",
+  "createdAt": "2025-09-24T17:34:50.518Z",
+  "updatedAt": "2025-09-24T20:18:03.063Z",
+  "totalChapters": 194,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.163Z",
+  "chapterSources": {
+    "anilist": 194,
+    "mangadex": 192,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:18:03.063Z"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Lupin III: The Final Years",
+  "description": "Lupin's final years as a thief",
+  "author": "Monkey Punch",
+  "artist": "Monkey Punch",
+  "publisher": "Futabasha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "50fe4f79-8c94-4052-bf66-2cf87f8efd34",
+  "createdAt": "2025-09-24T18:33:44.493Z",
+  "updatedAt": "2025-09-24T21:15:21.179Z",
+  "totalChapters": 8,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.650Z",
+  "chapterSources": {
+    "jikan": 8,
+    "kitsu": 5,
+    "anilist": 1,
+    "mangadex": 109
+  },
+  "chapterVerifiedAt": "2025-09-24T21:15:21.179Z"
+}

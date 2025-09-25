@@ -1,0 +1,25 @@
+{
+  "title": "Black Cat",
+  "description": "A former assassin becomes a sweeper",
+  "author": "Kentaro Yabuki",
+  "artist": "Kentaro Yabuki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8bcdbfe3-3424-4978-a48d-17d1b968ddd7",
+  "createdAt": "2025-09-24T17:35:01.265Z",
+  "updatedAt": "2025-09-24T20:43:07.719Z",
+  "totalChapters": 187,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.987Z",
+  "chapterSources": {
+    "jikan": 187,
+    "kitsu": 187,
+    "mangadex": 27
+  },
+  "chapterVerifiedAt": "2025-09-24T20:43:07.719Z"
+}

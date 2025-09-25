@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: indiwave-postgres
+    environment:
+      POSTGRES_DB: indiwave
+      POSTGRES_USER: indiwave_user
+      POSTGRES_PASSWORD: MySecurePassword123!
+    volumes:
+      - indiwave_pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U indiwave_user -d indiwave"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  app:
+    build: .
+    container_name: indiwave-app
+    env_file:
+      - env.production
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    volumes:
+      - indiwave_data:/app/data
+      - indiwave_public:/app/public
+    command: sh -c "npx prisma migrate deploy && npm run import:series && npm run build && npm start"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  indiwave_pg_data:
+    driver: local
+  indiwave_data:
+    driver: local
+  indiwave_public:
+    driver: local

@@ -1,0 +1,26 @@
+{
+  "title": "Metropolis: The Investigation",
+  "description": "Robots investigate their past",
+  "author": "Osamu Tezuka",
+  "artist": "Osamu Tezuka",
+  "publisher": "Kobunsha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "82f660d0-bf1c-4aef-9adb-fba7e2a90865",
+  "createdAt": "2025-09-24T18:33:37.065Z",
+  "updatedAt": "2025-09-24T21:20:10.822Z",
+  "totalChapters": 8,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.325Z",
+  "chapterSources": {
+    "jikan": 3,
+    "kitsu": 8,
+    "anilist": 1,
+    "mangadex": 286
+  },
+  "chapterVerifiedAt": "2025-09-24T21:20:10.822Z"
+}

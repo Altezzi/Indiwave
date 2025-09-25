@@ -1,0 +1,25 @@
+{
+  "title": "Cowboy Bebop",
+  "description": "Bounty hunters in space",
+  "author": "Yutaka Nanten",
+  "artist": "Cain Kuga",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "46e782ea-478a-4204-b83b-8da011c73ba5",
+  "createdAt": "2025-09-24T18:08:24.159Z",
+  "updatedAt": "2025-09-24T20:09:46.888Z",
+  "totalChapters": 11,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.315Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 11,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:09:46.888Z"
+}

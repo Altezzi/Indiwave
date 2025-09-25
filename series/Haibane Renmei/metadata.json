@@ -1,0 +1,23 @@
+{
+  "title": "Haibane Renmei",
+  "description": "Angels with wings in a mysterious town",
+  "author": "Yoshitoshi ABe",
+  "artist": "Yoshitoshi ABe",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "2397f998-5d31-4c2d-83c3-28cfa523bc99",
+  "createdAt": "2025-09-24T18:10:44.828Z",
+  "updatedAt": "2025-09-24T21:04:13.472Z",
+  "totalChapters": 2,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.749Z",
+  "chapterSources": {
+    "anilist": 2
+  },
+  "chapterVerifiedAt": "2025-09-24T21:04:13.472Z"
+}

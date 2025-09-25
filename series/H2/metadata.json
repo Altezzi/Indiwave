@@ -1,0 +1,25 @@
+{
+  "title": "H2",
+  "description": "Two childhood friends meet again in high school baseball",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a6b6adde-4d93-4944-b2a6-0ac50f6f9642",
+  "createdAt": "2025-09-24T17:07:21.212Z",
+  "updatedAt": "2025-09-24T20:13:57.010Z",
+  "totalChapters": 338,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.731Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 338,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:57.010Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Chainsaw Man: The Investigation",
+  "description": "Denji investigates his past",
+  "author": "Tatsuki Fujimoto",
+  "artist": "Tatsuki Fujimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "991e9f15-8368-4843-a78a-5605918f9c3e",
+  "createdAt": "2025-09-24T18:20:25.170Z",
+  "updatedAt": "2025-09-24T20:09:26.497Z",
+  "totalChapters": 4,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.224Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 4,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:09:26.497Z"
+}

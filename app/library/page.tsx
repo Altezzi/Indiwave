@@ -4,11 +4,16 @@ import LibraryContent from "../../components/LibraryContent";
 import BackToTopButton from "../../components/BackToTopButton";
 import LibraryLayout from "../../components/LibraryLayout";
 import { CoverFallbackProvider } from "../../components/CoverFallbackProvider";
+import fs from 'fs';
+import path from 'path';
 
 // Force fresh data on every request
 export const revalidate = 0;
 
-// Show all manga without pagination
+function getBaseUrl() {
+  const envUrl = process.env.VERCEL_URL || process.env.DEPLOY_PRIME_URL;
+  return envUrl?.startsWith("http") ? envUrl : "http://localhost:3000";
+}
 
 type Comic = {
   id: string;
@@ -22,41 +27,51 @@ type Comic = {
   [key: string]: any;
 };
 
-function getBaseUrl() {
-  const h = headers();
-
-  // Prefer real host from the request (works on Netlify)
-  const forwardedHost = h.get("x-forwarded-host");
-  const host = forwardedHost || h.get("host");
-
-  // Netlify also exposes these during build/runtime
-  const envUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || // set this in Netlify to your canonical domain
-    process.env.URL ||                  // eg. https://<site>.netlify.app
-    process.env.DEPLOY_PRIME_URL;       // preview URL on PR builds
-
-  const proto = h.get("x-forwarded-proto") || "https";
-  const candidate = host ? `${proto}://${host}` : envUrl;
-
-  // Final fallback for local dev
-  return candidate?.startsWith("http") ? candidate : "http://localhost:3000";
-}
-
-async function getComics(): Promise<{ comics: Comic[] } | Comic[]> {
+async function getAllComics(): Promise<Comic[]> {
   const origin = getBaseUrl();
 
-  // Force fresh data - no caching
-  const res = await fetch(`${origin}/api/comics`, {
-    cache: 'no-store',
-  });
+  try {
+    // Use the comics API (same as home page)
+    const res = await fetch(`${origin}/api/comics`, {
+      cache: 'no-store',
+    });
 
-  if (!res.ok) {
-    // During first-ever build, if your API depends on runtime state, avoid failing the whole build.
-    // Render an empty library but allow ISR to repopulate on first requests.
-    return { comics: [] };
+    if (!res.ok) {
+      console.error('Failed to fetch comics data:', res.status);
+      return [];
+    }
+
+    const comicsData = await res.json();
+    
+    if (comicsData.comics) {
+      // Convert comics data to the expected format
+      const comics: Comic[] = comicsData.comics.map((comic: any) => ({
+        id: String(comic.id || ''),
+        title: String(comic.title || ''),
+        cover: String(comic.cover || ''),
+        coverImage: String(comic.cover || ''),
+        author: String(comic.author || ''),
+        artist: String(comic.artist || ''),
+        authors: comic.authors || [],
+        artists: comic.artists || [],
+        year: comic.year || 0,
+        tags: Array.isArray(comic.tags) ? comic.tags : [],
+        description: String(comic.description || ''),
+        status: String(comic.status || ''),
+        contentRating: String(comic.contentRating || 'safe'),
+        totalChapters: comic.totalChapters || 0,
+        source: 'database',
+        chapters: comic.chapters || []
+      }));
+
+      return comics;
+    }
+
+    return [];
+  } catch (error) {
+    console.error('Error fetching comics:', error);
+    return [];
   }
-
-  return res.json();
 }
 
 export default async function LibraryPage({
@@ -64,12 +79,11 @@ export default async function LibraryPage({
 }: {
   searchParams: { page?: string; genre?: string; search?: string };
 }) {
-  const data = await getComics();
-  const allComics: Comic[] = Array.isArray(data) ? data : data.comics ?? [];
+  const comics = await getAllComics();
 
   return (
     <div style={{ position: "relative", minHeight: "300vh" }}>
-      {/* Background Image with Artistic Effects */}
+      {/* Background */}
       <div
         style={{
           position: "fixed",
@@ -81,7 +95,6 @@ export default async function LibraryPage({
           zIndex: -3,
         }}
       />
-      {/* Overlay Effects */}
       <div
         style={{
           position: "fixed",
@@ -101,9 +114,7 @@ export default async function LibraryPage({
         }}
       />
 
-      {/* Content Container */}
-      <LibraryLayout>
-        {/* Header Section */}
+      <CoverFallbackProvider>
         <div style={{ textAlign: "center", marginBottom: "40px", padding: "40px 20px" }}>
           <h1
             style={{
@@ -113,7 +124,7 @@ export default async function LibraryPage({
               color: "var(--fg)",
             }}
           >
-            Comic Library
+            Manga Library
           </h1>
           <p
             style={{
@@ -123,11 +134,8 @@ export default async function LibraryPage({
               maxWidth: "600px",
             }}
           >
-            Explore our collection of amazing comics from independent creators and
-            public domain classics.
+            Explore our collection of amazing manga series with cover art and detailed metadata.
           </p>
-          
-          {/* Library Stats */}
           <div
             style={{
               margin: "0 auto 24px",
@@ -136,19 +144,11 @@ export default async function LibraryPage({
               opacity: 0.8,
             }}
           >
-            📚 {allComics.length} total manga in library
+            📚 {comics.length} total manga in library
           </div>
-
-          {/* Search and Filter Bar */}
-          <CoverFallbackProvider>
-            <LibraryContent
-              allComics={allComics}
-            />
-          </CoverFallbackProvider>
+          <LibraryContent allComics={comics} />
         </div>
-      </LibraryLayout>
-
-      {/* Back to Top Button */}
+      </CoverFallbackProvider>
       <BackToTopButton />
     </div>
   );

@@ -1,24 +1,25 @@
 {
-  "title": "Mob Psycho 100 – Mobu Sai Hyakumonogatari (Doujinshi)",
-  "mangaMDId": "7e2f6397-be42-4999-94bf-31e9372230af",
-  "description": "A series of short horror stories featuring various characters from Mob Psycho 100.",
-  "authors": [
-    "Serubin"
-  ],
-  "artists": [
-    "Serubin"
-  ],
-  "tags": [
-    "Oneshot",
-    "Doujinshi",
-    "Horror"
-  ],
-  "status": "completed",
-  "year": 2017,
+  "title": "Mob Psycho 100",
+  "description": "A middle schooler with psychic powers",
+  "author": "ONE",
+  "artist": "ONE",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpg",
-  "totalChapters": 1,
-  "createdAt": "2025-09-22T05:15:44.864Z",
-  "updatedAt": "2025-09-22T05:25:01.927Z",
-  "source": "MangaDex"
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "a812538c-8ea0-41d6-a503-217e09e0a1a5",
+  "createdAt": "2025-09-24T16:53:49.455Z",
+  "updatedAt": "2025-09-24T21:21:21.348Z",
+  "totalChapters": 109,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.509Z",
+  "chapterSources": {
+    "jikan": 109,
+    "kitsu": 101,
+    "anilist": 113
+  },
+  "chapterVerifiedAt": "2025-09-24T21:21:21.348Z"
 }

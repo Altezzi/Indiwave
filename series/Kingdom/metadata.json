@@ -1,0 +1,33 @@
+{
+  "title": "Kingdom",
+  "description": "A war orphan becomes a great general in ancient China",
+  "author": "Yasuhisa Hara",
+  "artist": "Yasuhisa Hara",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [
+    "Historical",
+    "War",
+    "Seinen"
+  ],
+  "contentRating": "mature",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "sources": [
+    "anilist",
+    "mangadex"
+  ],
+  "aniListId": 46765,
+  "mangaDexId": "40b59a66-5eb9-491f-b667-1e9c955bd84d",
+  "createdAt": "2025-09-24T19:33:35.242Z",
+  "updatedAt": "2025-09-24T20:15:54.410Z",
+  "totalChapters": 110,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.759Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 110,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:15:54.410Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Goodnight Punpun",
+  "description": "A surreal coming-of-age story",
+  "author": "Inio Asano",
+  "artist": "Inio Asano",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "4301d363-ee02-43f4-ae24-4cbf29a74830",
+  "createdAt": "2025-09-24T18:00:39.115Z",
+  "updatedAt": "2025-09-24T20:13:41.820Z",
+  "totalChapters": 147,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.678Z",
+  "chapterSources": {
+    "anilist": 147,
+    "mangadex": 147,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:41.820Z"
+}

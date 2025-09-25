@@ -1,0 +1,25 @@
+{
+  "title": "All You Need Is Kill",
+  "description": "A soldier relives the same battle over and over",
+  "author": "Hiroshi Sakurazaka",
+  "artist": "Takeshi Obata",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7dc523b0-8ecd-40b0-b86c-1ea57c07773c",
+  "createdAt": "2025-09-24T17:06:10.793Z",
+  "updatedAt": "2025-09-24T20:06:16.747Z",
+  "totalChapters": 17,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.429Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 17,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:16.747Z"
+}

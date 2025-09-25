@@ -1,0 +1,26 @@
+{
+  "title": "Dorohedoro",
+  "description": "A man with a lizard head searches for his identity",
+  "author": "Q Hayashida",
+  "artist": "Q Hayashida",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "34f45c13-2b78-4900-8af2-d0bb551101f4",
+  "createdAt": "2025-09-24T18:06:10.431Z",
+  "updatedAt": "2025-09-24T20:53:35.179Z",
+  "totalChapters": 190,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.430Z",
+  "chapterSources": {
+    "jikan": 190,
+    "kitsu": 167,
+    "anilist": 191,
+    "mangadex": 167
+  },
+  "chapterVerifiedAt": "2025-09-24T20:53:35.179Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Barakamon",
+  "description": "A calligrapher moves to a rural island",
+  "author": "Satsuki Yoshino",
+  "artist": "Satsuki Yoshino",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b9a99e3f-6803-4efe-9f7c-f7d566703e4c",
+  "createdAt": "2025-09-24T18:04:03.623Z",
+  "updatedAt": "2025-09-24T20:06:56.299Z",
+  "totalChapters": 146,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.478Z",
+  "chapterSources": {
+    "anilist": 146,
+    "mangadex": 145,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:56.299Z"
+}

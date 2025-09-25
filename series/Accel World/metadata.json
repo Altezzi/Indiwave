@@ -1,0 +1,24 @@
+{
+  "title": "Accel World",
+  "description": "A bullied boy discovers a virtual reality fighting game",
+  "author": "Reki Kawahara",
+  "artist": "Hima",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6c079564-363d-4d95-9410-4a841e6a33fb",
+  "createdAt": "2025-09-24T17:35:08.746Z",
+  "updatedAt": "2025-09-24T20:36:51.666Z",
+  "totalChapters": 45,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.095Z",
+  "chapterSources": {
+    "jikan": 45,
+    "kitsu": 45
+  },
+  "chapterVerifiedAt": "2025-09-24T20:36:51.666Z"
+}

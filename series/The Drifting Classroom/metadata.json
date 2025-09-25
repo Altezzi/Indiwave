@@ -1,0 +1,25 @@
+{
+  "title": "The Drifting Classroom",
+  "description": "School children transported to a wasteland",
+  "author": "Kazuo Umezu",
+  "artist": "Kazuo Umezu",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "0c3d5ecc-28a9-4317-9b87-50954737b1e5",
+  "createdAt": "2025-09-24T18:01:02.365Z",
+  "updatedAt": "2025-09-24T20:27:22.763Z",
+  "totalChapters": 44,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.974Z",
+  "chapterSources": {
+    "anilist": 44,
+    "mangadex": 42,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:27:22.763Z"
+}

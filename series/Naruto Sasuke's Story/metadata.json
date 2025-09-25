@@ -1,0 +1,25 @@
+{
+  "title": "Naruto: Sasuke's Story",
+  "description": "Sasuke's journey after the Fourth Great Ninja War",
+  "author": "Masashi Kishimoto",
+  "artist": "Masashi Kishimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "65125892-8584-4938-b45c-7a4cd9ad67d7",
+  "createdAt": "2025-09-24T17:03:52.161Z",
+  "updatedAt": "2025-09-24T20:19:50.203Z",
+  "totalChapters": 10,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:18.767Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 10,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:19:50.203Z"
+}

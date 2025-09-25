@@ -1,0 +1,25 @@
+{
+  "title": "Hunter x Hunter: Kurapika's Memories",
+  "description": "Kurapika's backstory and the Kurta Clan massacre",
+  "author": "Yoshihiro Togashi",
+  "artist": "Yoshihiro Togashi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "936f0ba5-ca65-4de4-99b1-528c02a4454d",
+  "createdAt": "2025-09-24T17:04:23.731Z",
+  "updatedAt": "2025-09-24T20:14:55.848Z",
+  "totalChapters": 2,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.705Z",
+  "chapterSources": {
+    "anilist": 2,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:55.848Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Nausicaä of the Valley of the Wind",
+  "description": "A princess tries to prevent war in a post-apocalyptic world",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "0c9e19cd-86cb-490c-93e9-955af41746ca",
+  "createdAt": "2025-09-24T16:56:02.061Z",
+  "updatedAt": "2025-09-24T20:19:58.735Z",
+  "totalChapters": 59,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.678Z",
+  "chapterSources": {
+    "anilist": 59,
+    "mangadex": 59,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:19:58.735Z"
+}

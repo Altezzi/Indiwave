@@ -1,0 +1,19 @@
+{
+  "title": "Detective Conan",
+  "description": "A high school detective is turned into a child",
+  "author": "Gosho Aoyama",
+  "artist": "Gosho Aoyama",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7f30dfc3-0b80-4dcc-a3b9-0cd746fac005",
+  "createdAt": "2025-09-24T16:56:06.398Z",
+  "updatedAt": "2025-09-24T20:00:07.036Z",
+  "totalChapters": 1100,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:07.036Z"
+}

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: indiwave-emergency
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: file:./data/prod.db
+      NEXTAUTH_URL: https://indiwave.io
+      NEXTAUTH_SECRET: 94a7109fb6b7c7b5c7c6c2d31f28f5c69df641c0680f48b68467a86f379a33be
+      GOOGLE_CLIENT_ID: 959986325042-o5pqr065tc2dm267ub4f8pnkp4bigs34.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: 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
+      NEXT_PUBLIC_GOOGLE_CLIENT_ID: 959986325042-o5pqr065tc2dm267ub4f8pnkp4bigs34.apps.googleusercontent.com
+    ports:
+      - "3000:3000"
+    volumes:
+      - indiwave_data:/app/data
+      - indiwave_public:/app/public
+    command: sh -c "npx prisma db push && npm run build && npm start"
+    restart: unless-stopped
+
+volumes:
+  indiwave_data:
+    driver: local
+  indiwave_public:
+    driver: local

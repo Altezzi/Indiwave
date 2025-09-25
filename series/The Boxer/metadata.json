@@ -1,0 +1,25 @@
+{
+  "title": "The Boxer",
+  "description": "A boxer with a tragic past",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "40efa78d-d27a-4364-92ac-6d7af69a851b",
+  "createdAt": "2025-09-24T18:27:02.167Z",
+  "updatedAt": "2025-09-24T20:26:50.282Z",
+  "totalChapters": 133,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.880Z",
+  "chapterSources": {
+    "anilist": 133,
+    "mangadex": 123,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:26:50.282Z"
+}

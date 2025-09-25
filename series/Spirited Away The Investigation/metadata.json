@@ -1,0 +1,25 @@
+{
+  "title": "Spirited Away: The Investigation",
+  "description": "Chihiro investigates her past",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "708e2bed-5bc7-46c4-b9e8-a1c5d32a992a",
+  "createdAt": "2025-09-24T18:33:21.238Z",
+  "updatedAt": "2025-09-24T20:25:22.674Z",
+  "totalChapters": 7,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.857Z",
+  "chapterSources": {
+    "anilist": 7,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:22.674Z"
+}

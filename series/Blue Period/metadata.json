@@ -1,0 +1,25 @@
+{
+  "title": "Blue Period",
+  "description": "A high school student discovers his passion for art",
+  "author": "Tsubasa Yamaguchi",
+  "artist": "Tsubasa Yamaguchi",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f8e294c0-7c11-4c66-bdd7-4e25df52bf69",
+  "createdAt": "2025-09-24T17:44:47.108Z",
+  "updatedAt": "2025-09-24T20:08:40.235Z",
+  "totalChapters": 4,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:05.786Z",
+  "chapterSources": {
+    "anilist": 4,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:40.235Z"
+}

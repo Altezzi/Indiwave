@@ -1,0 +1,25 @@
+{
+  "title": "Tokyo Ghoul: Jack",
+  "description": "Kishou Arima's backstory as a young investigator",
+  "author": "Sui Ishida",
+  "artist": "Sui Ishida",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a66ff0a3-7f4b-48ca-b153-0029e45bbebf",
+  "createdAt": "2025-09-24T17:04:17.124Z",
+  "updatedAt": "2025-09-24T20:29:36.241Z",
+  "totalChapters": 7,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.630Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 7,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:29:36.241Z"
+}

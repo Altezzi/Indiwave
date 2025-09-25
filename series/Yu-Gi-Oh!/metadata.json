@@ -1,0 +1,19 @@
+{
+  "title": "Yu-Gi-Oh!",
+  "description": "A boy solves ancient puzzles and duels with cards",
+  "author": "Kazuki Takahashi",
+  "artist": "Kazuki Takahashi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "3e3604cc-97b5-43f0-ab2c-c144debcae87",
+  "createdAt": "2025-09-24T16:57:17.340Z",
+  "updatedAt": "2025-09-24T20:00:33.156Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:33.156Z"
+}

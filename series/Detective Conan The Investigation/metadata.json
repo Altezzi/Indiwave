@@ -1,0 +1,24 @@
+{
+  "title": "Detective Conan: The Investigation",
+  "description": "Conan investigates his past",
+  "author": "Gosho Aoyama",
+  "artist": "Gosho Aoyama",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "bdb64c74-cfc5-4a78-98ee-4dfcfd3f3343",
+  "createdAt": "2025-09-24T18:33:47.983Z",
+  "updatedAt": "2025-09-24T20:52:14.575Z",
+  "totalChapters": 8,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.151Z",
+  "chapterSources": {
+    "jikan": 8,
+    "kitsu": 8
+  },
+  "chapterVerifiedAt": "2025-09-24T20:52:14.575Z"
+}

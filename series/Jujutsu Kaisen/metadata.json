@@ -1,33 +1,28 @@
 {
   "title": "Jujutsu Kaisen",
-  "mangaMDId": "c52b2ce3-7f95-469c-96b0-479524fb7a1a",
-  "description": "For some strange reason, Itadori Yuuji, despite his insane athleticism, would rather just hang out with the Occult Club. However, he soon finds out that the occult is as real as it gets when his fellow club members are attacked!\n\nMeanwhile, the mysterious Fushiguro Megumi is tracking down a special-grade cursed object, and his search leads him to Itadori…\n___\n**Alt Official English:** [VIZ](https://www.viz.com/shonenjump/chapters/jujutsu-kaisen)",
-  "authors": [
-    "Akutami Gege"
-  ],
-  "artists": [
-    "Akutami Gege"
-  ],
+  "description": "A high school student becomes a sorcerer to fight cursed spirits",
+  "author": "Gege Akutami",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
   "tags": [
-    "Thriller",
-    "Monsters",
     "Action",
-    "Ghosts",
-    "Martial Arts",
-    "Magic",
-    "Gore",
-    "Drama",
-    "School Life",
     "Supernatural",
-    "Mystery",
-    "Tragedy"
+    "Horror"
   ],
-  "status": "completed",
-  "year": 2018,
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 3,
-  "createdAt": "2025-09-22T05:15:00.677Z",
-  "updatedAt": "2025-09-22T05:24:49.563Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "createdAt": "2025-09-24T15:59:54.577Z",
+  "updatedAt": "2025-09-24T20:15:14.171Z",
+  "totalChapters": 272,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.125Z",
+  "chapterSources": {
+    "anilist": 272,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:15:14.171Z",
+  "mangaDexId": "f3f59f12-351a-4de7-bd51-696d0764d64e"
 }

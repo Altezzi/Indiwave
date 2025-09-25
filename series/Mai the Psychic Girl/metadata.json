@@ -1,0 +1,25 @@
+{
+  "title": "Mai the Psychic Girl",
+  "description": "A girl with psychic powers",
+  "author": "Kazuya Kudo",
+  "artist": "Ryoichi Ikegami",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "78df87fa-74bb-4e8c-9c22-33194e3935ae",
+  "createdAt": "2025-09-24T18:03:55.706Z",
+  "updatedAt": "2025-09-24T21:16:20.871Z",
+  "totalChapters": 53,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.813Z",
+  "chapterSources": {
+    "jikan": 53,
+    "kitsu": 53,
+    "anilist": 53
+  },
+  "chapterVerifiedAt": "2025-09-24T21:16:20.871Z"
+}

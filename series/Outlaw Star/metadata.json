@@ -1,0 +1,25 @@
+{
+  "title": "Outlaw Star",
+  "description": "Space pirates on the galactic leyline",
+  "author": "Takehiko Itou",
+  "artist": "Takehiko Itou",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "0cb9c6a7-93d0-420c-90c9-00fb0ea547c7",
+  "createdAt": "2025-09-24T18:08:29.683Z",
+  "updatedAt": "2025-09-24T21:31:22.853Z",
+  "totalChapters": 17,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.114Z",
+  "chapterSources": {
+    "jikan": 17,
+    "kitsu": 17,
+    "mangadex": 21
+  },
+  "chapterVerifiedAt": "2025-09-24T21:31:22.853Z"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Dragon Ball Super",
+  "description": "Goku faces new threats to the universe",
+  "author": "Akira Toriyama",
+  "artist": "Toyotaro",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "625156ef-36c0-4432-babf-a2ee57194442",
+  "createdAt": "2025-09-24T16:57:13.874Z",
+  "updatedAt": "2025-09-24T20:00:09.631Z",
+  "totalChapters": 520,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:09.631Z"
+}

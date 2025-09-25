@@ -1,0 +1,25 @@
+{
+  "title": "School Live!",
+  "description": "Schoolgirls survive a zombie apocalypse",
+  "author": "Norimitsu Kaihou",
+  "artist": "Sadoru Chiba",
+  "publisher": "Houbunsha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e7ab9f39-7ffc-4fda-bd87-dc3e5b8480ce",
+  "createdAt": "2025-09-24T18:04:01.279Z",
+  "updatedAt": "2025-09-24T20:23:58.294Z",
+  "totalChapters": 78,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.559Z",
+  "chapterSources": {
+    "anilist": 78,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:58.294Z"
+}

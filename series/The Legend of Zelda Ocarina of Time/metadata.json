@@ -1,0 +1,25 @@
+{
+  "title": "The Legend of Zelda: Ocarina of Time",
+  "description": "Link's adventure through time",
+  "author": "Shigeru Miyamoto",
+  "artist": "Akira Himekawa",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "24322835-916a-4054-887b-2d39fed55de7",
+  "createdAt": "2025-09-24T18:10:21.597Z",
+  "updatedAt": "2025-09-24T20:28:02.816Z",
+  "totalChapters": 18,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.543Z",
+  "chapterSources": {
+    "anilist": 18,
+    "mangadex": 9,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:28:02.816Z"
+}

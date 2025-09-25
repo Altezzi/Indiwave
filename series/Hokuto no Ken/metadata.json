@@ -1,0 +1,25 @@
+{
+  "title": "Hokuto no Ken",
+  "description": "A martial artist fights to save a post-apocalyptic world",
+  "author": "Tetsuo Hara",
+  "artist": "Buronson",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "3e65d915-332b-4399-ba64-ebf0583f9887",
+  "createdAt": "2025-09-24T17:05:54.260Z",
+  "updatedAt": "2025-09-24T20:14:24.796Z",
+  "totalChapters": 245,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.515Z",
+  "chapterSources": {
+    "anilist": 245,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:24.796Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "One Piece: Strong World",
+  "description": "Luffy faces the legendary pirate Shiki",
+  "author": "Eiichiro Oda",
+  "artist": "Eiichiro Oda",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "fcb5111f-be88-4f5a-b456-22135f3eda49",
+  "createdAt": "2025-09-24T18:19:09.554Z",
+  "updatedAt": "2025-09-24T20:20:57.954Z",
+  "totalChapters": 1,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:24.803Z",
+  "chapterSources": {
+    "anilist": 1,
+    "mangadex": 0,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:57.954Z"
+}

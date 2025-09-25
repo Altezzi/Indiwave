@@ -1,0 +1,25 @@
+{
+  "title": "Neon Genesis Evangelion",
+  "description": "Teenagers pilot giant robots against angels",
+  "author": "Yoshiyuki Sadamoto",
+  "artist": "Yoshiyuki Sadamoto",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "99bad780-a6c5-493e-9349-281eea194ec8",
+  "createdAt": "2025-09-24T18:08:21.603Z",
+  "updatedAt": "2025-09-24T20:20:03.434Z",
+  "totalChapters": 97,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.725Z",
+  "chapterSources": {
+    "anilist": 97,
+    "mangadex": 22,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:03.434Z"
+}

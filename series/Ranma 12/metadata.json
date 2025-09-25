@@ -1,0 +1,25 @@
+{
+  "title": "Ranma 1/2",
+  "description": "A boy who turns into a girl when splashed with cold water",
+  "author": "Rumiko Takahashi",
+  "artist": "Rumiko Takahashi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "d41bebac-1fd3-45dd-80f4-c371db540a2a",
+  "createdAt": "2025-09-24T17:05:22.579Z",
+  "updatedAt": "2025-09-24T20:23:05.241Z",
+  "totalChapters": 407,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.945Z",
+  "chapterSources": {
+    "anilist": 407,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:05.241Z"
+}

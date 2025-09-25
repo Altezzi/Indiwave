@@ -1,0 +1,26 @@
+{
+  "title": "Detroit Metal City",
+  "description": "A pop musician becomes a death metal star",
+  "author": "Kiminori Wakasugi",
+  "artist": "Kiminori Wakasugi",
+  "publisher": "Hakusensha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "087e1ee7-491e-4e67-b3c2-44d227cb0584",
+  "createdAt": "2025-09-24T18:05:55.579Z",
+  "updatedAt": "2025-09-24T20:52:19.986Z",
+  "totalChapters": 114,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.169Z",
+  "chapterSources": {
+    "jikan": 114,
+    "kitsu": 113,
+    "anilist": 121,
+    "mangadex": 113
+  },
+  "chapterVerifiedAt": "2025-09-24T20:52:19.986Z"
+}

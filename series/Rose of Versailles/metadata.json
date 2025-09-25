@@ -1,0 +1,25 @@
+{
+  "title": "Rose of Versailles",
+  "description": "French Revolution through the eyes of a female guard",
+  "author": "Riyoko Ikeda",
+  "artist": "Riyoko Ikeda",
+  "publisher": "Margaret Comics",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "fd9577a0-43a3-4610-835f-1cbf903b7e3f",
+  "createdAt": "2025-09-24T18:02:23.182Z",
+  "updatedAt": "2025-09-24T20:23:42.802Z",
+  "totalChapters": 85,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.415Z",
+  "chapterSources": {
+    "anilist": 85,
+    "mangadex": 82,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:42.802Z"
+}

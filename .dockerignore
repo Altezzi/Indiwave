@@ -1,0 +1,51 @@
+# Exclude large series files from Docker build (but keep series folder for manga library)
+# series/
+# *.jpg
+# *.png
+# *.jpeg
+# *.gif
+# *.webp
+
+# Exclude development files
+node_modules/
+.git/
+.gitignore
+*.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Exclude build artifacts
+.next/
+out/
+dist/
+
+# Exclude temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Exclude test files
+test/
+tests/
+__tests__/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+
+# Exclude documentation
+README.md
+*.md
+docs/
+
+# Exclude scripts (but keep real-time import scripts)
+scripts/
+*.js
+*.mjs
+!next.config.mjs
+!next-env.d.ts
+!scripts/start-realtime-import.js
+!scripts/file-watcher.js

@@ -1,0 +1,25 @@
+{
+  "title": "Fist of the North Star",
+  "description": "Post-apocalyptic martial arts",
+  "author": "Buronson",
+  "artist": "Tetsuo Hara",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "75251a47-952c-4e38-b1c6-3572b9bfd481",
+  "createdAt": "2025-09-24T18:00:59.185Z",
+  "updatedAt": "2025-09-24T20:12:24.941Z",
+  "totalChapters": 245,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.116Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 245,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:12:24.941Z"
+}

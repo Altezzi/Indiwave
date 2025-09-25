@@ -1,0 +1,25 @@
+{
+  "title": "Only Yesterday: The Investigation",
+  "description": "Taeko investigates her past",
+  "author": "Hotaru Okamoto",
+  "artist": "Isao Takahata",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "d068024e-9765-499b-a569-64669cd3f0ce",
+  "createdAt": "2025-09-24T18:33:08.043Z",
+  "updatedAt": "2025-09-24T20:21:11.165Z",
+  "totalChapters": 24,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:24.956Z",
+  "chapterSources": {
+    "anilist": 24,
+    "mangadex": 24,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:21:11.165Z"
+}

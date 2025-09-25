@@ -1,0 +1,25 @@
+{
+  "title": "Fabricant 100",
+  "description": "A girl created by a mad scientist seeks her creator",
+  "author": "Daisuke Enoshima",
+  "artist": "Daisuke Enoshima",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "90c12eeb-af02-43d4-aafd-d9aa5aafcaba",
+  "createdAt": "2025-09-24T17:02:12.368Z",
+  "updatedAt": "2025-09-24T20:57:17.666Z",
+  "totalChapters": 36,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.849Z",
+  "chapterSources": {
+    "jikan": 40,
+    "kitsu": 36,
+    "anilist": 1
+  },
+  "chapterVerifiedAt": "2025-09-24T20:57:17.666Z"
+}

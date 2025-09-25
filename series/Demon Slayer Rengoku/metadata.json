@@ -1,0 +1,25 @@
+{
+  "title": "Demon Slayer: Rengoku",
+  "description": "Kyojuro Rengoku's backstory and training",
+  "author": "Koyoharu Gotouge",
+  "artist": "Koyoharu Gotouge",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "789642f8-ca89-4e4e-8f7b-eee4d17ea08b",
+  "createdAt": "2025-09-24T17:04:03.229Z",
+  "updatedAt": "2025-09-24T20:51:22.579Z",
+  "totalChapters": 2,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.626Z",
+  "chapterSources": {
+    "jikan": 5,
+    "kitsu": 2,
+    "anilist": 2
+  },
+  "chapterVerifiedAt": "2025-09-24T20:51:22.579Z"
+}

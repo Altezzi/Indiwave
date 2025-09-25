@@ -1,0 +1,26 @@
+{
+  "title": "Aliens Area",
+  "description": "A boy with alien powers fights other aliens",
+  "author": "Fusai Naba",
+  "artist": "Fusai Naba",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "293365c8-aae7-4dbf-a12c-36e3f2edae99",
+  "createdAt": "2025-09-24T17:02:44.011Z",
+  "updatedAt": "2025-09-24T20:37:36.035Z",
+  "totalChapters": 21,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.412Z",
+  "chapterSources": {
+    "jikan": 21,
+    "kitsu": 20,
+    "anilist": 21,
+    "mangadex": 20
+  },
+  "chapterVerifiedAt": "2025-09-24T20:37:36.035Z"
+}

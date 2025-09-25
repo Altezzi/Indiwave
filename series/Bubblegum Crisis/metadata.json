@@ -1,0 +1,25 @@
+{
+  "title": "Bubblegum Crisis",
+  "description": "Female mercenaries fight robots in future Tokyo",
+  "author": "Toshimichi Suzuki",
+  "artist": "Toshimichi Suzuki",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "739a72a4-6dc4-47f3-bfec-df9641eb7a76",
+  "createdAt": "2025-09-24T18:08:33.160Z",
+  "updatedAt": "2025-09-24T20:08:48.613Z",
+  "totalChapters": 8,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.057Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 8,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:48.613Z"
+}

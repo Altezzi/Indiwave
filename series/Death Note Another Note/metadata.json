@@ -1,0 +1,26 @@
+{
+  "title": "Death Note: Another Note",
+  "description": "A murder case investigated by L and Naomi Misora",
+  "author": "Tsugumi Ohba",
+  "artist": "Takeshi Obata",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "75ee72ab-c6bf-4b87-badd-de839156934c",
+  "createdAt": "2025-09-24T17:04:22.024Z",
+  "updatedAt": "2025-09-24T20:51:01.895Z",
+  "totalChapters": 8,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.496Z",
+  "chapterSources": {
+    "jikan": 7,
+    "kitsu": 7,
+    "anilist": 8,
+    "mangadex": 108
+  },
+  "chapterVerifiedAt": "2025-09-24T20:51:01.895Z"
+}

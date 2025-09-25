@@ -1,0 +1,24 @@
+{
+  "title": "Mix",
+  "description": "A sequel to Touch featuring the next generation",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "98467236-8e2b-4f3d-ae7d-20ef4a84417a",
+  "createdAt": "2025-09-24T17:07:29.374Z",
+  "updatedAt": "2025-09-24T21:21:08.855Z",
+  "totalChapters": 43,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.447Z",
+  "chapterSources": {
+    "kitsu": 43,
+    "anilist": 2
+  },
+  "chapterVerifiedAt": "2025-09-24T21:21:08.855Z"
+}

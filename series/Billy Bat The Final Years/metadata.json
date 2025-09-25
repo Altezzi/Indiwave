@@ -1,0 +1,25 @@
+{
+  "title": "Billy Bat: The Final Years",
+  "description": "Kevin's final confrontation with the conspiracy",
+  "author": "Naoki Urasawa",
+  "artist": "Naoki Urasawa",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6e8d7542-0b0c-4948-91b5-cdcccb481f2b",
+  "createdAt": "2025-09-24T18:19:53.830Z",
+  "updatedAt": "2025-09-24T20:07:46.178Z",
+  "totalChapters": 165,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.908Z",
+  "chapterSources": {
+    "anilist": 165,
+    "mangadex": 165,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:07:46.178Z"
+}

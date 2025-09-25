@@ -1,0 +1,26 @@
+{
+  "title": "Digimon Adventure",
+  "description": "Kids are transported to the Digital World",
+  "author": "Akiyoshi Hongo",
+  "artist": "Yabuno Tenya",
+  "publisher": "Toei Animation",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "ea01341d-ca83-4896-be99-0487e9a8fa7a",
+  "createdAt": "2025-09-24T16:57:21.502Z",
+  "updatedAt": "2025-09-24T20:52:39.687Z",
+  "totalChapters": 35,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.238Z",
+  "chapterSources": {
+    "jikan": 35,
+    "kitsu": 35,
+    "anilist": 19,
+    "mangadex": 58
+  },
+  "chapterVerifiedAt": "2025-09-24T20:52:39.687Z"
+}

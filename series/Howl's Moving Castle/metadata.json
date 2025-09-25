@@ -1,0 +1,24 @@
+{
+  "title": "Howl's Moving Castle",
+  "description": "A girl cursed with old age seeks help from a wizard",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "2e4de5b6-c38a-46c4-a8fa-d8a90c39f713",
+  "createdAt": "2025-09-24T16:57:38.413Z",
+  "updatedAt": "2025-09-24T21:06:25.929Z",
+  "totalChapters": 77,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.666Z",
+  "chapterSources": {
+    "jikan": 10,
+    "kitsu": 77
+  },
+  "chapterVerifiedAt": "2025-09-24T21:06:25.929Z"
+}

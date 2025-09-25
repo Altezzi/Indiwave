@@ -1,43 +1,25 @@
 {
   "title": "Overlord",
-  "mangaMDId": "ac4e2459-d995-45ae-8421-4c4cf4a87770",
-  "description": "The final hour of the popular virtual reality game Yggdrasil has come. However, Momonga, a powerful wizard and master of the dark guild Ainz Ooal Gown, decides to spend his last few moments in the game as the servers begin to shut down. To his surprise, despite the clock having struck midnight, Momonga is still fully conscious as his character and, moreover, the non-player characters appear to have developed personalities of their own!  \n\nConfronted with this abnormal situation, Momonga commands his loyal servants to help him investigate and take control of this new world, with the hopes of figuring out what has caused this development and if there may be others in the same predicament.\n\n---\n\nNote: Due to unknown circumstances, the series was ended at Chapter 78 and continued in a new series as [Overlord: New World](https://mangadex.org/title/73320da2-eac6-4ff5-a12d-30788624d85b).",
-  "authors": [
-    "Maruyama Kugane"
-  ],
-  "artists": [
-    "Miyama Fugin"
-  ],
-  "tags": [
-    "Thriller",
-    "Sci-Fi",
-    "Loli",
-    "Monsters",
-    "Action",
-    "Demons",
-    "Comedy",
-    "Zombies",
-    "Adventure",
-    "Magic",
-    "Harem",
-    "Military",
-    "Isekai",
-    "Gore",
-    "Drama",
-    "Horror",
-    "Fantasy",
-    "Vampires",
-    "Monster Girls",
-    "Slice of Life",
-    "Mystery",
-    "Adaptation"
-  ],
-  "status": "completed",
-  "year": 2014,
-  "contentRating": "suggestive",
+  "description": "A gamer becomes trapped in his favorite game as an evil overlord",
+  "author": "Kugane Maruyama",
+  "artist": "Satoshi Oshio",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:15:56.598Z",
-  "updatedAt": "2025-09-22T05:25:18.186Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "412a300a-79ab-4f6d-9505-a4b9754e6c07",
+  "createdAt": "2025-09-24T16:55:27.965Z",
+  "updatedAt": "2025-09-24T20:21:31.577Z",
+  "totalChapters": 83,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.155Z",
+  "chapterSources": {
+    "anilist": 83,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:21:31.577Z"
 }

@@ -1,0 +1,26 @@
+{
+  "title": "Pigpen: The Investigation",
+  "description": "A boy investigates his past",
+  "author": "Kim Carnby",
+  "artist": "Hwang Young-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "mangadex",
+  "mangaDexId": "3080a5e2-abc1-4682-92f5-7429428bc198",
+  "createdAt": "2025-09-24T18:27:29.470Z",
+  "updatedAt": "2025-09-24T21:32:50.863Z",
+  "totalChapters": 68,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.331Z",
+  "chapterSources": {
+    "jikan": 3,
+    "kitsu": 68,
+    "anilist": 68,
+    "mangadex": 67
+  },
+  "chapterVerifiedAt": "2025-09-24T21:32:50.863Z"
+}

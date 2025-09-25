@@ -1,0 +1,26 @@
+{
+  "title": "Kimi ni Todoke",
+  "description": "A shy girl learns to make friends and find love",
+  "author": "Karuho Shiina",
+  "artist": "Karuho Shiina",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b3b6fa42-08df-4663-b827-caaa49c7ccbf",
+  "createdAt": "2025-09-24T17:59:18.048Z",
+  "updatedAt": "2025-09-24T21:10:13.646Z",
+  "totalChapters": 125,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.453Z",
+  "chapterSources": {
+    "jikan": 125,
+    "kitsu": 125,
+    "anilist": 127,
+    "mangadex": 123
+  },
+  "chapterVerifiedAt": "2025-09-24T21:10:13.646Z"
+}

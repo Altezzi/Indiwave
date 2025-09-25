@@ -1,0 +1,26 @@
+{
+  "title": "Magic Knight Rayearth",
+  "description": "Three girls are summoned to save a magical world",
+  "author": "CLAMP",
+  "artist": "CLAMP",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "20331b71-1d3f-4aed-b990-e54298424488",
+  "createdAt": "2025-09-24T18:05:24.546Z",
+  "updatedAt": "2025-09-24T21:16:04.739Z",
+  "totalChapters": 15,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.771Z",
+  "chapterSources": {
+    "jikan": 15,
+    "kitsu": 15,
+    "anilist": 15,
+    "mangadex": 9
+  },
+  "chapterVerifiedAt": "2025-09-24T21:16:04.739Z"
+}

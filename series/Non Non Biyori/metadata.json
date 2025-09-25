@@ -1,0 +1,25 @@
+{
+  "title": "Non Non Biyori",
+  "description": "Rural elementary school students",
+  "author": "Atto",
+  "artist": "Atto",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "74502f72-ad26-4af1-846c-de18061107a0",
+  "createdAt": "2025-09-24T18:04:13.641Z",
+  "updatedAt": "2025-09-24T20:20:23.039Z",
+  "totalChapters": 126,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:20.108Z",
+  "chapterSources": {
+    "anilist": 126,
+    "mangadex": 120,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:23.039Z"
+}

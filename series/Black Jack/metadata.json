@@ -1,0 +1,25 @@
+{
+  "title": "Black Jack",
+  "description": "An unlicensed surgeon performs miraculous operations",
+  "author": "Osamu Tezuka",
+  "artist": "Osamu Tezuka",
+  "publisher": "Akita Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "bc430f16-299e-44fe-b04b-b0fc35f37de5",
+  "createdAt": "2025-09-24T16:56:13.599Z",
+  "updatedAt": "2025-09-24T20:08:07.163Z",
+  "totalChapters": 243,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:04.137Z",
+  "chapterSources": {
+    "anilist": 243,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:07.163Z"
+}

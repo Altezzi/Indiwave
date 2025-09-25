@@ -1,0 +1,25 @@
+{
+  "title": "Chrono Trigger",
+  "description": "Time travel RPG adventure",
+  "author": "Akira Toriyama",
+  "artist": "Akira Toriyama",
+  "publisher": "Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "1f68439a-24eb-4baa-b48f-184a2f5f07de",
+  "createdAt": "2025-09-24T18:08:11.634Z",
+  "updatedAt": "2025-09-24T20:48:53.873Z",
+  "totalChapters": 1,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.257Z",
+  "chapterSources": {
+    "jikan": 1,
+    "kitsu": 1,
+    "anilist": 1
+  },
+  "chapterVerifiedAt": "2025-09-24T20:48:53.873Z"
+}

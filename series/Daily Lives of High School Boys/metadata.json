@@ -1,0 +1,25 @@
+{
+  "title": "Daily Lives of High School Boys",
+  "description": "Comedy about ordinary high school boys",
+  "author": "Yasunobu Yamauchi",
+  "artist": "Yasunobu Yamauchi",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "fd79c6c7-c704-4e7b-8769-5b12c3612971",
+  "createdAt": "2025-09-24T18:00:56.072Z",
+  "updatedAt": "2025-09-24T20:50:32.757Z",
+  "totalChapters": 138,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.425Z",
+  "chapterSources": {
+    "jikan": 138,
+    "kitsu": 132,
+    "anilist": 138
+  },
+  "chapterVerifiedAt": "2025-09-24T20:50:32.757Z"
+}

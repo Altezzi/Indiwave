@@ -1,0 +1,26 @@
+{
+  "title": "Dorohedoro: The First Years",
+  "description": "Caiman's early years in the Hole",
+  "author": "Q Hayashida",
+  "artist": "Q Hayashida",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6639a7a2-5d10-4ffa-a93f-e93367c3b945",
+  "createdAt": "2025-09-24T18:20:12.705Z",
+  "updatedAt": "2025-09-24T20:53:52.757Z",
+  "totalChapters": 190,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.543Z",
+  "chapterSources": {
+    "jikan": 190,
+    "kitsu": 167,
+    "anilist": 191,
+    "mangadex": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T20:53:52.757Z"
+}

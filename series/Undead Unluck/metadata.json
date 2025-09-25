@@ -1,31 +1,25 @@
 {
   "title": "Undead Unluck",
-  "mangaMDId": "cc1b8669-82b2-4232-99c1-40d48fc2d988",
-  "description": "As an UNLUCKY girl prepares to face her death, an UNDEAD who desperately wants to die appears before her! Vicious, violent and buck naked!\n___\n- Winner of the 2020 Tsugimanga award.",
-  "authors": [
-    "Tozuka Yoshifumi"
-  ],
-  "artists": [
-    "Tozuka Yoshifumi"
-  ],
-  "tags": [
-    "Award Winning",
-    "Sci-Fi",
-    "Time Travel",
-    "Monsters",
-    "Action",
-    "Comedy",
-    "Zombies",
-    "Martial Arts",
-    "Drama",
-    "Supernatural"
-  ],
-  "status": "completed",
-  "year": 2020,
-  "contentRating": "suggestive",
+  "description": "A girl with unlucky powers teams up with an undead man",
+  "author": "Yoshifumi Tozuka",
+  "artist": "Yoshifumi Tozuka",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 4,
-  "createdAt": "2025-09-22T05:17:11.956Z",
-  "updatedAt": "2025-09-22T05:25:54.895Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "cc1b8669-82b2-4232-99c1-40d48fc2d988",
+  "createdAt": "2025-09-24T17:01:54.512Z",
+  "updatedAt": "2025-09-24T20:30:02.592Z",
+  "totalChapters": 244,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.125Z",
+  "chapterSources": {
+    "anilist": 244,
+    "mangadex": 239,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:30:02.592Z"
 }

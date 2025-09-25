@@ -1,0 +1,25 @@
+{
+  "title": "One Piece: Stampede",
+  "description": "The greatest pirate festival ever held",
+  "author": "Eiichiro Oda",
+  "artist": "Eiichiro Oda",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a2c1d849-af05-4bbc-b2a7-866ebb10331f",
+  "createdAt": "2025-09-24T18:19:11.469Z",
+  "updatedAt": "2025-09-24T20:20:56.039Z",
+  "totalChapters": 8,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:24.351Z",
+  "chapterSources": {
+    "anilist": 8,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:56.039Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Gyo",
+  "description": "Fish with mechanical legs invade the land",
+  "author": "Junji Ito",
+  "artist": "Junji Ito",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b252e636-0143-42d7-903c-de0c9772d5fb",
+  "createdAt": "2025-09-24T17:59:30.901Z",
+  "updatedAt": "2025-09-24T21:04:00.674Z",
+  "totalChapters": 21,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.715Z",
+  "chapterSources": {
+    "jikan": 21,
+    "kitsu": 20,
+    "anilist": 21
+  },
+  "chapterVerifiedAt": "2025-09-24T21:04:00.674Z"
+}

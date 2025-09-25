@@ -1,0 +1,34 @@
+{
+  "title": "Blade of the Immortal",
+  "description": "An immortal swordsman seeks redemption",
+  "author": "Hiroaki Samura",
+  "artist": "Hiroaki Samura",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [
+    "Historical",
+    "Action",
+    "Seinen"
+  ],
+  "contentRating": "mature",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "sources": [
+    "anilist",
+    "mangadex"
+  ],
+  "aniListId": 30658,
+  "mangaDexId": "48de4f49-d7f9-4b0c-99f4-0929c2a9910b",
+  "createdAt": "2025-09-24T19:33:38.947Z",
+  "updatedAt": "2025-09-24T20:43:28.955Z",
+  "totalChapters": 207,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:04.152Z",
+  "chapterSources": {
+    "jikan": 207,
+    "kitsu": 207,
+    "anilist": 219,
+    "mangadex": 17
+  },
+  "chapterVerifiedAt": "2025-09-24T20:43:28.955Z"
+}

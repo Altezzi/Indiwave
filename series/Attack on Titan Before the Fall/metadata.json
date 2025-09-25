@@ -1,0 +1,25 @@
+{
+  "title": "Attack on Titan: Before the Fall",
+  "description": "The story of the first person to use vertical maneuvering equipment",
+  "author": "Ryo Suzukaze",
+  "artist": "Satoshi Shiki",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d5a3d9cb-b1ad-4ba1-9a92-a7569cb600f2",
+  "createdAt": "2025-09-24T17:03:39.887Z",
+  "updatedAt": "2025-09-24T20:06:38.427Z",
+  "totalChapters": 65,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.005Z",
+  "chapterSources": {
+    "anilist": 15,
+    "mangadex": 65,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:38.427Z"
+}

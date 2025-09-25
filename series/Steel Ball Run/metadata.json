@@ -1,0 +1,25 @@
+{
+  "title": "Steel Ball Run",
+  "description": "Jojo's Bizarre Adventure Part 7",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "1044287a-73df-48d0-b0b2-5327f32dd651",
+  "createdAt": "2025-09-24T18:05:59.288Z",
+  "updatedAt": "2025-09-24T20:25:32.681Z",
+  "totalChapters": 95,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.012Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 95,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:32.681Z"
+}

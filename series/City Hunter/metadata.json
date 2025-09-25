@@ -1,0 +1,25 @@
+{
+  "title": "City Hunter",
+  "description": "A private detective who specializes in protecting women",
+  "author": "Tsukasa Hojo",
+  "artist": "Tsukasa Hojo",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "c7d93139-b172-42d9-b5d8-56c0cdb606a3",
+  "createdAt": "2025-09-24T17:05:50.938Z",
+  "updatedAt": "2025-09-24T20:49:05.644Z",
+  "totalChapters": 193,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.287Z",
+  "chapterSources": {
+    "jikan": 193,
+    "kitsu": 193,
+    "anilist": 336
+  },
+  "chapterVerifiedAt": "2025-09-24T20:49:05.644Z"
+}

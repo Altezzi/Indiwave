@@ -1,0 +1,24 @@
+{
+  "title": "Fullmetal Alchemist: The First Attack",
+  "description": "Ed and Al's early adventures as State Alchemists",
+  "author": "Hiromu Arakawa",
+  "artist": "Hiromu Arakawa",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "fa70239f-1c1d-4e1d-a513-83c418cfcea7",
+  "createdAt": "2025-09-24T17:04:23.163Z",
+  "updatedAt": "2025-09-24T21:00:24.797Z",
+  "totalChapters": 4,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.320Z",
+  "chapterSources": {
+    "jikan": 4,
+    "kitsu": 1
+  },
+  "chapterVerifiedAt": "2025-09-24T21:00:24.797Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Mission: Yozakura Family",
+  "description": "A boy marries into a family of spies",
+  "author": "Hitsuji Gondaira",
+  "artist": "Hitsuji Gondaira",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "ce7cd7b0-e595-4f0d-98e8-447da10d652d",
+  "createdAt": "2025-09-24T17:01:55.760Z",
+  "updatedAt": "2025-09-24T20:18:41.246Z",
+  "totalChapters": 259,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.425Z",
+  "chapterSources": {
+    "anilist": 259,
+    "mangadex": 258,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:18:41.246Z"
+}

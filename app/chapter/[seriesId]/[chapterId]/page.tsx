@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-// import { useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 interface Chapter {
   id: string;
@@ -44,8 +44,7 @@ interface UserUrl {
 export default function ChapterPage() {
   const params = useParams();
   const router = useRouter();
-  // const { data: session } = useSession();
-  const session = null; // Temporarily disable NextAuth
+  const { data: session } = useSession();
   const [series, setSeries] = useState<Series | null>(null);
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
@@ -68,18 +67,32 @@ export default function ChapterPage() {
 
   const fetchSeriesData = async (seriesId: string) => {
     try {
-      const response = await fetch("/api/comics");
+      const response = await fetch("/api/manga");
       const data = await response.json();
-      const foundSeries = data.comics.find((s: any) => s.id === seriesId);
+      const foundSeries = data.data.find((s: any) => s.id === seriesId);
       
       if (foundSeries) {
-        setSeries(foundSeries);
-        const foundChapter = foundSeries.chapters.find((c: any) => c.id === params.chapterId);
-        if (foundChapter) {
-          setChapter(foundChapter);
-        } else {
-          router.push(`/series/${seriesId}`);
-        }
+        // Convert manga data to series format for compatibility
+        const series = {
+          id: foundSeries.id,
+          title: foundSeries.title,
+          cover: foundSeries.coverUrl,
+          author: foundSeries.authors?.join(', ') || '',
+          artist: foundSeries.artists?.join(', ') || '',
+          year: foundSeries.year,
+          tags: foundSeries.tags,
+          description: foundSeries.description,
+          status: foundSeries.status,
+          contentRating: foundSeries.contentRating,
+          totalChapters: foundSeries.totalChapters,
+          source: foundSeries.source,
+          chapters: [] // We'll need to implement chapter fetching separately
+        };
+        setSeries(series);
+        
+        // For now, we don't have chapter data in the manga API
+        // This will need to be implemented separately
+        setChapter(null);
       } else {
         router.push("/library");
       }

@@ -1,0 +1,26 @@
+{
+  "title": "Dragon Ball Z: Resurrection F",
+  "description": "Frieza returns from the dead",
+  "author": "Akira Toriyama",
+  "artist": "Toyotarou",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d22cf103-18fa-4fb0-bc2c-75695895c74b",
+  "createdAt": "2025-09-24T18:18:58.628Z",
+  "updatedAt": "2025-09-24T20:55:15.586Z",
+  "totalChapters": 3,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.512Z",
+  "chapterSources": {
+    "jikan": 3,
+    "kitsu": 3,
+    "anilist": 3,
+    "mangadex": 11
+  },
+  "chapterVerifiedAt": "2025-09-24T20:55:15.586Z"
+}

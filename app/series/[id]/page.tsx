@@ -9,6 +9,20 @@ interface Chapter {
   id: string;
   title: string;
   pages: string[];
+  chapterNumber: number;
+  isPublished: boolean;
+  createdAt: string;
+}
+
+interface Season {
+  id: string;
+  title: string;
+  seasonNumber: number;
+  coverImage: string;
+  description: string;
+  createdAt: string;
+  chapters: Chapter[];
+  totalChapters: number;
 }
 
 interface Comic {
@@ -22,6 +36,8 @@ interface Comic {
   author: string;
   artist: string;
   chapters: Chapter[];
+  seasons: Season[];
+  totalSeasons: number;
 }
 
 interface Comment {
@@ -45,8 +61,9 @@ interface UserUrl {
 export default function SeriesPage() {
   const params = useParams();
   const router = useRouter();
-  // const { data: session, status } = useSession();
-  const session = null; // Temporarily disable NextAuth
+  // Temporarily disable session functionality
+  const session = null;
+  const status = "unauthenticated";
   const [comic, setComic] = useState<Comic | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
@@ -59,34 +76,62 @@ export default function SeriesPage() {
   const [communityRating, setCommunityRating] = useState<number | null>(null);
   const [isFollowing, setIsFollowing] = useState(false);
   const [isLoadingFollow, setIsLoadingFollow] = useState(false);
+  const [selectedSeason, setSelectedSeason] = useState<number | null>(null);
+  const [chapterOrder, setChapterOrder] = useState<'asc' | 'desc'>('asc'); // 'asc' = first chapter first, 'desc' = last chapter first
+  const [activeTab, setActiveTab] = useState<'chapters'>('chapters');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (params.id) {
       fetchComicData(params.id as string);
       fetchComments(params.id as string);
       fetchUserUrls(params.id as string); // Always fetch user URLs now
-      if (session?.user?.id) {
-        fetchUserRating(params.id as string);
-        fetchFollowStatus(params.id as string);
-      }
       fetchCommunityRating(params.id as string);
     }
-  }, [params.id, session?.user?.id]);
+  }, [params.id]);
+
+  // Fetch follow status after comic data is loaded
+  useEffect(() => {
+    if (comic?.id && session?.user?.id) {
+      fetchFollowStatus(comic.id);
+      fetchUserRating(comic.id);
+    }
+  }, [comic?.id, session?.user?.id]);
 
   const fetchComicData = async (id: string) => {
     try {
-      const response = await fetch("/api/comics");
-      const data = await response.json();
-      const foundComic = data.comics.find((c: any) => c.id === id);
+      // Decode the ID since it comes from URL params already encoded
+      const decodedId = decodeURIComponent(id);
       
-      if (foundComic) {
-        setComic(foundComic);
-      } else {
-        router.push("/library");
+      // First try to fetch from database (for user-created series)
+      let response = await fetch(`/api/series/${encodeURIComponent(decodedId)}`);
+      
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && data.comic) {
+          setComic(data.comic);
+          return;
+        }
       }
+      
+      // If not found in database, try to fetch from file-based series (imported series)
+      response = await fetch('/api/comics');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && data.data) {
+          const foundComic = data.data.find((comic: any) => comic.id === decodedId);
+          if (foundComic) {
+            setComic(foundComic);
+            return;
+          }
+        }
+      }
+      
+      console.error("Series not found with ID:", decodedId);
+      setComic(null);
     } catch (error) {
       console.error("Error fetching comic:", error);
-      router.push("/library");
+      setComic(null);
     } finally {
       setLoading(false);
     }
@@ -94,7 +139,8 @@ export default function SeriesPage() {
 
   const fetchComments = async (seriesId: string) => {
     try {
-      const response = await fetch(`/api/comments?seriesId=${seriesId}`);
+      const decodedSeriesId = decodeURIComponent(seriesId);
+      const response = await fetch(`/api/comments?seriesId=${encodeURIComponent(decodedSeriesId)}`);
       if (response.ok) {
         const data = await response.json();
         setComments(data.comments || []);
@@ -107,7 +153,8 @@ export default function SeriesPage() {
          const fetchUserUrls = async (seriesId: string) => {
            try {
              // For now, load from localStorage since NextAuth is disabled
-             const storedUrls = localStorage.getItem(`userUrls_${seriesId}`);
+             const decodedSeriesId = decodeURIComponent(seriesId);
+             const storedUrls = localStorage.getItem(`userUrls_${decodedSeriesId}`);
              if (storedUrls) {
                setUserUrls(JSON.parse(storedUrls));
              } else {
@@ -121,7 +168,8 @@ export default function SeriesPage() {
 
   const fetchUserRating = async (seriesId: string) => {
     try {
-      const response = await fetch(`/api/user/rating?seriesId=${seriesId}`);
+      const decodedSeriesId = decodeURIComponent(seriesId);
+      const response = await fetch(`/api/user/rating?seriesId=${encodeURIComponent(decodedSeriesId)}`);
       if (response.ok) {
         const data = await response.json();
         setUserRating(data.rating || null);
@@ -133,7 +181,8 @@ export default function SeriesPage() {
 
   const fetchFollowStatus = async (seriesId: string) => {
     try {
-      const response = await fetch(`/api/user/follow-status?seriesId=${seriesId}`);
+      const decodedSeriesId = decodeURIComponent(seriesId);
+      const response = await fetch(`/api/user/follow-status?seriesId=${encodeURIComponent(decodedSeriesId)}`);
       if (response.ok) {
         const data = await response.json();
         setIsFollowing(data.isFollowing || false);
@@ -145,7 +194,8 @@ export default function SeriesPage() {
 
   const fetchCommunityRating = async (seriesId: string) => {
     try {
-      const response = await fetch(`/api/community/rating?seriesId=${seriesId}`);
+      const decodedSeriesId = decodeURIComponent(seriesId);
+      const response = await fetch(`/api/community/rating?seriesId=${encodeURIComponent(decodedSeriesId)}`);
       if (response.ok) {
         const data = await response.json();
         setCommunityRating(data.averageRating || null);
@@ -165,7 +215,7 @@ export default function SeriesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          seriesId: params.id,
+          seriesId: decodeURIComponent(params.id as string),
           content: newComment.trim(),
         }),
       });
@@ -189,15 +239,16 @@ export default function SeriesPage() {
                url: newUrl.trim(),
                label: newLabel.trim(),
                userId: 'local-user',
-               seriesId: params.id
+               seriesId: decodeURIComponent(params.id as string)
              };
 
              // Get existing URLs from localStorage
-             const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${params.id}`) || '[]');
+             const decodedId = decodeURIComponent(params.id as string);
+             const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${decodedId}`) || '[]');
              existingUrls.push(newUserUrl);
              
              // Save back to localStorage
-             localStorage.setItem(`userUrls_${params.id}`, JSON.stringify(existingUrls));
+             localStorage.setItem(`userUrls_${decodedId}`, JSON.stringify(existingUrls));
              
              // Update state
              setUserUrls(existingUrls);
@@ -219,11 +270,12 @@ export default function SeriesPage() {
 
     try {
       // Get existing URLs from localStorage
-      const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${params.id}`) || '[]');
+      const decodedId = decodeURIComponent(params.id as string);
+      const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${decodedId}`) || '[]');
       const updatedUrls = existingUrls.filter((url: any) => url.id !== urlId);
       
       // Save back to localStorage
-      localStorage.setItem(`userUrls_${params.id}`, JSON.stringify(updatedUrls));
+      localStorage.setItem(`userUrls_${decodedId}`, JSON.stringify(updatedUrls));
       
       // Update state
       setUserUrls(updatedUrls);
@@ -245,7 +297,7 @@ export default function SeriesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          seriesId: params.id,
+          seriesId: decodeURIComponent(params.id as string),
           rating: rating,
         }),
       });
@@ -261,7 +313,7 @@ export default function SeriesPage() {
   };
 
   const handleFollow = async () => {
-    if (!session?.user || !params.id) return;
+    if (!session?.user || !comic?.id) return;
 
     setIsLoadingFollow(true);
     try {
@@ -271,13 +323,15 @@ export default function SeriesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          seriesId: params.id,
+          seriesId: comic.id,
           action: isFollowing ? "unfollow" : "follow",
         }),
       });
 
       if (response.ok) {
         setIsFollowing(!isFollowing);
+      } else {
+        console.error("Failed to follow/unfollow series:", response.status);
       }
     } catch (error) {
       console.error("Error following/unfollowing series:", error);
@@ -305,13 +359,43 @@ export default function SeriesPage() {
     return (
       <div style={{ 
         display: "flex", 
+        flexDirection: "column",
         justifyContent: "center", 
         alignItems: "center", 
         minHeight: "50vh",
-        fontSize: "18px",
-        color: "var(--muted-foreground)"
+        gap: "16px",
+        textAlign: "center"
       }}>
-        Series not found
+        <div style={{ 
+          fontSize: "24px",
+          color: "var(--fg)",
+          marginBottom: "8px"
+        }}>
+          📚 Series Not Found
+        </div>
+        <div style={{ 
+          fontSize: "16px",
+          color: "var(--muted-foreground)",
+          maxWidth: "400px"
+        }}>
+          The series "{decodeURIComponent(params.id as string)}" could not be found in our library.
+        </div>
+        <Link 
+          href="/library"
+          style={{
+            marginTop: "16px",
+            padding: "12px 24px",
+            background: "#8ab4ff",
+            color: "white",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontSize: "16px",
+            fontWeight: "500",
+            transition: "all 0.2s ease"
+          }}
+        >
+          ← Back to Library
+        </Link>
       </div>
     );
   }
@@ -334,7 +418,72 @@ export default function SeriesPage() {
         </Link>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 400px", gap: "32px" }}>
+      {/* Mobile Menu Button - Only visible on small screens */}
+      <div style={{ 
+        display: "none", 
+        position: "fixed", 
+        top: "20px", 
+        right: "20px", 
+        zIndex: 1000,
+        "@media (max-width: 768px)": { display: "block" }
+      }}>
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{
+            background: "var(--accent)",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            padding: "12px",
+            cursor: "pointer",
+            fontSize: "16px",
+            fontWeight: "500",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)"
+          }}
+        >
+          📖 Where to Read
+        </button>
+      </div>
+
+      {/* Desktop Reading Sites Button - Only visible on larger screens */}
+      <div style={{ 
+        display: "none", 
+        position: "fixed", 
+        top: "420px", 
+        right: "20px", 
+        zIndex: 1000,
+        "@media (min-width: 769px)": { display: "block" }
+      }}>
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{
+            background: "var(--accent)",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            padding: "12px 16px",
+            cursor: "pointer",
+            fontSize: "14px",
+            fontWeight: "500",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+            writingMode: "vertical-rl",
+            textOrientation: "mixed"
+          }}
+        >
+          📖 Where to Read
+        </button>
+      </div>
+
+      <div style={{ 
+        display: "grid", 
+        gridTemplateColumns: "1fr 400px", 
+        gap: "32px", 
+        alignItems: "start",
+        "@media (max-width: 768px)": { 
+          gridTemplateColumns: "1fr",
+          gap: "24px"
+        }
+      }}>
         {/* Main Content */}
         <div>
           {/* Series Header */}
@@ -546,55 +695,366 @@ export default function SeriesPage() {
             padding: "24px",
             border: "1px solid rgba(138, 180, 255, 0.1)"
           }}>
-            <h2 style={{ 
-              fontSize: "20px", 
-              fontWeight: "600", 
-              margin: "0 0 20px 0",
-              color: "var(--fg)"
+            {/* Tab Navigation */}
+            <div style={{ 
+              display: "flex", 
+              gap: "8px", 
+              marginBottom: "24px",
+              borderBottom: "1px solid var(--border)",
+              alignItems: "center"
             }}>
-              Chapters ({comic.chapters.length})
-            </h2>
-            
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              {comic.chapters.map((chapter, index) => (
-                <Link 
-                  key={chapter.id}
-                  href={`/chapter/${comic.id}/${chapter.id}`}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    padding: "16px",
-                    background: "var(--border)",
-                    borderRadius: "8px",
-                    textDecoration: "none",
-                    color: "var(--fg)",
-                    transition: "background 0.2s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "rgba(138, 180, 255, 0.1)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "var(--border)";
-                  }}
-                >
-                  <div>
-                    <div style={{ fontWeight: "500", marginBottom: "4px" }}>
-                      {chapter.title}
-                    </div>
-                    <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
-                      {chapter.pages.length} pages
-                    </div>
-                  </div>
-                  <span style={{ color: "var(--accent)" }}>→</span>
-                </Link>
-              ))}
+              <button
+                onClick={() => setActiveTab('chapters')}
+                style={{
+                  padding: "12px 20px",
+                  background: activeTab === 'chapters' ? "var(--accent)" : "transparent",
+                  color: activeTab === 'chapters' ? "white" : "var(--fg)",
+                  border: "none",
+                  borderRadius: "8px 8px 0 0",
+                  cursor: "pointer",
+                  fontWeight: "500",
+                  transition: "all 0.2s ease"
+                }}
+              >
+                Chapters ({(() => {
+                  if (selectedSeason && comic.seasons) {
+                    const selectedSeasonData = comic.seasons.find(s => s.seasonNumber === selectedSeason);
+                    return selectedSeasonData ? selectedSeasonData.chapters.length : 0;
+                  }
+                  return comic.chapters.length;
+                })()})
+              </button>
+              
+              {/* Season Dropdown and Chapter Ordering Controls */}
+              {activeTab === 'chapters' && comic.seasons && comic.seasons.length > 0 && (
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginLeft: "16px" }}>
+                  <label style={{ 
+                    fontSize: "14px", 
+                    color: "var(--fg)", 
+                    fontWeight: "500" 
+                  }}>
+                    Season:
+                  </label>
+                  <select
+                    value={selectedSeason || ''}
+                    onChange={(e) => setSelectedSeason(e.target.value ? parseInt(e.target.value) : null)}
+                    style={{
+                      padding: "6px 12px",
+                      borderRadius: "6px",
+                      border: "1px solid var(--border)",
+                      background: "var(--bg)",
+                      color: "var(--fg)",
+                      fontSize: "14px",
+                      minWidth: "150px"
+                    }}
+                  >
+                    <option value="">All Seasons</option>
+                    {comic.seasons.map((season) => (
+                      <option key={season.id} value={season.seasonNumber}>
+                        Season {season.seasonNumber}
+                      </option>
+                    ))}
+                  </select>
+                  
+                  {/* Chapter Ordering Control */}
+                  <button
+                    onClick={() => setChapterOrder(chapterOrder === 'asc' ? 'desc' : 'asc')}
+                    style={{
+                      padding: "6px 8px",
+                      borderRadius: "4px",
+                      border: "1px solid var(--border)",
+                      background: "var(--bg)",
+                      color: "var(--fg)",
+                      cursor: "pointer",
+                      fontSize: "14px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      minWidth: "32px",
+                      height: "32px",
+                      marginLeft: "8px"
+                    }}
+                    title={chapterOrder === 'asc' ? "Click to show last chapter first" : "Click to show first chapter first"}
+                  >
+                    {chapterOrder === 'asc' ? '↓' : '↑'}
+                  </button>
+                </div>
+              )}
+              
             </div>
+
+            {/* Tab Content */}
+            {activeTab === 'chapters' && (
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {(() => {
+                  // Get chapters to display based on selected season or all seasons
+                  let chaptersToShow = [];
+                  
+                  if (comic.seasons && comic.seasons.length > 0) {
+                    // If seasons exist, show chapters from selected season or all seasons
+                    if (selectedSeason) {
+                      // Show chapters from specific season
+                      const selectedSeasonData = comic.seasons.find(s => s.seasonNumber === selectedSeason);
+                      if (selectedSeasonData) {
+                        chaptersToShow = selectedSeasonData.chapters || [];
+                        // Apply ordering for single season
+                        if (chaptersToShow.length > 0) {
+                          chaptersToShow.sort((a, b) => {
+                            if (chapterOrder === 'asc') {
+                              return a.chapterNumber - b.chapterNumber;
+                            } else {
+                              return b.chapterNumber - a.chapterNumber;
+                            }
+                          });
+                        }
+                      }
+                    } else {
+                      // Show all chapters from all seasons grouped by season
+                      chaptersToShow = [];
+                      // Sort seasons by season number (ascending or descending based on order)
+                      const sortedSeasons = [...comic.seasons].sort((a, b) => {
+                        if (chapterOrder === 'asc') {
+                          return a.seasonNumber - b.seasonNumber; // Season 1, 2, 3...
+                        } else {
+                          return b.seasonNumber - a.seasonNumber; // Season 3, 2, 1...
+                        }
+                      });
+                      
+                      sortedSeasons.forEach(season => {
+                        if (season.chapters && season.chapters.length > 0) {
+                          // Sort chapters within each season
+                          const sortedChapters = [...season.chapters].sort((a, b) => {
+                            if (chapterOrder === 'asc') {
+                              return a.chapterNumber - b.chapterNumber; // Chapter 1, 2, 3...
+                            } else {
+                              return b.chapterNumber - a.chapterNumber; // Chapter 3, 2, 1...
+                            }
+                          });
+                          
+                          // Add chapters with season info
+                          chaptersToShow = chaptersToShow.concat(sortedChapters.map(chapter => ({
+                            ...chapter,
+                            seasonNumber: season.seasonNumber,
+                            seasonTitle: season.title
+                          })));
+                        }
+                      });
+                    }
+                  } else {
+                    // Show all chapters from main series (no seasons)
+                    chaptersToShow = comic.chapters || [];
+                    // Apply ordering for main series
+                    if (chaptersToShow.length > 0) {
+                      chaptersToShow.sort((a, b) => {
+                        if (chapterOrder === 'asc') {
+                          return a.chapterNumber - b.chapterNumber;
+                        } else {
+                          return b.chapterNumber - a.chapterNumber;
+                        }
+                      });
+                    }
+                  }
+                  
+                  if (chaptersToShow.length === 0) {
+                    return (
+                      <div style={{ 
+                        textAlign: "center", 
+                        padding: "40px", 
+                        color: "var(--muted-foreground)" 
+                      }}>
+                        {selectedSeason ? `No chapters found for Season ${selectedSeason}` : "No chapters available"}
+                      </div>
+                    );
+                  }
+                  
+                  return chaptersToShow.map((chapter, index) => {
+                    // Determine the correct route based on series type
+                    const seriesId = selectedSeason && comic.seasons ? 
+                      comic.seasons.find(s => s.seasonNumber === selectedSeason)?.id : 
+                      comic.id;
+                    
+                    // Use /reader route for file-based series (isImported: true), /chapter for database series
+                    const chapterRoute = comic.isImported ? 
+                      `/reader/${seriesId}/${chapter.id}` : 
+                      `/chapter/${seriesId}/${chapter.id}`;
+                    
+                    return (
+                    <Link 
+                      key={chapter.id}
+                      href={chapterRoute}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        padding: "16px",
+                        background: "var(--border)",
+                        borderRadius: "8px",
+                        textDecoration: "none",
+                        color: "var(--fg)",
+                        transition: "background 0.2s ease"
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "rgba(138, 180, 255, 0.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "var(--border)";
+                      }}
+                    >
+                      <div>
+                        <div style={{ fontWeight: "500", marginBottom: "4px" }}>
+                          {chapter.title}
+                        </div>
+                        <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
+                          Chapter {chapter.chapterNumber} • {chapter.pages ? chapter.pages.length : 0} pages
+                          {selectedSeason && (
+                            <span style={{ marginLeft: "8px", color: "var(--accent)" }}>
+                              • Season {selectedSeason}
+                            </span>
+                          )}
+                          {!selectedSeason && chapter.seasonNumber && (
+                            <span style={{ marginLeft: "8px", color: "var(--accent)" }}>
+                              • Season {chapter.seasonNumber}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <span style={{ color: "var(--accent)" }}>→</span>
+                    </Link>
+                    );
+                  });
+                })()}
+              </div>
+            )}
+
+            {activeTab === 'seasons' && comic.seasons && comic.seasons.length > 0 && (
+              <div>
+                {/* Season Selector */}
+                <div style={{ marginBottom: "20px" }}>
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "8px", 
+                    fontWeight: "500",
+                    color: "var(--fg)"
+                  }}>
+                    Select Season:
+                  </label>
+                  <select
+                    value={selectedSeason || ''}
+                    onChange={(e) => setSelectedSeason(e.target.value ? parseInt(e.target.value) : null)}
+                    style={{
+                      padding: "8px 12px",
+                      borderRadius: "6px",
+                      border: "1px solid var(--border)",
+                      background: "var(--bg)",
+                      color: "var(--fg)",
+                      fontSize: "14px",
+                      minWidth: "200px"
+                    }}
+                  >
+                    <option value="">All Seasons</option>
+                    {comic.seasons.map((season) => (
+                      <option key={season.id} value={season.seasonNumber}>
+                        Season {season.seasonNumber} - {season.title}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Season Content */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                  {comic.seasons
+                    .filter(season => !selectedSeason || season.seasonNumber === selectedSeason)
+                    .map((season) => (
+                    <div key={season.id} style={{
+                      background: "var(--border)",
+                      borderRadius: "12px",
+                      padding: "16px",
+                      border: "1px solid rgba(138, 180, 255, 0.1)"
+                    }}>
+                      <div style={{ 
+                        display: "flex", 
+                        alignItems: "center", 
+                        gap: "12px", 
+                        marginBottom: "12px" 
+                      }}>
+                        <img 
+                          src={season.coverImage} 
+                          alt={season.title}
+                          style={{
+                            width: "60px",
+                            height: "80px",
+                            objectFit: "cover",
+                            borderRadius: "6px"
+                          }}
+                        />
+                        <div>
+                          <h3 style={{ 
+                            margin: "0 0 4px 0", 
+                            fontSize: "16px", 
+                            fontWeight: "600",
+                            color: "var(--fg)"
+                          }}>
+                            Season {season.seasonNumber}
+                          </h3>
+                          <p style={{ 
+                            margin: "0", 
+                            fontSize: "14px", 
+                            color: "var(--muted-foreground)" 
+                          }}>
+                            {season.totalChapters} chapters
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {season.chapters.length > 0 && (
+                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                          {season.chapters.map((chapter) => (
+                            <Link 
+                              key={chapter.id}
+                              href={`/chapter/${season.id}/${chapter.id}`}
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                padding: "12px",
+                                background: "rgba(var(--bg-rgb, 18, 18, 18), 0.6)",
+                                borderRadius: "6px",
+                                textDecoration: "none",
+                                color: "var(--fg)",
+                                transition: "background 0.2s ease"
+                              }}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.background = "rgba(138, 180, 255, 0.1)";
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.background = "rgba(var(--bg-rgb, 18, 18, 18), 0.6)";
+                              }}
+                            >
+                              <div>
+                                <div style={{ fontWeight: "500", fontSize: "14px" }}>
+                                  {chapter.title}
+                                </div>
+                                <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
+                                  Chapter {chapter.chapterNumber}
+                                </div>
+                              </div>
+                              <span style={{ color: "var(--accent)" }}>→</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Sidebar */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+        {/* Sidebar - Hidden on both mobile and desktop (replaced by button) */}
+        <div style={{ 
+          display: "none"
+        }}>
           {/* Where to Read Section */}
           {(
             <div style={{ 
@@ -747,6 +1207,47 @@ export default function SeriesPage() {
                     ))}
                   </div>
                 )}
+
+                {/* User-Submitted Reading Links (from upload) */}
+                {(comic as any)?.userReadingLinks && (comic as any).userReadingLinks.length > 0 && (
+                  <div style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                    <h3 style={{ fontSize: "16px", fontWeight: "600", margin: "0 0 8px 0", color: "var(--fg)" }}>
+                      Official Reading Options
+                    </h3>
+                    {(comic as any).userReadingLinks.map((link: any, index: number) => (
+                      <div key={index} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            flex: 1,
+                            padding: "12px 16px",
+                            background: "rgba(138, 180, 255, 0.1)",
+                            color: "var(--fg)",
+                            textDecoration: "none",
+                            borderRadius: "8px",
+                            fontSize: "14px",
+                            fontWeight: "500",
+                            textAlign: "center",
+                            transition: "opacity 0.2s ease",
+                            border: "1px solid rgba(138, 180, 255, 0.2)"
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.opacity = "0.9";
+                            e.currentTarget.style.background = "rgba(138, 180, 255, 0.15)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.opacity = "1";
+                            e.currentTarget.style.background = "rgba(138, 180, 255, 0.1)";
+                          }}
+                        >
+                          {link.label}
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Add New Site Button - Temporarily allow for all users */}
@@ -778,24 +1279,167 @@ export default function SeriesPage() {
             </div>
           )}
 
-          {/* Comments Section */}
-          <div style={{ 
-            background: "rgba(var(--bg-rgb, 18, 18, 18), 0.6)",
-            borderRadius: "16px",
-            padding: "24px",
-            border: "1px solid rgba(138, 180, 255, 0.1)",
-            height: "fit-content"
-          }}>
-            <h2 style={{ 
-              fontSize: "20px", 
-              fontWeight: "600", 
-              margin: "0 0 20px 0",
-              color: "var(--fg)"
-            }}>
-              Discussion ({comments.length})
-            </h2>
+        </div>
+      </div>
 
-          {/* Add Comment */}
+      {/* Reading Sites Overlay Menu */}
+      {isMobileMenuOpen && (
+        <div style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: "rgba(0, 0, 0, 0.8)",
+          zIndex: 1001,
+          display: "flex",
+          justifyContent: "flex-end"
+        }}>
+          <div style={{
+            background: "var(--bg)",
+            width: "300px",
+            height: "100%",
+            padding: "24px",
+            overflowY: "auto",
+            borderLeft: "1px solid var(--border)"
+          }}>
+            {/* Close Button */}
+            <div style={{ 
+              display: "flex", 
+              justifyContent: "space-between", 
+              alignItems: "center", 
+              marginBottom: "24px" 
+            }}>
+              <h2 style={{ 
+                fontSize: "20px", 
+                fontWeight: "600", 
+                margin: 0, 
+                color: "var(--fg)" 
+              }}>
+                Where to Read
+              </h2>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  color: "var(--fg)",
+                  fontSize: "24px",
+                  cursor: "pointer",
+                  padding: "4px"
+                }}
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Where to Read Content - Same as sidebar */}
+            <div style={{ marginBottom: "24px" }}>
+              {/* Default Reading Options */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                <a
+                  href={`https://mangadex.org/title/${comic?.id || ''}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--accent)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500"
+                  }}
+                >
+                  📚 Read on MangaDex
+                </a>
+                <a
+                  href={`https://mangakakalot.com/search/story/${encodeURIComponent(comic?.title || '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--accent)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500"
+                  }}
+                >
+                  🔍 Search on MangaKakalot
+                </a>
+                <a
+                  href={`https://mangasee123.com/search/?name=${encodeURIComponent(comic?.title || '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--accent)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500"
+                  }}
+                >
+                  🔍 Search on MangaSee
+                </a>
+                <button
+                  onClick={() => setShowUrlForm(true)}
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--border)",
+                    color: "var(--fg)",
+                    border: "none",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    cursor: "pointer"
+                  }}
+                >
+                  ➕ Add Reading Option
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Comments Section - Mobile (moved to bottom) */}
+      <div style={{ 
+        display: "none",
+        "@media (max-width: 768px)": { display: "block" },
+        marginTop: "32px"
+      }}>
+        <div style={{ 
+          background: "rgba(var(--bg-rgb, 18, 18, 18), 0.6)",
+          borderRadius: "16px",
+          padding: "24px",
+          border: "1px solid rgba(138, 180, 255, 0.1)"
+        }}>
+          <h2 style={{ 
+            fontSize: "20px", 
+            fontWeight: "600", 
+            margin: "0 0 20px 0",
+            color: "var(--fg)"
+          }}>
+            Discussion ({comments.length})
+          </h2>
+
+          {/* Add Comment Form */}
           {session?.user ? (
             <div style={{ marginBottom: "24px" }}>
               <textarea
@@ -804,10 +1448,10 @@ export default function SeriesPage() {
                 placeholder="Share your thoughts about this series..."
                 style={{
                   width: "100%",
-                  minHeight: "80px",
+                  minHeight: "100px",
                   padding: "12px",
-                  border: "1px solid var(--border)",
                   borderRadius: "8px",
+                  border: "1px solid var(--border)",
                   background: "var(--bg)",
                   color: "var(--fg)",
                   fontSize: "14px",
@@ -820,14 +1464,13 @@ export default function SeriesPage() {
                 disabled={!newComment.trim()}
                 style={{
                   padding: "8px 16px",
-                  background: "var(--accent)",
-                  color: "white",
+                  background: newComment.trim() ? "var(--accent)" : "var(--border)",
+                  color: newComment.trim() ? "white" : "var(--muted-foreground)",
                   border: "none",
                   borderRadius: "6px",
-                  fontSize: "14px",
-                  fontWeight: "500",
                   cursor: newComment.trim() ? "pointer" : "not-allowed",
-                  opacity: newComment.trim() ? 1 : 0.5
+                  fontSize: "14px",
+                  fontWeight: "500"
                 }}
               >
                 Post Comment
@@ -835,18 +1478,19 @@ export default function SeriesPage() {
             </div>
           ) : (
             <div style={{ 
-              marginBottom: "24px",
-              padding: "16px",
-              background: "var(--border)",
-              borderRadius: "8px",
-              textAlign: "center"
+              background: "var(--border)", 
+              padding: "16px", 
+              borderRadius: "8px", 
+              textAlign: "center",
+              marginBottom: "24px"
             }}>
-              <p style={{ margin: "0 0 12px 0", color: "var(--muted-foreground)" }}>
+              <p style={{ margin: "0 0 12px 0", color: "var(--fg)" }}>
                 Sign in to join the discussion
               </p>
               <Link 
-                href="/sign-in"
+                href="/auth/signin" 
                 style={{
+                  display: "inline-block",
                   padding: "8px 16px",
                   background: "var(--accent)",
                   color: "white",
@@ -874,46 +1518,42 @@ export default function SeriesPage() {
             ) : (
               comments.map((comment) => (
                 <div key={comment.id} style={{
-                  padding: "16px",
                   background: "var(--border)",
-                  borderRadius: "8px"
+                  padding: "16px",
+                  borderRadius: "8px",
+                  border: "1px solid rgba(138, 180, 255, 0.1)"
                 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
-                    <div style={{
-                      width: "32px",
-                      height: "32px",
-                      borderRadius: "50%",
-                      background: "var(--accent)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      fontSize: "12px",
-                      fontWeight: "600"
+                  <div style={{ 
+                    display: "flex", 
+                    justifyContent: "space-between", 
+                    alignItems: "center", 
+                    marginBottom: "8px" 
+                  }}>
+                    <span style={{ 
+                      fontWeight: "500", 
+                      color: "var(--fg)",
+                      fontSize: "14px"
                     }}>
-                      {comment.userName.charAt(0).toUpperCase()}
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: "500", fontSize: "14px", color: "var(--fg)" }}>
-                        {comment.userName}
-                      </div>
-                      <div style={{ fontSize: "12px", color: "var(--muted-foreground)" }}>
-                        {new Date(comment.createdAt).toLocaleDateString()}
-                      </div>
-                    </div>
+                      {comment.user?.name || "Anonymous"}
+                    </span>
+                    <span style={{ 
+                      fontSize: "12px", 
+                      color: "var(--muted-foreground)" 
+                    }}>
+                      {new Date(comment.createdAt).toLocaleDateString()}
+                    </span>
                   </div>
                   <p style={{ 
-                    margin: "0", 
-                    color: "var(--muted-foreground)",
-                    fontSize: "14px",
-                    lineHeight: "1.5"
+                    margin: 0, 
+                    color: "var(--fg)", 
+                    lineHeight: "1.5",
+                    fontSize: "14px"
                   }}>
                     {comment.content}
                   </p>
                 </div>
               ))
             )}
-          </div>
           </div>
         </div>
       </div>

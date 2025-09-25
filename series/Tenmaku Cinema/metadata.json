@@ -1,0 +1,25 @@
+{
+  "title": "Tenmaku Cinema",
+  "description": "Students create movies to save their school",
+  "author": "Yuto Tsukuda",
+  "artist": "Shun Saeki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6f10c2dc-0901-40d0-ac32-eb7bec6ea920",
+  "createdAt": "2025-09-24T17:02:18.095Z",
+  "updatedAt": "2025-09-24T20:26:19.392Z",
+  "totalChapters": 24,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.444Z",
+  "chapterSources": {
+    "anilist": 24,
+    "mangadex": 22,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:26:19.392Z"
+}

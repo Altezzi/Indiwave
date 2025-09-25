@@ -1,0 +1,26 @@
+{
+  "title": "Eyeshield 21",
+  "description": "A weak boy becomes a star American football player",
+  "author": "Riichiro Inagaki",
+  "artist": "Yusuke Murata",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "3bce85cf-0459-42ca-be2d-5ec56445fce9",
+  "createdAt": "2025-09-24T17:07:05.919Z",
+  "updatedAt": "2025-09-24T20:57:11.735Z",
+  "totalChapters": 333,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.834Z",
+  "chapterSources": {
+    "jikan": 333,
+    "kitsu": 333,
+    "anilist": 333,
+    "mangadex": 1
+  },
+  "chapterVerifiedAt": "2025-09-24T20:57:11.735Z"
+}

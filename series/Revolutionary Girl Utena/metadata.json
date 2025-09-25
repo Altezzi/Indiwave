@@ -1,0 +1,25 @@
+{
+  "title": "Revolutionary Girl Utena",
+  "description": "A girl fights duels to become a prince",
+  "author": "Chiho Saito",
+  "artist": "Chiho Saito",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b5c810ba-d6d5-485e-8990-2fa48c893af8",
+  "createdAt": "2025-09-24T16:57:28.225Z",
+  "updatedAt": "2025-09-24T20:23:30.631Z",
+  "totalChapters": 24,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.259Z",
+  "chapterSources": {
+    "anilist": 24,
+    "mangadex": 22,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:30.631Z"
+}

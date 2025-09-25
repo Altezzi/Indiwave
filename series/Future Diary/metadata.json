@@ -1,0 +1,25 @@
+{
+  "title": "Future Diary",
+  "description": "Diary users fight to become the next god",
+  "author": "Sakae Esuno",
+  "artist": "Sakae Esuno",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a02e8bd8-e11a-45c6-ae83-d5541ba54745",
+  "createdAt": "2025-09-24T18:02:36.577Z",
+  "updatedAt": "2025-09-24T21:00:55.600Z",
+  "totalChapters": 59,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.390Z",
+  "chapterSources": {
+    "jikan": 59,
+    "kitsu": 59,
+    "anilist": 17
+  },
+  "chapterVerifiedAt": "2025-09-24T21:00:55.600Z"
+}

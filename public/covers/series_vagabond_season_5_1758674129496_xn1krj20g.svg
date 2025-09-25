@@ -1,0 +1,6 @@
+<svg width="300" height="400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="300" height="400" fill="#f0f0f0"/>
+    <rect x="10" y="10" width="280" height="380" fill="#e0e0e0" stroke="#ccc" stroke-width="2"/>
+    <text x="150" y="200" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">Cover Image</text>
+    <text x="150" y="220" text-anchor="middle" font-family="Arial" font-size="12" fill="#999">series_vagabond_season_5_1758674129496_xn1krj20g</text>
+  </svg>

@@ -1,0 +1,28 @@
+{
+  "title": "Solo Leveling: The First Years",
+  "description": "Sung Jin-woo's early years as a weak hunter",
+  "author": "Chugong",
+  "artist": "Dubu",
+  "publisher": "KakaoPage",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": null,
+  "createdAt": "2025-09-24T18:27:55.557Z",
+  "updatedAt": "2025-09-24T20:25:08.923Z",
+  "sources": [
+    "anilist"
+  ],
+  "totalChapters": 201,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.750Z",
+  "chapterSources": {
+    "anilist": 201,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:08.923Z"
+}

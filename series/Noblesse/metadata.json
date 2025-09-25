@@ -1,0 +1,25 @@
+{
+  "title": "Noblesse",
+  "description": "A powerful vampire awakens in modern times",
+  "author": "Jeho Son",
+  "artist": "Kwangsu Lee",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f61952ad-63bb-4e81-a03e-9e50b9e23037",
+  "createdAt": "2025-09-24T18:02:03.377Z",
+  "updatedAt": "2025-09-24T20:20:18.970Z",
+  "totalChapters": 544,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:20.063Z",
+  "chapterSources": {
+    "anilist": 544,
+    "mangadex": 544,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:18.970Z"
+}

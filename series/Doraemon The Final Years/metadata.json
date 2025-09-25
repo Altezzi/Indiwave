@@ -1,0 +1,25 @@
+{
+  "title": "Doraemon: The Final Years",
+  "description": "Doraemon's final years with Nobita",
+  "author": "Fujiko F. Fujio",
+  "artist": "Fujiko F. Fujio",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "28bf349e-41e5-4443-84f0-f0581752519b",
+  "createdAt": "2025-09-24T18:33:50.825Z",
+  "updatedAt": "2025-09-24T20:10:50.018Z",
+  "totalChapters": 821,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.296Z",
+  "chapterSources": {
+    "anilist": 821,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:10:50.018Z"
+}

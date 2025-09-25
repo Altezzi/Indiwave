@@ -1,0 +1,25 @@
+{
+  "title": "Lupin III: The First Years",
+  "description": "Lupin's early years as a thief",
+  "author": "Monkey Punch",
+  "artist": "Monkey Punch",
+  "publisher": "Futabasha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "50fe4f79-8c94-4052-bf66-2cf87f8efd34",
+  "createdAt": "2025-09-24T18:33:41.374Z",
+  "updatedAt": "2025-09-24T20:17:17.133Z",
+  "totalChapters": 109,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.672Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 109,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:17:17.133Z"
+}

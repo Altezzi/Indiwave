@@ -1,0 +1,33 @@
+{
+  "title": "The Rose of Versailles",
+  "description": "A woman disguises herself as a man in pre-revolutionary France",
+  "author": "Riyoko Ikeda",
+  "artist": "Riyoko Ikeda",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [
+    "Historical",
+    "Romance",
+    "Shoujo"
+  ],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "sources": [
+    "anilist",
+    "mangadex"
+  ],
+  "aniListId": 30660,
+  "mangaDexId": "c2f475a6-ad73-40bd-a2ff-cd36b6f4b85c",
+  "createdAt": "2025-09-24T19:33:42.782Z",
+  "updatedAt": "2025-09-24T20:28:39.611Z",
+  "totalChapters": 85,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.019Z",
+  "chapterSources": {
+    "anilist": 85,
+    "mangadex": 14,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:28:39.611Z"
+}

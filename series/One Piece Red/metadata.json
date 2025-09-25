@@ -1,0 +1,23 @@
+{
+  "title": "One Piece: Red",
+  "description": "Luffy faces the mysterious Uta",
+  "author": "Eiichiro Oda",
+  "artist": "Eiichiro Oda",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a2c1d849-af05-4bbc-b2a7-866ebb10331f",
+  "createdAt": "2025-09-24T18:19:11.964Z",
+  "updatedAt": "2025-09-24T21:29:08.301Z",
+  "totalChapters": 6,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:23.905Z",
+  "chapterSources": {
+    "kitsu": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T21:29:08.301Z"
+}

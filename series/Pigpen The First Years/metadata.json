@@ -1,0 +1,26 @@
+{
+  "title": "Pigpen: The First Years",
+  "description": "A boy's early years in the facility",
+  "author": "Kim Carnby",
+  "artist": "Hwang Young-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6639a7a2-5d10-4ffa-a93f-e93367c3b945",
+  "createdAt": "2025-09-24T18:27:28.969Z",
+  "updatedAt": "2025-09-24T21:32:41.998Z",
+  "totalChapters": 68,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.323Z",
+  "chapterSources": {
+    "jikan": 68,
+    "kitsu": 68,
+    "anilist": 68,
+    "mangadex": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T21:32:41.998Z"
+}

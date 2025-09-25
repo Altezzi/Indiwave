@@ -1,0 +1,25 @@
+{
+  "title": "Silver Spoon",
+  "description": "City boy attends agricultural school",
+  "author": "Hiromu Arakawa",
+  "artist": "Hiromu Arakawa",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "3316f5cb-c828-4ad4-b350-5bb474da9542",
+  "createdAt": "2025-09-24T18:04:07.326Z",
+  "updatedAt": "2025-09-24T20:24:40.496Z",
+  "totalChapters": 131,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.913Z",
+  "chapterSources": {
+    "anilist": 92,
+    "mangadex": 131,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:40.496Z"
+}

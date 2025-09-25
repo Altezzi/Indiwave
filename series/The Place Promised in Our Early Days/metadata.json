@@ -1,0 +1,25 @@
+{
+  "title": "The Place Promised in Our Early Days",
+  "description": "Three friends are separated by war and time",
+  "author": "Makoto Shinkai",
+  "artist": "Hitoshi Nishiya",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "69b88d6f-7439-46d0-9983-f4b5ea6a96c9",
+  "createdAt": "2025-09-24T17:37:32.142Z",
+  "updatedAt": "2025-09-24T20:28:21.232Z",
+  "totalChapters": 8,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.648Z",
+  "chapterSources": {
+    "anilist": 8,
+    "mangadex": 8,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:28:21.232Z"
+}

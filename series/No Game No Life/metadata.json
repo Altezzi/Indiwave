@@ -1,33 +1,25 @@
 {
   "title": "No Game No Life",
-  "mangaMDId": "eb57cab2-b5bf-4317-9928-7215921a74d2",
-  "description": "The internet is full of rumors about the Neet and Hikikomori genius gamer siblings Sora and Shiro. The two go as far as to refer to the world as a \"shit game\", but then one day a young man calling himself \"God\" summons them to parallel universe. There, God has forbidden war, and \"everything is to be settled with games\". Yes, even the national borders. Driven into a corner by other species, the 'human species' is down to its last city. Can Sora and Shiro, these related failures of society, become the saviors of humankind in this parallel world?",
-  "authors": [
-    "Kamiya Yuu"
-  ],
-  "artists": [
-    "Hiiragi Mashiro",
-    "Kamiya Yuu"
-  ],
-  "tags": [
-    "Loli",
-    "Action",
-    "Romance",
-    "Comedy",
-    "Incest",
-    "Adventure",
-    "Isekai",
-    "Drama",
-    "Fantasy",
-    "Supernatural",
-    "Adaptation"
-  ],
-  "status": "hiatus",
-  "year": 2013,
-  "contentRating": "suggestive",
+  "description": "Siblings are transported to a world where everything is decided by games",
+  "author": "Yuu Kamiya",
+  "artist": "Yuu Kamiya",
+  "publisher": "Media Factory",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:16:08.621Z",
-  "updatedAt": "2025-09-22T05:25:11.786Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "76f676e8-8594-4f81-9cd2-6e25208929d7",
+  "createdAt": "2025-09-24T16:55:35.019Z",
+  "updatedAt": "2025-09-24T20:20:16.238Z",
+  "totalChapters": 11,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:20.039Z",
+  "chapterSources": {
+    "anilist": 11,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:16.238Z"
 }

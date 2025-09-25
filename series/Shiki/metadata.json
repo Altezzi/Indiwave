@@ -1,0 +1,25 @@
+{
+  "title": "Shiki",
+  "description": "Vampires invade a small village",
+  "author": "Fuyumi Ono",
+  "artist": "Ryu Fujisaki",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "540f5728-6521-4a93-8eb1-059c1a6585e1",
+  "createdAt": "2025-09-24T18:04:00.317Z",
+  "updatedAt": "2025-09-24T20:24:13.911Z",
+  "totalChapters": 62,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.710Z",
+  "chapterSources": {
+    "anilist": 4,
+    "mangadex": 62,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:13.911Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Konosuba",
+  "description": "A NEET is reincarnated in a fantasy world with a useless goddess",
+  "author": "Natsume Akatsuki",
+  "artist": "Masahito Watari",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "03426dd2-63c5-493e-853e-485d7c7dc9c0",
+  "createdAt": "2025-09-24T16:55:36.188Z",
+  "updatedAt": "2025-09-24T21:11:38.127Z",
+  "totalChapters": 127,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.203Z",
+  "chapterSources": {
+    "jikan": 127,
+    "kitsu": 127,
+    "mangadex": 32
+  },
+  "chapterVerifiedAt": "2025-09-24T21:11:38.127Z"
+}

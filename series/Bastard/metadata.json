@@ -1,0 +1,26 @@
+{
+  "title": "Bastard",
+  "description": "A high school student discovers his father is a serial killer",
+  "author": "Kim Carnby",
+  "artist": "Hwang Young-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "bb169078-7289-4f95-948f-9315960e6905",
+  "createdAt": "2025-09-24T18:26:53.471Z",
+  "updatedAt": "2025-09-24T20:39:29.838Z",
+  "totalChapters": 94,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.598Z",
+  "chapterSources": {
+    "jikan": 94,
+    "kitsu": 94,
+    "anilist": 76,
+    "mangadex": 93
+  },
+  "chapterVerifiedAt": "2025-09-24T20:39:29.838Z"
+}

@@ -4,7 +4,7 @@ import path from 'path';
 import { prisma } from '@/lib/prisma';
 
 // POST /api/dexi/mangadex - Import manga from MangaDex with cover art
-export async function POST(request: NextRequest) {
+export async function POST(request) {
   try {
     const body = await request.json();
     const { mangaId, coverUrl } = body;
@@ -128,7 +128,7 @@ export async function POST(request: NextRequest) {
 }
 
 // GET /api/dexi/mangadex - Search manga on MangaDex
-export async function GET(request: NextRequest) {
+export async function GET(request) {
   try {
     const searchParams = request.nextUrl.searchParams;
     const query = searchParams.get('q');
@@ -160,7 +160,7 @@ export async function GET(request: NextRequest) {
 }
 
 // Helper function to fetch manga from MangaDex
-async function fetchMangaFromMangaDex(mangaId: string) {
+async function fetchMangaFromMangaDex(mangaId) {
   try {
     const response = await fetch(`https://api.mangadex.org/manga/${mangaId}?includes[]=author&includes[]=artist&includes[]=cover_art`);
     
@@ -212,7 +212,7 @@ async function fetchMangaFromMangaDex(mangaId: string) {
 }
 
 // Helper function to search MangaDex
-async function searchMangaDex(query: string, limit: number) {
+async function searchMangaDex(query, limit) {
   try {
     const response = await fetch(`https://api.mangadex.org/manga?title=${encodeURIComponent(query)}&limit=${limit}&includes[]=cover_art`);
     
@@ -245,7 +245,7 @@ async function searchMangaDex(query: string, limit: number) {
 }
 
 // Helper function to download cover art
-async function downloadCoverArt(url: string, seriesPath: string, title: string) {
+async function downloadCoverArt(url, seriesPath, title) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -280,4 +280,3 @@ async function downloadCoverArt(url: string, seriesPath: string, title: string) 
     throw error;
   }
 }
-

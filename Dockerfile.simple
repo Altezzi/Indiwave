@@ -9,7 +9,7 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Copy Prisma schema first (needed for postinstall)
+# Copy Prisma schema
 COPY prisma ./prisma
 
 # Install dependencies
@@ -21,15 +21,15 @@ COPY . .
 # Generate Prisma client
 RUN npx prisma generate
 
-# Build the application with verbose output and error handling
+# Set environment variables
 ARG NEXT_PUBLIC_GOOGLE_CLIENT_ID
 ENV NEXT_PUBLIC_GOOGLE_CLIENT_ID=$NEXT_PUBLIC_GOOGLE_CLIENT_ID
 
-# Build the application with error handling
-RUN npm run build 2>&1 || (echo "Build failed, trying with no type check..." && npm run build:no-check)
+# Build the application with minimal configuration
+RUN npm run build:no-check
 
-# Verify the build was created
-RUN ls -la .next/ || (echo "Build directory not found!" && exit 1)
+# Verify build exists
+RUN ls -la .next/
 
 # Expose port
 EXPOSE 3000

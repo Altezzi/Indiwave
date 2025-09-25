@@ -52,7 +52,9 @@ export default function UploadSeriesPage() {
     readingLinks: []
   });
   const [newReadingLink, setNewReadingLink] = useState({ label: "", url: "" });
-  const [selectedTag, setSelectedTag] = useState("");
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [tagSearchQuery, setTagSearchQuery] = useState("");
+  const [showTagPopup, setShowTagPopup] = useState(false);
   const [coverPreview, setCoverPreview] = useState<string | null>(null);
 
   const handleCoverChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -86,21 +88,35 @@ export default function UploadSeriesPage() {
     }));
   };
 
-  const addTag = () => {
-    if (selectedTag && !uploadData.tags.includes(selectedTag)) {
+  const toggleTag = (tag: string) => {
+    if (uploadData.tags.includes(tag)) {
+      // Remove tag
       setUploadData(prev => ({
         ...prev,
-        tags: [...prev.tags, selectedTag]
+        tags: prev.tags.filter(t => t !== tag)
       }));
-      setSelectedTag("");
+    } else {
+      // Add tag
+      setUploadData(prev => ({
+        ...prev,
+        tags: [...prev.tags, tag]
+      }));
     }
   };
 
-  const removeTag = (index: number) => {
-    setUploadData(prev => ({
-      ...prev,
-      tags: prev.tags.filter((_, i) => i !== index)
-    }));
+  // Get all tags from all categories
+  const getAllTags = () => {
+    return Object.values(TAG_CATEGORIES).flat();
+  };
+
+  // Filter tags based on search query
+  const getFilteredTags = () => {
+    if (!tagSearchQuery.trim()) return [];
+    const query = tagSearchQuery.toLowerCase();
+    return getAllTags().filter(tag => 
+      tag.toLowerCase().includes(query) && 
+      !uploadData.tags.includes(tag)
+    );
   };
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -168,6 +184,38 @@ export default function UploadSeriesPage() {
       padding: "32px 16px",
       minHeight: "calc(100vh - 160px)"
     }}>
+      {/* Back to Home Button */}
+      <div style={{ marginBottom: "24px" }}>
+        <button
+          onClick={() => router.push("/home")}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            padding: "12px 16px",
+            background: "transparent",
+            color: "var(--fg)",
+            border: "1px solid var(--border)",
+            borderRadius: "8px",
+            cursor: "pointer",
+            fontSize: "14px",
+            fontWeight: "500",
+            transition: "all 0.2s ease"
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)";
+            e.currentTarget.style.borderColor = "var(--accent)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "transparent";
+            e.currentTarget.style.borderColor = "var(--border)";
+          }}
+        >
+          <span style={{ fontSize: "16px" }}>←</span>
+          <span>Back to Home</span>
+        </button>
+      </div>
+
       <div style={{ 
         background: "rgba(var(--bg-rgb, 18, 18, 18), 0.6)",
         borderRadius: "16px",
@@ -301,89 +349,249 @@ export default function UploadSeriesPage() {
               color: "var(--muted-foreground)", 
               margin: "0 0 16px 0" 
             }}>
-              Select tags from the list below to help categorize this series
+              Search for tags or browse all categories to select them.
             </p>
 
-            {/* Add new tag */}
-            <div style={{ display: "flex", gap: "12px", marginBottom: "16px" }}>
-              <select
-                value={selectedTag}
-                onChange={(e) => setSelectedTag(e.target.value)}
-                style={{
-                  flex: 1,
-                  padding: "12px 16px",
+            {/* Tag Search Bar */}
+            <div style={{ position: "relative", marginBottom: "16px" }}>
+              <div style={{ display: "flex", gap: "8px" }}>
+                <input
+                  type="text"
+                  placeholder="Search for tags..."
+                  value={tagSearchQuery}
+                  onChange={(e) => setTagSearchQuery(e.target.value)}
+                  style={{
+                    flex: 1,
+                    padding: "12px 16px",
+                    border: "1px solid var(--border)",
+                    borderRadius: "8px",
+                    background: "var(--bg)",
+                    color: "var(--fg)",
+                    fontSize: "14px"
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowTagPopup(!showTagPopup)}
+                  style={{
+                    padding: "12px 16px",
+                    background: "var(--accent)",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "8px",
+                    fontSize: "14px",
+                    cursor: "pointer",
+                    whiteSpace: "nowrap"
+                  }}
+                >
+                  Browse All
+                </button>
+              </div>
+
+              {/* Search Results Dropdown */}
+              {tagSearchQuery.trim() && getFilteredTags().length > 0 && (
+                <div style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: 0,
+                  right: "100px",
+                  zIndex: 1000,
+                  background: "var(--bg)",
                   border: "1px solid var(--border)",
                   borderRadius: "8px",
-                  background: "var(--bg)",
-                  color: "var(--fg)",
-                  fontSize: "14px"
-                }}
-              >
-                <option value="">Select a tag to add...</option>
-                {PREDEFINED_TAGS
-                  .filter(tag => !uploadData.tags.includes(tag))
-                  .sort()
-                  .map(tag => (
-                    <option key={tag} value={tag}>{tag}</option>
-                  ))}
-              </select>
-              <button
-                type="button"
-                onClick={addTag}
-                disabled={!selectedTag || uploadData.tags.includes(selectedTag)}
-                style={{
-                  padding: "12px 16px",
-                  background: "var(--accent)",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "8px",
-                  fontSize: "14px",
-                  cursor: "pointer",
-                  opacity: (!selectedTag || uploadData.tags.includes(selectedTag)) ? 0.5 : 1
-                }}
-              >
-                Add Tag
-              </button>
-            </div>
-
-            {/* Display added tags */}
-            {uploadData.tags.length > 0 && (
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                {uploadData.tags.map((tag, index) => (
-                  <div key={index} style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "8px",
-                    padding: "6px 12px",
-                    background: "rgba(138, 180, 255, 0.1)",
-                    border: "1px solid rgba(138, 180, 255, 0.3)",
-                    borderRadius: "16px",
-                    fontSize: "14px"
-                  }}>
-                    <span style={{ color: "var(--fg)" }}>
-                      {tag}
-                    </span>
+                  marginTop: "4px",
+                  maxHeight: "200px",
+                  overflowY: "auto",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.3)"
+                }}>
+                  {getFilteredTags().slice(0, 10).map(tag => (
                     <button
+                      key={tag}
                       type="button"
-                      onClick={() => removeTag(index)}
+                      onClick={() => {
+                        toggleTag(tag);
+                        setTagSearchQuery("");
+                      }}
                       style={{
-                        background: "transparent",
-                        color: "var(--muted-foreground)",
+                        width: "100%",
+                        padding: "12px 16px",
                         border: "none",
+                        background: "transparent",
+                        color: "var(--fg)",
+                        fontSize: "14px",
+                        textAlign: "left",
                         cursor: "pointer",
-                        fontSize: "16px",
-                        padding: "0",
-                        width: "16px",
-                        height: "16px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center"
+                        borderBottom: "1px solid var(--border)"
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "transparent";
                       }}
                     >
-                      ×
+                      {tag}
                     </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Tag Categories Popup */}
+            {showTagPopup && (
+              <div style={{
+                position: "fixed",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                zIndex: 2000,
+                background: "var(--bg)",
+                border: "1px solid var(--border)",
+                borderRadius: "12px",
+                padding: "24px",
+                maxWidth: "800px",
+                maxHeight: "80vh",
+                overflowY: "auto",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.5)"
+              }}>
+                <div style={{ 
+                  display: "flex", 
+                  justifyContent: "space-between", 
+                  alignItems: "center", 
+                  marginBottom: "20px" 
+                }}>
+                  <h2 style={{ 
+                    fontSize: "18px", 
+                    fontWeight: "600", 
+                    color: "var(--fg)", 
+                    margin: 0 
+                  }}>
+                    Select Tags
+                  </h2>
+                  <button
+                    type="button"
+                    onClick={() => setShowTagPopup(false)}
+                    style={{
+                      background: "transparent",
+                      border: "none",
+                      color: "var(--muted-foreground)",
+                      fontSize: "20px",
+                      cursor: "pointer",
+                      padding: "4px"
+                    }}
+                  >
+                    ×
+                  </button>
+                </div>
+
+                {/* Tag Categories */}
+                {Object.entries(TAG_CATEGORIES).map(([categoryName, tags]) => (
+                  <div key={categoryName} style={{ marginBottom: "24px" }}>
+                    <h3 style={{ 
+                      fontSize: "14px", 
+                      fontWeight: "600", 
+                      color: "var(--fg)", 
+                      margin: "0 0 12px 0",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.5px"
+                    }}>
+                      {categoryName}
+                    </h3>
+                    <div style={{ 
+                      display: "flex", 
+                      flexWrap: "wrap", 
+                      gap: "8px" 
+                    }}>
+                      {tags.map(tag => (
+                        <button
+                          key={tag}
+                          type="button"
+                          onClick={() => toggleTag(tag)}
+                          style={{
+                            padding: "8px 12px",
+                            border: "1px solid var(--border)",
+                            borderRadius: "16px",
+                            background: uploadData.tags.includes(tag) 
+                              ? "rgba(138, 180, 255, 0.2)" 
+                              : "var(--bg)",
+                            color: uploadData.tags.includes(tag) 
+                              ? "var(--accent)" 
+                              : "var(--fg)",
+                            fontSize: "13px",
+                            fontWeight: uploadData.tags.includes(tag) ? "600" : "400",
+                            cursor: "pointer",
+                            transition: "all 0.2s ease",
+                            borderColor: uploadData.tags.includes(tag) 
+                              ? "rgba(138, 180, 255, 0.4)" 
+                              : "var(--border)"
+                          }}
+                          onMouseEnter={(e) => {
+                            if (!uploadData.tags.includes(tag)) {
+                              e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)";
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (!uploadData.tags.includes(tag)) {
+                              e.currentTarget.style.background = "var(--bg)";
+                            }
+                          }}
+                        >
+                          {tag}
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 ))}
+              </div>
+            )}
+
+            {/* Overlay for popup */}
+            {showTagPopup && (
+              <div
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: "rgba(0, 0, 0, 0.5)",
+                  zIndex: 1999
+                }}
+                onClick={() => setShowTagPopup(false)}
+              />
+            )}
+
+            {/* Selected Tags Summary */}
+            {uploadData.tags.length > 0 && (
+              <div style={{ 
+                marginTop: "20px", 
+                padding: "16px", 
+                background: "rgba(138, 180, 255, 0.1)", 
+                borderRadius: "8px",
+                border: "1px solid rgba(138, 180, 255, 0.2)"
+              }}>
+                <h4 style={{ 
+                  fontSize: "14px", 
+                  fontWeight: "600", 
+                  color: "var(--fg)", 
+                  margin: "0 0 8px 0" 
+                }}>
+                  Selected Tags ({uploadData.tags.length})
+                </h4>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                  {uploadData.tags.map(tag => (
+                    <span key={tag} style={{ 
+                      padding: "4px 8px",
+                      background: "rgba(138, 180, 255, 0.2)",
+                      color: "var(--accent)",
+                      borderRadius: "12px",
+                      fontSize: "12px",
+                      fontWeight: "500"
+                    }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             )}
           </div>

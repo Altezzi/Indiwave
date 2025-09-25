@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
-    "build:no-check": "prisma generate && SKIP_TYPE_CHECK=true next build",
+    "build:no-check": "prisma generate && cross-env SKIP_TYPE_CHECK=true next build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
@@ -34,6 +34,7 @@
     "@types/node": "20.19.17",
     "@types/react": "18.3.24",
     "@types/react-dom": "^18.3.0",
+    "cross-env": "^10.0.0",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
     "rimraf": "^6.0.1",

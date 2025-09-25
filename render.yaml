@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: indiwave
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: file:./dev.db
+      - key: NEXTAUTH_URL
+        value: https://indiwave.onrender.com
+      - key: NEXTAUTH_SECRET
+        value: 4702b5e97e6ea07133f16d3659162286c2c58e932c0203393a82dc153c2e337e

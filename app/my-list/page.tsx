@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSession } from "next-auth/react";
 import Link from "next/link";
 
 export default function MyListPage() {
-  const { data: session, status } = useSession();
+  // Temporarily disable authentication until NextAuth is properly configured
+  const session = null; // { user: { id: 'demo-user' } }; // Uncomment for demo mode
+  const status = "authenticated"; // "loading" or "unauthenticated"
   const [activeTab, setActiveTab] = useState<"all" | "favorites">("all");
   const [followedSeries, setFollowedSeries] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);

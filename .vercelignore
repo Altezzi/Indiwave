@@ -1,0 +1,67 @@
+# Large directories that aren't needed for build
+series/
+scripts/
+node_modules/
+
+# Build artifacts
+.next/
+out/
+dist/
+build/
+
+# Docker files
+Dockerfile*
+docker-compose*
+nginx.conf
+
+# Deployment scripts
+deploy-*.ps1
+deploy-*.sh
+
+# Environment files
+.env*
+
+# Database files
+*.db
+*.db-journal
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.npm/
+.yarn/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Package files
+*.tgz
+
+# Optional REPL history
+.node_repl_history

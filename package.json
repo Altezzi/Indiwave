@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
+    "vercel-build": "prisma generate && next build",
     "build:no-check": "prisma generate && cross-env SKIP_TYPE_CHECK=true next build",
     "start": "next start",
     "lint": "next lint",

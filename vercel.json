@@ -1,8 +1,9 @@
 {
-  "buildCommand": "npm run build",
+  "version": 2,
+  "buildCommand": "NODE_OPTIONS='--max-old-space-size=4096' npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "installCommand": "npm install",
+  "installCommand": "npm install --legacy-peer-deps",
   "devCommand": "npm run dev",
   "regions": ["iad1"],
   "functions": {
@@ -15,5 +16,9 @@
       "source": "/api/series-covers/(.*)",
       "destination": "/api/series-covers/$1"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  }
 }

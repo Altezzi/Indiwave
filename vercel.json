@@ -1,8 +1,19 @@
 {
+  "version": 2,
+  "buildCommand": "npm run vercel-build",
+  "installCommand": "npm install",
   "env": {
     "DATABASE_URL": "postgresql://postgres:Impetigo8423@@db.uvzlcfqbwwaqafzjeivx.supabase.co:5432/postgres",
     "NEXTAUTH_URL": "https://indiwave.vercel.app",
     "NEXTAUTH_SECRET": "4ED+X2iduBE7eAaRd3PhYY29P775XmfU6410zdIXw2U=",
     "NODE_ENV": "production"
+  },
+  "build": {
+    "env": {
+      "DATABASE_URL": "postgresql://postgres:Impetigo8423@@db.uvzlcfqbwwaqafzjeivx.supabase.co:5432/postgres",
+      "NEXTAUTH_URL": "https://indiwave.vercel.app",
+      "NEXTAUTH_SECRET": "4ED+X2iduBE7eAaRd3PhYY29P775XmfU6410zdIXw2U=",
+      "NODE_ENV": "production"
+    }
   }
 }

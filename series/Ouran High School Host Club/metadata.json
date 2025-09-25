@@ -1,103 +1,26 @@
 {
   "title": "Ouran High School Host Club",
-  "description": "One day, Haruhi, a scholarship student at exclusive Ouran High School, breaks an $80,000 vase that belongs to the \"Host Club,\" a mysterious campus group consisting of six super-rich (and gorgeous) guys. To pay back the damages, she is forced to work for the club, and it's there that she discovers just how wealthy the boys are and how different they are from everybody else. [Viz]",
-  "authors": [],
-  "artists": [],
-  "year": 2003,
-  "tags": [
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "65761a2a-415e-47f3-bef2-a9dababba7a6",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Reverse Harem"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "9ab53f92-3eed-4e9b-903a-917c86035ee3",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Crossdressing"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A girl accidentally joins a host club",
+  "author": "Bisco Hatori",
+  "artist": "Bisco Hatori",
+  "publisher": "Hakusensha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "661a792b-6729-4f54-af20-4108db55ccf4"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "661a792b-6729-4f54-af20-4108db55ccf4",
+  "createdAt": "2025-09-24T17:59:22.110Z",
+  "updatedAt": "2025-09-24T21:31:16.517Z",
+  "totalChapters": 87,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.068Z",
+  "chapterSources": {
+    "jikan": 87,
+    "kitsu": 87,
+    "anilist": 97,
+    "mangadex": 83
+  },
+  "chapterVerifiedAt": "2025-09-24T21:31:16.517Z"
 }

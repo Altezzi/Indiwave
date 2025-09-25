@@ -1,33 +1,25 @@
 {
   "title": "Soul Eater",
-  "mangaMDId": "53ef1720-7a5d-40ad-90b0-2f9ca0a1ab01",
-  "description": "Maka is a weapon meister, determined to turn her partner, a living scythe named Soul Eater, into a powerful death scythe — the ultimate weapon of Death himself! Charged with the task of collecting and devouring the tainted souls of ninety-nine humans and one witch, Maka and her fellow meisters strive to master their weapons as they face off against the bizarre and dangerous minions of the underworld. But the meisters’ own personal quirks may prove a bigger obstacle than any sultry enchantress!",
-  "authors": [
-    "Ookubo Atsushi "
-  ],
-  "artists": [
-    "Ookubo Atsushi "
-  ],
-  "tags": [
-    "Action",
-    "Comedy",
-    "Martial Arts",
-    "Adventure",
-    "Drama",
-    "School Life",
-    "Horror",
-    "Fantasy",
-    "Slice of Life",
-    "Supernatural",
-    "Mystery",
-    "Tragedy"
-  ],
-  "status": "completed",
-  "year": 2004,
-  "contentRating": "suggestive",
+  "description": "Students at a school for weapon meisters",
+  "author": "Atsushi Ohkubo",
+  "artist": "Atsushi Ohkubo",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:16:56.263Z",
-  "updatedAt": "2025-09-22T05:25:33.600Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "53ef1720-7a5d-40ad-90b0-2f9ca0a1ab01",
+  "createdAt": "2025-09-24T18:04:20.582Z",
+  "updatedAt": "2025-09-24T20:25:13.563Z",
+  "totalChapters": 113,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.850Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 113,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:13.563Z"
 }

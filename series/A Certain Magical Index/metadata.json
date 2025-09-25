@@ -1,0 +1,25 @@
+{
+  "title": "A Certain Magical Index",
+  "description": "A boy with the power to negate magic lives in Academy City",
+  "author": "Kazuma Kamachi",
+  "artist": "Chuya Kogino",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "229e5177-2e71-4642-bd56-a9b0b0ba0e60",
+  "createdAt": "2025-09-24T17:35:53.990Z",
+  "updatedAt": "2025-09-24T20:36:07.310Z",
+  "totalChapters": 133,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:00.699Z",
+  "chapterSources": {
+    "jikan": 133,
+    "kitsu": 133,
+    "anilist": 132
+  },
+  "chapterVerifiedAt": "2025-09-24T20:36:07.310Z"
+}

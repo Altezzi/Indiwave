@@ -1,0 +1,26 @@
+{
+  "title": "Kuroko's Basketball: Extra Game",
+  "description": "A sequel to Kuroko's Basketball",
+  "author": "Tadatoshi Fujimaki",
+  "artist": "Tadatoshi Fujimaki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8cfc7947-9f65-4cbc-bab8-470e46596210",
+  "createdAt": "2025-09-24T17:07:52.542Z",
+  "updatedAt": "2025-09-24T21:11:49.546Z",
+  "totalChapters": 10,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.395Z",
+  "chapterSources": {
+    "jikan": 10,
+    "kitsu": 10,
+    "anilist": 9,
+    "mangadex": 8
+  },
+  "chapterVerifiedAt": "2025-09-24T21:11:49.546Z"
+}

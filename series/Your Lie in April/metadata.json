@@ -1,103 +1,19 @@
 {
   "title": "Your Lie in April",
-  "description": "Piano prodigy Arima Kosei dominated the competition and all child musicians knew his name. But after his mother, who was also his instructor, passed away, he had a mental breakdown while performing at a recital that resulted in him no longer being able to hear the sound of his piano even though his hearing was perfectly fine. Even two years later, Kosei hasn’t touched the piano and views the world in monotone, and without any flair or color. He was content at living out his life with his good friends Tsubaki and Watari until, one day, a girl changed everything. Miyazono Kaori is a pretty, free spirited violinist whose playing style reflects her personality. Kaori helps Kosei return to the music world and show that it should be free and mold breaking unlike the structured and rigid style Kosei was used to.  \n  \nNominated for the 2012 Manga Taisho Award.  \nWinner of the Kodansha Manga Award (2013).",
-  "authors": [],
-  "artists": [],
-  "year": 2011,
-  "tags": [
-    {
-      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Award Winning"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f42fbf9e-188a-447b-9fdc-f19dc1e4d685",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Music"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A pianist rediscovers music through a violinist",
+  "author": "Naoshi Arakawa",
+  "artist": "Naoshi Arakawa",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "eab876cc-a233-4d73-a6c3-a94e7baa70be"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d68f0bfb-6ef5-4b98-bf6b-a76ec4c75d2e",
+  "createdAt": "2025-09-24T18:05:51.599Z",
+  "updatedAt": "2025-09-24T20:00:32.995Z",
+  "totalChapters": 44,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:32.995Z"
 }

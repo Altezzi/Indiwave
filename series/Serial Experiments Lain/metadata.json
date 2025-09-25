@@ -1,0 +1,25 @@
+{
+  "title": "Serial Experiments Lain",
+  "description": "A girl discovers the wired world",
+  "author": "Yoshitoshi ABe",
+  "artist": "Yoshitoshi ABe",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "9ba83841-f8f0-4ea6-934a-f3e1df40eb34",
+  "createdAt": "2025-09-24T18:10:42.690Z",
+  "updatedAt": "2025-09-24T20:24:04.533Z",
+  "totalChapters": 1,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.625Z",
+  "chapterSources": {
+    "anilist": 1,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:04.533Z"
+}

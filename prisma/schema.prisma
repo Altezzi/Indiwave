@@ -73,7 +73,7 @@ model User {
   sessions        Session[]
   auditLogs       AuditLog[]
   createdSeries   Series[]       // Series created by user
-  createdSeasons  Season[]       // Seasons created by user
+  createdVolumes  Volume[]       // Volumes created by user
   createdChapters Chapter[]      // Chapters created by user
   comments        Comment[]
   creatorClaims   CreatorClaim[]
@@ -84,59 +84,44 @@ model User {
   @@map("users")
 }
 
-// Main Series model
+// Main Series model - simplified and clean
 model Series {
   id            String    @id @default(cuid())
   title         String
-  chapterNumber Int?      // Optional since some series might not have chapter numbers
-  pages         String?   // Optional since some series might not have pages
+  description   String?
+  coverImage    String?
   isPublished   Boolean   @default(false)
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   creatorId     String
   creator       User      @relation(fields: [creatorId], references: [id])
-  comments      Comment[]
   
-  // MangaDex import fields
-  mangaMDChapterId       String?
-  mangaMDChapterTitle    String?
-  mangaMDChapterNumber   Float?
-  mangaMDPages           Int?
-  mangaMDTranslatedLanguage String?
-  mangaMDPublishAt       DateTime?
-
   // Series metadata
-  description    String?
-  coverImage     String?
-  mangaMDId      String?        @unique
-  mangaMDTitle   String?
-  mangaMDStatus  String?
-  mangaMDYear    Int?
-  contentRating  String?
-  tags           String?
-  authors        String?
-  artists        String?
-  altTitles      String?
-  isImported     Boolean        @default(false)
-
-  // Season relationship
-  seasons        Season[]
-
+  contentRating String?
+  tags          String?
+  authors       String?
+  artists       String?
+  altTitles     String?
+  
+  // Volume relationship
+  volumes       Volume[]
+  
   // Relationships
-  chapters       Chapter[]      // Chapters within this series/season
-  creatorClaims  CreatorClaim[]
+  chapters      Chapter[]      // Chapters within this series/season
+  comments      Comment[]
+  creatorClaims CreatorClaim[]
   libraryEntries LibraryEntry[]
-  ratings        Rating[]
-  userUrls       UserUrl[]
+  ratings       Rating[]
+  userUrls      UserUrl[]
 
   @@map("series")
 }
 
-// Season model for organizing series into seasons
-model Season {
+// Volume model for organizing series into volumes
+model Volume {
   id            String    @id @default(cuid())
   title         String
-  seasonNumber  Int
+  volumeNumber  Int
   description   String?
   coverImage    String?
   isPublished   Boolean   @default(false)
@@ -149,19 +134,12 @@ model Season {
   chapters      Chapter[]
   creatorId     String
   creator       User      @relation(fields: [creatorId], references: [id])
-  
-  // MangaDex import fields
-  mangaMDSeasonId       String?
-  mangaMDSeasonTitle    String?
-  mangaMDSeasonNumber   Int?
-  mangaMDTranslatedLanguage String?
-  mangaMDPublishAt       DateTime?
 
-  @@unique([seriesId, seasonNumber])
-  @@map("seasons")
+  @@unique([seriesId, volumeNumber])
+  @@map("volumes")
 }
 
-// New Chapter model for individual chapters within series or seasons
+// Chapter model for individual chapters within series or volumes
 model Chapter {
   id            String    @id @default(cuid())
   title         String
@@ -171,23 +149,15 @@ model Chapter {
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   
-  // Can belong to either a Series (main series) or a Season
-  seriesId      String?   // Points to the parent Series (null if belongs to season)
-  seasonId      String?   // Points to the parent Season (null if belongs to main series)
+  // Can belong to either a Series (main series) or a Volume
+  seriesId      String?   // Points to the parent Series (null if belongs to volume)
+  volumeId      String?   // Points to the parent Volume (null if belongs to main series)
   
   creatorId     String
   creator       User      @relation(fields: [creatorId], references: [id])
   series        Series?   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
-  season        Season?   @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  volume        Volume?   @relation(fields: [volumeId], references: [id], onDelete: Cascade)
   comments      Comment[]
-  
-  // MangaDex import fields
-  mangaMDChapterId       String?
-  mangaMDChapterTitle    String?
-  mangaMDChapterNumber   Float?
-  mangaMDPages           Int?
-  mangaMDTranslatedLanguage String?
-  mangaMDPublishAt       DateTime?
 
   @@map("chapters")
 }
@@ -212,7 +182,7 @@ model UserUrl {
   id        String   @id @default(cuid())
   url       String
   label     String
-  seriesId  String?  // Now points to Series instead of chapterId
+  seriesId  String?  // Points to Series
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   userId    String
@@ -246,7 +216,7 @@ model Rating {
   userId    String
   seriesId  String
   series    Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id])
 
   @@unique([userId, seriesId])
   @@map("ratings")

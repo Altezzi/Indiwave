@@ -1,0 +1,25 @@
+{
+  "title": "Drakengard",
+  "description": "Dark fantasy about war and dragons",
+  "author": "Yoko Taro",
+  "artist": "Jun Eishima",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "5e6f5c76-e13f-47a7-826c-2a3d7b087dcf",
+  "createdAt": "2025-09-24T18:10:50.983Z",
+  "updatedAt": "2025-09-24T20:11:31.754Z",
+  "totalChapters": 21,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.573Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 21,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:11:31.754Z"
+}

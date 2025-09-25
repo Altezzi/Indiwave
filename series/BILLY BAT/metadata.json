@@ -1,194 +1,25 @@
 {
-  "title": "BILLY BAT",
-  "description": "Japanese-American Kevin Yamagata now authors the renowned detective comic book \"Billy Bat\" after serving in the Allied Forces in World War II. But as his series becomes a massive hit, Kevin discovers that his famed character, Billy Bat, already existed before within a Japanese comic. Worried that he may have unconsciously copied something he saw during his time there, Kevin returns to Japan to find Billy Bat's original creator and seek permission for him to use their character. However, as he traces back Billy Bat's roots, he finds himself unraveling a dark and twisted history of murders that somehow involve the character he thought he created.\n\n---\n**Awards Won:**\n\n- Winner of the [Lucca Comics Awards](https://luccacomicsawards.com/albo-doro-2/) for Best Manga Series in 2012.\n- Winner of the [Max und Moritz Award](https://www.comic-salon.de/en/max-and-moritz-award) for Best International Comic in 2014.\n\n---\nSee [MyAnimeList](https://myanimelist.net/manga/11054/Billy_Bat?q=billy%20bat&cat=manga) for Manga Details.\n\n- [Wikipedia](https://en.wikipedia.org/wiki/Billy_Bat)",
-  "authors": [],
-  "artists": [],
-  "year": 2008,
-  "tags": [
-    {
-      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Thriller"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Award Winning"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sci-Fi"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "292e862b-2d17-4062-90a2-0356caa4ae27",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Time Travel"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "33771934-028e-4cb3-8744-691e866a923e",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Historical"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Psychological"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Survival"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "92d6d951-ca5e-429c-ac78-451071cbf064",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Office Workers"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b1e97889-25b4-4258-b28b-cd7f4d28ea9b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Philosophical"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Gore"
-        },
-        "description": {},
-        "group": "content",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Supernatural"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "ee968100-4191-4968-93d3-f82d72be7e46",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Mystery"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
-  "contentRating": "suggestive",
-  "mangaMDId": "e5357466-c8a2-4259-9b02-2580185bd2bb"
+  "title": "Billy Bat",
+  "description": "A manga artist uncovers a conspiracy",
+  "author": "Naoki Urasawa",
+  "artist": "Naoki Urasawa",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e5357466-c8a2-4259-9b02-2580185bd2bb",
+  "createdAt": "2025-09-24T18:00:30.818Z",
+  "updatedAt": "2025-09-24T20:07:43.596Z",
+  "totalChapters": 165,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.900Z",
+  "chapterSources": {
+    "anilist": 165,
+    "mangadex": 165,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:07:43.596Z"
 }

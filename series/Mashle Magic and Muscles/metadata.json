@@ -1,47 +1,25 @@
 {
   "title": "Mashle: Magic and Muscles",
-  "mangaMDId": "558c2122-7342-4649-85e9-a866727bb2e8",
-  "description": "This is a world of magic where magic is used for everything. But deep in the forest exists a young man who spends his time training and bulking up. He can't use magic, but he enjoys a peaceful life with his father. But one day, his life is put in danger! Will his muscular body protect him from the magic users who are out to get him? Powerfully trained muscles crush magic as this abnormal magical fantasy begins!\n\n---\n\n**Officially Translated:**  \n- In French by [Kazé](http://manga.kaze.fr/)",
-  "authors": [
-    "Komoto Hajime"
-  ],
-  "artists": [
-    "Komoto Hajime"
-  ],
-  "tags": [
-    "Monsters",
-    "Action",
-    "Comedy",
-    "Martial Arts",
-    "Magic",
-    "School Life",
-    "Fantasy",
-    "Slice of Life",
-    "Supernatural"
-  ],
-  "status": "completed",
-  "year": 2020,
+  "description": "A boy without magic uses pure muscle to compete in a magical school",
+  "author": "Hajime Komoto",
+  "artist": "Hajime Komoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "en": "Mashle"
-    },
-    {
-      "ru": "Магия и мускулы"
-    },
-    {
-      "ja": "マッシュル -MASHLE-"
-    },
-    {
-      "fa": "ماشل"
-    },
-    {
-      "fa": "ماشل : جادو و عضله"
-    }
-  ],
-  "createdAt": "2025-09-23T07:40:54.371Z",
-  "updatedAt": "2025-09-23T07:40:54.371Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Mashle Magic and Muscles"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "558c2122-7342-4649-85e9-a866727bb2e8",
+  "createdAt": "2025-09-24T17:01:51.387Z",
+  "updatedAt": "2025-09-24T20:17:49.917Z",
+  "totalChapters": 162,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.031Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 162,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:17:49.917Z"
 }

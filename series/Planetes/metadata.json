@@ -1,0 +1,25 @@
+{
+  "title": "Planetes",
+  "description": "Space debris collectors in the near future",
+  "author": "Makoto Yukimura",
+  "artist": "Makoto Yukimura",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "3be16cf9-fe5c-431e-b528-98551d3d3bb0",
+  "createdAt": "2025-09-24T17:58:54.690Z",
+  "updatedAt": "2025-09-24T20:22:01.283Z",
+  "totalChapters": 26,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.365Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 26,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:22:01.283Z"
+}

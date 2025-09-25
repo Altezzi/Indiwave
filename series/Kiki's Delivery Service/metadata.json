@@ -1,0 +1,24 @@
+{
+  "title": "Kiki's Delivery Service",
+  "description": "A young witch starts a delivery service",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "4fac3f96-b558-41db-9ec1-520ff48e59dc",
+  "createdAt": "2025-09-24T16:57:39.391Z",
+  "updatedAt": "2025-09-24T21:08:52.285Z",
+  "totalChapters": 73,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.369Z",
+  "chapterSources": {
+    "jikan": 73,
+    "kitsu": 22
+  },
+  "chapterVerifiedAt": "2025-09-24T21:08:52.285Z"
+}

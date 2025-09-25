@@ -1,0 +1,25 @@
+{
+  "title": "Dice: The Cube That Changes Everything",
+  "description": "A dice app changes people's lives",
+  "author": "Yun Hyunseok",
+  "artist": "Yun Hyunseok",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7cc6c48f-ba3a-4b7a-8817-8ae28204e9e8",
+  "createdAt": "2025-09-24T18:02:12.381Z",
+  "updatedAt": "2025-09-24T20:10:39.193Z",
+  "totalChapters": 388,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.219Z",
+  "chapterSources": {
+    "anilist": 388,
+    "mangadex": 388,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:10:39.193Z"
+}

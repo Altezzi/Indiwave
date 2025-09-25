@@ -1,0 +1,26 @@
+{
+  "title": "Blame!: The First Years",
+  "description": "Killy's early years in the megastructure",
+  "author": "Tsutomu Nihei",
+  "artist": "Tsutomu Nihei",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8715a978-d873-4398-8061-b959f72bea58",
+  "createdAt": "2025-09-24T18:20:05.321Z",
+  "updatedAt": "2025-09-24T20:43:50.529Z",
+  "totalChapters": 66,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:04.210Z",
+  "chapterSources": {
+    "jikan": 9,
+    "kitsu": 23,
+    "anilist": 66,
+    "mangadex": 102
+  },
+  "chapterVerifiedAt": "2025-09-24T20:43:50.529Z"
+}

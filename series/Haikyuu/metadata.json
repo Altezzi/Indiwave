@@ -1,21 +1,20 @@
 {
-  "title": "Haikyuu!!",
-  "description": "A short high school student joins the volleyball team and dreams of becoming a great player.",
-  "authors": [
-    "Haruichi Furudate"
-  ],
-  "artists": [
-    "Haruichi Furudate"
-  ],
-  "year": 2012,
+  "title": "Haikyuu",
+  "description": "Short volleyball player aims for nationals",
+  "author": "Haruichi Furudate",
+  "artist": "Haruichi Furudate",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
   "tags": [
-    "sports",
-    "comedy",
-    "shounen",
-    "volleyball"
+    "Sports",
+    "Volleyball",
+    "School"
   ],
-  "status": "completed",
-  "contentRating": "safe",
-  "mangaMDId": "series_haikyuu",
-  "mangaMDStatus": "completed"
+  "contentRating": "teen",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "c38e3024-3761-48e1-be0b-80ab91cb6d84",
+  "createdAt": "2025-09-24T21:44:23.590Z",
+  "updatedAt": "2025-09-24T21:44:23.590Z"
 }

@@ -1,90 +1,25 @@
 {
   "title": "Love Hina",
-  "description": "Keitaro has had great difficulty getting into the university of his choice and no luck in meeting women. In a desperate effort to go into seclusion and study for his entrance exams, he volunteers to take over running his grandmother's hotel. His plans are ruined when he discovers that the \"hotel\" is actually an all-girls dormitory… and some serious distractions ensue.  \n  \nWon the 25nd Kodansha Manga Award for Best Shounen Manga.",
-  "authors": [],
-  "artists": [],
-  "year": 1998,
-  "tags": [
-    {
-      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Award Winning"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "aafb99c1-7f60-43fa-b75f-fc9502ce29c7",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Harem"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
-  "contentRating": "suggestive",
-  "mangaMDId": "b3fe7c22-0045-439a-9b74-82d43a19eeb4"
+  "description": "A boy accidentally becomes the manager of an all-girls dormitory",
+  "author": "Ken Akamatsu",
+  "artist": "Ken Akamatsu",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "5a3d1fa1-14f0-40c5-82e8-f4eac67ae4aa",
+  "createdAt": "2025-09-24T17:05:13.800Z",
+  "updatedAt": "2025-09-24T21:15:01.493Z",
+  "totalChapters": 120,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.598Z",
+  "chapterSources": {
+    "jikan": 120,
+    "kitsu": 276,
+    "anilist": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T21:15:01.493Z"
 }

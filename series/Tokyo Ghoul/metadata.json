@@ -1,37 +1,25 @@
 {
   "title": "Tokyo Ghoul",
-  "mangaMDId": "6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b",
-  "description": "Lurking within the shadows of Tokyo are frightening beings known as \"ghouls,\" who satisfy their hunger by feeding on humans once night falls. Ken Kaneki, an unsuspecting university freshman, finds himself caught in a world between humans and ghouls when his date turns out to be a ghoul after his flesh.\n\n[Written by MAL Rewrite]",
-  "authors": [
-    "Ishida Sui"
-  ],
-  "artists": [
-    "Ishida Sui"
-  ],
-  "tags": [
-    "Thriller",
-    "Sci-Fi",
-    "Monsters",
-    "Action",
-    "Psychological",
-    "Romance",
-    "Survival",
-    "Adventure",
-    "Philosophical",
-    "Gore",
-    "Drama",
-    "Horror",
-    "Delinquents",
-    "Police",
-    "Mystery",
-    "Tragedy"
-  ],
-  "status": "completed",
-  "year": 2011,
+  "description": "A college student becomes a half-ghoul",
+  "author": "Sui Ishida",
+  "artist": "Sui Ishida",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 3,
-  "createdAt": "2025-09-22T05:16:16.640Z",
-  "updatedAt": "2025-09-22T05:25:52.782Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "a66ff0a3-7f4b-48ca-b153-0029e45bbebf",
+  "createdAt": "2025-09-24T16:52:00.956Z",
+  "updatedAt": "2025-09-24T20:29:34.474Z",
+  "totalChapters": 7,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.614Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 7,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:29:34.474Z"
 }

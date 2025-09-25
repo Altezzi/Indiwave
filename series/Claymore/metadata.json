@@ -1,0 +1,26 @@
+{
+  "title": "Claymore",
+  "description": "Half-human, half-demon warriors fight monsters",
+  "author": "Norihiro Yagi",
+  "artist": "Norihiro Yagi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "be8fe64b-37da-4fba-b14d-603aba19be1f",
+  "createdAt": "2025-09-24T17:06:18.591Z",
+  "updatedAt": "2025-09-24T20:49:10.333Z",
+  "totalChapters": 159,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.301Z",
+  "chapterSources": {
+    "jikan": 159,
+    "kitsu": 159,
+    "anilist": 159,
+    "mangadex": 155
+  },
+  "chapterVerifiedAt": "2025-09-24T20:49:10.333Z"
+}

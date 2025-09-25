@@ -1,0 +1,26 @@
+{
+  "title": "A Girl on the Shore",
+  "description": "A controversial coming-of-age story",
+  "author": "Inio Asano",
+  "artist": "Inio Asano",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "099992b1-ce62-4a28-8133-d39c004ab470",
+  "createdAt": "2025-09-24T18:00:43.276Z",
+  "updatedAt": "2025-09-24T20:36:28.666Z",
+  "totalChapters": 20,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:00.900Z",
+  "chapterSources": {
+    "jikan": 20,
+    "kitsu": 20,
+    "anilist": 20,
+    "mangadex": 25
+  },
+  "chapterVerifiedAt": "2025-09-24T20:36:28.666Z"
+}

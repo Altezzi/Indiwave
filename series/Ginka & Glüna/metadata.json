@@ -1,0 +1,25 @@
+{
+  "title": "Ginka & Glüna",
+  "description": "A girl searches for her missing friend in a magical world",
+  "author": "Shinpei Watanabe",
+  "artist": "Shinpei Watanabe",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f75d1f6a-6905-4588-a1d6-04570dbf011f",
+  "createdAt": "2025-09-24T17:02:35.850Z",
+  "updatedAt": "2025-09-24T20:13:13.180Z",
+  "totalChapters": 32,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.447Z",
+  "chapterSources": {
+    "anilist": 32,
+    "mangadex": 29,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:13.180Z"
+}

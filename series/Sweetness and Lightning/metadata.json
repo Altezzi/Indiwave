@@ -1,0 +1,25 @@
+{
+  "title": "Sweetness and Lightning",
+  "description": "Single father learns to cook for his daughter",
+  "author": "Gido Amagakure",
+  "artist": "Gido Amagakure",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "622d9a81-11d3-433b-819b-d3d882c8213d",
+  "createdAt": "2025-09-24T18:04:10.586Z",
+  "updatedAt": "2025-09-24T20:26:13.303Z",
+  "totalChapters": 64,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.393Z",
+  "chapterSources": {
+    "anilist": 64,
+    "mangadex": 56,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:26:13.303Z"
+}

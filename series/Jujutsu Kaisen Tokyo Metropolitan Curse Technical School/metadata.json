@@ -1,0 +1,25 @@
+{
+  "title": "Jujutsu Kaisen: Tokyo Metropolitan Curse Technical School",
+  "description": "The story of Gojo and Geto's school days",
+  "author": "Gege Akutami",
+  "artist": "Gege Akutami",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8b58f452-4d8a-4aad-a050-349e83fecccb",
+  "createdAt": "2025-09-24T17:04:14.522Z",
+  "updatedAt": "2025-09-24T20:15:16.212Z",
+  "totalChapters": 4,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.211Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 4,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:15:16.212Z"
+}

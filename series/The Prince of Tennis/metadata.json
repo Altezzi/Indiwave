@@ -1,90 +1,19 @@
 {
   "title": "The Prince of Tennis",
-  "description": "Ryoma Echizen just joined the Seishun Academy's tennis team, which is known for being one of the most competitive teams in Japan. Its members are incredibly talented, gifted, and athletic. With rigorous and extremely intense practices, the upperclassmen of the team expect the very best from themselves and they expect even more from the new members of the team. While most of the freshmen are on pins and needles hoping they won't get cut from the team, Ryoma Echizen is confident, cool, and collected. Some might even say he's cocky, but at least he's got the skills to back up his attitude. With his virtually unreturnable \"twist serve,\" Ryoma is sure to make the starting team.  \n  \nJoin Ryoma and the other first years, as they train hard, make friends, and try to find a place for themselves on the team. Ryoma Echizen is the Prince of Tennis. He may be ready for the Seishun Academy tennis team, but are THEY ready for HIM?",
-  "authors": [],
-  "artists": [],
-  "year": 1999,
-  "tags": [
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Survival"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sports"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A tennis prodigy joins his school's tennis team",
+  "author": "Takeshi Konomi",
+  "artist": "Takeshi Konomi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "57b52103-769a-490e-af54-49fd9ce08dcf"
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "9b1dd3b2-20a1-4b14-b22e-7eae63610141",
+  "createdAt": "2025-09-24T17:07:44.177Z",
+  "updatedAt": "2025-09-24T20:00:29.800Z",
+  "totalChapters": 379,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.800Z"
 }

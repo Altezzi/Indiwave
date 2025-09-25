@@ -1,77 +1,19 @@
 {
-  "title": "WORKING!!",
-  "description": "Souta Takanashi gets a job at Wagnaria, a local family restaurant. He is \"lured\" there by a cute girl named Poplar, who looks like she's 10. However, she is in fact 17, a year older than him! Some of the crazy characters include Satou, the cool chef who is in fact in love with Yachiyo, the chief who is madly in love (admiration) with their boss, Kyoko, who can't stop eating sweets and slows down the restaurant in general. Satou's cooking assistant and \"friend\" is Souma, a man who can get dirt on anyone and use it against them, except for Inami, a girl who has a phobia of men and punches him before he has the chance to find out anything about her, and Aoi, a girl with fishy motives for joining the restaurant who finds Souma's one weakness… Tears. How does Takanashi, the \"normal\", high school, small-thing loving (not a lolicon!) teen deal with all of this?",
-  "authors": [],
-  "artists": [],
-  "year": 2004,
-  "tags": [
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "92d6d951-ca5e-429c-ac78-451071cbf064",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Office Workers"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b11fda93-8f1d-4bef-b2ed-8803d3733170",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "4-Koma"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "title": "Working!!",
+  "description": "The daily life of employees at a family restaurant",
+  "author": "Karino Takatsu",
+  "artist": "Karino Takatsu",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "b54c1fe5-61f3-47db-898d-8e4fc58ac204"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f2ba181a-3651-4903-b391-44134a57c144",
+  "createdAt": "2025-09-24T17:36:11.937Z",
+  "updatedAt": "2025-09-24T20:00:32.773Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:32.773Z"
 }

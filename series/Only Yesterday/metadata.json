@@ -1,0 +1,25 @@
+{
+  "title": "Only Yesterday",
+  "description": "A woman reflects on her childhood during a trip to the countryside",
+  "author": "Hotaru Okamoto",
+  "artist": "Isao Takahata",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d068024e-9765-499b-a569-64669cd3f0ce",
+  "createdAt": "2025-09-24T16:57:59.603Z",
+  "updatedAt": "2025-09-24T20:21:04.037Z",
+  "totalChapters": 24,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:24.951Z",
+  "chapterSources": {
+    "anilist": 24,
+    "mangadex": 24,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:21:04.037Z"
+}

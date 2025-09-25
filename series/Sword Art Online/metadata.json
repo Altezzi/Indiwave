@@ -1,29 +1,19 @@
 {
-  "title": "Sword Art Online: Calibur",
-  "mangaMDId": "f1a177da-99e0-48df-8cdf-5d676803c234",
-  "description": "On December 28, 2025; Kirigaya Suguha (Leafa) showed her cousin, Kirigaya Kazuto (Kirito), a news article that the Holy Sword Excalibur in ALfheim Online (ALO) had been found. Excalibur was the rarest and most powerful sword in ALO, but, although Kazuto had Suguha had found the sword nearly a year ago, they were not able to break through the guardians of the dungeon that the sword was held in, until they ended up temporarily forgetting about the sword due to more important matters. However, Kazuto was then told that the weapon had only been discovered so far, but not yet acquired. Thus Kazuto called Asuna, Lisbeth, Silica, Klein and Sinon to form a full party and attempt to clear the dungeon again.",
-  "authors": [
-    "Kawahara Reki"
-  ],
-  "artists": [
-    "Kiya Shii"
-  ],
-  "tags": [
-    "Monsters",
-    "Action",
-    "Adventure",
-    "Virtual Reality",
-    "Video Games",
-    "Drama",
-    "Fantasy",
-    "Adaptation"
-  ],
-  "status": "completed",
-  "year": 2014,
-  "contentRating": "suggestive",
+  "title": "Sword Art Online",
+  "description": "Players trapped in a VRMMORPG must clear the game to escape",
+  "author": "Reki Kawahara",
+  "artist": "abec",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:15:29.685Z",
-  "updatedAt": "2025-09-22T05:25:40.056Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "512cd78f-cbb8-460a-bafd-e8840c0f7c31",
+  "createdAt": "2025-09-24T16:55:30.969Z",
+  "updatedAt": "2025-09-24T20:00:28.410Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.410Z"
 }

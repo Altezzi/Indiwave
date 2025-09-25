@@ -1,0 +1,25 @@
+{
+  "title": "Seven Deadly Sins",
+  "description": "Knights fight to save their kingdom",
+  "author": "Nakaba Suzuki",
+  "artist": "Nakaba Suzuki",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "34019331-7377-4e2c-837e-f6e1ab2b5ef7",
+  "createdAt": "2025-09-24T18:04:18.137Z",
+  "updatedAt": "2025-09-24T20:24:08.822Z",
+  "totalChapters": 367,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.668Z",
+  "chapterSources": {
+    "anilist": 367,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:08.822Z"
+}

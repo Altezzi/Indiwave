@@ -1,0 +1,25 @@
+{
+  "title": "Call of the Night",
+  "description": "A boy meets a vampire girl and becomes a vampire",
+  "author": "Kotoyama",
+  "artist": "Kotoyama",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a14e0f03-8f51-4226-aa44-48cdf0e68f5c",
+  "createdAt": "2025-09-24T17:44:53.509Z",
+  "updatedAt": "2025-09-24T20:08:54.612Z",
+  "totalChapters": 203,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.102Z",
+  "chapterSources": {
+    "anilist": 203,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:54.612Z"
+}

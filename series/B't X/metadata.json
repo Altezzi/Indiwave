@@ -1,0 +1,25 @@
+{
+  "title": "B't X",
+  "description": "A boy searches for his kidnapped brother in a world of cyborgs",
+  "author": "Masami Kurumada",
+  "artist": "Masami Kurumada",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7fe0dfc3-9fc8-47e4-9f36-99f27b99cc08",
+  "createdAt": "2025-09-24T17:06:04.666Z",
+  "updatedAt": "2025-09-24T20:06:48.531Z",
+  "totalChapters": 63,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.222Z",
+  "chapterSources": {
+    "anilist": 63,
+    "mangadex": 63,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:48.531Z"
+}

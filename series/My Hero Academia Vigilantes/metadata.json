@@ -1,0 +1,26 @@
+{
+  "title": "My Hero Academia: Vigilantes",
+  "description": "The story of vigilantes in the My Hero Academia world",
+  "author": "Hideyuki Furuhashi",
+  "artist": "Betten Court",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "894c4cf1-07d1-479d-ba09-16ab4b41ee0e",
+  "createdAt": "2025-09-24T17:04:06.196Z",
+  "updatedAt": "2025-09-24T21:22:44.825Z",
+  "totalChapters": 133,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:17.412Z",
+  "chapterSources": {
+    "jikan": 132,
+    "kitsu": 133,
+    "anilist": 133,
+    "mangadex": 14
+  },
+  "chapterVerifiedAt": "2025-09-24T21:22:44.825Z"
+}

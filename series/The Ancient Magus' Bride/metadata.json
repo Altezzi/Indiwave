@@ -1,0 +1,25 @@
+{
+  "title": "The Ancient Magus' Bride",
+  "description": "A girl becomes the apprentice of a mysterious mage",
+  "author": "Kore Yamazaki",
+  "artist": "Kore Yamazaki",
+  "publisher": "Mag Garden",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d1874a5b-9397-41ee-9289-415e975b53bd",
+  "createdAt": "2025-09-24T17:36:39.053Z",
+  "updatedAt": "2025-09-24T20:26:25.963Z",
+  "totalChapters": 35,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.508Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 35,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:26:25.963Z"
+}

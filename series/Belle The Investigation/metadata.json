@@ -1,0 +1,25 @@
+{
+  "title": "Belle: The Investigation",
+  "description": "Suzu investigates her past",
+  "author": "Mamoru Hosoda",
+  "artist": "Mamoru Hosoda",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "b0519bc6-977e-4c72-aaed-cd43eaf19bf9",
+  "createdAt": "2025-09-24T18:32:50.224Z",
+  "updatedAt": "2025-09-24T20:40:57.495Z",
+  "totalChapters": 10,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.022Z",
+  "chapterSources": {
+    "jikan": 65,
+    "kitsu": 10,
+    "anilist": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T20:40:57.495Z"
+}

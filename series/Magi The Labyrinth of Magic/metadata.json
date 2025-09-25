@@ -1,0 +1,25 @@
+{
+  "title": "Magi: The Labyrinth of Magic",
+  "description": "Arabian Nights inspired adventure",
+  "author": "Shinobu Ohtaka",
+  "artist": "Shinobu Ohtaka",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "c5cdf853-1b18-4d1a-8534-a7772841e424",
+  "createdAt": "2025-09-24T18:04:14.978Z",
+  "updatedAt": "2025-09-24T21:15:59.557Z",
+  "totalChapters": 369,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.750Z",
+  "chapterSources": {
+    "jikan": 369,
+    "kitsu": 369,
+    "anilist": 369
+  },
+  "chapterVerifiedAt": "2025-09-24T21:15:59.557Z"
+}

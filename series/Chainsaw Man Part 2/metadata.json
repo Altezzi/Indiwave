@@ -1,0 +1,29 @@
+{
+  "title": "Chainsaw Man Part 2",
+  "description": "The continuation of the Chainsaw Man series",
+  "author": "Tatsuki Fujimoto",
+  "artist": "Tatsuki Fujimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [
+    "Action",
+    "Horror",
+    "Shounen"
+  ],
+  "contentRating": "mature",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "991e9f15-8368-4843-a78a-5605918f9c3e",
+  "createdAt": "2025-09-24T19:30:00.483Z",
+  "updatedAt": "2025-09-24T20:47:39.740Z",
+  "totalChapters": 12,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.196Z",
+  "chapterSources": {
+    "jikan": 12,
+    "kitsu": 97,
+    "mangadex": 4
+  },
+  "chapterVerifiedAt": "2025-09-24T20:47:39.740Z"
+}

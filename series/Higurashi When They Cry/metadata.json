@@ -1,0 +1,26 @@
+{
+  "title": "Higurashi When They Cry",
+  "description": "A village with a dark secret",
+  "author": "Ryukishi07",
+  "artist": "Karin Suzuragi",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "cbc33410-6934-4ea0-9f00-731df27c55b2",
+  "createdAt": "2025-09-24T18:03:58.338Z",
+  "updatedAt": "2025-09-24T21:05:12.981Z",
+  "totalChapters": 9,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.480Z",
+  "chapterSources": {
+    "jikan": 7,
+    "kitsu": 7,
+    "anilist": 12,
+    "mangadex": 9
+  },
+  "chapterVerifiedAt": "2025-09-24T21:05:12.981Z"
+}

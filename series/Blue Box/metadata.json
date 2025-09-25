@@ -1,0 +1,25 @@
+{
+  "title": "Blue Box",
+  "description": "A badminton player falls for a basketball player",
+  "author": "Kouji Miura",
+  "artist": "Kouji Miura",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "ed5dddc0-999d-4fd2-a702-9fef1ec2c955",
+  "createdAt": "2025-09-24T17:02:06.592Z",
+  "updatedAt": "2025-09-24T20:08:33.287Z",
+  "totalChapters": 1,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:05.672Z",
+  "chapterSources": {
+    "anilist": 1,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:33.287Z"
+}

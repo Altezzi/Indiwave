@@ -1,0 +1,25 @@
+{
+  "title": "Doraemon: The Investigation",
+  "description": "Doraemon investigates his past",
+  "author": "Fujiko F. Fujio",
+  "artist": "Fujiko F. Fujio",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "47dc4da4-ec9c-4dbf-a035-298cc3207f2f",
+  "createdAt": "2025-09-24T18:33:49.909Z",
+  "updatedAt": "2025-09-24T20:10:55.254Z",
+  "totalChapters": 821,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.319Z",
+  "chapterSources": {
+    "anilist": 821,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:10:55.254Z"
+}

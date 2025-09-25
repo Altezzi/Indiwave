@@ -1,0 +1,28 @@
+{
+  "title": "Summer Wars: The First Years",
+  "description": "Kenji's early years in summer wars",
+  "author": "Mamoru Hosoda",
+  "artist": "Mamoru Hosoda",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": null,
+  "createdAt": "2025-09-24T18:24:44.131Z",
+  "updatedAt": "2025-09-24T20:25:50.726Z",
+  "sources": [
+    "anilist"
+  ],
+  "totalChapters": 5,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.101Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 5,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:50.726Z"
+}

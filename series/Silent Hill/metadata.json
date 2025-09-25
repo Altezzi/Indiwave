@@ -1,0 +1,19 @@
+{
+  "title": "Silent Hill",
+  "description": "Psychological horror in a foggy town",
+  "author": "Keiichiro Toyama",
+  "artist": "Various",
+  "publisher": "Konami",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "862b8bac-badf-4094-9fdf-61fa10044fc1",
+  "createdAt": "2025-09-24T18:10:58.917Z",
+  "updatedAt": "2025-09-24T20:00:26.893Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.893Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Robotech",
+  "description": "Humans fight alien invaders with transforming mechs",
+  "author": "Carl Macek",
+  "artist": "Various",
+  "publisher": "Harmony Gold",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "1152d68b-e9b3-49d7-b467-ca493d102089",
+  "createdAt": "2025-09-24T18:08:40.376Z",
+  "updatedAt": "2025-09-24T20:23:40.798Z",
+  "totalChapters": 31,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.394Z",
+  "chapterSources": {
+    "anilist": 31,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:40.798Z"
+}

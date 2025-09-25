@@ -1,25 +1,25 @@
 {
-  "title": "Rurouni Kenshin - Tokuhitsuban",
-  "mangaMDId": "4e850d21-f74a-4c6b-a07e-ffbc1d51dba9",
-  "description": "To celebrate the upcoming live action movie, Nobuhiro Watsuki reinvents the classic Rurouni Kenshin manga with all-new twists and turns.  \n  \nAction, romance, and historical intrigue abound in Rurouni Kenshin, the tale of a wandering swordsman during Japan's chaotic Meiji Restoration. Join Kenshin, Kaoru, Yahiko, and others as they take up their swords once again!",
-  "authors": [
-    "Watsuki Nobuhiro"
-  ],
-  "artists": [
-    "Watsuki Nobuhiro"
-  ],
-  "tags": [
-    "Historical",
-    "Action",
-    "Romance",
-    "Martial Arts"
-  ],
-  "status": "completed",
-  "year": 2012,
+  "title": "Rurouni Kenshin",
+  "description": "A former assassin becomes a wandering swordsman",
+  "author": "Nobuhiro Watsuki",
+  "artist": "Nobuhiro Watsuki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 8,
-  "createdAt": "2025-09-22T05:16:32.558Z",
-  "updatedAt": "2025-09-22T05:25:29.330Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "ada4b443-7a2a-4974-862e-c66f1127413b",
+  "createdAt": "2025-09-24T17:05:40.084Z",
+  "updatedAt": "2025-09-24T20:23:49.475Z",
+  "totalChapters": 259,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.478Z",
+  "chapterSources": {
+    "anilist": 259,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:49.475Z"
 }

@@ -1,140 +1,23 @@
 {
   "title": "Dragon Ball",
-  "mangaMDId": "40bc649f-7b49-4645-859e-6cd94136e722",
-  "description": "Dragon Ball follows the adventures of Goku from his childhood through adulthood as he trains in martial arts and explores the world in search of the seven mystical orbs known as the Dragon Balls, which can summon a wish-granting dragon when gathered. Along his journey, Goku makes several friends and battles a wide variety of villains, many of whom also seek the Dragon Balls for their own desires. Along the way becoming the strongest warrior in the universe.\n\nPart II (the post-time skip portion) of Dragon Ball is also known as 'Dragon Ball Z' in North America.\n\n---\n\n- **The 4th Best Selling Manga in History**",
-  "authors": [
-    "Toriyama Akira"
-  ],
-  "artists": [
-    "Toriyama Akira"
-  ],
+  "description": "Goku's adventures as he grows stronger and protects Earth",
+  "author": "Akira Toriyama",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
   "tags": [
-    "Award Winning",
-    "Sci-Fi",
-    "Time Travel",
-    "Monsters",
     "Action",
-    "Comedy",
-    "Martial Arts",
     "Adventure",
-    "Gore",
-    "Fantasy",
-    "Aliens",
+    "Martial Arts",
     "Supernatural"
   ],
-  "status": "completed",
-  "year": 1984,
-  "contentRating": "suggestive",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "ja": "ドラゴンボール"
-    },
-    {
-      "en": "Dragonball"
-    },
-    {
-      "en": "Dragon Ball Z"
-    },
-    {
-      "en": "DBZ"
-    },
-    {
-      "de": "Dragon Ball"
-    },
-    {
-      "nl": "Dragon Ball"
-    },
-    {
-      "la": "Pila draconis"
-    },
-    {
-      "pt-br": "Dragon Ball"
-    },
-    {
-      "ca": "Bola de drac"
-    },
-    {
-      "es": "Bola de dragón"
-    },
-    {
-      "eo": "DrakoPilko"
-    },
-    {
-      "sq": "Sferat e Dragoit"
-    },
-    {
-      "lt": "Drakonų kovos"
-    },
-    {
-      "uk": "Куля Дракона"
-    },
-    {
-      "ru": "Жемчуг дракона"
-    },
-    {
-      "sr": "Zmajeva kugla"
-    },
-    {
-      "fa": "دراگون بال"
-    },
-    {
-      "ur": "ڈریگن گیند"
-    },
-    {
-      "hi": "ड्रैगन बॉल"
-    },
-    {
-      "bn": "ড্রাগন বল"
-    },
-    {
-      "te": "డ్రాగన్ బాల్"
-    },
-    {
-      "he": "דרגון בול"
-    },
-    {
-      "ar": "دراغون بول"
-    },
-    {
-      "eu": "Dragoi Bola"
-    },
-    {
-      "ms": "Mutiara naga"
-    },
-    {
-      "id": "Bola naga"
-    },
-    {
-      "th": "ดราก้อนบอล"
-    },
-    {
-      "tr": "Ejder topu"
-    },
-    {
-      "ko": "드래곤볼"
-    },
-    {
-      "zh": "七龙珠"
-    },
-    {
-      "zh-hk": "七龍珠"
-    },
-    {
-      "vi": "Bảy viên ngọc rồng"
-    },
-    {
-      "vi": "Viên ngọc thần kỳ"
-    },
-    {
-      "vi": "7 viên ngọc rồng"
-    },
-    {
-      "fa": "گوی اژدها"
-    }
-  ],
-  "createdAt": "2025-09-23T07:40:53.373Z",
-  "updatedAt": "2025-09-23T07:40:53.373Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Dragon Ball"
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "createdAt": "2025-09-24T15:59:46.766Z",
+  "updatedAt": "2025-09-24T20:00:08.833Z",
+  "mangaDexId": "40bc649f-7b49-4645-859e-6cd94136e722",
+  "totalChapters": 520,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.833Z"
 }

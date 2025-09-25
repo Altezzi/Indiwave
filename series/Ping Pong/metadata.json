@@ -1,0 +1,19 @@
+{
+  "title": "Ping Pong",
+  "description": "Two friends compete in table tennis",
+  "author": "Taiyo Matsumoto",
+  "artist": "Taiyo Matsumoto",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e4003893-3162-44c5-b5dc-d7433dfb4e0c",
+  "createdAt": "2025-09-24T17:58:58.886Z",
+  "updatedAt": "2025-09-24T20:00:25.353Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.353Z"
+}

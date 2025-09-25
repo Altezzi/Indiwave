@@ -100,8 +100,11 @@ export default function SeriesPage() {
 
   const fetchComicData = async (id: string) => {
     try {
+      // Decode the ID since it comes from URL params already encoded
+      const decodedId = decodeURIComponent(id);
+      
       // First try to fetch from database (for user-created series)
-      let response = await fetch(`/api/series/${encodeURIComponent(id)}`);
+      let response = await fetch(`/api/series/${encodeURIComponent(decodedId)}`);
       
       if (response.ok) {
         const data = await response.json();
@@ -116,7 +119,7 @@ export default function SeriesPage() {
       if (response.ok) {
         const data = await response.json();
         if (data.success && data.data) {
-          const foundComic = data.data.find((comic: any) => comic.id === id);
+          const foundComic = data.data.find((comic: any) => comic.id === decodedId);
           if (foundComic) {
             setComic(foundComic);
             return;
@@ -124,7 +127,7 @@ export default function SeriesPage() {
         }
       }
       
-      console.error("Series not found with ID:", id);
+      console.error("Series not found with ID:", decodedId);
       setComic(null);
     } catch (error) {
       console.error("Error fetching comic:", error);
@@ -136,7 +139,8 @@ export default function SeriesPage() {
 
   const fetchComments = async (seriesId: string) => {
     try {
-      const response = await fetch(`/api/comments?seriesId=${seriesId}`);
+      const decodedSeriesId = decodeURIComponent(seriesId);
+      const response = await fetch(`/api/comments?seriesId=${encodeURIComponent(decodedSeriesId)}`);
       if (response.ok) {
         const data = await response.json();
         setComments(data.comments || []);
@@ -149,7 +153,8 @@ export default function SeriesPage() {
          const fetchUserUrls = async (seriesId: string) => {
            try {
              // For now, load from localStorage since NextAuth is disabled
-             const storedUrls = localStorage.getItem(`userUrls_${seriesId}`);
+             const decodedSeriesId = decodeURIComponent(seriesId);
+             const storedUrls = localStorage.getItem(`userUrls_${decodedSeriesId}`);
              if (storedUrls) {
                setUserUrls(JSON.parse(storedUrls));
              } else {
@@ -163,7 +168,8 @@ export default function SeriesPage() {
 
   const fetchUserRating = async (seriesId: string) => {
     try {
-      const response = await fetch(`/api/user/rating?seriesId=${seriesId}`);
+      const decodedSeriesId = decodeURIComponent(seriesId);
+      const response = await fetch(`/api/user/rating?seriesId=${encodeURIComponent(decodedSeriesId)}`);
       if (response.ok) {
         const data = await response.json();
         setUserRating(data.rating || null);
@@ -175,7 +181,8 @@ export default function SeriesPage() {
 
   const fetchFollowStatus = async (seriesId: string) => {
     try {
-      const response = await fetch(`/api/user/follow-status?seriesId=${seriesId}`);
+      const decodedSeriesId = decodeURIComponent(seriesId);
+      const response = await fetch(`/api/user/follow-status?seriesId=${encodeURIComponent(decodedSeriesId)}`);
       if (response.ok) {
         const data = await response.json();
         setIsFollowing(data.isFollowing || false);
@@ -187,7 +194,8 @@ export default function SeriesPage() {
 
   const fetchCommunityRating = async (seriesId: string) => {
     try {
-      const response = await fetch(`/api/community/rating?seriesId=${seriesId}`);
+      const decodedSeriesId = decodeURIComponent(seriesId);
+      const response = await fetch(`/api/community/rating?seriesId=${encodeURIComponent(decodedSeriesId)}`);
       if (response.ok) {
         const data = await response.json();
         setCommunityRating(data.averageRating || null);
@@ -207,7 +215,7 @@ export default function SeriesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          seriesId: params.id,
+          seriesId: decodeURIComponent(params.id as string),
           content: newComment.trim(),
         }),
       });
@@ -231,15 +239,16 @@ export default function SeriesPage() {
                url: newUrl.trim(),
                label: newLabel.trim(),
                userId: 'local-user',
-               seriesId: params.id
+               seriesId: decodeURIComponent(params.id as string)
              };
 
              // Get existing URLs from localStorage
-             const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${params.id}`) || '[]');
+             const decodedId = decodeURIComponent(params.id as string);
+             const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${decodedId}`) || '[]');
              existingUrls.push(newUserUrl);
              
              // Save back to localStorage
-             localStorage.setItem(`userUrls_${params.id}`, JSON.stringify(existingUrls));
+             localStorage.setItem(`userUrls_${decodedId}`, JSON.stringify(existingUrls));
              
              // Update state
              setUserUrls(existingUrls);
@@ -261,11 +270,12 @@ export default function SeriesPage() {
 
     try {
       // Get existing URLs from localStorage
-      const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${params.id}`) || '[]');
+      const decodedId = decodeURIComponent(params.id as string);
+      const existingUrls = JSON.parse(localStorage.getItem(`userUrls_${decodedId}`) || '[]');
       const updatedUrls = existingUrls.filter((url: any) => url.id !== urlId);
       
       // Save back to localStorage
-      localStorage.setItem(`userUrls_${params.id}`, JSON.stringify(updatedUrls));
+      localStorage.setItem(`userUrls_${decodedId}`, JSON.stringify(updatedUrls));
       
       // Update state
       setUserUrls(updatedUrls);
@@ -287,7 +297,7 @@ export default function SeriesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          seriesId: params.id,
+          seriesId: decodeURIComponent(params.id as string),
           rating: rating,
         }),
       });
@@ -368,7 +378,7 @@ export default function SeriesPage() {
           color: "var(--muted-foreground)",
           maxWidth: "400px"
         }}>
-          The series "{params.id}" could not be found in our library.
+          The series "{decodeURIComponent(params.id as string)}" could not be found in our library.
         </div>
         <Link 
           href="/library"
@@ -1193,6 +1203,47 @@ export default function SeriesPage() {
                         >
                           ×
                         </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* User-Submitted Reading Links (from upload) */}
+                {(comic as any)?.userReadingLinks && (comic as any).userReadingLinks.length > 0 && (
+                  <div style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                    <h3 style={{ fontSize: "16px", fontWeight: "600", margin: "0 0 8px 0", color: "var(--fg)" }}>
+                      Official Reading Options
+                    </h3>
+                    {(comic as any).userReadingLinks.map((link: any, index: number) => (
+                      <div key={index} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            flex: 1,
+                            padding: "12px 16px",
+                            background: "rgba(138, 180, 255, 0.1)",
+                            color: "var(--fg)",
+                            textDecoration: "none",
+                            borderRadius: "8px",
+                            fontSize: "14px",
+                            fontWeight: "500",
+                            textAlign: "center",
+                            transition: "opacity 0.2s ease",
+                            border: "1px solid rgba(138, 180, 255, 0.2)"
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.opacity = "0.9";
+                            e.currentTarget.style.background = "rgba(138, 180, 255, 0.15)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.opacity = "1";
+                            e.currentTarget.style.background = "rgba(138, 180, 255, 0.1)";
+                          }}
+                        >
+                          {link.label}
+                        </a>
                       </div>
                     ))}
                   </div>

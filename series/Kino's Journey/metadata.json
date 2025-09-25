@@ -1,0 +1,23 @@
+{
+  "title": "Kino's Journey",
+  "description": "A traveler visits different countries",
+  "author": "Keiichi Sigsawa",
+  "artist": "Kouhaku Kuroboshi",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "fadafee2-dfb4-4eb1-833f-3c3669d5767b",
+  "createdAt": "2025-09-24T18:11:00.973Z",
+  "updatedAt": "2025-09-24T21:10:34.372Z",
+  "totalChapters": 53,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.043Z",
+  "chapterSources": {
+    "jikan": 53
+  },
+  "chapterVerifiedAt": "2025-09-24T21:10:34.372Z"
+}

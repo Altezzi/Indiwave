@@ -1,47 +1,19 @@
 {
   "title": "Study Group",
-  "mangaMDId": "24c8e2f3-f515-4e58-bfdd-c423ab00499a",
-  "description": "Gamin Yoon, a 17 year old student, goes to a school known to harbor future criminals. Stuck in a carnivorous environment where only the strongest survive, he struggles to get good grades to enter a 4 year university. But, will he be able to study well enough to enter university, or will he get involved in the unending fights around the school?  \n\n\n---\n\n[Official Chinese Translation](https://www.dongmanmanhua.cn/CAMPUS/pizixueba/list?title_no=1467)",
-  "authors": [
-    "Hyungwuk Shin"
-  ],
-  "artists": [
-    "Seungyeon Ryu"
-  ],
-  "tags": [
-    "Action",
-    "Long Strip",
-    "Comedy",
-    "Martial Arts",
-    "Drama",
-    "School Life",
-    "Delinquents",
-    "Web Comic",
-    "Full Color"
-  ],
-  "status": "ongoing",
-  "year": 2019,
+  "description": "Students form a study group",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "tl": "Grupo sa pag-aaral"
-    },
-    {
-      "ko-ro": "Seuteodigeurup"
-    },
-    {
-      "ko": "스터디그룹"
-    },
-    {
-      "es-la": "GRUPO DE ESTUDIO"
-    },
-    {
-      "pt-br": "Grupo de Estudos"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:38.889Z",
-  "updatedAt": "2025-09-23T04:55:38.889Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Study Group"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "24c8e2f3-f515-4e58-bfdd-c423ab00499a",
+  "createdAt": "2025-09-24T18:27:04.740Z",
+  "updatedAt": "2025-09-24T20:00:28.056Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.056Z"
 }

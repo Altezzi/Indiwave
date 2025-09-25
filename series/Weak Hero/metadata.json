@@ -1,39 +1,19 @@
 {
   "title": "Weak Hero",
-  "mangaMDId": "94a87fd5-250d-4058-9d33-88b6885ebfc2",
-  "description": "Once the bullies target you, it’s game over. The school is run by tyrants whose favorite hobby is tormenting the weakest kids in class. But then Gray arrived. This mysterious new student threatens to dismantle the established order. He may be small in stature, but his calculative and brutal fighting leaves unsuspecting opponents lying on the floor begging for mercy. Now the school's toughest bullies have to scramble to take down this new and unusual hero.",
-  "authors": [
-    "SEOPASS (서패스)"
-  ],
-  "artists": [
-    "Kim Jin-Seok (김진석)"
-  ],
-  "tags": [
-    "Action",
-    "Long Strip",
-    "Drama",
-    "School Life",
-    "Delinquents",
-    "Web Comic",
-    "Full Color"
-  ],
-  "status": "completed",
-  "year": 2018,
+  "description": "A weak boy becomes a hero",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "ko-ro": "Yakanyeongung"
-    },
-    {
-      "ko": "약한영웅"
-    },
-    {
-      "zh": "弱美男英雄"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:32.921Z",
-  "updatedAt": "2025-09-23T04:55:32.921Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Weak Hero"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b97a30e0-58da-41ac-bba5-f200f49525f3",
+  "createdAt": "2025-09-24T18:27:03.340Z",
+  "updatedAt": "2025-09-24T20:00:32.315Z",
+  "totalChapters": 200,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:32.315Z"
 }

@@ -1,0 +1,25 @@
+{
+  "title": "Kill Blue",
+  "description": "An assassin becomes a middle school student",
+  "author": "Tadatoshi Fujimaki",
+  "artist": "Tadatoshi Fujimaki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7066efc8-b73f-4b17-8b8d-6060a5412590",
+  "createdAt": "2025-09-24T17:02:24.085Z",
+  "updatedAt": "2025-09-24T20:15:40.830Z",
+  "totalChapters": 115,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.389Z",
+  "chapterSources": {
+    "anilist": 115,
+    "mangadex": 115,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:15:40.830Z"
+}

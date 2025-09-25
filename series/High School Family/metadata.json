@@ -1,0 +1,25 @@
+{
+  "title": "High School Family",
+  "description": "A high school student lives with his parents who are also students",
+  "author": "Rensuke Oshikiri",
+  "artist": "Rensuke Oshikiri",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "30a34bd8-b33a-4ff2-94aa-c34670f904d2",
+  "createdAt": "2025-09-24T17:02:41.713Z",
+  "updatedAt": "2025-09-24T20:14:18.167Z",
+  "totalChapters": 122,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.462Z",
+  "chapterSources": {
+    "anilist": 122,
+    "mangadex": 122,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:18.167Z"
+}

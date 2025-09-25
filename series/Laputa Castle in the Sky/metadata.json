@@ -1,0 +1,25 @@
+{
+  "title": "Laputa: Castle in the Sky",
+  "description": "A girl with a magic crystal seeks a floating castle",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "23ec2201-b110-459f-90b4-c76314c94e37",
+  "createdAt": "2025-09-24T18:08:46.607Z",
+  "updatedAt": "2025-09-24T20:16:29.168Z",
+  "totalChapters": 7,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.478Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 7,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:29.168Z"
+}

@@ -1,168 +1,27 @@
 {
-  "title": "The World After the Fall",
-  "description": "Faced with imminent defeat and certain death, would you choose to run – or continue to fight for a doomed world?\n\nWhen mysterious towers appear across the world, summoning monsters that prey on mankind, this is the choice presented to the Tower Walkers – adventurers with special powers to fight the monsters.\n\nOn the brink of death, they can choose to use a “regression stone” to return to the past for a second chance, though this decision places them in a separate timeline forever.\n\nStubborn Tower Walker Jaehwan rejects this choice, choosing to fight for the original timeline, and learning shocking secrets about the Tower along the way.",
-  "authors": [],
-  "artists": [],
-  "year": 2022,
+  "title": "The World After The Fall",
+  "description": "A man survives the apocalypse and gains powers",
+  "author": "Singong",
+  "artist": "S-Cynan",
+  "publisher": "Naver",
+  "publisherLinks": [],
   "tags": [
-    {
-      "id": "292e862b-2d17-4062-90a2-0356caa4ae27",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Time Travel"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Monsters"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Action"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "39730448-9a5f-48a2-85b0-a70db87b1233",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Demons"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3e2b8dae-350e-4ab8-a8ce-016e844b9f0d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Long Strip"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Adventure"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "ace04997-f6bd-436e-b261-779182193d3d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Isekai"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Fantasy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Web Comic"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Adaptation"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Full Color"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    }
+    "Action",
+    "Post-Apocalyptic",
+    "Manhwa"
   ],
-  "status": "ongoing",
-  "contentRating": "safe",
-  "mangaMDId": "14b81959-13ed-46eb-a277-da66f672acb5"
+  "contentRating": "mature",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "sources": [
+    "anilist",
+    "mangadex"
+  ],
+  "aniListId": 144957,
+  "mangaDexId": "202718c6-525e-4cec-a469-c945548cacc3",
+  "createdAt": "2025-09-24T19:33:20.210Z",
+  "updatedAt": "2025-09-24T20:00:30.514Z",
+  "totalChapters": 100,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.514Z"
 }

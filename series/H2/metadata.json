@@ -1,103 +1,25 @@
 {
   "title": "H2",
-  "description": "Kunimi Hiro and his best friend Hideo were baseball wonders… Until Hiro found out his arm was permanently damaged, rendering him unable to play anymore. A frustrated Hiro goes through the trouble of specifically finding a high school with no baseball team… Only to later on find out the doctor who examined him was a quack and his arm is perfectly fine. Hiro is quick to reinstate his dream: Creating a baseball team for his school and getting to face off against Hideo in the Koshien… The number one premier league for high school baseball.",
-  "authors": [],
-  "artists": [],
-  "year": 1992,
-  "tags": [
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sports"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "Two childhood friends meet again in high school baseball",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "a6b6adde-4d93-4944-b2a6-0ac50f6f9642"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a6b6adde-4d93-4944-b2a6-0ac50f6f9642",
+  "createdAt": "2025-09-24T17:07:21.212Z",
+  "updatedAt": "2025-09-24T20:13:57.010Z",
+  "totalChapters": 338,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.731Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 338,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:57.010Z"
 }

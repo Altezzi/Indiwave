@@ -1,20 +1,20 @@
 {
   "title": "Shimoneta",
-  "description": "The original Shimoneta series.",
-  "authors": [
-    "Various Authors"
-  ],
-  "artists": [
-    "Various Authors"
-  ],
-  "year": 2008,
+  "description": "Future where dirty jokes are forbidden",
+  "author": "Hirotaka Akagi",
+  "artist": "Etsuya Amajishi",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
   "tags": [
-    "comedy",
-    "slice-of-life",
-    "shounen"
+    "Comedy",
+    "Ecchi",
+    "Dystopia"
   ],
-  "status": "ongoing",
   "contentRating": "mature",
-  "mangaMDId": "series_shimoneta",
-  "mangaMDStatus": "ongoing"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d3bf5c5d-5280-443f-9a8c-2be7277479d1",
+  "createdAt": "2025-09-24T22:34:53.546Z",
+  "updatedAt": "2025-09-24T22:34:53.546Z"
 }

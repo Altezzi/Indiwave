@@ -1,0 +1,26 @@
+{
+  "title": "Gundam Wing",
+  "description": "Five mobile suit pilots fight for peace",
+  "author": "Yoshiyuki Tomino",
+  "artist": "Katsuyuki Sumisawa",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "176c0c8d-8c77-467f-8046-6c726d8e80b9",
+  "createdAt": "2025-09-24T18:08:42.298Z",
+  "updatedAt": "2025-09-24T21:03:54.947Z",
+  "totalChapters": 12,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.698Z",
+  "chapterSources": {
+    "jikan": 12,
+    "kitsu": 5,
+    "anilist": 24,
+    "mangadex": 5
+  },
+  "chapterVerifiedAt": "2025-09-24T21:03:54.947Z"
+}

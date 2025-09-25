@@ -1,0 +1,23 @@
+{
+  "title": "Free!",
+  "description": "High school swimming team",
+  "author": "Koji Oji",
+  "artist": "Futoshi Nishiya",
+  "publisher": "Kyoto Animation",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "359eb456-02e7-4906-bd48-10624d0419fd",
+  "createdAt": "2025-09-24T18:03:38.123Z",
+  "updatedAt": "2025-09-24T20:59:29.592Z",
+  "totalChapters": 131,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.221Z",
+  "chapterSources": {
+    "kitsu": 131
+  },
+  "chapterVerifiedAt": "2025-09-24T20:59:29.592Z"
+}

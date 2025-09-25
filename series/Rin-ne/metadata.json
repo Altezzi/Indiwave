@@ -1,0 +1,25 @@
+{
+  "title": "Rin-ne",
+  "description": "A girl who can see ghosts meets a shinigami",
+  "author": "Rumiko Takahashi",
+  "artist": "Rumiko Takahashi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b6f36898-b8ce-4fe9-bca5-dcbcdb24565d",
+  "createdAt": "2025-09-24T17:05:32.435Z",
+  "updatedAt": "2025-09-24T20:23:35.237Z",
+  "totalChapters": 398,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.301Z",
+  "chapterSources": {
+    "anilist": 398,
+    "mangadex": 14,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:35.237Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Sweet Home",
+  "description": "A boy tries to survive in an apartment building full of monsters",
+  "author": "Kim Carnby",
+  "artist": "Hwang Young-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f2bf7eff-6560-4565-8539-721918c6c6ec",
+  "createdAt": "2025-09-24T18:26:52.224Z",
+  "updatedAt": "2025-09-24T20:26:03.319Z",
+  "totalChapters": 6,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.247Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 6,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:26:03.319Z"
+}

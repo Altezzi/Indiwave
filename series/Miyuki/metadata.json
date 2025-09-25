@@ -1,0 +1,25 @@
+{
+  "title": "Miyuki",
+  "description": "A girl's coming-of-age story",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7382dfe5-d645-4b58-a576-7a2ee179cce7",
+  "createdAt": "2025-09-24T17:07:37.436Z",
+  "updatedAt": "2025-09-24T21:21:15.217Z",
+  "totalChapters": 13,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.467Z",
+  "chapterSources": {
+    "jikan": 95,
+    "kitsu": 4,
+    "anilist": 13
+  },
+  "chapterVerifiedAt": "2025-09-24T21:21:15.217Z"
+}

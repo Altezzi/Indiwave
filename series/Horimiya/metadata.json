@@ -1,88 +1,29 @@
 {
   "title": "Horimiya",
-  "mangaMDId": "a25e46ec-30f7-4db6-89df-cacbc1d9a900",
-  "description": "Kyoko Hori is your average teenage girl… who has a side she wants no one else to ever discover. Then there's her classmate Izumi Miyamura, your average glasses-wearing boy — who's also a totally different person outside of school. When the two unexpectedly meet, they discover each other's secrets, and a friendship is born.\n\nRead the official English release on [MangaUp](https://global.manga-up.com/manga/122).",
-  "authors": [
-    "Hero"
-  ],
-  "artists": [
-    "Hagiwara Daisuke"
-  ],
+  "description": "A popular girl and a quiet boy's relationship",
+  "author": "Hero",
+  "artist": "Daisuke Hagiwara",
+  "publisher": "Square Enix",
+  "publisherLinks": [],
   "tags": [
     "Romance",
-    "Comedy",
-    "School Life",
     "Slice of Life",
-    "Adaptation"
+    "Shounen"
   ],
-  "status": "completed",
-  "year": 2011,
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "en": "Hori-san and Miyamura-kun"
-    },
-    {
-      "id": "Hori-san dan Miyamura-kun"
-    },
-    {
-      "ja-ro": "Hori-san to Miyamura-kun"
-    },
-    {
-      "tl": "Si Hori at Si Miyamura"
-    },
-    {
-      "ru": "Хори-сан и Миямура-кун"
-    },
-    {
-      "ru": "Хоримия"
-    },
-    {
-      "he": "הורימיה"
-    },
-    {
-      "ar": "هوريميا"
-    },
-    {
-      "th": "โฮริมิยะ สาวมั่นกับนายมืดมน"
-    },
-    {
-      "ja": "ホリミヤ"
-    },
-    {
-      "zh": "堀与宫村"
-    },
-    {
-      "zh-hk": "堀與宮村"
-    },
-    {
-      "zh": "崛与宫村"
-    },
-    {
-      "ko": "호리미야"
-    },
-    {
-      "tr": "Hori-san ve Miyamura-kun"
-    },
-    {
-      "pt-br": "Horimiya - Hori-san e Miyamura-kun"
-    },
-    {
-      "de": "Horimiya"
-    },
-    {
-      "fr": "Horimiya"
-    },
-    {
-      "es": "Hori y Miyamura"
-    },
-    {
-      "es": "Horimiya"
-    }
-  ],
-  "createdAt": "2025-09-23T04:40:56.405Z",
-  "updatedAt": "2025-09-23T04:40:56.405Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Horimiya"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "4ec3e6b3-18bf-4964-9c87-1f287d3398f4",
+  "createdAt": "2025-09-24T19:30:04.023Z",
+  "updatedAt": "2025-09-24T20:14:28.827Z",
+  "totalChapters": 152,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.573Z",
+  "chapterSources": {
+    "anilist": 152,
+    "mangadex": 140,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:28.827Z"
 }

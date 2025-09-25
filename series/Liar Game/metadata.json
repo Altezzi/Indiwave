@@ -1,0 +1,25 @@
+{
+  "title": "Liar Game",
+  "description": "A naive girl is forced into psychological games",
+  "author": "Shinobu Kaitani",
+  "artist": "Shinobu Kaitani",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "9ca93385-fce7-435e-9d3c-c15cae49cc59",
+  "createdAt": "2025-09-24T18:02:33.802Z",
+  "updatedAt": "2025-09-24T21:12:47.295Z",
+  "totalChapters": 203,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.541Z",
+  "chapterSources": {
+    "jikan": 203,
+    "kitsu": 203,
+    "anilist": 201
+  },
+  "chapterVerifiedAt": "2025-09-24T21:12:47.295Z"
+}

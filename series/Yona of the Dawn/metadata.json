@@ -1,0 +1,27 @@
+{
+  "title": "Yona of the Dawn",
+  "description": "A princess flees after her father is killed",
+  "author": "Mizuho Kusanagi",
+  "artist": "Mizuho Kusanagi",
+  "publisher": "Hakusensha",
+  "publisherLinks": [],
+  "tags": [
+    "Historical",
+    "Romance",
+    "Shoujo"
+  ],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "sources": [
+    "anilist",
+    "mangadex"
+  ],
+  "aniListId": 87035,
+  "mangaDexId": "8211bac6-a392-4e37-b3b6-dac0f4512d24",
+  "createdAt": "2025-09-24T19:33:46.633Z",
+  "updatedAt": "2025-09-24T20:00:32.980Z",
+  "totalChapters": 250,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:32.980Z"
+}

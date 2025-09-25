@@ -1,0 +1,25 @@
+{
+  "title": "A Certain Scientific Accelerator",
+  "description": "The strongest esper in Academy City faces new threats",
+  "author": "Kazuma Kamachi",
+  "artist": "Arata Yamaji",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d00bd104-d9b2-4ee9-a088-b5065d1c406a",
+  "createdAt": "2025-09-24T17:35:56.671Z",
+  "updatedAt": "2025-09-24T20:36:13.802Z",
+  "totalChapters": 64,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:00.795Z",
+  "chapterSources": {
+    "jikan": 64,
+    "kitsu": 64,
+    "anilist": 63
+  },
+  "chapterVerifiedAt": "2025-09-24T20:36:13.802Z"
+}

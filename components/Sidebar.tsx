@@ -424,6 +424,38 @@ export default function Sidebar({ isOpen, onClose, onOpen }: SidebarProps) {
                 <span style={{ fontSize: "14px" }}>⚙️</span>
                 <span>Settings</span>
               </Link>
+
+              <Link
+                href="/upload-series"
+                onClick={handleNavClick}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                  padding: "10px 16px",
+                  borderRadius: "8px",
+                  color: "var(--fg)",
+                  textDecoration: "none",
+                  transition: "all 0.2s ease",
+                  fontSize: "14px",
+                  background: isActive("/upload-series") ? "rgba(138, 180, 255, 0.1)" : "none",
+                  border: isActive("/upload-series") ? "1px solid rgba(138, 180, 255, 0.2)" : "1px solid transparent",
+                  fontWeight: isActive("/upload-series") ? "600" : "500",
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive("/upload-series")) {
+                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive("/upload-series")) {
+                    e.currentTarget.style.background = "none";
+                  }
+                }}
+              >
+                <span style={{ fontSize: "14px" }}>📤</span>
+                <span>Upload a Series</span>
+              </Link>
             </nav>
           </div>
 

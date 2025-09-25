@@ -1,0 +1,25 @@
+{
+  "title": "Ral Grad",
+  "description": "A boy with a demon inside him fights to control his power",
+  "author": "Tsuneo Takano",
+  "artist": "Takeshi Obata",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "07382196-5d12-4b4f-93d9-50c521f65a7e",
+  "createdAt": "2025-09-24T17:06:13.537Z",
+  "updatedAt": "2025-09-24T20:23:03.538Z",
+  "totalChapters": 29,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.923Z",
+  "chapterSources": {
+    "anilist": 29,
+    "mangadex": 29,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:03.538Z"
+}

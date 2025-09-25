@@ -1,90 +1,26 @@
 {
   "title": "Digimon Adventure",
-  "description": "Seven kids at summer camp are unexpectedly transported by 'digi-vices' to a colorful and enigmatic world. Lost and alone, they are befriended by small digital monsters, Digimons. The kids and their Digimon partners quickly become inseparable, and the strange creatures guide their human friends through the wondrous DigiWorld, protecting them from the hordes of evil Digimons. The group soon discovers that some of the giant Digimons they encounter are not evil Digimons but good Digimons gone bad. A dark power is corrupting even the most gentle of Digimons by embedding Black Gears into them, turning them into vicious monsters. Creating chaos and destruction wherever it goes, the evil power threatens all of DigiWorld.  \n  \nAs they try to find their way back home, the seven kids are drawn further and further into the mystery. Through teamwork and trust, they help their newfound Digimon friends digivolve from 'monsters in training' to giant champions that must save the DigiWorld from the powerful evil intent on destroying it.",
-  "authors": [],
-  "artists": [],
-  "year": 2000,
-  "tags": [
-    {
-      "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sci-Fi"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Action"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Adventure"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "ace04997-f6bd-436e-b261-779182193d3d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Isekai"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Fantasy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Adaptation"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "Kids are transported to the Digital World",
+  "author": "Akiyoshi Hongo",
+  "artist": "Yabuno Tenya",
+  "publisher": "Toei Animation",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "a9739f43-3b2d-4aa1-b306-650f576bc716"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "ea01341d-ca83-4896-be99-0487e9a8fa7a",
+  "createdAt": "2025-09-24T16:57:21.502Z",
+  "updatedAt": "2025-09-24T20:52:39.687Z",
+  "totalChapters": 35,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.238Z",
+  "chapterSources": {
+    "jikan": 35,
+    "kitsu": 35,
+    "anilist": 19,
+    "mangadex": 58
+  },
+  "chapterVerifiedAt": "2025-09-24T20:52:39.687Z"
 }

@@ -1,52 +1,25 @@
 {
   "title": "Noblesse",
-  "mangaMDId": "f61952ad-63bb-4e81-a03e-9e50b9e23037",
-  "description": "Rai wakes up from 820-years long sleep and starts his new life as a student in a high school founded by his loyal servant, Frankenstein. But his peaceful days with other human students are soon interrupted by mysterious attackers known as the \"Unions\".\n\n---\n\n• [Naver Webtoon Fan Translation (English)](http://webtoons.com/translate/episodeList?titleNo=87&translatedWebtoonType=WEBTOON&languageCode=ENG&teamVersion=0)",
-  "authors": [
-    "Son Jae-Ho (손제호)"
-  ],
-  "artists": [
-    "Lee Kwang-su (이광수)"
-  ],
-  "tags": [
-    "Action",
-    "Long Strip",
-    "Comedy",
-    "Drama",
-    "School Life",
-    "Vampires",
-    "Web Comic",
-    "Supernatural",
-    "Mystery",
-    "Full Color",
-    "Tragedy"
-  ],
-  "status": "completed",
-  "year": 2007,
+  "description": "A powerful vampire awakens in modern times",
+  "author": "Jeho Son",
+  "artist": "Kwangsu Lee",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "ms": "Kaum bangsawan"
-    },
-    {
-      "ru": "Дворянство"
-    },
-    {
-      "ar": "النبلاء"
-    },
-    {
-      "zh-hk": "大貴族"
-    },
-    {
-      "zh": "大贵族"
-    },
-    {
-      "ko": "노블레스"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:30.548Z",
-  "updatedAt": "2025-09-23T04:55:30.548Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Noblesse"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f61952ad-63bb-4e81-a03e-9e50b9e23037",
+  "createdAt": "2025-09-24T18:02:03.377Z",
+  "updatedAt": "2025-09-24T20:20:18.970Z",
+  "totalChapters": 544,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:20.063Z",
+  "chapterSources": {
+    "anilist": 544,
+    "mangadex": 544,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:18.970Z"
 }

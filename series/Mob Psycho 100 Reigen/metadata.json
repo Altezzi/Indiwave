@@ -1,0 +1,25 @@
+{
+  "title": "Mob Psycho 100: Reigen",
+  "description": "Reigen's backstory and early days as a con artist",
+  "author": "ONE",
+  "artist": "ONE",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "a812538c-8ea0-41d6-a503-217e09e0a1a5",
+  "createdAt": "2025-09-24T17:04:28.312Z",
+  "updatedAt": "2025-09-24T21:21:27.257Z",
+  "totalChapters": 7,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.547Z",
+  "chapterSources": {
+    "jikan": 7,
+    "kitsu": 7,
+    "anilist": 7
+  },
+  "chapterVerifiedAt": "2025-09-24T21:21:27.257Z"
+}

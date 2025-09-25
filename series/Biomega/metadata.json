@@ -1,0 +1,25 @@
+{
+  "title": "Biomega",
+  "description": "Zombie apocalypse in a cyberpunk setting",
+  "author": "Tsutomu Nihei",
+  "artist": "Tsutomu Nihei",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "5bdb093f-9707-4a30-b02e-c8b66554ecf0",
+  "createdAt": "2025-09-24T17:58:52.092Z",
+  "updatedAt": "2025-09-24T20:07:53.369Z",
+  "totalChapters": 42,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.943Z",
+  "chapterSources": {
+    "anilist": 42,
+    "mangadex": 42,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:07:53.369Z"
+}

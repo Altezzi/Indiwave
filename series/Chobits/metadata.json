@@ -1,0 +1,25 @@
+{
+  "title": "Chobits",
+  "description": "A student finds a personal computer in the shape of a girl",
+  "author": "CLAMP",
+  "artist": "CLAMP",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "2998ef22-88d4-4191-81b4-c21ec5d45fbc",
+  "createdAt": "2025-09-24T18:05:15.989Z",
+  "updatedAt": "2025-09-24T20:09:37.537Z",
+  "totalChapters": 88,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.243Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 88,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:09:37.537Z"
+}

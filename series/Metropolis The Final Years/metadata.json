@@ -1,0 +1,26 @@
+{
+  "title": "Metropolis: The Final Years",
+  "description": "Robots' final years in the city",
+  "author": "Osamu Tezuka",
+  "artist": "Osamu Tezuka",
+  "publisher": "Kobunsha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "28bf349e-41e5-4443-84f0-f0581752519b",
+  "createdAt": "2025-09-24T18:33:37.772Z",
+  "updatedAt": "2025-09-24T21:19:51.866Z",
+  "totalChapters": 16,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.297Z",
+  "chapterSources": {
+    "jikan": 1,
+    "kitsu": 16,
+    "anilist": 1,
+    "mangadex": 286
+  },
+  "chapterVerifiedAt": "2025-09-24T21:19:51.866Z"
+}

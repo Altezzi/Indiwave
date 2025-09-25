@@ -1,0 +1,25 @@
+{
+  "title": "Dragon Quest",
+  "description": "The classic RPG adventure",
+  "author": "Akira Toriyama",
+  "artist": "Akira Toriyama",
+  "publisher": "Enix",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "263deeff-c010-4ac7-bc01-6341f3e698ac",
+  "createdAt": "2025-09-24T18:08:09.071Z",
+  "updatedAt": "2025-09-24T20:55:22.168Z",
+  "totalChapters": 349,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.557Z",
+  "chapterSources": {
+    "jikan": 349,
+    "kitsu": 349,
+    "anilist": 36
+  },
+  "chapterVerifiedAt": "2025-09-24T20:55:22.168Z"
+}

@@ -1,194 +1,33 @@
 {
   "title": "The Rose of Versailles",
-  "description": "In 1755, in three European countries, three people are born who will eventually have a fateful meeting in Versailles, France. \n\nHans Axel von Fersen, born the eldest son of a Swedish senator; Oscar François de Jarge, born the youngest daughter of a French general; and Marie Antoinette, born the princess of Austria and the Habsburgs! \n\nThe great masterpiece that shines in the history of Shojo Manga is finally here!",
-  "authors": [],
-  "artists": [],
-  "year": 1972,
+  "description": "A woman disguises herself as a man in pre-revolutionary France",
+  "author": "Riyoko Ikeda",
+  "artist": "Riyoko Ikeda",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
   "tags": [
-    {
-      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Thriller"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "33771934-028e-4cb3-8744-691e866a923e",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Historical"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Action"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Psychological"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Survival"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Adventure"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "9ab53f92-3eed-4e9b-903a-917c86035ee3",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Crossdressing"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "ac72833b-c4e9-4878-b9db-6c8a4a99444a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Military"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b1e97889-25b4-4258-b28b-cd7f4d28ea9b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Philosophical"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Gore"
-        },
-        "description": {},
-        "group": "content",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
+    "Historical",
+    "Romance",
+    "Shoujo"
   ],
-  "status": "completed",
   "contentRating": "safe",
-  "mangaMDId": "fd9577a0-43a3-4610-835f-1cbf903b7e3f"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "sources": [
+    "anilist",
+    "mangadex"
+  ],
+  "aniListId": 30660,
+  "mangaDexId": "c2f475a6-ad73-40bd-a2ff-cd36b6f4b85c",
+  "createdAt": "2025-09-24T19:33:42.782Z",
+  "updatedAt": "2025-09-24T20:28:39.611Z",
+  "totalChapters": 85,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.019Z",
+  "chapterSources": {
+    "anilist": 85,
+    "mangadex": 14,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:28:39.611Z"
 }

@@ -1,0 +1,25 @@
+{
+  "title": "Emma",
+  "description": "A maid falls in love with a nobleman in Victorian England",
+  "author": "Kaoru Mori",
+  "artist": "Kaoru Mori",
+  "publisher": "Enterbrain",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "32eac372-ebb0-4a53-998b-7129b6889021",
+  "createdAt": "2025-09-24T18:24:05.605Z",
+  "updatedAt": "2025-09-24T20:11:47.279Z",
+  "totalChapters": 72,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.667Z",
+  "chapterSources": {
+    "anilist": 72,
+    "mangadex": 72,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:11:47.279Z"
+}

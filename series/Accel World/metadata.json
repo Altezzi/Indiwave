@@ -1,46 +1,24 @@
 {
   "title": "Accel World",
-  "mangaMDId": "b84acd44-6439-4a91-93b0-4fdcc9dacaf8",
-  "description": "No matter what age it is, the \"Bullied Child\" will never disappear. The overweight, Middle School student, Haruyuki, was one such kid. The only time he could relax completely, was when he would play a squash game on the local network the school had set up. He loved playing this simple game as he can forget painful times while immersed in it.  \n  \nIt was fall. He was passing his time like this until one day, he had an encounter with the school's most beautiful, refined girl, \"Black-Snow Princess\"(Kuroyukihime), which changed his life abruptly. Introduced to the software she transmitted, Haruyuki learned about \"Accel World.\" A program that enhances one's mind capabilities, with certain side-effects.  \n  \nSee [AnimeNewsNetwork](https://www.animenewsnetwork.com/encyclopedia/anime.php?id=13857) for the anime.  \nSee [AnimeNewsNetwork](https://www.animenewsnetwork.com/encyclopedia/anime.php?id=15214) for the OAV (sequel).  \nSee [AnimeNewsNetwork](https://www.animenewsnetwork.com/encyclopedia/anime.php?id=18063) for the movie.",
-  "authors": [
-    "Kawahara Reki"
-  ],
-  "artists": [
-    "Aigamo Hiroyuki"
-  ],
-  "tags": [
-    "Action",
-    "Romance",
-    "Drama",
-    "School Life",
-    "Adaptation"
-  ],
-  "status": "completed",
-  "year": 2010,
-  "contentRating": "suggestive",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "en": "Axel World"
-    },
-    {
-      "ru": "Ускоренный мир"
-    },
-    {
-      "ar": "عالم التسارع"
-    },
-    {
-      "ja": "アクセル・ワールド"
-    },
-    {
-      "zh": "加速世界"
-    },
-    {
-      "ko": "액셀월드"
-    }
-  ],
-  "createdAt": "2025-09-23T04:27:07.855Z",
-  "updatedAt": "2025-09-23T04:27:07.855Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Accel World"
+  "description": "A bullied boy discovers a virtual reality fighting game",
+  "author": "Reki Kawahara",
+  "artist": "Hima",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6c079564-363d-4d95-9410-4a841e6a33fb",
+  "createdAt": "2025-09-24T17:35:08.746Z",
+  "updatedAt": "2025-09-24T20:36:51.666Z",
+  "totalChapters": 45,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.095Z",
+  "chapterSources": {
+    "jikan": 45,
+    "kitsu": 45
+  },
+  "chapterVerifiedAt": "2025-09-24T20:36:51.666Z"
 }

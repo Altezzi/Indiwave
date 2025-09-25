@@ -1,0 +1,25 @@
+{
+  "title": "Lucky Star",
+  "description": "The daily life of high school girls who love anime and manga",
+  "author": "Kagami Yoshimizu",
+  "artist": "Kagami Yoshimizu",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "b635888b-f3fd-4e0e-be8b-13e0d8fa8c3e",
+  "createdAt": "2025-09-24T17:36:02.533Z",
+  "updatedAt": "2025-09-24T21:15:08.042Z",
+  "totalChapters": 5,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.619Z",
+  "chapterSources": {
+    "jikan": 5,
+    "kitsu": 7,
+    "anilist": 5
+  },
+  "chapterVerifiedAt": "2025-09-24T21:15:08.042Z"
+}

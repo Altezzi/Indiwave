@@ -1,38 +1,25 @@
 {
   "title": "Rough",
-  "description": "",
-  "authors": [],
-  "artists": [],
-  "year": 1965,
-  "tags": [
-    {
-      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Action"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A swimming rivalry turns into romance",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "4946ba62-36ab-4874-a948-536dcfeccfda"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "9b78663c-850f-434b-8b33-d88d43cc3151",
+  "createdAt": "2025-09-24T17:07:22.441Z",
+  "updatedAt": "2025-09-24T20:23:45.293Z",
+  "totalChapters": 10,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.435Z",
+  "chapterSources": {
+    "anilist": 10,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:45.293Z"
 }

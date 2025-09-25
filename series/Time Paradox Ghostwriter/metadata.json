@@ -1,0 +1,25 @@
+{
+  "title": "Time Paradox Ghostwriter",
+  "description": "A manga artist travels back in time to steal ideas",
+  "author": "Kenji Ichima",
+  "artist": "Kenji Ichima",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f7e168e8-42f5-4ebc-b9ae-74c844a7c189",
+  "createdAt": "2025-09-24T17:02:57.116Z",
+  "updatedAt": "2025-09-24T20:29:26.017Z",
+  "totalChapters": 14,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.548Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 14,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:29:26.017Z"
+}

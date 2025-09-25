@@ -1,142 +1,23 @@
 {
   "title": "Nichijou",
-  "description": "While the title suggests a story of simple, everyday school life, the contents are more the opposite. The setting is a strange school where you may see the principal wrestle a deer or a robot's arm hide a rollcake. However there are still normal stories, like making a card castle or taking a test you didn't study for. The art style is cute but mixes with extreme expressions and action sequences for surprising comedy bits.\n\n(The original magazine run ends at Chapter 192)",
-  "authors": [],
-  "artists": [],
-  "year": 2006,
-  "tags": [
-    {
-      "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sci-Fi"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Action"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3de8c75d-8ee3-48ff-98ee-e20a65c86451",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Animals"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "50880a9d-5440-4732-9afb-8f457127e836",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Mecha"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "799c202e-7daa-44eb-9cf7-8a3c0441531e",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Martial Arts"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "hiatus",
+  "description": "The surreal daily life of high school students",
+  "author": "Keiichi Arawi",
+  "artist": "Keiichi Arawi",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "f5bf9cc3-d003-47fe-bc76-99774b2a0562"
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "d719e0e6-9086-48eb-b609-601613ea38da",
+  "createdAt": "2025-09-24T17:36:06.469Z",
+  "updatedAt": "2025-09-24T21:26:30.655Z",
+  "totalChapters": 12,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.968Z",
+  "chapterSources": {
+    "anilist": 12
+  },
+  "chapterVerifiedAt": "2025-09-24T21:26:30.655Z"
 }

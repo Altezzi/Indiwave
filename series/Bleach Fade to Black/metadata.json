@@ -1,0 +1,25 @@
+{
+  "title": "Bleach: Fade to Black",
+  "description": "Ichigo's memories are stolen",
+  "author": "Tite Kubo",
+  "artist": "Tite Kubo",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "48de4f49-d7f9-4b0c-99f4-0929c2a9910b",
+  "createdAt": "2025-09-24T18:19:18.447Z",
+  "updatedAt": "2025-09-24T20:08:25.534Z",
+  "totalChapters": 17,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:05.060Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 17,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:25.534Z"
+}

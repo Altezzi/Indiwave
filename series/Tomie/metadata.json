@@ -1,194 +1,25 @@
 {
   "title": "Tomie",
-  "description": "Every male who encounters Tomie becomes obsessed with her and eventually kills and dismembers her. But Tomie is not human, and is always reborn…  \n  \nNotes:  \n|| Note: There is a third volume of Tomie called \"Tomie: Again\" which was included in the new japanese reissued two- volume version of the Junji Ito Horror Comic Collection (伊藤潤二 恐怖博物館). These new stories are not included in the original ComicsOne editions of Tomie, but are available in Dark Horse's Museum of Terror volume 2.  \n  \nNote 2: Besides Junji Ito's Horror Comic Collection (Also called Museum of Terror), in 2000 Tomie was also published in a compilatory tankoubon called \"Tomie, The Complete of Tomie\" -「富江」 （全）THE COMPLETE OF TOMIE-. Regardless of the title, this volume does not include \"Tomie Again\" within its pages.  \n  \nNote 3: Some people also consider \"Tomie no kyoufu gaka\" [ シリーズ富江の 恐怖 画家] as part of the Tomie franchise. Tomie no kyoufu gaka was the first Tomie's compilatory tankoubon that was ever released (It was published in 1996) and features five stand-alone stories (Gaka, Ansatsu, Mouhatsu, Youjo and Takitsubo) that were published a year later in Junji Ito's Horror Comic Collection.||",
-  "authors": [],
-  "artists": [],
-  "year": 1987,
-  "tags": [
-    {
-      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Thriller"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "39730448-9a5f-48a2-85b0-a70db87b1233",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Demons"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Psychological"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3bb26d85-09d5-4d2e-880c-c34b974339e9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Ghosts"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "5ca48985-9a9d-4bd8-be29-80dc0303db72",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Crime"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "81c836c9-914a-4eca-981a-560dad663e73",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Magical Girls"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "97893a4c-12af-4dac-b6be-0dffb353568e",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sexual Violence"
-        },
-        "description": {},
-        "group": "content",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Gore"
-        },
-        "description": {},
-        "group": "content",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "cdad7e68-1419-41dd-bdce-27753074a640",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Horror"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Supernatural"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "ee968100-4191-4968-93d3-f82d72be7e46",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Mystery"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A beautiful girl who drives people to madness",
+  "author": "Junji Ito",
+  "artist": "Junji Ito",
+  "publisher": "Asahi Sonorama",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "9ad2d9a1-8e01-48f6-b979-a03b1050a2bd"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "9ad2d9a1-8e01-48f6-b979-a03b1050a2bd",
+  "createdAt": "2025-09-24T17:59:29.527Z",
+  "updatedAt": "2025-09-24T20:29:42.070Z",
+  "totalChapters": 20,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.789Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 20,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:29:42.070Z"
 }

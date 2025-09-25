@@ -1,0 +1,28 @@
+{
+  "title": "My Neighbor Totoro: The Investigation",
+  "description": "Satsuki investigates her past",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": null,
+  "createdAt": "2025-09-24T18:33:24.733Z",
+  "updatedAt": "2025-09-24T21:24:09.031Z",
+  "sources": [
+    "anilist"
+  ],
+  "totalChapters": 9,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:17.499Z",
+  "chapterSources": {
+    "jikan": 9,
+    "kitsu": 55,
+    "anilist": 2
+  },
+  "chapterVerifiedAt": "2025-09-24T21:24:09.031Z"
+}

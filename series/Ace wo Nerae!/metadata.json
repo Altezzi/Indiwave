@@ -1,0 +1,25 @@
+{
+  "title": "Ace wo Nerae!",
+  "description": "A girl learns to play tennis",
+  "author": "Sumika Yamamoto",
+  "artist": "Sumika Yamamoto",
+  "publisher": "Margaret Comics",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "fc25ce20-c979-4838-8674-b0a0718a3c0f",
+  "createdAt": "2025-09-24T18:02:32.542Z",
+  "updatedAt": "2025-09-24T20:06:06.507Z",
+  "totalChapters": 157,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.234Z",
+  "chapterSources": {
+    "anilist": 157,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:06.507Z"
+}

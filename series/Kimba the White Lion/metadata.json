@@ -1,0 +1,25 @@
+{
+  "title": "Kimba the White Lion",
+  "description": "A white lion cub becomes king of the jungle",
+  "author": "Osamu Tezuka",
+  "artist": "Osamu Tezuka",
+  "publisher": "Mushi Production",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7754aecb-e155-490c-8bc0-7f3f3726d355",
+  "createdAt": "2025-09-24T16:56:21.126Z",
+  "updatedAt": "2025-09-24T21:09:40.783Z",
+  "totalChapters": 23,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.406Z",
+  "chapterSources": {
+    "jikan": 23,
+    "kitsu": 23,
+    "anilist": 22
+  },
+  "chapterVerifiedAt": "2025-09-24T21:09:40.783Z"
+}

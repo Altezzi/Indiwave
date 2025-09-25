@@ -1,199 +1,199 @@
-import fs from 'fs';
-import path from 'path';
+// Direct approach to download covers for series without them
+const fs = require('fs');
+const path = require('path');
 
-// Create main series directory
-const SERIES_DIR = path.join(process.cwd(), 'series');
+// Main series that should definitely have covers
+const seriesToFix = [
+  "Attack on Titan",
+  "My Neighbor Totoro", 
+  "Kiki's Delivery Service",
+  "Ponyo",
+  "Astro Boy",
+  "Hell's Paradise Jigokuraku",
+  "Texhnolyze",
+  "The Twelve Kingdoms",
+  "RuriDragon",
+  "Niji-iro Togarashi"
+];
 
-class CoverDownloader {
-  constructor() {
-    this.baseUrl = 'https://api.mangadex.org';
-    this.downloadedCount = 0;
-    this.failedCount = 0;
-    this.errors = [];
-  }
-
-  async fetchWithRetry(url, retries = 3) {
-    for (let i = 0; i < retries; i++) {
-      try {
-        const response = await fetch(url, {
-          headers: {
-            'User-Agent': 'indiwave-cover-downloader/1.0.0',
-            'Accept': 'application/json',
-          },
-        });
-
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-
-        return await response.json();
-      } catch (error) {
-        if (i === retries - 1) throw error;
-        await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
+async function searchMangaDex(title) {
+  try {
+    const response = await fetch(`https://api.mangadex.org/manga?title=${encodeURIComponent(title)}&limit=5`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
       }
+    });
+
+    if (!response.ok) {
+      throw new Error(`MangaDex API error: ${response.statusText}`);
     }
+
+    const data = await response.json();
+
+    if (data.result !== 'ok') {
+      throw new Error('Invalid response from MangaDex');
+    }
+
+    return data.data.map((manga) => ({
+      id: manga.id,
+      title: manga.attributes.title.en || Object.values(manga.attributes.title)[0],
+      description: manga.attributes.description?.en || manga.attributes.description,
+      year: manga.attributes.year,
+      status: manga.attributes.status
+    }));
+
+  } catch (error) {
+    console.error('Error searching MangaDex:', error);
+    return null;
   }
+}
 
-  async getMangaById(mangaId) {
-    const searchParams = new URLSearchParams();
-    searchParams.append('includes[]', 'cover_art');
-    searchParams.append('includes[]', 'author');
-    searchParams.append('includes[]', 'artist');
-
-    const url = `${this.baseUrl}/manga/${mangaId}?${searchParams.toString()}`;
-    return await this.fetchWithRetry(url);
-  }
-
-  getCoverUrl(manga) {
-    if (!manga.relationships) {
-      return null;
-    }
-
-    const coverRel = manga.relationships.find(rel => rel.type === 'cover_art');
-    if (!coverRel || !coverRel.attributes?.fileName) {
-      return null;
-    }
-
-    return `https://uploads.mangadex.org/covers/${manga.id}/${coverRel.attributes.fileName}.512.jpg`;
-  }
-
-  // Download cover and save to series folder
-  async downloadCover(seriesFolder, mangaId, coverUrl, seriesName) {
-    if (!coverUrl || !mangaId) {
-      return { success: false, error: 'Manga ID or cover URL is missing.' };
-    }
-
-    const filename = 'cover.jpg';
-    const localPath = path.join(seriesFolder, filename);
-
-    // Check if file already exists
-    if (fs.existsSync(localPath)) {
-      console.log(`⏭️ Cover already exists for ${seriesName}`);
-      return { success: true, localPath: filename };
-    }
-
-    try {
-      console.log(`🖼️ Downloading cover for ${seriesName}...`);
-      console.log(`   URL: ${coverUrl}`);
-      
-      const response = await fetch(coverUrl, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-          'Referer': 'https://mangadex.org/',
-          'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+async function downloadMangaDexCover(mangaId, seriesPath, title) {
+  try {
+    // Fetch manga data with cover art relationship
+    const response = await fetch(`https://api.mangadex.org/manga/${mangaId}?includes[]=cover_art`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
       }
-
-      const arrayBuffer = await response.arrayBuffer();
-      fs.writeFileSync(localPath, Buffer.from(arrayBuffer));
-      
-      console.log(`✅ Cover downloaded for ${seriesName}: ${filename}`);
-      return { success: true, localPath: filename };
-    } catch (error) {
-      console.log(`❌ Cover download failed for ${seriesName}: ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async downloadCoversForSeries(seriesFolder) {
-    const seriesName = path.basename(seriesFolder);
-    const metadataPath = path.join(seriesFolder, 'metadata.json');
+    });
     
-    if (!fs.existsSync(metadataPath)) {
-      console.log(`⚠️ No metadata.json found for ${seriesName}`);
-      return false;
+    if (!response.ok) {
+      throw new Error(`MangaDex API error: ${response.statusText}`);
     }
 
+    const data = await response.json();
+    
+    if (data.result !== 'ok') {
+      throw new Error('Invalid manga data from MangaDex');
+    }
+
+    // Get cover art URL
+    const coverRelationship = data.data.relationships?.find((rel) => rel.type === 'cover_art');
+    if (!coverRelationship) {
+      throw new Error('No cover art found for this manga');
+    }
+
+    // Get cover art details
+    const coverResponse = await fetch(`https://api.mangadex.org/cover/${coverRelationship.id}`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      }
+    });
+    const coverData = await coverResponse.json();
+    
+    if (coverData.result !== 'ok') {
+      throw new Error('Failed to get cover art details');
+    }
+
+    const fileName = coverData.data.attributes.fileName;
+    const coverUrl = `https://uploads.mangadex.org/covers/${mangaId}/${fileName}`;
+
+    // Download the cover image
+    const imageResponse = await fetch(coverUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      }
+    });
+    
+    if (!imageResponse.ok) {
+      throw new Error(`Failed to download cover: ${imageResponse.statusText}`);
+    }
+
+    const arrayBuffer = await imageResponse.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    
+    // Determine file extension
+    let extension = 'jpg';
+    const contentType = imageResponse.headers.get('content-type');
+    if (contentType?.includes('png')) {
+      extension = 'png';
+    } else if (contentType?.includes('webp')) {
+      extension = 'webp';
+    }
+
+    const filename = `cover.${extension}`;
+    const filePath = path.join(seriesPath, filename);
+
+    // Write cover art file
+    fs.writeFileSync(filePath, buffer);
+
+    return {
+      path: filePath,
+      filename: filename,
+      size: buffer.length,
+      url: coverUrl
+    };
+
+  } catch (error) {
+    console.error('Error downloading MangaDex cover art:', error);
+    return null;
+  }
+}
+
+async function updateMissingCovers() {
+  for (const seriesName of seriesToFix) {
     try {
-      const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
-      const mangaId = metadata.mangaMDId;
+      console.log(`\n🔍 Processing: ${seriesName}`);
       
-      if (!mangaId) {
-        console.log(`⚠️ No mangaMDId found in metadata for ${seriesName}`);
-        return false;
+      const seriesPath = path.join(process.cwd(), 'series', seriesName);
+      
+      if (!fs.existsSync(seriesPath)) {
+        console.log(`❌ Series folder not found: ${seriesName}`);
+        continue;
       }
 
-      // Get manga data to find cover URL
-      const mangaData = await this.getMangaById(mangaId);
-      const coverUrl = this.getCoverUrl(mangaData);
+      // Check if already has a cover
+      const existingCovers = fs.readdirSync(seriesPath)
+        .filter(file => file.startsWith('cover.'));
       
-      if (!coverUrl) {
-        console.log(`⚠️ No cover URL found for ${seriesName}`);
-        return false;
+      if (existingCovers.length > 0) {
+        console.log(`✅ Already has cover: ${existingCovers[0]}`);
+        continue;
       }
 
-      // Download the cover
-      const result = await this.downloadCover(seriesFolder, mangaId, coverUrl, seriesName);
+      // Search for the manga
+      const searchResults = await searchMangaDex(seriesName);
       
-      if (result.success) {
-        this.downloadedCount++;
-        return true;
+      if (!searchResults || searchResults.length === 0) {
+        console.log(`❌ No MangaDex results found for: ${seriesName}`);
+        continue;
+      }
+
+      // Use the first (most relevant) result
+      const manga = searchResults[0];
+      console.log(`✅ Found MangaDex entry: ${manga.title} (ID: ${manga.id})`);
+      
+      // Download the cover art
+      const coverResult = await downloadMangaDexCover(manga.id, seriesPath, seriesName);
+      if (coverResult) {
+        console.log(`🎨 Downloaded cover: ${coverResult.filename} (${Math.round(coverResult.size / 1024)}KB)`);
+        
+        // Update metadata.json
+        const metadataPath = path.join(seriesPath, 'metadata.json');
+        if (fs.existsSync(metadataPath)) {
+          try {
+            const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
+            metadata.coverImage = coverResult.filename;
+            metadata.mangaDexId = manga.id;
+            metadata.updatedAt = new Date().toISOString();
+            
+            fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2));
+            console.log(`📝 Updated metadata.json`);
+          } catch (error) {
+            console.log(`❌ Error updating metadata: ${error.message}`);
+          }
+        }
       } else {
-        this.failedCount++;
-        this.errors.push(`${seriesName}: ${result.error}`);
-        return false;
+        console.log(`❌ Failed to download cover for: ${seriesName}`);
       }
+      
+      // Small delay to avoid overwhelming the server
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
     } catch (error) {
       console.log(`❌ Error processing ${seriesName}: ${error.message}`);
-      this.failedCount++;
-      this.errors.push(`${seriesName}: ${error.message}`);
-      return false;
     }
-  }
-
-  async run() {
-    console.log('🚀 Starting COVER DOWNLOAD for all series...');
-    console.log(`📁 Looking in: ${SERIES_DIR}`);
-    
-    if (!fs.existsSync(SERIES_DIR)) {
-      console.log('❌ Series directory does not exist!');
-      return;
-    }
-
-    const seriesFolders = fs.readdirSync(SERIES_DIR)
-      .filter(item => {
-        const itemPath = path.join(SERIES_DIR, item);
-        return fs.statSync(itemPath).isDirectory();
-      });
-
-    console.log(`📚 Found ${seriesFolders.length} series folders`);
-
-    for (const folderName of seriesFolders) {
-      const seriesFolder = path.join(SERIES_DIR, folderName);
-      await this.downloadCoversForSeries(seriesFolder);
-      
-      // Add delay between downloads to be respectful to the API
-      console.log('⏳ Waiting 2 seconds before next download...');
-      await new Promise(resolve => setTimeout(resolve, 2000));
-    }
-
-    console.log('\n🎊 COVER DOWNLOAD completed!');
-    console.log(`📊 Final Summary:`);
-    console.log(`   ✅ Downloaded: ${this.downloadedCount} covers`);
-    console.log(`   ❌ Failed: ${this.failedCount} covers`);
-    console.log(`   📚 Total processed: ${seriesFolders.length} series`);
-    
-    if (this.errors.length > 0) {
-      console.log('\n❌ Errors encountered:');
-      this.errors.forEach(err => console.log(`   - ${err}`));
-    }
-    
-    console.log('\n🎨 All covers downloaded to series folders!');
   }
 }
 
-// Main execution
-async function main() {
-  const downloader = new CoverDownloader();
-  await downloader.run();
-}
-
-main().catch((error) => {
-  console.error('💥 Cover download failed:', error);
-  process.exit(1);
-});
+updateMissingCovers();

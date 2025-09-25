@@ -1,0 +1,25 @@
+{
+  "title": "A Place Further Than the Universe",
+  "description": "High school girls travel to Antarctica",
+  "author": "Yorimoi",
+  "artist": "Yorimoi",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "fc77aaad-2372-4464-9e84-7effc65697c0",
+  "createdAt": "2025-09-24T17:36:30.730Z",
+  "updatedAt": "2025-09-24T20:05:58.565Z",
+  "totalChapters": 17,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:00.920Z",
+  "chapterSources": {
+    "anilist": 17,
+    "mangadex": 15,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:05:58.564Z"
+}

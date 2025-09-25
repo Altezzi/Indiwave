@@ -1,0 +1,26 @@
+{
+  "title": "Cromartie High School",
+  "description": "Delinquent school comedy",
+  "author": "Eiji Nonaka",
+  "artist": "Eiji Nonaka",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6e9deb8d-9152-42e6-83c4-cfe8bad25039",
+  "createdAt": "2025-09-24T18:00:53.051Z",
+  "updatedAt": "2025-09-24T20:49:19.603Z",
+  "totalChapters": 335,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.330Z",
+  "chapterSources": {
+    "jikan": 335,
+    "kitsu": 335,
+    "anilist": 335,
+    "mangadex": 338
+  },
+  "chapterVerifiedAt": "2025-09-24T20:49:19.603Z"
+}

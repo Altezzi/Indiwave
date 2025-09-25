@@ -1,20 +1,25 @@
 {
   "title": "Real",
-  "description": "The original Real series.",
-  "authors": [
-    "Various Authors"
-  ],
-  "artists": [
-    "Various Authors"
-  ],
-  "year": 2003,
-  "tags": [
-    "sports",
-    "action",
-    "shounen"
-  ],
-  "status": "ongoing",
+  "description": "A story about wheelchair basketball and personal growth",
+  "author": "Takehiko Inoue",
+  "artist": "Takehiko Inoue",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "series_real",
-  "mangaMDStatus": "ongoing"
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "d3de0128-f60b-4fd2-acc6-fa4735659a34",
+  "createdAt": "2025-09-24T17:05:49.759Z",
+  "updatedAt": "2025-09-24T20:23:09.868Z",
+  "totalChapters": 11,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.974Z",
+  "chapterSources": {
+    "anilist": 11,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:09.868Z"
 }

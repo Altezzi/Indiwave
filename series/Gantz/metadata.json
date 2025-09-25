@@ -1,0 +1,25 @@
+{
+  "title": "Gantz",
+  "description": "People who die are forced to fight aliens",
+  "author": "Hiroya Oku",
+  "artist": "Hiroya Oku",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "c37d93a8-9c50-49b3-bd71-143937f4288e",
+  "createdAt": "2025-09-24T17:59:36.318Z",
+  "updatedAt": "2025-09-24T20:13:08.827Z",
+  "totalChapters": 383,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.424Z",
+  "chapterSources": {
+    "anilist": 383,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:08.827Z"
+}

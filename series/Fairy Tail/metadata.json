@@ -1,29 +1,25 @@
 {
-  "title": "FAIRY TAIL",
-  "mangaMDId": "227e3f72-863f-46f9-bafe-c43104ca29ee",
-  "description": "Celestial wizard Lucy wants to join the Fairy Tail, a guild for the most powerful wizards. But instead, her ambitions land her in the clutches of a gang of unsavory pirates led by a devious magician. Her only hope is Natsu, a strange boy she happens to meet on her travels. Natsu's not your typical hero - but he just might be Lucy's best hope.\n\n**Awards:**\n- Won the 33th Kodansha Manga Award for Best Shounen Manga.\n- Won the Society for the Promotion of Japanese Animation's Industry Award for Best Comedy Manga.\n___\n**Official English Volumes:** [Kodansha USA](https://kodansha.us/series/fairy-tail/)",
-  "authors": [
-    "Mashima Hiro"
-  ],
-  "artists": [
-    "Mashima Hiro"
-  ],
-  "tags": [
-    "Award Winning",
-    "Action",
-    "Romance",
-    "Comedy",
-    "Adventure",
-    "Magic",
-    "Fantasy",
-    "Supernatural"
-  ],
-  "status": "completed",
-  "year": 2006,
-  "contentRating": "suggestive",
+  "title": "Fairy Tail",
+  "description": "A guild of wizards in the magical world",
+  "author": "Hiro Mashima",
+  "artist": "Hiro Mashima",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:15:26.043Z",
-  "updatedAt": "2025-09-22T05:24:27.894Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "ace62c1e-2d70-4517-b2f4-baa147db82f7",
+  "createdAt": "2025-09-24T16:52:10.104Z",
+  "updatedAt": "2025-09-24T20:57:24.223Z",
+  "totalChapters": 9,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.865Z",
+  "chapterSources": {
+    "jikan": 549,
+    "kitsu": 3,
+    "anilist": 9
+  },
+  "chapterVerifiedAt": "2025-09-24T20:57:24.223Z"
 }

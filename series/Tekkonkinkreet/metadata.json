@@ -1,0 +1,25 @@
+{
+  "title": "Tekkonkinkreet",
+  "description": "Two street children protect their city from developers",
+  "author": "Taiyo Matsumoto",
+  "artist": "Taiyo Matsumoto",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7661932f-7f80-4c3a-bb37-6861a1477876",
+  "createdAt": "2025-09-24T17:58:57.607Z",
+  "updatedAt": "2025-09-24T20:26:17.434Z",
+  "totalChapters": 33,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.426Z",
+  "chapterSources": {
+    "anilist": 33,
+    "mangadex": 33,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:26:17.434Z"
+}

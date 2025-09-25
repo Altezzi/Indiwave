@@ -1,0 +1,25 @@
+{
+  "title": "Negima! Magister Negi Magi",
+  "description": "A ten-year-old wizard becomes a teacher at an all-girls school",
+  "author": "Ken Akamatsu",
+  "artist": "Ken Akamatsu",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "d08a69ee-9f90-439a-b17d-da561eda2c66",
+  "createdAt": "2025-09-24T17:05:16.594Z",
+  "updatedAt": "2025-09-24T20:20:01.273Z",
+  "totalChapters": 355,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.701Z",
+  "chapterSources": {
+    "anilist": 355,
+    "mangadex": 355,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:01.273Z"
+}

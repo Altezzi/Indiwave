@@ -1,21 +1,26 @@
 {
   "title": "Macross",
-  "description": "Humanity fights against alien invaders using transforming mechs.",
-  "authors": [
-    "Shoji Kawamori"
-  ],
-  "artists": [
-    "Shoji Kawamori"
-  ],
-  "year": 1982,
-  "tags": [
-    "action",
-    "sci-fi",
-    "shounen",
-    "mecha"
-  ],
-  "status": "completed",
+  "description": "Space war and transforming robots",
+  "author": "Hikaru Ichijyo",
+  "artist": "Haruhiko Mikimoto",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "series_macross",
-  "mangaMDStatus": "completed"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "1152d68b-e9b3-49d7-b467-ca493d102089",
+  "createdAt": "2025-09-24T18:08:39.854Z",
+  "updatedAt": "2025-09-24T21:15:43.510Z",
+  "totalChapters": 23,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.700Z",
+  "chapterSources": {
+    "jikan": 23,
+    "kitsu": 23,
+    "anilist": 23,
+    "mangadex": 10
+  },
+  "chapterVerifiedAt": "2025-09-24T21:15:43.510Z"
 }

@@ -1,0 +1,25 @@
+{
+  "title": "Robot x Laserbeam",
+  "description": "A boy discovers his talent for golf",
+  "author": "Tadatoshi Fujimaki",
+  "artist": "Tadatoshi Fujimaki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8cdbb977-4774-4360-a91c-feeea846f97f",
+  "createdAt": "2025-09-24T17:07:55.237Z",
+  "updatedAt": "2025-09-24T20:23:39.105Z",
+  "totalChapters": 62,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.340Z",
+  "chapterSources": {
+    "anilist": 62,
+    "mangadex": 62,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:39.105Z"
+}

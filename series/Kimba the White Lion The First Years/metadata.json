@@ -1,0 +1,25 @@
+{
+  "title": "Kimba the White Lion: The First Years",
+  "description": "Kimba's early years as a cub",
+  "author": "Osamu Tezuka",
+  "artist": "Osamu Tezuka",
+  "publisher": "Mushi Production",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "7754aecb-e155-490c-8bc0-7f3f3726d355",
+  "createdAt": "2025-09-24T18:33:38.325Z",
+  "updatedAt": "2025-09-24T21:10:00.445Z",
+  "totalChapters": 23,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.431Z",
+  "chapterSources": {
+    "jikan": 23,
+    "kitsu": 23,
+    "anilist": 22
+  },
+  "chapterVerifiedAt": "2025-09-24T21:10:00.445Z"
+}

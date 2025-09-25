@@ -1,142 +1,26 @@
 {
   "title": "Cardcaptor Sakura",
-  "description": "Sakura Kinomoto was just an average 4th Grader - loved P.E., hated math - until one day, while looking through her father's library, Sakura found the Clow, an enchanted book designed to hold a set of magical Clow Cards. But when Sakura opened the book, it was empty. Talk about disasters!! Cerberus, the Creature of the Seal, emerged from the cover of the book and told Sakura the cards must be returned to the book. \"If the cards aren't in the book, they come to life and do evil!\" Kero formed a contract with Sakura making her a Cardcaptor and together with Sakura's best friend, Tomoyo, they embark on a mystical journey to capture all the Clow Cards before the Cards can wreak chaos and destruction.",
-  "authors": [],
-  "artists": [],
-  "year": 1996,
-  "tags": [
-    {
-      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Award Winning"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Action"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "81c836c9-914a-4eca-981a-560dad663e73",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Magical Girls"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Magic"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Fantasy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Supernatural"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A girl captures magical cards that escaped from a book",
+  "author": "CLAMP",
+  "artist": "CLAMP",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "e4967558-c7fa-4c48-9a4f-1e462f50fb2c"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "78218ec5-b7ea-4c03-accd-df98c3d8e350",
+  "createdAt": "2025-09-24T16:57:24.098Z",
+  "updatedAt": "2025-09-24T20:46:18.905Z",
+  "totalChapters": 50,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.128Z",
+  "chapterSources": {
+    "jikan": 50,
+    "kitsu": 50,
+    "anilist": 50,
+    "mangadex": 80
+  },
+  "chapterVerifiedAt": "2025-09-24T20:46:18.905Z"
 }

@@ -1,0 +1,26 @@
+{
+  "title": "Beelzebub",
+  "description": "A delinquent becomes the foster parent of the demon lord's son",
+  "author": "Ryuhei Tamura",
+  "artist": "Ryuhei Tamura",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8af3ad21-3e7e-4fb5-b344-d0044ec154fc",
+  "createdAt": "2025-09-24T17:34:46.610Z",
+  "updatedAt": "2025-09-24T20:40:19.479Z",
+  "totalChapters": 250,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.972Z",
+  "chapterSources": {
+    "jikan": 250,
+    "kitsu": 250,
+    "anilist": 252,
+    "mangadex": 246
+  },
+  "chapterVerifiedAt": "2025-09-24T20:40:19.479Z"
+}

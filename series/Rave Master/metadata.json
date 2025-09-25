@@ -1,0 +1,25 @@
+{
+  "title": "Rave Master",
+  "description": "A boy wields a sword to save the world",
+  "author": "Hiro Mashima",
+  "artist": "Hiro Mashima",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f73cb139-5ecb-4442-a100-ff2e08583797",
+  "createdAt": "2025-09-24T18:04:19.419Z",
+  "updatedAt": "2025-09-24T20:23:07.321Z",
+  "totalChapters": 298,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.967Z",
+  "chapterSources": {
+    "anilist": 298,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:07.321Z"
+}

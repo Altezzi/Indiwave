@@ -1,0 +1,25 @@
+{
+  "title": "Cat's Eye",
+  "description": "Three sisters who are also art thieves",
+  "author": "Tsukasa Hojo",
+  "artist": "Tsukasa Hojo",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b8f4e35a-c0e0-4806-b8cc-fc489207df82",
+  "createdAt": "2025-09-24T17:05:52.055Z",
+  "updatedAt": "2025-09-24T20:09:11.117Z",
+  "totalChapters": 158,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.147Z",
+  "chapterSources": {
+    "anilist": 158,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:09:11.117Z"
+}

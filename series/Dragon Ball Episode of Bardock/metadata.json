@@ -1,0 +1,25 @@
+{
+  "title": "Dragon Ball: Episode of Bardock",
+  "description": "Bardock's final moments and potential survival",
+  "author": "Akira Toriyama",
+  "artist": "Akira Toriyama",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8dc1675c-fc40-48d9-b776-ca1ac5e66fc1",
+  "createdAt": "2025-09-24T17:04:01.664Z",
+  "updatedAt": "2025-09-24T20:11:11.587Z",
+  "totalChapters": 3,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:09.055Z",
+  "chapterSources": {
+    "anilist": 3,
+    "mangadex": 3,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:11:11.587Z"
+}

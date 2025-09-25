@@ -1,0 +1,26 @@
+{
+  "title": "Paprika",
+  "description": "Scientists use a device to enter people's dreams",
+  "author": "Yasutaka Tsutsui",
+  "artist": "Reiji Hagiwara",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": null,
+  "createdAt": "2025-09-24T16:55:56.681Z",
+  "updatedAt": "2025-09-24T21:31:48.888Z",
+  "sources": [
+    "anilist"
+  ],
+  "totalChapters": 57,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.176Z",
+  "chapterSources": {
+    "jikan": 57
+  },
+  "chapterVerifiedAt": "2025-09-24T21:31:48.888Z"
+}

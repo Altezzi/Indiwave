@@ -1,0 +1,25 @@
+{
+  "title": "My Hero Academia: Team-Up Missions",
+  "description": "Crossovers and team-ups between various heroes",
+  "author": "Kohei Horikoshi",
+  "artist": "Yoco Akiyama",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "38109f1a-6b8c-49e9-a46f-8149967f4a3e",
+  "createdAt": "2025-09-24T17:04:09.519Z",
+  "updatedAt": "2025-09-24T21:22:39.625Z",
+  "totalChapters": 60,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:17.226Z",
+  "chapterSources": {
+    "jikan": 60,
+    "kitsu": 46,
+    "anilist": 61
+  },
+  "chapterVerifiedAt": "2025-09-24T21:22:39.625Z"
+}

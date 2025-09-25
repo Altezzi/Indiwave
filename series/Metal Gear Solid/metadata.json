@@ -1,0 +1,24 @@
+{
+  "title": "Metal Gear Solid",
+  "description": "Tactical espionage action",
+  "author": "Hideo Kojima",
+  "artist": "Ashley Wood",
+  "publisher": "Konami",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "6ef855f9-4626-476b-a4d3-9d6cd6a034b8",
+  "createdAt": "2025-09-24T18:10:59.423Z",
+  "updatedAt": "2025-09-24T21:19:33.634Z",
+  "totalChapters": 111,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.243Z",
+  "chapterSources": {
+    "jikan": 111,
+    "anilist": 1
+  },
+  "chapterVerifiedAt": "2025-09-24T21:19:33.634Z"
+}

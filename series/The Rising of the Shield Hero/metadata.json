@@ -1,30 +1,19 @@
 {
-  "title": "Tate no Yuusha No Nariagari - Mobile Game Short Comics",
-  "mangaMDId": "99f2bd26-0323-4bc6-a585-0d6b3d3c7fc6",
-  "description": "These are short comics posted on the official Chinese The Rising of the Shield Hero Mobile Game blog  \n  \n<https://www.taptap.com/app/181313> App store link",
-  "authors": [
-    "Aneko Yusagi"
-  ],
-  "artists": [
-    "Aneko Yusagi"
-  ],
-  "tags": [
-    "Action",
-    "Long Strip",
-    "Comedy",
-    "Adventure",
-    "Isekai",
-    "4-Koma",
-    "Fantasy",
-    "Web Comic",
-    "Full Color"
-  ],
-  "status": "ongoing",
-  "year": null,
+  "title": "The Rising of the Shield Hero",
+  "description": "A gamer is transported to another world as the Shield Hero",
+  "author": "Aneko Yusagi",
+  "artist": "Minami Seira",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 12,
-  "createdAt": "2025-09-22T05:16:04.648Z",
-  "updatedAt": "2025-09-22T05:25:50.694Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "0f237a5f-07ad-4e43-bbd9-2a320694434d",
+  "createdAt": "2025-09-24T16:55:21.071Z",
+  "updatedAt": "2025-09-24T20:00:30.014Z",
+  "totalChapters": 100,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.014Z"
 }

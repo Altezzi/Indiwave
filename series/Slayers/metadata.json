@@ -1,0 +1,25 @@
+{
+  "title": "Slayers",
+  "description": "A sorceress goes on comedic adventures",
+  "author": "Hajime Kanzaka",
+  "artist": "Rui Araizumi",
+  "publisher": "Fujimi Shobo",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7c5ba525-4888-4b80-8117-46fc7d9fe9ac",
+  "createdAt": "2025-09-24T18:08:14.254Z",
+  "updatedAt": "2025-09-24T20:24:56.505Z",
+  "totalChapters": 28,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.440Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 28,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:56.505Z"
+}

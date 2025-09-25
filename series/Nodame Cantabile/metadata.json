@@ -1,0 +1,26 @@
+{
+  "title": "Nodame Cantabile",
+  "description": "Music students at a conservatory",
+  "author": "Tomoko Ninomiya",
+  "artist": "Tomoko Ninomiya",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e24610da-3c20-47fd-b658-7f760053a865",
+  "createdAt": "2025-09-24T17:59:16.264Z",
+  "updatedAt": "2025-09-24T21:27:02.753Z",
+  "totalChapters": 150,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:20.086Z",
+  "chapterSources": {
+    "jikan": 150,
+    "kitsu": 146,
+    "anilist": 152,
+    "mangadex": 146
+  },
+  "chapterVerifiedAt": "2025-09-24T21:27:02.753Z"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Excel Saga",
+  "description": "Parody manga about world conquest",
+  "author": "Rikdo Koshi",
+  "artist": "Rikdo Koshi",
+  "publisher": "Shonen Gahosha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "5b995a49-9494-4b7d-8978-00304a0ff1ab",
+  "createdAt": "2025-09-24T18:00:49.627Z",
+  "updatedAt": "2025-09-24T20:57:07.087Z",
+  "totalChapters": 178,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.728Z",
+  "chapterSources": {
+    "jikan": 178,
+    "kitsu": 178,
+    "anilist": 183,
+    "mangadex": 178
+  },
+  "chapterVerifiedAt": "2025-09-24T20:57:07.087Z"
+}

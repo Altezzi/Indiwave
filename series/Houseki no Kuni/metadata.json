@@ -1,0 +1,25 @@
+{
+  "title": "Houseki no Kuni",
+  "description": "Gem people fight against the Lunarians",
+  "author": "Haruko Ichikawa",
+  "artist": "Haruko Ichikawa",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "37bf7574-641e-4665-b992-f2ba8d4652b8",
+  "createdAt": "2025-09-24T17:36:35.951Z",
+  "updatedAt": "2025-09-24T20:14:31.000Z",
+  "totalChapters": 108,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.619Z",
+  "chapterSources": {
+    "anilist": 108,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:31.000Z"
+}

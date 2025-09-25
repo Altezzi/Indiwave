@@ -1,21 +1,25 @@
 {
-  "title": "UnOrdinary",
-  "description": "A manhwa about a world where everyone has superpowers.",
-  "authors": [
-    "uru-chan"
-  ],
-  "artists": [
-    "uru-chan"
-  ],
-  "year": 2016,
-  "tags": [
-    "action",
-    "drama",
-    "shounen",
-    "supernatural"
-  ],
-  "status": "ongoing",
+  "title": "Unordinary",
+  "description": "A powerless boy in a world of superpowers",
+  "author": "uru-chan",
+  "artist": "uru-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "series_unordinary",
-  "mangaMDStatus": "ongoing"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "de34e04a-a9a4-4d9b-b434-f13ad275230c",
+  "createdAt": "2025-09-24T18:02:17.780Z",
+  "updatedAt": "2025-09-24T20:30:04.455Z",
+  "totalChapters": 18,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.141Z",
+  "chapterSources": {
+    "anilist": 18,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:30:04.455Z"
 }

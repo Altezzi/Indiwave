@@ -1,0 +1,25 @@
+{
+  "title": "Super Psychic Policeman Chojo",
+  "description": "A psychic policeman solves supernatural crimes",
+  "author": "Tatsuki Fujimoto",
+  "artist": "Tatsuki Fujimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "53afa9e9-6b61-49c2-a92f-a55c78d0f88f",
+  "createdAt": "2025-09-24T17:02:51.055Z",
+  "updatedAt": "2025-09-24T20:25:58.830Z",
+  "totalChapters": 65,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.166Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 65,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:58.830Z"
+}

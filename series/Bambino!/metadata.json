@@ -1,0 +1,25 @@
+{
+  "title": "Bambino!",
+  "description": "A cook works at an Italian restaurant",
+  "author": "Tetsuji Sekiya",
+  "artist": "Tetsuji Sekiya",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6f2a2474-6b38-4e85-9efe-4a4a8ac50103",
+  "createdAt": "2025-09-24T18:05:48.544Z",
+  "updatedAt": "2025-09-24T20:06:52.572Z",
+  "totalChapters": 164,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.370Z",
+  "chapterSources": {
+    "anilist": 164,
+    "mangadex": 102,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:52.572Z"
+}

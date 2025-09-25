@@ -1,0 +1,25 @@
+{
+  "title": "The Girl Who Leapt Through Time",
+  "description": "A girl discovers she can leap through time",
+  "author": "Yasutaka Tsutsui",
+  "artist": "Ranmaru Kotone",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "99ea52c2-2c80-470a-8f25-71a8c9d1703d",
+  "createdAt": "2025-09-24T16:55:55.790Z",
+  "updatedAt": "2025-09-24T20:27:36.556Z",
+  "totalChapters": 19,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.052Z",
+  "chapterSources": {
+    "anilist": 5,
+    "mangadex": 19,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:27:36.556Z"
+}

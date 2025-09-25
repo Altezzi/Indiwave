@@ -1,41 +1,19 @@
 {
   "title": "Wind Breaker",
-  "mangaMDId": "9eb78304-0436-484d-9a79-a925b45e2731",
-  "description": "Haruka Sakura wants nothing to do with weaklings—he's only interested in the strongest of the strong. He's just started at Furin High School, a school of degenerates known only for their brawling strength—strength they use to protect their town from anyone who wishes it ill. But Haruka's not interested in being a hero or being part of any sort of team—he just wants to fight his way to the top!",
-  "authors": [
-    "Nii Satoru"
-  ],
-  "artists": [
-    "Nii Satoru"
-  ],
-  "tags": [
-    "Action",
-    "Comedy",
-    "Martial Arts",
-    "School Life",
-    "Delinquents",
-    "Slice of Life"
-  ],
-  "status": "ongoing",
-  "year": 2021,
+  "description": "A cyclist competes in races",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "ja": "ウィンドブレイカー"
-    },
-    {
-      "en": "Windbreaker"
-    },
-    {
-      "fr": "Wind Breaker"
-    },
-    {
-      "ru": "Ветролом"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:33.405Z",
-  "updatedAt": "2025-09-23T04:55:33.405Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Wind Breaker"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "9eb78304-0436-484d-9a79-a925b45e2731",
+  "createdAt": "2025-09-24T18:27:06.192Z",
+  "updatedAt": "2025-09-24T20:00:32.543Z",
+  "totalChapters": 100,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:32.543Z"
 }

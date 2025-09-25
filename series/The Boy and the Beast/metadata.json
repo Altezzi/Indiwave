@@ -1,0 +1,25 @@
+{
+  "title": "The Boy and the Beast",
+  "description": "A boy is raised by a beast in a parallel world",
+  "author": "Mamoru Hosoda",
+  "artist": "Mamoru Hosoda",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "77462deb-15bf-4957-9109-e12f4e06d0e7",
+  "createdAt": "2025-09-24T17:38:36.233Z",
+  "updatedAt": "2025-09-24T20:26:59.950Z",
+  "totalChapters": 20,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.913Z",
+  "chapterSources": {
+    "anilist": 20,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:26:59.950Z"
+}

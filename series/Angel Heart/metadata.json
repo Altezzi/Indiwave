@@ -1,0 +1,26 @@
+{
+  "title": "Angel Heart",
+  "description": "A sequel to City Hunter featuring a new protagonist",
+  "author": "Tsukasa Hojo",
+  "artist": "Tsukasa Hojo",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "88784b0a-208b-4528-801b-379a0777de44",
+  "createdAt": "2025-09-24T17:05:53.253Z",
+  "updatedAt": "2025-09-24T20:37:45.641Z",
+  "totalChapters": 363,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.568Z",
+  "chapterSources": {
+    "jikan": 363,
+    "kitsu": 84,
+    "anilist": 363,
+    "mangadex": 80
+  },
+  "chapterVerifiedAt": "2025-09-24T20:37:45.641Z"
+}

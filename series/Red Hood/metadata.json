@@ -1,0 +1,25 @@
+{
+  "title": "Red Hood",
+  "description": "A young hunter protects a village from monsters",
+  "author": "Yamaguchi Yuki",
+  "artist": "Yamaguchi Yuki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8ccc7b43-8aba-44e5-a826-d2cdb20b56c8",
+  "createdAt": "2025-09-24T17:02:54.307Z",
+  "updatedAt": "2025-09-24T20:23:18.138Z",
+  "totalChapters": 9,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.008Z",
+  "chapterSources": {
+    "anilist": 9,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:18.138Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Dragon Ball Z: Broly",
+  "description": "Goku faces the legendary Super Saiyan Broly",
+  "author": "Akira Toriyama",
+  "artist": "Toyotarou",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "40bc649f-7b49-4645-859e-6cd94136e722",
+  "createdAt": "2025-09-24T18:19:01.384Z",
+  "updatedAt": "2025-09-24T20:55:10.597Z",
+  "totalChapters": 520,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.349Z",
+  "chapterSources": {
+    "jikan": 520,
+    "kitsu": 520,
+    "mangadex": 519
+  },
+  "chapterVerifiedAt": "2025-09-24T20:55:10.597Z"
+}

@@ -1,116 +1,25 @@
 {
   "title": "Solanin",
-  "description": "After graduating from college, Meiko went straight to work as an office lady, but she can't help feeling there should be something more to life. Determined to find a worthier goal, she quits work, but can she actually make her nebulous dreams come true- and how will her sudden decision affect her relationship with her boyfriend Taneda?\n\n---\n\n- English release by [Viz Media](https://www.viz.com/read/manga/solanin/product/1889)\n- Indonesian release by m&c! Comics",
-  "authors": [],
-  "artists": [],
-  "year": 2005,
-  "tags": [
-    {
-      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Psychological"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "92d6d951-ca5e-429c-ac78-451071cbf064",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Office Workers"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f42fbf9e-188a-447b-9fdc-f19dc1e4d685",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Music"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "Young adults struggle with post-graduation life",
+  "author": "Inio Asano",
+  "artist": "Inio Asano",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "a42db50d-20df-4f33-bddc-fe990df9c231"
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "a42db50d-20df-4f33-bddc-fe990df9c231",
+  "createdAt": "2025-09-24T18:00:38.004Z",
+  "updatedAt": "2025-09-24T20:25:00.839Z",
+  "totalChapters": 30,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.483Z",
+  "chapterSources": {
+    "anilist": 30,
+    "mangadex": 29,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:00.839Z"
 }

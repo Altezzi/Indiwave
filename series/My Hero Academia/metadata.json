@@ -1,25 +1,29 @@
 {
-  "title": "My Hero Academia Vol. Rising",
-  "mangaMDId": "fa89b43e-41d0-46a3-8a7d-c8bac5ffbd05",
-  "description": "Special tie-in volume released alongside the film *My Hero Academia: Heroes Rising*.\n\n**Contents:**\n1. Character File\n2. Movie Character File\n3. Horikoshi Kouhei Character Design Draft Collection\n4. Extra File\n4.1. Horikoshi Kouhei–sensei Long Interview\n4.2. League of Villains: Undercover\nIn a world where the mightiest quirk makes right, how far are you willing to go to gain the ultimate power?!",
-  "authors": [
-    "Horikoshi Kouhei"
-  ],
-  "artists": [
-    "Horikoshi Kouhei"
-  ],
+  "title": "My Hero Academia",
+  "description": "A world where people have superpowers called Quirks",
+  "author": "Kohei Horikoshi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
   "tags": [
     "Action",
-    "Animals",
-    "Philosophical",
-    "Drama"
+    "Superhero",
+    "School"
   ],
-  "status": "completed",
-  "year": 2019,
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:14:53.603Z",
-  "updatedAt": "2025-09-22T05:25:06.144Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "createdAt": "2025-09-24T15:59:51.967Z",
+  "updatedAt": "2025-09-24T21:22:33.109Z",
+  "mangaDexId": "4f3bcae4-2d96-4c9d-932c-90181d9c873e",
+  "totalChapters": 432,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:17.049Z",
+  "chapterSources": {
+    "jikan": 432,
+    "kitsu": 432,
+    "anilist": 41,
+    "mangadex": 126
+  },
+  "chapterVerifiedAt": "2025-09-24T21:22:33.109Z"
 }

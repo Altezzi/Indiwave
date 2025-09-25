@@ -1,0 +1,25 @@
+{
+  "title": "Fist of the Blue Sky",
+  "description": "A prequel to Hokuto no Ken set in 1930s Shanghai",
+  "author": "Tetsuo Hara",
+  "artist": "Buronson",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "53c0f7cf-6caf-4d87-a3dc-a26dda5b7086",
+  "createdAt": "2025-09-24T17:05:56.757Z",
+  "updatedAt": "2025-09-24T20:58:25.105Z",
+  "totalChapters": 260,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.101Z",
+  "chapterSources": {
+    "jikan": 260,
+    "kitsu": 260,
+    "anilist": 260
+  },
+  "chapterVerifiedAt": "2025-09-24T20:58:25.105Z"
+}

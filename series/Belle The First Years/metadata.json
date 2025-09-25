@@ -1,0 +1,26 @@
+{
+  "title": "Belle: The First Years",
+  "description": "Suzu's early years as Belle",
+  "author": "Mamoru Hosoda",
+  "artist": "Mamoru Hosoda",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6639a7a2-5d10-4ffa-a93f-e93367c3b945",
+  "createdAt": "2025-09-24T18:32:49.748Z",
+  "updatedAt": "2025-09-24T20:40:47.612Z",
+  "totalChapters": 13,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:03.015Z",
+  "chapterSources": {
+    "jikan": 13,
+    "kitsu": 41,
+    "anilist": 6,
+    "mangadex": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T20:40:47.612Z"
+}

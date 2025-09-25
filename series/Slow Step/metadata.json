@@ -1,0 +1,25 @@
+{
+  "title": "Slow Step",
+  "description": "A girl's love triangle involving two baseball players",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6b5a0983-0884-40bc-b11c-fbb0577a6707",
+  "createdAt": "2025-09-24T17:07:34.486Z",
+  "updatedAt": "2025-09-24T20:24:58.432Z",
+  "totalChapters": 13,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:27.462Z",
+  "chapterSources": {
+    "anilist": 13,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:58.432Z"
+}

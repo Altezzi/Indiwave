@@ -1,0 +1,25 @@
+{
+  "title": "Beck",
+  "description": "A teenager joins a rock band",
+  "author": "Harold Sakuishi",
+  "artist": "Harold Sakuishi",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "4cf9b503-439a-48f7-9fc5-21831087a421",
+  "createdAt": "2025-09-24T18:00:34.765Z",
+  "updatedAt": "2025-09-24T20:07:15.003Z",
+  "totalChapters": 103,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.877Z",
+  "chapterSources": {
+    "anilist": 103,
+    "mangadex": 102,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:07:15.003Z"
+}

@@ -1,64 +1,26 @@
 {
   "title": "Magic Knight Rayearth",
-  "description": "Hikaru, Umi, and Fuu, girls from separate schools, find themselves linked together as they fall through the floor during a field trip to the Tokyo Tower. They land in a place called Cephiro, where their will controls what happens. They meet with Guru Clef and find out that they were summoned to save Princess Emeraude who has been imprisoned by High Priest Zagato. They learn magic and acquire weapons on their quest to save Cephiro from the evils of Zagato.",
-  "authors": [],
-  "artists": [],
-  "year": 1993,
-  "tags": [
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "50880a9d-5440-4732-9afb-8f457127e836",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Mecha"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "ace04997-f6bd-436e-b261-779182193d3d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Isekai"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Fantasy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "Three girls are summoned to save a magical world",
+  "author": "CLAMP",
+  "artist": "CLAMP",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "20331b71-1d3f-4aed-b990-e54298424488"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "20331b71-1d3f-4aed-b990-e54298424488",
+  "createdAt": "2025-09-24T18:05:24.546Z",
+  "updatedAt": "2025-09-24T21:16:04.739Z",
+  "totalChapters": 15,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.771Z",
+  "chapterSources": {
+    "jikan": 15,
+    "kitsu": 15,
+    "anilist": 15,
+    "mangadex": 9
+  },
+  "chapterVerifiedAt": "2025-09-24T21:16:04.739Z"
 }

@@ -1,0 +1,25 @@
+{
+  "title": "Ring ni Kakero",
+  "description": "A young boxer fights to become the world champion",
+  "author": "Masami Kurumada",
+  "artist": "Masami Kurumada",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "eb1babe4-e69a-43f2-b0df-e46eef3ec206",
+  "createdAt": "2025-09-24T17:06:01.941Z",
+  "updatedAt": "2025-09-24T20:23:37.159Z",
+  "totalChapters": 242,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.320Z",
+  "chapterSources": {
+    "anilist": 242,
+    "mangadex": 122,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:23:37.159Z"
+}

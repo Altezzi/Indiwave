@@ -1,90 +1,19 @@
 {
   "title": "Ahiru no Sora",
-  "description": "He’s short, weak, and has just transfered to a new school. Kurumatani Sora is the main character in this story who loves basketball. He has been shooting hoops ever since he was little and has been trying to grow tall just like his mother, who “used” to be a basketball player. What happened to her and what Sora will do at the new school is all up to you to find out!",
-  "authors": [],
-  "artists": [],
-  "year": 2003,
-  "tags": [
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sports"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "hiatus",
+  "description": "A short boy joins his school's basketball team",
+  "author": "Takehiko Inoue",
+  "artist": "Takehiko Inoue",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "8f3c24d3-6e15-4fea-a60f-f80cef482853"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8f3c24d3-6e15-4fea-a60f-f80cef482853",
+  "createdAt": "2025-09-24T17:07:58.695Z",
+  "updatedAt": "2025-09-24T20:00:01.327Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.327Z"
 }

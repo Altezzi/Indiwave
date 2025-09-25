@@ -1,0 +1,25 @@
+{
+  "title": "My Life as a Loser",
+  "description": "A loser tries to change his life",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "630fcb7b-a262-4c92-b0c7-1323392f1b67",
+  "createdAt": "2025-09-24T18:27:17.115Z",
+  "updatedAt": "2025-09-24T21:22:59.908Z",
+  "totalChapters": 56,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:17.455Z",
+  "chapterSources": {
+    "jikan": 56,
+    "kitsu": 58,
+    "anilist": 56
+  },
+  "chapterVerifiedAt": "2025-09-24T21:22:59.908Z"
+}

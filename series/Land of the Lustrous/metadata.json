@@ -1,0 +1,25 @@
+{
+  "title": "Land of the Lustrous",
+  "description": "Gem people fight against the Lunarians",
+  "author": "Haruko Ichikawa",
+  "artist": "Haruko Ichikawa",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8adbd5c7-5ccc-4eec-ae8e-1b7daa062959",
+  "createdAt": "2025-09-24T17:36:34.798Z",
+  "updatedAt": "2025-09-24T20:16:27.335Z",
+  "totalChapters": 108,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.477Z",
+  "chapterSources": {
+    "anilist": 108,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:27.335Z"
+}

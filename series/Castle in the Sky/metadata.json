@@ -1,0 +1,23 @@
+{
+  "title": "Castle in the Sky",
+  "description": "A girl with a magic crystal seeks a floating castle",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "02ecca56-3f78-4ae1-9d57-da17e0bb1429",
+  "createdAt": "2025-09-24T16:57:42.695Z",
+  "updatedAt": "2025-09-24T20:46:27.177Z",
+  "totalChapters": 10,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.129Z",
+  "chapterSources": {
+    "jikan": 10
+  },
+  "chapterVerifiedAt": "2025-09-24T20:46:27.177Z"
+}

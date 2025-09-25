@@ -1,50 +1,19 @@
 {
   "title": "Manager Kim",
-  "mangaMDId": "a3c09565-47aa-410c-a137-a3a6e6bfa8a8",
-  "description": "\"Please don’t touch the guy wearing glasses…\"\nDepartment head Kim, who quit his job as a special agent only for his daughter Minji and chose to be normal. Then one day, Minji disappeared silently, and Manager Kim began to find his daughter by turning the country that monitors him into the enemy.",
-  "authors": [
-    "Toy",
-    "Park Tae Joon"
-  ],
-  "artists": [
-    "Jeongjongtaek (정종택)"
-  ],
-  "tags": [
-    "Action",
-    "Long Strip",
-    "Mafia",
-    "Drama",
-    "Delinquents",
-    "Web Comic",
-    "Mystery",
-    "Full Color"
-  ],
-  "status": "ongoing",
-  "year": 2021,
-  "contentRating": "suggestive",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "ko": "김부장"
-    },
-    {
-      "ru": "Менеджер Ким"
-    },
-    {
-      "en": "Director Kim"
-    },
-    {
-      "pt-br": "Gerente Kim"
-    },
-    {
-      "vi": "Đặc Vụ Kim"
-    },
-    {
-      "vi": "Bố Tôi Là Đặc Vụ"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:37.058Z",
-  "updatedAt": "2025-09-23T04:55:37.058Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Manager Kim"
+  "description": "A manager becomes a fighter",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a3c09565-47aa-410c-a137-a3a6e6bfa8a8",
+  "createdAt": "2025-09-24T18:27:15.920Z",
+  "updatedAt": "2025-09-24T20:00:15.899Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.899Z"
 }

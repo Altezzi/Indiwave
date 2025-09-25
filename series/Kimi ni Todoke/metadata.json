@@ -1,103 +1,26 @@
 {
   "title": "Kimi ni Todoke",
-  "description": "Sawako Kuronuma is the perfect heroine… for a horror movie. With her jet-black hair, sinister smile and silent demeanor, she's often mistaken for the haunting movie character Sadako. But behind her scary facade is a very misunderstood teenager. Too shy to fit in, all she wants to do is make some friends. But when a popular boy in class befriends her, she's sure to make more than just that–she's about to make some enemies too!  \n  \n---\n- **Won the 32nd Kodansha Manga Award for Shojo in 2008**\n\n---\nOfficial Release:\n- Indonesian release by Elex Media as **Kimi ni Todoke: From Me To You** (2014)",
-  "authors": [],
-  "artists": [],
-  "year": 2005,
-  "tags": [
-    {
-      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Award Winning"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Psychological"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A shy girl learns to make friends and find love",
+  "author": "Karuho Shiina",
+  "artist": "Karuho Shiina",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "b3b6fa42-08df-4663-b827-caaa49c7ccbf"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b3b6fa42-08df-4663-b827-caaa49c7ccbf",
+  "createdAt": "2025-09-24T17:59:18.048Z",
+  "updatedAt": "2025-09-24T21:10:13.646Z",
+  "totalChapters": 125,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.453Z",
+  "chapterSources": {
+    "jikan": 125,
+    "kitsu": 125,
+    "anilist": 127,
+    "mangadex": 123
+  },
+  "chapterVerifiedAt": "2025-09-24T21:10:13.646Z"
 }

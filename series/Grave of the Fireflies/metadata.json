@@ -1,0 +1,25 @@
+{
+  "title": "Grave of the Fireflies",
+  "description": "Two siblings struggle to survive during World War II",
+  "author": "Akiyuki Nosaka",
+  "artist": "Isao Takahata",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b847ca8b-1b14-4780-98eb-10049467bc03",
+  "createdAt": "2025-09-24T16:57:57.492Z",
+  "updatedAt": "2025-09-24T20:13:43.589Z",
+  "totalChapters": 223,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.679Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 223,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:43.589Z"
+}

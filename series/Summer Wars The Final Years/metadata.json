@@ -1,0 +1,28 @@
+{
+  "title": "Summer Wars: The Final Years",
+  "description": "Kenji's final years in summer wars",
+  "author": "Mamoru Hosoda",
+  "artist": "Mamoru Hosoda",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": null,
+  "createdAt": "2025-09-24T18:24:47.398Z",
+  "updatedAt": "2025-09-24T20:25:48.578Z",
+  "sources": [
+    "mangadex"
+  ],
+  "totalChapters": 5,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.099Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 5,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:25:48.578Z"
+}

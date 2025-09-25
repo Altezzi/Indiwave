@@ -1,0 +1,25 @@
+{
+  "title": "Psycho-Pass",
+  "description": "Cyberpunk police procedural about thought crime",
+  "author": "Gen Urobuchi",
+  "artist": "Hikaru Miyoshi",
+  "publisher": "Mag Garden",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f5cfca9a-eb89-404b-8e42-e53126fed3e7",
+  "createdAt": "2025-09-24T18:02:43.541Z",
+  "updatedAt": "2025-09-24T20:22:47.940Z",
+  "totalChapters": 35,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.824Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 35,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:22:47.940Z"
+}

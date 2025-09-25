@@ -1,0 +1,25 @@
+{
+  "title": "Cipher Academy",
+  "description": "Students compete in code-breaking competitions",
+  "author": "Nisio Isin",
+  "artist": "Yuji Iwahara",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "c30e8e1c-c53c-4111-a00e-7995c261d325",
+  "createdAt": "2025-09-24T17:02:15.169Z",
+  "updatedAt": "2025-09-24T20:09:41.116Z",
+  "totalChapters": 58,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.272Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 58,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:09:41.116Z"
+}

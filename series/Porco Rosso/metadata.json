@@ -1,0 +1,25 @@
+{
+  "title": "Porco Rosso",
+  "description": "A pig pilot in 1920s Italy",
+  "author": "Hayao Miyazaki",
+  "artist": "Hayao Miyazaki",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "6e1da82f-cf00-4163-b77e-c902db4c7451",
+  "createdAt": "2025-09-24T18:08:49.791Z",
+  "updatedAt": "2025-09-24T20:22:31.657Z",
+  "totalChapters": 3,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.572Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 3,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:22:31.657Z"
+}

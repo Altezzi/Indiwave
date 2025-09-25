@@ -1,70 +1,26 @@
 {
   "title": "Bastard",
-  "mangaMDId": "bb169078-7289-4f95-948f-9315960e6905",
-  "description": "\"There is a murderer living with me.\"  \nGeneration discord thriller.",
-  "authors": [
-    "Carnby Kim (김칸비)"
-  ],
-  "artists": [
-    "Hwang Youngchan"
-  ],
-  "tags": [
-    "Thriller",
-    "Psychological",
-    "Long Strip",
-    "Romance",
-    "Crime",
-    "Drama",
-    "School Life",
-    "Horror",
-    "Mystery",
-    "Full Color",
-    "Tragedy"
-  ],
-  "status": "completed",
-  "year": 2014,
+  "description": "A high school student discovers his father is a serial killer",
+  "author": "Kim Carnby",
+  "artist": "Hwang Young-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "ko": "후레자식"
-    },
-    {
-      "ko-ro": "Hulejasig"
-    },
-    {
-      "fr": "Bâtard"
-    },
-    {
-      "es": "Bastardo"
-    },
-    {
-      "pl": "Drań"
-    },
-    {
-      "uk": "Сволота"
-    },
-    {
-      "ru": "Ублюдок"
-    },
-    {
-      "ru": "Сволочь"
-    },
-    {
-      "ja": "バスタード"
-    },
-    {
-      "zh": "不肖子"
-    },
-    {
-      "vi": "Bastard - Đứa Con Của Quỷ"
-    },
-    {
-      "tr": "Piç Kurusu"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:43.039Z",
-  "updatedAt": "2025-09-23T04:55:43.039Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Bastard"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "bb169078-7289-4f95-948f-9315960e6905",
+  "createdAt": "2025-09-24T18:26:53.471Z",
+  "updatedAt": "2025-09-24T20:39:29.838Z",
+  "totalChapters": 94,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.598Z",
+  "chapterSources": {
+    "jikan": 94,
+    "kitsu": 94,
+    "anilist": 76,
+    "mangadex": 93
+  },
+  "chapterVerifiedAt": "2025-09-24T20:39:29.838Z"
 }

@@ -1,0 +1,25 @@
+{
+  "title": "UQ Holder!",
+  "description": "The sequel to Negima featuring immortal warriors",
+  "author": "Ken Akamatsu",
+  "artist": "Ken Akamatsu",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "73d70237-b7c4-4350-ae11-fd09a103f84a",
+  "createdAt": "2025-09-24T17:05:19.177Z",
+  "updatedAt": "2025-09-24T20:30:14.338Z",
+  "totalChapters": 192,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.189Z",
+  "chapterSources": {
+    "anilist": 192,
+    "mangadex": 192,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:30:14.338Z"
+}

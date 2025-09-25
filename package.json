@@ -18,6 +18,8 @@
     "@auth/prisma-adapter": "^2.10.0",
     "@prisma/client": "^6.16.2",
     "@types/bcryptjs": "^2.4.6",
+    "axios": "^1.12.2",
+    "batoto.js": "^3.1.5",
     "bcryptjs": "^3.0.2",
     "chokidar": "^4.0.3",
     "mangadex-full-api": "^6.0.0",

@@ -1,0 +1,25 @@
+{
+  "title": "PPPPPP",
+  "description": "A family of piano prodigies deals with their complex relationships",
+  "author": "Mapollo 3",
+  "artist": "Mapollo 3",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "13d5ac2b-e606-4f81-81f6-198de2af8536",
+  "createdAt": "2025-09-24T17:02:38.949Z",
+  "updatedAt": "2025-09-24T20:22:33.507Z",
+  "totalChapters": 70,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.594Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 70,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:22:33.507Z"
+}

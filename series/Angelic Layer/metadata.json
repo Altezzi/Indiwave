@@ -1,0 +1,25 @@
+{
+  "title": "Angelic Layer",
+  "description": "Fighting dolls controlled by mental power",
+  "author": "CLAMP",
+  "artist": "CLAMP",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "e2468248-97a8-455a-848a-d8df41dad048",
+  "createdAt": "2025-09-24T18:05:28.368Z",
+  "updatedAt": "2025-09-24T20:06:20.592Z",
+  "totalChapters": 28,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.592Z",
+  "chapterSources": {
+    "anilist": 28,
+    "mangadex": 26,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:06:20.592Z"
+}

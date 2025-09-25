@@ -1,21 +1,25 @@
 {
   "title": "Pigpen",
-  "description": "A manhwa about a man trapped in a mysterious facility.",
-  "authors": [
-    "Kim Carnby"
-  ],
-  "artists": [
-    "Kim Carnby"
-  ],
-  "year": 2019,
-  "tags": [
-    "horror",
-    "thriller",
-    "seinen",
-    "psychological"
-  ],
-  "status": "completed",
+  "description": "A boy is trapped in a mysterious facility",
+  "author": "Kim Carnby",
+  "artist": "Hwang Young-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "series_pigpen",
-  "mangaMDStatus": "completed"
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "3080a5e2-abc1-4682-92f5-7429428bc198",
+  "createdAt": "2025-09-24T18:26:58.252Z",
+  "updatedAt": "2025-09-24T20:21:50.646Z",
+  "totalChapters": 68,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.290Z",
+  "chapterSources": {
+    "anilist": 68,
+    "mangadex": 67,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:21:50.646Z"
 }

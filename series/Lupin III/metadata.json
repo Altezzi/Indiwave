@@ -1,0 +1,25 @@
+{
+  "title": "Lupin III",
+  "description": "The adventures of the world's greatest thief",
+  "author": "Monkey Punch",
+  "artist": "Monkey Punch",
+  "publisher": "Futabasha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "50fe4f79-8c94-4052-bf66-2cf87f8efd34",
+  "createdAt": "2025-09-24T16:56:03.433Z",
+  "updatedAt": "2025-09-24T20:17:12.864Z",
+  "totalChapters": 109,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.640Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 109,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:17:12.864Z"
+}

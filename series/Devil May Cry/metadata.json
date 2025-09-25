@@ -1,0 +1,25 @@
+{
+  "title": "Devil May Cry",
+  "description": "Demon hunter Dante's adventures",
+  "author": "Hideki Kamiya",
+  "artist": "Various",
+  "publisher": "Capcom",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "a6e9ca4f-69cf-4911-bf9a-2bce657c8820",
+  "createdAt": "2025-09-24T18:10:53.620Z",
+  "updatedAt": "2025-09-24T20:10:34.754Z",
+  "totalChapters": 38,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.185Z",
+  "chapterSources": {
+    "anilist": 38,
+    "mangadex": 9,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:10:34.754Z"
+}

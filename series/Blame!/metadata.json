@@ -1,0 +1,26 @@
+{
+  "title": "Blame!",
+  "description": "A cyberpunk story in a vast megastructure",
+  "author": "Tsutomu Nihei",
+  "artist": "Tsutomu Nihei",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "ee80e31f-0d55-4cd5-9a67-c0bcee3ecc95",
+  "createdAt": "2025-09-24T17:58:46.247Z",
+  "updatedAt": "2025-09-24T20:43:33.345Z",
+  "totalChapters": 66,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:04.171Z",
+  "chapterSources": {
+    "jikan": 66,
+    "kitsu": 66,
+    "anilist": 66,
+    "mangadex": 102
+  },
+  "chapterVerifiedAt": "2025-09-24T20:43:33.345Z"
+}

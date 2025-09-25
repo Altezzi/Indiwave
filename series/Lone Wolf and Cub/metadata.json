@@ -1,116 +1,25 @@
 {
   "title": "Lone Wolf and Cub",
-  "description": "In the feudal era of Japan, Ogami Itto is the elite executioner for the Shogun until the ruthless Yagyu clan frames him in an attempt to gain the position. His name dishonored and his wife murdered, Itto and his infant son Daigoro wander Japan as an assassin for hire, named Lone Wolf and Cub. Ultimately, Ogami Itto strives for revenge against the Yagyu clan.",
-  "authors": [],
-  "artists": [],
-  "year": 1970,
-  "tags": [
-    {
-      "id": "33771934-028e-4cb3-8744-691e866a923e",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Historical"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Action"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "489dd859-9b61-4c37-af75-5b18e88daafc",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Ninja"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "799c202e-7daa-44eb-9cf7-8a3c0441531e",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Martial Arts"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "81183756-1453-4c81-aa9e-f6e1b63be016",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Samurai"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Adventure"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Gore"
-        },
-        "description": {},
-        "group": "content",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A ronin and his son seek vengeance",
+  "author": "Kazuo Koike",
+  "artist": "Goseki Kojima",
+  "publisher": "Futabasha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "526f68e3-4af1-460f-aea0-0fc29b0d6681"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "991e9f15-8368-4843-a78a-5605918f9c3e",
+  "createdAt": "2025-09-24T18:03:48.520Z",
+  "updatedAt": "2025-09-24T20:16:49.481Z",
+  "totalChapters": 142,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.639Z",
+  "chapterSources": {
+    "anilist": 142,
+    "mangadex": 4,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:16:49.481Z"
 }

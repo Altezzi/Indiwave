@@ -1,102 +1,25 @@
 {
   "title": "Goodnight Punpun",
-  "mangaMDId": "4301d363-ee02-43f4-ae24-4cbf29a74830",
-  "description": "Punpun Onodera is a normal 11-year-old boy living in Japan. Hopelessly idealistic and romantic, Punpun begins to see his life take a subtle—though nonetheless startling—turn to the adult when he meets the new girl in his class, Aiko Tanaka. It is then that the quiet boy learns just how fickle maintaining a relationship can be, and the surmounting difficulties of transitioning from a naïve boyhood to a convoluted adulthood. When his father assaults his mother one night, Punpun realizes another thing: those whom he looked up to were not as impressive as he once thought.  \r\n  \r\nAs his problems increase, Punpun's once shy demeanor turns into voluntary reclusiveness. Rather than curing him of his problems and conflicting emotions, this merely intensifies them, sending him down the dark path of maturity in this grim coming-of-age saga.",
-  "authors": [
-    "Asano Inio"
-  ],
-  "artists": [
-    "Asano Inio"
-  ],
-  "tags": [
-    "Thriller",
-    "Award Winning",
-    "Psychological",
-    "Romance",
-    "Crime",
-    "Sexual Violence",
-    "Philosophical",
-    "Gore",
-    "Drama",
-    "School Life",
-    "Horror",
-    "Delinquents",
-    "Police",
-    "Slice of Life",
-    "Mystery",
-    "Tragedy"
-  ],
-  "status": "completed",
-  "year": 2007,
-  "contentRating": "suggestive",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "pt-br": "Boa noite Punpun!"
-    },
-    {
-      "fr": "Bonne nuit Punpun"
-    },
-    {
-      "es-la": "Buenas noches Punpun"
-    },
-    {
-      "it": "Buona notte Punpun"
-    },
-    {
-      "pl": "Dobranoc Punpun!"
-    },
-    {
-      "tl": "Good Night Pung Pung"
-    },
-    {
-      "fi": "Hyvää yötä Punpun"
-    },
-    {
-      "tr": "İyi Uykular Punpun"
-    },
-    {
-      "ru": "Спокойной ночи, Пунпун"
-    },
-    {
-      "ar": "طابت ليلتك پُنپُن"
-    },
-    {
-      "ja": "おやすみプンプン"
-    },
-    {
-      "zh": "晚安，布布"
-    },
-    {
-      "ko": "잘자 뿡뿡"
-    },
-    {
-      "ne": "शुभ रात्री पुनपुन"
-    },
-    {
-      "uk": "Надобраніч, Пунпун"
-    },
-    {
-      "uk": "На добраніч, Пунпун"
-    },
-    {
-      "ja-ro": "Oyasumi Punpun"
-    },
-    {
-      "sr": "Laku Noć Punpune"
-    },
-    {
-      "id": "Selamat Malam, Punpun"
-    },
-    {
-      "kk": "Қайырлы түн, Пунпун"
-    },
-    {
-      "de": "Gute Nacht, Punpun"
-    }
-  ],
-  "createdAt": "2025-09-23T04:08:44.009Z",
-  "updatedAt": "2025-09-23T04:08:44.009Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Goodnight Punpun"
+  "description": "A surreal coming-of-age story",
+  "author": "Inio Asano",
+  "artist": "Inio Asano",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "4301d363-ee02-43f4-ae24-4cbf29a74830",
+  "createdAt": "2025-09-24T18:00:39.115Z",
+  "updatedAt": "2025-09-24T20:13:41.820Z",
+  "totalChapters": 147,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.678Z",
+  "chapterSources": {
+    "anilist": 147,
+    "mangadex": 147,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:41.820Z"
 }

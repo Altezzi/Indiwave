@@ -1,0 +1,25 @@
+{
+  "title": "Pom Poko: The Investigation",
+  "description": "Tanuki investigates their past",
+  "author": "Isao Takahata",
+  "artist": "Isao Takahata",
+  "publisher": "Tokuma Shoten",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "6a9baffb-505e-49c1-9b28-94521fdd5b2b",
+  "createdAt": "2025-09-24T18:33:12.018Z",
+  "updatedAt": "2025-09-24T20:22:28.519Z",
+  "totalChapters": 106,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.549Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 106,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:22:28.519Z"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Food Wars!",
+  "description": "A young chef enters an elite culinary school",
+  "author": "Yuto Tsukuda",
+  "artist": "Shun Saeki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "5d5eab11-c930-4d2f-a669-d9108b4ac7a0",
+  "createdAt": "2025-09-24T16:57:05.161Z",
+  "updatedAt": "2025-09-24T20:59:21.632Z",
+  "totalChapters": 318,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.214Z",
+  "chapterSources": {
+    "jikan": 325,
+    "kitsu": 318,
+    "anilist": 50,
+    "mangadex": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T20:59:21.632Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "The Last Saiyuki",
+  "description": "A boy becomes involved in a battle between heaven and earth",
+  "author": "Daijiro Nonoue",
+  "artist": "Daijiro Nonoue",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "4bafceb5-c1b9-46f7-928d-3ff01b6627b4",
+  "createdAt": "2025-09-24T17:02:46.717Z",
+  "updatedAt": "2025-09-24T20:27:53.883Z",
+  "totalChapters": 24,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.432Z",
+  "chapterSources": {
+    "anilist": 24,
+    "mangadex": 23,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:27:53.883Z"
+}

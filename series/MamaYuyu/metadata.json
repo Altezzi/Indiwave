@@ -1,0 +1,25 @@
+{
+  "title": "MamaYuyu",
+  "description": "A hero and a demon king live together as mother and son",
+  "author": "Yoshihiro Togashi",
+  "artist": "Yoshihiro Togashi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "3148a516-751b-4e42-95e3-caaea40ad3f0",
+  "createdAt": "2025-09-24T17:02:49.691Z",
+  "updatedAt": "2025-09-24T20:17:36.745Z",
+  "totalChapters": 34,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:15.878Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 34,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:17:36.745Z"
+}

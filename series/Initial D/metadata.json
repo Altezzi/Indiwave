@@ -1,64 +1,29 @@
 {
   "title": "Initial D",
-  "description": "Only the fearless survive in the white-hot world of street racing, as teams take on dangerous roads in the shadow of Mt. Akina. Behind the wheel of the mysterious \"Ghost of Akina\" is Takumi, on his way to becoming the greatest racer ever.",
-  "authors": [],
-  "artists": [],
-  "year": 1995,
+  "description": "A delivery driver becomes a street racing legend",
+  "author": "Shuichi Shigeno",
+  "artist": "Shuichi Shigeno",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
   "tags": [
-    {
-      "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Action"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sports"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
+    "Sports",
+    "Racing",
+    "Seinen"
   ],
-  "status": "completed",
-  "contentRating": "safe",
-  "mangaMDId": "21f54bc1-aefd-4be1-8284-5858b1df0e55"
+  "contentRating": "mature",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "0976963e-c0b4-4bdc-abde-831e9cb29cc2",
+  "createdAt": "2025-09-24T19:30:10.732Z",
+  "updatedAt": "2025-09-24T21:07:35.032Z",
+  "totalChapters": 724,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.950Z",
+  "chapterSources": {
+    "jikan": 724,
+    "kitsu": 719,
+    "anilist": 725
+  },
+  "chapterVerifiedAt": "2025-09-24T21:07:35.032Z"
 }

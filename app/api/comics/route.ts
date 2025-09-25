@@ -116,13 +116,13 @@ export async function GET(request: NextRequest) {
               chapterNumber: 'asc'
             }
           },
-          seasons: {
+          volumes: {
             where: { isPublished: true },
-            orderBy: { seasonNumber: 'asc' },
+            orderBy: { volumeNumber: 'asc' },
             select: {
               id: true,
               title: true,
-              seasonNumber: true,
+              volumeNumber: true,
               coverImage: true,
               description: true,
               createdAt: true,
@@ -184,14 +184,14 @@ export async function GET(request: NextRequest) {
           isPublished: chapter.isPublished,
           createdAt: chapter.createdAt
         })),
-        seasons: series.seasons.map(season => ({
-          id: season.id,
-          title: season.title,
-          seasonNumber: season.seasonNumber,
+        volumes: series.volumes.map(volume => ({
+          id: volume.id,
+          title: volume.title,
+          volumeNumber: volume.volumeNumber,
           coverImage: series.coverImage || null, // Use parent series cover or null
-          description: season.description || '',
-          createdAt: season.createdAt,
-          chapters: season.chapters.map(chapter => ({
+          description: volume.description || '',
+          createdAt: volume.createdAt,
+          chapters: volume.chapters.map(chapter => ({
             id: chapter.id,
             title: chapter.title,
             chapterNumber: chapter.chapterNumber,
@@ -199,10 +199,10 @@ export async function GET(request: NextRequest) {
             isPublished: chapter.isPublished,
             createdAt: chapter.createdAt
           })),
-          totalChapters: season.chapters.length
+          totalChapters: volume.chapters.length
         })),
         totalChapters: series.chapters.length,
-        totalSeasons: series.seasons.length,
+        totalVolumes: series.volumes.length,
         libraryCount: 0,
         createdAt: series.createdAt,
         updatedAt: series.updatedAt,

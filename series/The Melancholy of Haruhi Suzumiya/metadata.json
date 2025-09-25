@@ -1,0 +1,25 @@
+{
+  "title": "The Melancholy of Haruhi Suzumiya",
+  "description": "A high school student discovers her classmates have supernatural powers",
+  "author": "Nagaru Tanigawa",
+  "artist": "Gaku Tsugano",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "14df7a34-bd44-4791-8413-8fc1a857d687",
+  "createdAt": "2025-09-24T17:35:59.393Z",
+  "updatedAt": "2025-09-24T20:28:08.946Z",
+  "totalChapters": 101,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:29.590Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 101,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:28:08.946Z"
+}

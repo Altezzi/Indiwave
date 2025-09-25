@@ -1,0 +1,25 @@
+{
+  "title": "Girls' Last Tour",
+  "description": "Two girls travel through a post-apocalyptic world",
+  "author": "Tsukumizu",
+  "artist": "Tsukumizu",
+  "publisher": "Shinchosha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "5b93fa0f-0640-49b8-974e-954b9959929b",
+  "createdAt": "2025-09-24T17:36:31.943Z",
+  "updatedAt": "2025-09-24T20:13:19.482Z",
+  "totalChapters": 47,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.498Z",
+  "chapterSources": {
+    "anilist": 47,
+    "mangadex": 43,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:13:19.482Z"
+}

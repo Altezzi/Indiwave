@@ -1,64 +1,25 @@
 {
-  "title": "NEW GAME!",
-  "description": "Having been inspired by the character designs of a particular video game when she was younger, Suzukaze Aoba, a high school graduate, begins working as a character designer for the game's developer, Eagle Jump. As she works on modelling and designing characters for games in development, she becomes acquainted with her fellow co-workers in the character design department, as well as those from across the company.",
-  "authors": [],
-  "artists": [],
-  "year": 2013,
-  "tags": [
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "92d6d951-ca5e-429c-ac78-451071cbf064",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Office Workers"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b11fda93-8f1d-4bef-b2ed-8803d3733170",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "4-Koma"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "title": "New Game!",
+  "description": "A girl starts working at a video game company",
+  "author": "Shoutarou Tokunou",
+  "artist": "Shoutarou Tokunou",
+  "publisher": "Houbunsha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "d7a0991d-2913-4b3c-8fb6-2b752f9e5f3a"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "418f03bc-3e57-4ecf-b081-495a9e879cd1",
+  "createdAt": "2025-09-24T17:36:18.210Z",
+  "updatedAt": "2025-09-24T21:26:13.937Z",
+  "totalChapters": 165,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.748Z",
+  "chapterSources": {
+    "jikan": 165,
+    "kitsu": 66,
+    "anilist": 181
+  },
+  "chapterVerifiedAt": "2025-09-24T21:26:13.937Z"
 }

@@ -1,39 +1,25 @@
 {
   "title": "Fire Punch",
-  "mangaMDId": "6fef1f74-a0ad-4f0d-99db-d32a7cd24098",
-  "description": "In the not-too-distant past, the Ice Witch blanketed the world in snow, starvation and madness, leading the inhabitants to seek their salvation in fire. With that, an unusual destiny unfolds for two young orphans, Agni and Luna, blessed with the ability to regenerate. But will this ability prove to be more of a curse than a blessing?\n\nNominee for the 2017 Manga Taisho Award.",
-  "authors": [
-    "Fujimoto Tatsuki"
-  ],
-  "artists": [
-    "Fujimoto Tatsuki"
-  ],
-  "tags": [
-    "Thriller",
-    "Action",
-    "Psychological",
-    "Romance",
-    "Comedy",
-    "Survival",
-    "Adventure",
-    "Post-Apocalyptic",
-    "Sexual Violence",
-    "Military",
-    "Philosophical",
-    "Gore",
-    "Drama",
-    "Horror",
-    "Fantasy",
-    "Supernatural",
-    "Mystery",
-    "Tragedy"
-  ],
-  "status": "completed",
-  "year": 2016,
+  "description": "A man who burns forever seeks revenge",
+  "author": "Tatsuki Fujimoto",
+  "artist": "Tatsuki Fujimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:17:00.142Z",
-  "updatedAt": "2025-09-22T05:24:33.538Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "6fef1f74-a0ad-4f0d-99db-d32a7cd24098",
+  "createdAt": "2025-09-24T18:06:12.787Z",
+  "updatedAt": "2025-09-24T20:12:13.248Z",
+  "totalChapters": 83,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:11.015Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 83,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:12:13.248Z"
 }

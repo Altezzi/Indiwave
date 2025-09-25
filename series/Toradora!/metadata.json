@@ -1,59 +1,19 @@
 {
   "title": "Toradora!",
-  "mangaMDId": "e9dc373b-314c-44ff-9428-ae63319ae86b",
-  "description": "Takasu Ryuuji has learned the hard way that appearances can be deceiving. For despite his inwardly sweet personality, his unintentionally sharp gaze and aggressive features give him the air of a delinquent thug, putting his chances at making new friends, let alone a girlfriend, next to zero.  \r\n  \r\nIt's Ryuuji's first day of his second year of high school and it seems as if things are looking up. He gets to sit in between his only friend, Yuusaku, and more importantly, the girl he's secretly crushing on, Kushieda Minori. But just when he thinks the stars are aligned in his favor, he unwittingly crosses the most feared girl in school, Aisaka Taiga, making her into his arch enemy. To top it off, Taiga has moved in right next door to Ryuuji and happens to be Minori's best friend! Can this school year possibly get any worse?!",
-  "authors": [
-    "Takemiya Yuyuko"
-  ],
-  "artists": [
-    "Zekkyou"
-  ],
-  "tags": [
-    "Romance",
-    "Comedy",
-    "Drama",
-    "School Life",
-    "Slice of Life",
-    "Adaptation"
-  ],
-  "status": "ongoing",
-  "year": 2007,
+  "description": "A small girl and a scary guy team up to help each other with their crushes",
+  "author": "Yuyuko Takemiya",
+  "artist": "Zekkyou",
+  "publisher": "ASCII Media Works",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "en": "Tiger x Dragon! Tora Dora"
-    },
-    {
-      "ja": "とらドラ！"
-    },
-    {
-      "zh": "龙虎斗"
-    },
-    {
-      "ja-ro": "Toradora!"
-    },
-    {
-      "zh-hk": "龍虎戀人"
-    },
-    {
-      "en": "Տորադորա՜ [HY]"
-    },
-    {
-      "zh-ro": "Lónghǔ liànrén"
-    },
-    {
-      "zh-ro": "龙虎斗"
-    },
-    {
-      "th": "ToraDora! ยัยตัวร้ายกับนายหน้าโหด"
-    },
-    {
-      "ru": "ТораДора! Тигр и Дракон"
-    }
-  ],
-  "createdAt": "2025-09-23T07:41:00.248Z",
-  "updatedAt": "2025-09-23T07:41:00.248Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Toradora!"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e9dc373b-314c-44ff-9428-ae63319ae86b",
+  "createdAt": "2025-09-24T16:55:40.468Z",
+  "updatedAt": "2025-09-24T20:00:30.793Z",
+  "totalChapters": 10,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.793Z"
 }

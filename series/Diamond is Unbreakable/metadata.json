@@ -1,0 +1,25 @@
+{
+  "title": "Diamond is Unbreakable",
+  "description": "Jojo's Bizarre Adventure Part 4",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "b7af9467-a5d3-470a-86e9-b5ae4a82e0cd",
+  "createdAt": "2025-09-24T18:06:04.726Z",
+  "updatedAt": "2025-09-24T20:10:36.897Z",
+  "totalChapters": 174,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.202Z",
+  "chapterSources": {
+    "anilist": 174,
+    "mangadex": 174,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:10:36.897Z"
+}

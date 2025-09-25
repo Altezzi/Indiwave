@@ -1,0 +1,25 @@
+{
+  "title": "Naruto: The Seventh Hokage and the Scarlet Spring",
+  "description": "Naruto's son Boruto's early adventures",
+  "author": "Masashi Kishimoto",
+  "artist": "Masashi Kishimoto",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "cc33a2b4-02f0-48d8-97d7-7ba23a06d7e2",
+  "createdAt": "2025-09-24T17:03:49.091Z",
+  "updatedAt": "2025-09-24T20:19:56.580Z",
+  "totalChapters": 10,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:19.656Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 10,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:19:56.580Z"
+}

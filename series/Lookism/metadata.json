@@ -1,49 +1,19 @@
 {
   "title": "Lookism",
-  "mangaMDId": "596191eb-69ee-4401-983e-cc07e277fa17",
-  "description": "Park Hyung-Seok is an unattractive loner who wakes up in a different body. Now tall, handsome, and cooler than ever in his new form, Hyung-Seok aims to achieve everything he couldn't before.\n\nHow far will he go to keep his body... and his secrets?",
-  "authors": [
-    "Park Tae Joon"
-  ],
-  "artists": [
-    "Park Tae Joon"
-  ],
-  "tags": [
-    "Action",
-    "Long Strip",
-    "Comedy",
-    "Crime",
-    "Martial Arts",
-    "Drama",
-    "School Life",
-    "Delinquents",
-    "Web Comic",
-    "Supernatural",
-    "Full Color"
-  ],
-  "status": "ongoing",
-  "year": 2014,
-  "contentRating": "suggestive",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "zh": "外見至上主義"
-    },
-    {
-      "zh": "看臉時代"
-    },
-    {
-      "ko": "외모지상주의"
-    },
-    {
-      "uk": "Лукізм"
-    },
-    {
-      "vi": "Hoán Đổi Diệu Kỳ"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:31.764Z",
-  "updatedAt": "2025-09-23T04:55:31.764Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Lookism"
+  "description": "A boy can switch between two bodies",
+  "author": "Park Taejoon",
+  "artist": "Park Taejoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "596191eb-69ee-4401-983e-cc07e277fa17",
+  "createdAt": "2025-09-24T18:02:14.180Z",
+  "updatedAt": "2025-09-24T20:00:14.936Z",
+  "totalChapters": 500,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.936Z"
 }

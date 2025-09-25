@@ -1,32 +1,25 @@
 {
-  "title": "Dr.STONE",
-  "mangaMDId": "cfc3d743-bd89-48e2-991f-63e680cc4edf",
-  "description": "Imagine waking to a world where every last human has been mysteriously turned to stone…  \n\nOne fateful day, all of humanity was petrified by a blinding flash of light. After several millennia, high schooler Taiju awakens and finds himself lost in a world of statues. However, he's not alone! His science-loving friend Senku's been up and running for a few months and he's got a grand plan in mind—to kickstart civilization with the power of science!\n\n---\nAlt. Official English: [Viz](https://www.viz.com/dr-stone)",
-  "authors": [
-    "Inagaki Riichiro"
-  ],
-  "artists": [
-    "Boichi"
-  ],
-  "tags": [
-    "Sci-Fi",
-    "Action",
-    "Comedy",
-    "Survival",
-    "Adventure",
-    "Post-Apocalyptic",
-    "Drama",
-    "Slice of Life",
-    "Cooking",
-    "Supernatural",
-    "Mystery"
-  ],
-  "status": "completed",
-  "year": 2017,
+  "title": "Dr. Stone",
+  "description": "A scientist tries to rebuild civilization after petrification",
+  "author": "Riichiro Inagaki",
+  "artist": "Boichi",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 6,
-  "createdAt": "2025-09-22T05:15:37.131Z",
-  "updatedAt": "2025-09-22T05:24:22.362Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "cfc3d743-bd89-48e2-991f-63e680cc4edf",
+  "createdAt": "2025-09-24T16:54:44.646Z",
+  "updatedAt": "2025-09-24T20:11:07.241Z",
+  "totalChapters": 236,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:08.673Z",
+  "chapterSources": {
+    "anilist": 236,
+    "mangadex": 232,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:11:07.241Z"
 }

@@ -1,64 +1,19 @@
 {
   "title": "Eleceed",
-  "mangaMDId": "7e544761-7d3d-4fce-8137-719814d7d138",
-  "description": "Jiwoo is a kind-hearted young man who harnesses the lightning quick reflexes of a cat to secretly make the world a better place – one saved little child or foster pet at a time. Kayden is a secret agent on the run, who finds himself stuck in the body of a …um… decidedly fat old fluffy cat. Together, armed with Jiwoo’s super powers and Kayden’s uber-smarts, they’re out to fight those forces who would let evil rule this world. That is, if they can stand each other long enough to get the job done.\n\n---\n- [Official Simplified Chinese Translation](https://www.dongmanmanhua.cn/FANTASY/juexingbachanshiguan/list?title_no=1313)\n- [Official Spanish <Es> Translation](https://www.webtoons.com/es/action/eleceed/list?title_no=2642)\n- [Official Indonesian Translation](https://www.webtoons.com/id/fantasy/eleceed/list?title_no=2034)\n- [Official Japanese Translation](https://manga.line.me/product/periodic?id=Z0000883)\n- [Official French Translation](https://www.webtoons.com/fr/fantasy/eleceed/list?title_no=2861)\n- [Official Thai Translation](https://www.webtoons.com/th/fantasy/eleceed/list?title_no=3523)",
-  "authors": [
-    "Son Jae-Ho (손제호)"
-  ],
-  "artists": [
-    "Zhena"
-  ],
-  "tags": [
-    "Action",
-    "Animals",
-    "Long Strip",
-    "Comedy",
-    "Martial Arts",
-    "Adventure",
-    "Supernatural",
-    "Full Color"
-  ],
-  "status": "ongoing",
-  "year": 2018,
+  "description": "A boy with cat powers",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "ko": "일렉시드"
-    },
-    {
-      "es": "Eleceed: Velocidad eléctrica"
-    },
-    {
-      "es-la": "Electricidad veloz"
-    },
-    {
-      "uk": "Ілексід"
-    },
-    {
-      "ru": "Элисед"
-    },
-    {
-      "ur": "السید"
-    },
-    {
-      "ar": "بذور الكهرباء"
-    },
-    {
-      "ar": "تجاوز الكهرباء"
-    },
-    {
-      "zh": "觉醒吧，铲屎官！"
-    },
-    {
-      "zh-hk": "覺醒吧！貓奴"
-    },
-    {
-      "ja": "エレキシード"
-    }
-  ],
-  "createdAt": "2025-09-23T04:55:32.995Z",
-  "updatedAt": "2025-09-23T04:55:32.995Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Eleceed"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "7e544761-7d3d-4fce-8137-719814d7d138",
+  "createdAt": "2025-09-24T18:27:07.324Z",
+  "updatedAt": "2025-09-24T20:00:10.605Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.605Z"
 }

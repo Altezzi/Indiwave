@@ -1,0 +1,25 @@
+{
+  "title": "Phantom Blood",
+  "description": "Jojo's Bizarre Adventure Part 1",
+  "author": "Hirohiko Araki",
+  "artist": "Hirohiko Araki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "2dfeb1aa-14c4-4acf-96d5-86334584bf94",
+  "createdAt": "2025-09-24T18:08:00.179Z",
+  "updatedAt": "2025-09-24T20:21:45.995Z",
+  "totalChapters": 44,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.242Z",
+  "chapterSources": {
+    "anilist": 44,
+    "mangadex": 44,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:21:45.995Z"
+}

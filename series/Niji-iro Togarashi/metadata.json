@@ -1,0 +1,25 @@
+{
+  "title": "Niji-iro Togarashi",
+  "description": "A story about family and personal growth",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "3646619f-42e2-4ced-a4cb-361229c88a6e",
+  "createdAt": "2025-09-24T17:07:40.961Z",
+  "updatedAt": "2025-09-24T20:20:14.056Z",
+  "totalChapters": 109,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:20.018Z",
+  "chapterSources": {
+    "anilist": 109,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:14.056Z"
+}

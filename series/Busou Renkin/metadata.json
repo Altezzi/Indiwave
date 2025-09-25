@@ -1,0 +1,25 @@
+{
+  "title": "Busou Renkin",
+  "description": "A boy becomes a warrior using alchemical weapons",
+  "author": "Nobuhiro Watsuki",
+  "artist": "Nobuhiro Watsuki",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "45e51495-ec90-4199-a0e2-e3d478d9a8f8",
+  "createdAt": "2025-09-24T17:05:43.023Z",
+  "updatedAt": "2025-09-24T20:08:50.313Z",
+  "totalChapters": 83,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.071Z",
+  "chapterSources": {
+    "anilist": 83,
+    "mangadex": 83,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:08:50.313Z"
+}

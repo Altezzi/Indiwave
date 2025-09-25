@@ -1,0 +1,25 @@
+{
+  "title": "Attack on Titan: Lost Girls",
+  "description": "Side stories focusing on Annie and Mikasa",
+  "author": "Hiroshi Seko",
+  "artist": "Ryosuke Fuji",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "738cb558-fe34-44e3-b77d-7ffe02ba1635",
+  "createdAt": "2025-09-24T17:03:46.072Z",
+  "updatedAt": "2025-09-24T20:38:41.183Z",
+  "totalChapters": 10,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.045Z",
+  "chapterSources": {
+    "jikan": 10,
+    "kitsu": 10,
+    "anilist": 3
+  },
+  "chapterVerifiedAt": "2025-09-24T20:38:41.183Z"
+}

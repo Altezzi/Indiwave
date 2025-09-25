@@ -1,21 +1,19 @@
 {
   "title": "Veritas",
-  "description": "A manhwa about a high school student with superpowers.",
-  "authors": [
-    "Yoon Joon-sik"
-  ],
-  "artists": [
-    "Yoon Joon-sik"
-  ],
-  "year": 2006,
-  "tags": [
-    "action",
-    "adventure",
-    "shounen",
-    "supernatural"
-  ],
-  "status": "completed",
+  "description": "A high school student learns about a martial arts school",
+  "author": "Yoon Joon-sik",
+  "artist": "Kim Dong-hoon",
+  "publisher": "Haksan",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "series_veritas",
-  "mangaMDStatus": "completed"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "191667a1-07db-40f8-948d-a8806aedd78c",
+  "createdAt": "2025-09-24T18:02:09.942Z",
+  "updatedAt": "2025-09-24T20:00:31.664Z",
+  "totalChapters": 50,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.664Z"
 }

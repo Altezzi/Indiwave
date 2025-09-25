@@ -1,0 +1,25 @@
+{
+  "title": "Kids on the Slope",
+  "description": "Jazz music brings unlikely friends together",
+  "author": "Yuki Kodama",
+  "artist": "Yuki Kodama",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "0bbed55f-a503-4b14-ad08-e0a416420adb",
+  "createdAt": "2025-09-24T18:05:52.989Z",
+  "updatedAt": "2025-09-24T21:08:45.091Z",
+  "totalChapters": 45,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.367Z",
+  "chapterSources": {
+    "jikan": 45,
+    "kitsu": 45,
+    "anilist": 53
+  },
+  "chapterVerifiedAt": "2025-09-24T21:08:45.091Z"
+}

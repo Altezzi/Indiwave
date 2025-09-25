@@ -1,31 +1,25 @@
 {
-  "title": "That Time I Got Reincarnated as a Slime (Official Colored Vertical)",
-  "mangaMDId": "536dc0ce-6954-490c-829b-ddfd7990bbb2",
-  "description": "The girl from the Rabbitman Tribe, Flamaire, came to make the town's guidebook at the request from the Lord of Tempest, Rimuru. What she saw was a strange scene in which, surprisingly, both monsters and humans coexisting naturally together. And it was a novel townscape she has never seen before. Flamaire's excitement doesn't stop from just a walk. Let's head off today and cover some more!\n\nWarning: Potential Spoilers for the main manga",
-  "authors": [
-    "Okagiri Shou",
-    "Fuse"
-  ],
-  "artists": [
-    "Okagiri Shou",
-    "Fuse"
-  ],
-  "tags": [
-    "Official Colored",
-    "Demons",
-    "Comedy",
-    "Adventure",
-    "Isekai",
-    "Fantasy",
-    "Vampires",
-    "Web Comic"
-  ],
-  "status": "ongoing",
-  "year": 2022,
+  "title": "That Time I Got Reincarnated as a Slime",
+  "description": "A man reincarnated as a slime builds a monster nation",
+  "author": "Fuse",
+  "artist": "Taiki Kawakami",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:16:00.614Z",
-  "updatedAt": "2025-09-22T05:25:42.262Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "f1c79d23-d306-40e5-8b47-17cab7408f1a",
+  "createdAt": "2025-09-24T16:55:25.356Z",
+  "updatedAt": "2025-09-24T20:26:23.719Z",
+  "totalChapters": 22,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:28.476Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 22,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:26:23.719Z"
 }

@@ -1,21 +1,25 @@
 {
   "title": "Another",
-  "description": "A transfer student discovers a dark secret about his new school.",
-  "authors": [
-    "Yukito Ayatsuji"
-  ],
-  "artists": [
-    "Yukito Ayatsuji"
-  ],
-  "year": 2009,
-  "tags": [
-    "horror",
-    "mystery",
-    "seinen",
-    "supernatural"
-  ],
-  "status": "completed",
+  "description": "Students face a deadly curse",
+  "author": "Yukito Ayatsuji",
+  "artist": "Hiro Kiyohara",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "series_another",
-  "mangaMDStatus": "completed"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "879af0bb-ce30-47e4-a74e-cd1ce874c6e3",
+  "createdAt": "2025-09-24T18:03:57.119Z",
+  "updatedAt": "2025-09-24T20:37:56.795Z",
+  "totalChapters": 20,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:01.614Z",
+  "chapterSources": {
+    "jikan": 20,
+    "kitsu": 20,
+    "anilist": 21
+  },
+  "chapterVerifiedAt": "2025-09-24T20:37:56.795Z"
 }

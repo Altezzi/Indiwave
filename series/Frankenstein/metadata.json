@@ -1,0 +1,20 @@
+{
+  "title": "Frankenstein",
+  "description": "Junji Ito's adaptation of Frankenstein",
+  "author": "Junji Ito",
+  "artist": "Junji Ito",
+  "publisher": "Asahi Sonorama",
+  "publisherLinks": [],
+  "tags": [
+    "Horror",
+    "Classic Literature",
+    "Monster"
+  ],
+  "contentRating": "mature",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "05875db7-5d63-4157-86e3-7e148a851b63",
+  "createdAt": "2025-09-24T22:12:37.456Z",
+  "updatedAt": "2025-09-24T22:12:37.456Z"
+}

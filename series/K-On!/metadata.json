@@ -1,0 +1,25 @@
+{
+  "title": "K-On!",
+  "description": "High school girls form a light music club",
+  "author": "Kakifly",
+  "artist": "Kakifly",
+  "publisher": "Houbunsha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "9d3d3403-1a87-4737-9803-bc3d99db1424",
+  "createdAt": "2025-09-24T17:36:07.688Z",
+  "updatedAt": "2025-09-24T20:15:19.438Z",
+  "totalChapters": 57,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:13.228Z",
+  "chapterSources": {
+    "anilist": 57,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:15:19.438Z"
+}

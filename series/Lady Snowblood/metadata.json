@@ -1,0 +1,26 @@
+{
+  "title": "Lady Snowblood",
+  "description": "A woman seeks revenge for her family",
+  "author": "Kazuo Koike",
+  "artist": "Kazuo Kamimura",
+  "publisher": "Futabasha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "17385fb2-00d3-479c-af25-f625a61c01b8",
+  "createdAt": "2025-09-24T18:03:51.605Z",
+  "updatedAt": "2025-09-24T21:12:04.259Z",
+  "totalChapters": 26,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.436Z",
+  "chapterSources": {
+    "jikan": 15,
+    "kitsu": 15,
+    "anilist": 26,
+    "mangadex": 28
+  },
+  "chapterVerifiedAt": "2025-09-24T21:12:04.259Z"
+}

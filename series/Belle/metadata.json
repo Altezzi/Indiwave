@@ -1,0 +1,23 @@
+{
+  "title": "Belle",
+  "description": "A girl becomes a famous singer in a virtual world",
+  "author": "Mamoru Hosoda",
+  "artist": "Mamoru Hosoda",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.png",
+  "source": "manual",
+  "mangaDexId": "e9462073-84d0-4ad2-a086-3f391e19cac1",
+  "createdAt": "2025-09-24T17:38:44.683Z",
+  "updatedAt": "2025-09-24T20:40:27.448Z",
+  "totalChapters": 6,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.988Z",
+  "chapterSources": {
+    "anilist": 6
+  },
+  "chapterVerifiedAt": "2025-09-24T20:40:27.448Z"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Noragami",
+  "description": "A minor god tries to become famous",
+  "author": "Adachitoka",
+  "artist": "Adachitoka",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e5ce88e2-8c46-482d-8acf-5c6d5a64a585",
+  "createdAt": "2025-09-24T18:17:16.228Z",
+  "updatedAt": "2025-09-24T20:20:25.258Z",
+  "totalChapters": 109,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:20.130Z",
+  "chapterSources": {
+    "anilist": 109,
+    "mangadex": 109,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:20:25.258Z"
+}

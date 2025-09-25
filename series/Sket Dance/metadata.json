@@ -1,0 +1,25 @@
+{
+  "title": "Sket Dance",
+  "description": "A school club that helps students with their problems",
+  "author": "Kenta Shinohara",
+  "artist": "Kenta Shinohara",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "566eb93d-5958-44ca-b9d3-a8335bfead5a",
+  "createdAt": "2025-09-24T17:34:49.286Z",
+  "updatedAt": "2025-09-24T20:24:42.619Z",
+  "totalChapters": 288,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:26.934Z",
+  "chapterSources": {
+    "anilist": 288,
+    "mangadex": 288,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:24:42.619Z"
+}

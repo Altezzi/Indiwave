@@ -1,0 +1,25 @@
+{
+  "title": "Dragon Ball Heroes",
+  "description": "Time Patrol adventures with Goku and friends",
+  "author": "Akira Toriyama",
+  "artist": "Toyotarou",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "4b1a60d8-d7f0-4c6b-b64f-43a192089f34",
+  "createdAt": "2025-09-24T18:18:55.737Z",
+  "updatedAt": "2025-09-24T20:54:32.388Z",
+  "totalChapters": 30,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:09.388Z",
+  "chapterSources": {
+    "jikan": 21,
+    "anilist": 37,
+    "mangadex": 30
+  },
+  "chapterVerifiedAt": "2025-09-24T20:54:32.387Z"
+}

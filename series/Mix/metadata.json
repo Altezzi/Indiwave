@@ -1,116 +1,24 @@
 {
   "title": "Mix",
-  "description": "Adachi's second serialization in Gessan Shounen Sunday, follows the story of three siblings, students of Meisei Middle School. Takes place 26 years after Adachi's biggest title, Touch. Because of the legend left by Tatsuya Uesugi, Meisei Academy High School was well-known for their strong baseball team. But 26 years after their glory, the team has not been able to keep their record and has since lost their fame. Two stepbrothers, Souichirou and Touma Tachibana, aim to revive of the once-strong Meisei Academy baseball team and enter the National High School Baseball Championship.  \n  \n(Source: MAL, edited)",
-  "authors": [],
-  "artists": [],
-  "year": 2012,
-  "tags": [
-    {
-      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Psychological"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sports"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "da2d50ca-3018-4cc0-ac7a-6b7d472a29ea",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Delinquents"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "ongoing",
+  "description": "A sequel to Touch featuring the next generation",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "d362fd89-f15c-481f-8bf1-17e59e125d03"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "98467236-8e2b-4f3d-ae7d-20ef4a84417a",
+  "createdAt": "2025-09-24T17:07:29.374Z",
+  "updatedAt": "2025-09-24T21:21:08.855Z",
+  "totalChapters": 43,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:16.447Z",
+  "chapterSources": {
+    "kitsu": 43,
+    "anilist": 2
+  },
+  "chapterVerifiedAt": "2025-09-24T21:21:08.855Z"
 }

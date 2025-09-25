@@ -1,32 +1,19 @@
 {
-  "title": "One-Punch Man (Fan Colored)",
-  "mangaMDId": "29c42e49-d6f5-4084-9cec-771f5660c90f",
-  "description": "After rigorously training for three years, the ordinary Saitama has gained immense strength which allows him to take out anyone and anything with just one punch. He decides to put his new skill to good use by becoming a hero. However, he quickly becomes bored with easily defeating monsters, and wants someone to give him a challenge to bring back the spark of being a hero.  \n  \nUpon bearing witness to Saitama's amazing power, Genos, a cyborg, is determined to become Saitama's apprentice. During this time, Saitama realizes he is neither getting the recognition that he deserves nor known by the people due to him not being a part of the Hero Association. Wanting to boost his reputation, Saitama decides to have Genos register with him, in exchange for taking him in as a pupil. Together, the two begin working their way up toward becoming true heroes, hoping to find strong enemies and earn respect in the process.",
-  "authors": [
-    "ONE"
-  ],
-  "artists": [
-    "Murata Yuusuke"
-  ],
-  "tags": [
-    "Award Winning",
-    "Sci-Fi",
-    "Monsters",
-    "Action",
-    "Comedy",
-    "Superhero",
-    "Martial Arts",
-    "Fan Colored",
-    "Gore",
-    "Drama",
-    "Supernatural"
-  ],
-  "status": "ongoing",
-  "year": null,
-  "contentRating": "suggestive",
+  "title": "One Punch Man",
+  "description": "A hero who can defeat any opponent with one punch",
+  "author": "ONE",
+  "artist": "Yusuke Murata",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 0,
-  "createdAt": "2025-09-22T05:15:11.592Z",
-  "updatedAt": "2025-09-22T05:25:16.098Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "d8a959f7-648e-4c8d-8f23-f1f3f8e129f3",
+  "createdAt": "2025-09-24T16:53:53.971Z",
+  "updatedAt": "2025-09-24T20:00:24.872Z",
+  "totalChapters": 180,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:24.872Z"
 }

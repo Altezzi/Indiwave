@@ -1,0 +1,25 @@
+{
+  "title": "Emma: The Final Years",
+  "description": "Emma's final years as a maid",
+  "author": "Kaoru Mori",
+  "artist": "Kaoru Mori",
+  "publisher": "Enterbrain",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "28bf349e-41e5-4443-84f0-f0581752519b",
+  "createdAt": "2025-09-24T18:24:13.691Z",
+  "updatedAt": "2025-09-24T20:11:49.943Z",
+  "totalChapters": 72,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:10.675Z",
+  "chapterSources": {
+    "anilist": 72,
+    "mangadex": 72,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:11:49.943Z"
+}

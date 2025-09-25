@@ -1,0 +1,25 @@
+{
+  "title": "Phoenix",
+  "description": "An epic spanning multiple time periods about immortality",
+  "author": "Osamu Tezuka",
+  "artist": "Osamu Tezuka",
+  "publisher": "Kobunsha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "1fcaaa65-6fa4-4772-9006-b905101905d7",
+  "createdAt": "2025-09-24T16:56:15.022Z",
+  "updatedAt": "2025-09-24T21:32:20.197Z",
+  "totalChapters": 19,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.269Z",
+  "chapterSources": {
+    "jikan": 19,
+    "kitsu": 19,
+    "anilist": 134
+  },
+  "chapterVerifiedAt": "2025-09-24T21:32:20.197Z"
+}

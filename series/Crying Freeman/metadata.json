@@ -1,0 +1,26 @@
+{
+  "title": "Crying Freeman",
+  "description": "An artist becomes an assassin",
+  "author": "Kazuo Koike",
+  "artist": "Ryoichi Ikegami",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "03c2bd97-c26b-452a-909e-34d4210da718",
+  "createdAt": "2025-09-24T18:03:54.243Z",
+  "updatedAt": "2025-09-24T20:49:30.504Z",
+  "totalChapters": 103,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.351Z",
+  "chapterSources": {
+    "jikan": 103,
+    "kitsu": 98,
+    "anilist": 103,
+    "mangadex": 92
+  },
+  "chapterVerifiedAt": "2025-09-24T20:49:30.504Z"
+}

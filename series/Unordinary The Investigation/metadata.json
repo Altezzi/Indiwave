@@ -1,0 +1,28 @@
+{
+  "title": "Unordinary: The Investigation",
+  "description": "John investigates his past",
+  "author": "uru-chan",
+  "artist": "uru-chan",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": null,
+  "createdAt": "2025-09-24T18:27:21.813Z",
+  "updatedAt": "2025-09-24T20:30:11.961Z",
+  "sources": [
+    "mangadex"
+  ],
+  "totalChapters": 18,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:31.172Z",
+  "chapterSources": {
+    "anilist": 18,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:30:11.961Z"
+}

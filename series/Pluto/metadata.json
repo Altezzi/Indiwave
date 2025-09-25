@@ -1,55 +1,19 @@
 {
   "title": "Pluto",
-  "mangaMDId": "e171c073-4415-499b-85bc-ea93825127ac",
-  "description": "Someone - or something - is destroying the seven most powerful robots in the world one after the other; brutally dismantling them without any provocation on their part. Gesicht, one of the seven and a detective for the European Federation — Europol, embarks on a mission to capture the killer…and confront the mysteries behind the vague but disturbing memories that keep haunting him in his dreams.  \n\nUrasawa's approach on \"The Greatest Robot on Earth\" chapter of Astro Boy done in celebration of Atom's in universe birthday (April 7th, 2003).",
-  "authors": [
-    "Tezuka Osamu",
-    "Urasawa Naoki"
-  ],
-  "artists": [
-    "Urasawa Naoki"
-  ],
-  "tags": [
-    "Thriller",
-    "Sci-Fi",
-    "Monsters",
-    "Action",
-    "Mecha",
-    "Military",
-    "Philosophical",
-    "Gore",
-    "Drama",
-    "Mystery"
-  ],
-  "status": "completed",
-  "year": 2004,
+  "description": "A robot detective investigates robot murders",
+  "author": "Naoki Urasawa",
+  "artist": "Naoki Urasawa",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "en": "PLUTO"
-    },
-    {
-      "en": "Pluto: Urasawa x Tezuka"
-    },
-    {
-      "ja": "プルートウ"
-    },
-    {
-      "zh": "冥王"
-    },
-    {
-      "ko": "플루토"
-    },
-    {
-      "ru": "Плутон"
-    },
-    {
-      "ne": "प्लुटो - नाओकी उरासावा × ओसामु तेजुका"
-    }
-  ],
-  "createdAt": "2025-09-23T04:08:14.744Z",
-  "updatedAt": "2025-09-23T04:08:14.744Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\Pluto"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "e171c073-4415-499b-85bc-ea93825127ac",
+  "createdAt": "2025-09-24T18:00:29.530Z",
+  "updatedAt": "2025-09-24T20:00:25.448Z",
+  "totalChapters": 65,
+  "chapterSource": "accurate_defaults",
+  "chaptersCreatedAt": "2025-09-24T20:00:25.448Z"
 }

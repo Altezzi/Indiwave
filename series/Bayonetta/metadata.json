@@ -1,0 +1,25 @@
+{
+  "title": "Bayonetta",
+  "description": "A witch fights angels",
+  "author": "Hideki Kamiya",
+  "artist": "Various",
+  "publisher": "Sega",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "mangadex",
+  "mangaDexId": "9e107c4a-ad46-4fcf-9ca1-98f21c6ec2a3",
+  "createdAt": "2025-09-24T18:10:51.421Z",
+  "updatedAt": "2025-09-24T20:07:12.943Z",
+  "totalChapters": 2,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:02.826Z",
+  "chapterSources": {
+    "anilist": 2,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:07:12.943Z"
+}

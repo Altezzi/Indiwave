@@ -1,0 +1,26 @@
+{
+  "title": "Legal Drug",
+  "description": "Two boys work at a pharmacy with supernatural cases",
+  "author": "CLAMP",
+  "artist": "CLAMP",
+  "publisher": "Kadokawa",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "8b530af3-b431-48ff-8d37-32b304765503",
+  "createdAt": "2025-09-24T18:05:37.692Z",
+  "updatedAt": "2025-09-24T21:12:33.407Z",
+  "totalChapters": 18,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:14.500Z",
+  "chapterSources": {
+    "jikan": 18,
+    "kitsu": 16,
+    "anilist": 21,
+    "mangadex": 16
+  },
+  "chapterVerifiedAt": "2025-09-24T21:12:33.407Z"
+}

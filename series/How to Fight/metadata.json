@@ -1,51 +1,25 @@
 {
   "title": "How to Fight",
-  "mangaMDId": "d2df017b-c003-4de6-9625-4f1fba7aef97",
-  "description": "Good for nothing Yoo Hobin is always bullied by students who feel superior to him, yet he ignores them as his life is all too difficult already. However, an unintentional incident ends up turning his life around. He becomes famous through a viral video that he didn't even intend to upload! Everything is perfect! He instantly becomes famous and starts earning money from the accidental video he uploaded.  \n  \nBut since it was unintentional, he is unable to reproduce it. Fueled by the potential money to be made and his sudden surge of popularity, he plans to make more captivating videos that people will find interesting and help him gather more subscribers… However, he cannot accomplish any of that unless he learns HOW TO FIGHT.",
-  "authors": [
-    "Park Tae Joon"
-  ],
-  "artists": [
-    "Kim Junghyun"
-  ],
-  "tags": [
-    "Action",
-    "Long Strip",
-    "Comedy",
-    "Martial Arts",
-    "Drama",
-    "Web Comic",
-    "Full Color"
-  ],
-  "status": "completed",
-  "year": 2019,
-  "contentRating": "suggestive",
-  "coverImage": "cover.jpeg",
-  "altTitles": [
-    {
-      "fr": "Comment se Battre"
-    },
-    {
-      "ko-ro": "Ssaumdokak"
-    },
-    {
-      "en": "Viral Hit!"
-    },
-    {
-      "zh": "格鬥實況"
-    },
-    {
-      "ko": "싸움독학"
-    },
-    {
-      "pt-br": "Como Lutar"
-    },
-    {
-      "vi": "Cách Chiến Thắng Trận Đấu"
-    }
-  ],
-  "createdAt": "2025-09-23T07:40:09.357Z",
-  "updatedAt": "2025-09-23T07:40:09.357Z",
-  "source": "MangaDex",
-  "folderPath": "C:\\Users\\sfgch\\Documents\\GitHub\\Indiwave\\series\\How to Fight"
+  "description": "A weak boy learns to fight",
+  "author": "Jung Ji-Hoon",
+  "artist": "Jung Ji-Hoon",
+  "publisher": "Webtoon",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "555bc816-ecab-48a2-b4f6-024da707a392",
+  "createdAt": "2025-09-24T18:27:18.250Z",
+  "updatedAt": "2025-09-24T20:14:33.382Z",
+  "totalChapters": 222,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:12.635Z",
+  "chapterSources": {
+    "anilist": 222,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:14:33.382Z"
 }

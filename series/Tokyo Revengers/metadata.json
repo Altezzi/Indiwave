@@ -1,0 +1,25 @@
+{
+  "title": "Tokyo Revengers",
+  "description": "A delinquent travels back in time to save his ex-girlfriend",
+  "author": "Ken Wakui",
+  "artist": "Ken Wakui",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "f7b1ce54-67df-4e08-9e79-d7187faa3584",
+  "createdAt": "2025-09-24T17:01:49.976Z",
+  "updatedAt": "2025-09-24T20:29:40.149Z",
+  "totalChapters": 40,
+  "chapterSource": "mangadex",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.772Z",
+  "chapterSources": {
+    "anilist": null,
+    "mangadex": 40,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:29:40.149Z"
+}

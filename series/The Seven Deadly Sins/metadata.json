@@ -1,0 +1,25 @@
+{
+  "title": "The Seven Deadly Sins",
+  "description": "Knights with the power of deadly sins fight demons",
+  "author": "Nakaba Suzuki",
+  "artist": "Nakaba Suzuki",
+  "publisher": "Kodansha",
+  "publisherLinks": [],
+  "tags": [],
+  "contentRating": "safe",
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "34019331-7377-4e2c-837e-f6e1ab2b5ef7",
+  "createdAt": "2025-09-24T16:57:06.451Z",
+  "updatedAt": "2025-09-24T20:28:50.991Z",
+  "totalChapters": 367,
+  "chapterSource": "anilist",
+  "chaptersCreatedAt": "2025-09-24T20:00:30.130Z",
+  "chapterSources": {
+    "anilist": 367,
+    "mangadex": null,
+    "batoto": null
+  },
+  "chapterVerifiedAt": "2025-09-24T20:28:50.991Z"
+}

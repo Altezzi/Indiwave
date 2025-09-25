@@ -1,155 +1,25 @@
 {
   "title": "Cross Game",
-  "description": "My childhood best friends are four sisters!　\n\nThis is a refreshing and sad coming-of-age baseball story about Kitamura Koh, the son of a sporting goods store, and the daughters of the batting center and coffee shop \"Clover\"!　\n\nIt was the summer of the 5th grade in elementary school when Kitamura Koh woke up to baseball... \n\nIt was a long and hot summer that he will never forget. \n\n(Source: ebookjapan, edited)\n___\n[Official English](https://www.viz.com/cross-game)\n[Official Spanish](https://www.penguinlibros.com/es/content/498-sagas?id=352938&cod_agrup=03680&utm_source=mangadex)\n___\n- **Won  the 54th Shogakukan Manga Award for Shonen in 2009**",
-  "authors": [],
-  "artists": [],
-  "year": 2005,
-  "tags": [
-    {
-      "id": "07251805-a27e-4d59-b488-f0bfbec15168",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Thriller"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Award Winning"
-        },
-        "description": {},
-        "group": "format",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Psychological"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Romance"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Comedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "69964a64-2f90-4d33-beeb-f3ed2875eb4c",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Sports"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Drama"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "School Life"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "da2d50ca-3018-4cc0-ac7a-6b7d472a29ea",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Delinquents"
-        },
-        "description": {},
-        "group": "theme",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Slice of Life"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    },
-    {
-      "id": "f8f62932-27da-4fe4-8ee1-6779a8c5edba",
-      "type": "tag",
-      "attributes": {
-        "name": {
-          "en": "Tragedy"
-        },
-        "description": {},
-        "group": "genre",
-        "version": 1
-      },
-      "relationships": []
-    }
-  ],
-  "status": "completed",
+  "description": "A boy and girl's relationship through baseball",
+  "author": "Mitsuru Adachi",
+  "artist": "Mitsuru Adachi",
+  "publisher": "Shogakukan",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
-  "mangaMDId": "8bd288e6-7c5a-403a-b5b6-a845a70ca376"
+  "altTitles": [],
+  "coverImage": "cover.jpg",
+  "source": "manual",
+  "mangaDexId": "64c59add-698a-4260-8671-848356f26eab",
+  "createdAt": "2025-09-24T17:07:18.874Z",
+  "updatedAt": "2025-09-24T20:49:25.535Z",
+  "totalChapters": 170,
+  "chapterSource": "jikan",
+  "chaptersCreatedAt": "2025-09-24T20:00:06.344Z",
+  "chapterSources": {
+    "jikan": 170,
+    "kitsu": 170,
+    "anilist": 170
+  },
+  "chapterVerifiedAt": "2025-09-24T20:49:25.535Z"
 }

@@ -1,30 +1,26 @@
 {
   "title": "Bleach",
-  "mangaMDId": "239d6260-d71f-43b0-afff-074e3619e3de",
-  "description": "Ichigo Kurosaki has always been able to see ghosts, but this ability doesn't change his life nearly as much as his close encounter with Rukia Kuchiki, a Soul Reaper and member of the mysterious Soul Society. While fighting a Hollow, an evil spirit that preys on humans who display psychic energy, Rukia attempts to lend Ichigo some of her powers so that he can save his family, but much to her surprise, Ichigo absorbs every last drop of her energy.   \nNow a full-fledged Soul Reaper himself, Ichigo quickly learns that the world he inhabits is one full of dangerous spirits, and along with Rukia, who is slowly regaining her powers, it's Ichigo's job to both protect the innocent from Hollows and to help the spirits themselves find peace.   \n\n---\n  \n- **Won the 50th Shogakukan Manga Award for Shonen**  \n \n--- \n- [Alternate Official English](https://mangaplus.shueisha.co.jp/titles/100004)",
-  "authors": [
-    "Kubo Tite"
-  ],
-  "artists": [
-    "Kubo Tite"
-  ],
-  "tags": [
-    "Award Winning",
-    "Action",
-    "Comedy",
-    "Martial Arts",
-    "Adventure",
-    "Gore",
-    "Drama",
-    "Fantasy",
-    "Supernatural"
-  ],
-  "status": "completed",
-  "year": 2001,
+  "description": "Ichigo Kurosaki becomes a Soul Reaper",
+  "author": "Tite Kubo",
+  "artist": "Tite Kubo",
+  "publisher": "Shueisha",
+  "publisherLinks": [],
+  "tags": [],
   "contentRating": "safe",
+  "altTitles": [],
   "coverImage": "cover.jpg",
-  "totalChapters": 3,
-  "createdAt": "2025-09-22T05:14:46.538Z",
-  "updatedAt": "2025-09-22T05:24:09.756Z",
-  "source": "MangaDex"
+  "source": "manual",
+  "mangaDexId": "a460ab18-22c1-47eb-a08a-9ee85fe37ec8",
+  "createdAt": "2025-09-24T16:31:25.930Z",
+  "updatedAt": "2025-09-24T20:44:04.599Z",
+  "totalChapters": 706,
+  "chapterSource": "kitsu",
+  "chaptersCreatedAt": "2025-09-24T20:00:04.426Z",
+  "chapterSources": {
+    "jikan": 705,
+    "kitsu": 706,
+    "anilist": 706,
+    "mangadex": 686
+  },
+  "chapterVerifiedAt": "2025-09-24T20:44:04.599Z"
 }

@@ -141,3 +141,4 @@ For production, consider:
 5. **Scale**: Upgrade plan as needed for better performance
 
 Your Indiwave application is now optimized for Vercel deployment! 🎉
+

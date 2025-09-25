@@ -49,3 +49,4 @@ volumes:
     driver: local
   indiwave_public:
     driver: local
+

@@ -280,3 +280,4 @@ async function downloadCoverArt(url: string, seriesPath: string, title: string) 
     throw error;
   }
 }
+

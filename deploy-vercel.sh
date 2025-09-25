@@ -27,3 +27,4 @@ echo "📋 Next steps:"
 echo "1. Set up environment variables in Vercel dashboard"
 echo "2. Configure custom domain if needed"
 echo "3. Test the drag scrolling functionality"
+

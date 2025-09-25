@@ -56,3 +56,4 @@ console.log('1. Push changes to GitHub');
 console.log('2. Vercel will automatically deploy');
 console.log('3. Set environment variables in Vercel dashboard');
 console.log('4. Test your deployment');
+

@@ -14,3 +14,4 @@ services:
         value: https://indiwave.onrender.com
       - key: NEXTAUTH_SECRET
         value: 4702b5e97e6ea07133f16d3659162286c2c58e932c0203393a82dc153c2e337e
+

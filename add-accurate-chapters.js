@@ -246,3 +246,4 @@ async function addAccurateChaptersToAllSeries() {
 }
 
 addAccurateChaptersToAllSeries();
+

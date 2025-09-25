@@ -175,3 +175,4 @@ async function fetchMangaFromMangaDex(mangaId: string) {
     return null;
   }
 }
+

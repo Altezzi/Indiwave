@@ -121,3 +121,4 @@ function findSimilarFolder(dbTitle, existingFolders) {
 
 restoreMissingFolders();
 
+

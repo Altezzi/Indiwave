@@ -30,3 +30,4 @@ Write-Host "📋 Next steps:" -ForegroundColor White
 Write-Host "1. Set up environment variables in Vercel dashboard" -ForegroundColor White
 Write-Host "2. Configure custom domain if needed" -ForegroundColor White
 Write-Host "3. Test the drag scrolling functionality" -ForegroundColor White
+

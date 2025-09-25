@@ -1,0 +1,17 @@
+# Vercel Environment Variables
+# Add these to your Vercel dashboard under Settings > Environment Variables
+
+# Database (PostgreSQL)
+DATABASE_URL=postgresql://username:password@host:port/database
+
+# NextAuth Configuration
+NEXTAUTH_URL=https://your-app.vercel.app
+NEXTAUTH_SECRET=your-secret-key-here
+
+# Google OAuth (if using)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+NEXT_PUBLIC_GOOGLE_CLIENT_ID=your-google-client-id
+
+# Environment
+NODE_ENV=production

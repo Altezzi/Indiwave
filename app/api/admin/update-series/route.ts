@@ -178,7 +178,7 @@ ${results.updates.chapters || 'Check chapters.json for chapter list'}
 // GET endpoint to check for updates without applying them
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const seriesId = searchParams.get('seriesId');
 
     if (!seriesId) {

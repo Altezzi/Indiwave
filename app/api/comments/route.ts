@@ -6,7 +6,7 @@ import { prisma } from "@/lib/prisma";
 // GET comments for a series
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const seriesId = searchParams.get("seriesId");
 
     if (!seriesId) {

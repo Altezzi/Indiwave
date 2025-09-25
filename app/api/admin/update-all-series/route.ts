@@ -222,7 +222,7 @@ ${seriesResult.updates.chapters || 'Check chapters.json for chapter list'}
 // GET endpoint to check all series for updates without applying them
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const delayMs = parseInt(searchParams.get('delayMs') || '1000');
 
     const mangaMD = new MangaMDService();

@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 
+// Force dynamic rendering to avoid static generation issues
+export const dynamic = 'force-dynamic';
+
 export default function MyListPage() {
   const { data: session, status } = useSession();
   const [activeTab, setActiveTab] = useState<"all" | "favorites">("all");

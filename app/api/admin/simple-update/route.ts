@@ -106,7 +106,7 @@ To enable full updates, the MangaDex API integration needs to be properly config
 // GET endpoint to check series status
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const seriesId = searchParams.get('seriesId');
 
     if (!seriesId) {

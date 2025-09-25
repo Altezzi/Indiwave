@@ -8,10 +8,10 @@ DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.[PROJECT-REF].supabase.co
 NEXTAUTH_URL="http://localhost:3003"
 NEXTAUTH_SECRET="4ED+X2iduBE7eAaRd3PhYY29P775XmfU6410zdIXw2U="
 
-# Google OAuth (optional)
-# GOOGLE_CLIENT_ID="your-google-client-id"
-# GOOGLE_CLIENT_SECRET="your-google-client-secret"
-# NEXT_PUBLIC_GOOGLE_CLIENT_ID="your-google-client-id"
+# Google OAuth (required for Google sign-in)
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+NEXT_PUBLIC_GOOGLE_CLIENT_ID="your-google-client-id"
 
 # Environment
 NODE_ENV="development"

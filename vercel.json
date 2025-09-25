@@ -1,8 +1,8 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "buildCommand": "npm run build:fast",
-  "installCommand": "npm ci --prefer-offline --no-audit",
+  "buildCommand": "npm run build:ultra",
+  "installCommand": "npm ci --prefer-offline --no-audit --no-optional --ignore-scripts",
   "devCommand": "npm run dev",
   "regions": ["iad1"],
   "functions": {
@@ -19,6 +19,6 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "NODE_OPTIONS": "--max-old-space-size=2048"
+    "NODE_OPTIONS": "--max-old-space-size=1024"
   }
 }

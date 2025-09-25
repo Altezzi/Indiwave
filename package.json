@@ -13,7 +13,9 @@
     "migrate:dev": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
     "import:series": "node ./scripts/import-series-folders-to-db.js",
-    "db:reset": "rimraf dev.db && prisma migrate reset --force && npm run import:series"
+    "db:reset": "rimraf dev.db && prisma migrate reset --force && npm run import:series",
+    "analyze": "ANALYZE=true next build",
+    "vercel:optimize": "node scripts/vercel-build.js"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.10.0",
@@ -40,5 +42,9 @@
     "eslint-config-next": "14.2.5",
     "rimraf": "^6.0.1",
     "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
   }
 }

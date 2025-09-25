@@ -1,0 +1,21 @@
+# Vercel Environment Variables Template
+# Copy these to your Vercel dashboard and fill in the values
+
+# Database
+DATABASE_URL=file:./dev.db
+
+# NextAuth Configuration
+NEXTAUTH_URL=https://your-app.vercel.app
+NEXTAUTH_SECRET=your-secret-key-here
+
+# Google OAuth (if using)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+NEXT_PUBLIC_GOOGLE_CLIENT_ID=your-google-client-id
+
+# Build Optimization
+NODE_ENV=production
+NODE_OPTIONS=--max-old-space-size=4096
+
+# Vercel Analytics (optional)
+VERCEL_ANALYTICS_ID=your-analytics-id

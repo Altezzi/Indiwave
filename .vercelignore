@@ -9,19 +9,20 @@ out/
 dist/
 build/
 
-# Docker files
+# Docker files (not needed for Vercel)
 Dockerfile*
 docker-compose*
 nginx.conf
 
-# Deployment scripts
+# Deployment scripts (not needed for Vercel)
 deploy-*.ps1
 deploy-*.sh
 
-# Environment files
+# Environment files (handled by Vercel dashboard)
 .env*
+vercel-env.example
 
-# Database files
+# Database files (use external database for production)
 *.db
 *.db-journal
 
@@ -65,3 +66,20 @@ coverage/
 
 # Optional REPL history
 .node_repl_history
+
+# Git files
+.git/
+.gitignore
+
+# Documentation (optional)
+README.md
+docs/
+
+# Test files
+test/
+tests/
+__tests__/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts

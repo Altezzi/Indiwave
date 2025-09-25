@@ -1,24 +1,9 @@
 {
-  "version": 2,
-  "framework": "nextjs",
-  "buildCommand": "npm run vercel-build",
-  "installCommand": "npm ci --prefer-offline --no-audit --no-optional --ignore-scripts",
-  "devCommand": "npm run dev",
-  "regions": ["iad1"],
-  "functions": {
-    "app/api/**/*.ts": {
-      "maxDuration": 10,
-      "memory": 512
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/series-covers/(.*)",
-      "destination": "/api/series-covers/$1"
-    }
-  ],
   "env": {
-    "NODE_ENV": "production",
-    "NODE_OPTIONS": "--max-old-space-size=1024"
-  }
+    "DATABASE_URL": "postgresql://dummy:dummy@dummy:5432/dummy",
+    "NEXTAUTH_URL": "https://your-app.vercel.app",
+    "NEXTAUTH_SECRET": "4ED+X2iduBE7eAaRd3PhYY29P775XmfU6410zdIXw2U=",
+    "NODE_ENV": "production"
+  },
+  "buildCommand": "npm run vercel-build"
 }

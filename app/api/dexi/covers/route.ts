@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
 // GET /api/dexi/covers - Get cover art suggestions or list current covers
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const seriesName = searchParams.get('seriesName');
 
     if (seriesName) {

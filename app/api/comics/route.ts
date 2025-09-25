@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 export async function GET(request: NextRequest) {
   try {
     // Get query parameters
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const limitParam = searchParams.get('limit');
     const limit = limitParam ? parseInt(limitParam) : null; // null means no limit
     const offset = parseInt(searchParams.get('offset') || '0');

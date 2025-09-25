@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 // GET /api/dexi/search-manga - Search for manga on MangaDex
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const query = searchParams.get('q');
 
     if (!query) {

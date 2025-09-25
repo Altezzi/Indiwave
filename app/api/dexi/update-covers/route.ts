@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
 // GET /api/dexi/update-covers - Get cover art suggestions for popular manga
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const action = searchParams.get('action');
 
     if (action === 'suggestions') {

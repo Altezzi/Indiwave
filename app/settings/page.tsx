@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 
+// Force dynamic rendering to avoid static generation issues
+export const dynamic = 'force-dynamic';
+
 export default function SettingsPage() {
   const [layoutWidth, setLayoutWidth] = useState("full");
   const [theme, setTheme] = useState("default");

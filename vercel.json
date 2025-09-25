@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "buildCommand": "npm run build:ultra",
+  "buildCommand": "npm run vercel-build",
   "installCommand": "npm ci --prefer-offline --no-audit --no-optional --ignore-scripts",
   "devCommand": "npm run dev",
   "regions": ["iad1"],

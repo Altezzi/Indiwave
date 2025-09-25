@@ -1,4 +1,4 @@
-# Large directories that aren't needed for build
+# Exclude large directories to speed up build
 series/
 scripts/
 node_modules/
@@ -9,28 +9,26 @@ out/
 dist/
 build/
 
-# Docker files (not needed for Vercel)
+# Docker files
 Dockerfile*
 docker-compose*
 nginx.conf
 
-# Deployment scripts (not needed for Vercel)
+# Deployment scripts
 deploy-*.ps1
 deploy-*.sh
 
-# Environment files (handled by Vercel dashboard)
+# Environment files
 .env*
 vercel-env.example
 
-# Database files (use external database for production)
+# Database files
 *.db
 *.db-journal
 
 # IDE files
 .vscode/
 .idea/
-*.swp
-*.swo
 
 # OS files
 .DS_Store
@@ -39,40 +37,19 @@ Thumbs.db
 # Logs
 logs/
 *.log
-npm-debug.log*
-
-# Runtime data
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage
-coverage/
-.nyc_output/
 
 # Cache directories
 .cache/
-.parcel-cache/
 .npm/
 .yarn/
-
-# Temporary files
-*.tmp
-*.temp
-
-# Package files
-*.tgz
-
-# Optional REPL history
-.node_repl_history
 
 # Git files
 .git/
 .gitignore
 
-# Documentation (optional)
+# Documentation
 README.md
+VERCEL_DEPLOYMENT.md
 docs/
 
 # Test files

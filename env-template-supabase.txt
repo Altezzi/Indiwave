@@ -1,0 +1,17 @@
+# Supabase Environment Variables Template
+# Copy these values to your .env.local file for development
+
+# Database (Supabase)
+DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.[PROJECT-REF].supabase.co:5432/postgres"
+
+# NextAuth Configuration
+NEXTAUTH_URL="http://localhost:3003"
+NEXTAUTH_SECRET="4ED+X2iduBE7eAaRd3PhYY29P775XmfU6410zdIXw2U="
+
+# Google OAuth (optional)
+# GOOGLE_CLIENT_ID="your-google-client-id"
+# GOOGLE_CLIENT_SECRET="your-google-client-secret"
+# NEXT_PUBLIC_GOOGLE_CLIENT_ID="your-google-client-id"
+
+# Environment
+NODE_ENV="development"

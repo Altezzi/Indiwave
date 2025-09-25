@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DATABASE_URL": "postgresql://dummy:dummy@dummy:5432/dummy",
+    "NEXTAUTH_URL": "https://indiwave.vercel.app",
+    "NEXTAUTH_SECRET": "4ED+X2iduBE7eAaRd3PhYY29P775XmfU6410zdIXw2U=",
+    "NODE_ENV": "production"
+  }
+}

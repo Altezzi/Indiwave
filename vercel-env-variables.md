@@ -7,7 +7,7 @@ Set these in your Vercel dashboard under **Settings** → **Environment Variable
 ### Supabase Configuration
 ```
 NEXT_PUBLIC_SUPABASE_URL=https://uvzlcfqbwwaqafzjeivx.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key-here
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV2emxjZnFid3dhcWFmemplaXZ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4MjYwNjMsImV4cCI6MjA3NDQwMjA2M30.GklR3s5ITYSOGYdCoJrkBZn8ot24StBeLm3IFrtasyQ
 SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key-here
 ```
 

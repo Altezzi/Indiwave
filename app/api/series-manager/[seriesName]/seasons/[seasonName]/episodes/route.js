@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'node:fs';
 import path from 'node:path';
-import { prisma } from '../../../../../../lib/prisma.js';
+import { supabase } from '../../../../../../lib/supabase.js';
 
 // GET /api/series-manager/[seriesName]/seasons/[seasonName]/episodes - List all episodes in season
 export async function GET(request, { params }) {
@@ -101,14 +101,20 @@ export async function POST(request, { params }) {
     );
 
     // Create database entry (using Chapter model for episodes)
-    const dbEpisode = await prisma.chapter.create({
-      data: {
+    const { data: dbEpisode, error: createError } = await supabase
+      .from('chapters')
+      .insert({
         title,
         chapterNumber: parseInt(episodeNumber),
         creatorId: 'system', // You'll need to get this from auth
         isPublished: false
-      }
-    });
+      })
+      .select()
+      .single();
+
+    if (createError) {
+      throw createError;
+    }
 
     return NextResponse.json({
       success: true,

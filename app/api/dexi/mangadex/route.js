@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'node:fs';
 import path from 'node:path';
-import { prisma } from '../../../lib/prisma.js';
+import { supabase } from '../../../lib/supabase.js';
 
 // POST /api/dexi/mangadex - Import manga from MangaDex with cover art
 export async function POST(request) {
@@ -91,8 +91,9 @@ export async function POST(request) {
     );
 
     // Create database entry
-    const dbSeries = await prisma.series.create({
-      data: {
+    const { data: dbSeries, error: createError } = await supabase
+      .from('series')
+      .insert({
         title: mangaData.title.en,
         description: mangaData.description?.en || '',
         coverImage: coverImageName,
@@ -103,8 +104,13 @@ export async function POST(request) {
         altTitles: JSON.stringify(metadata.altTitles),
         creatorId: 'system',
         isPublished: false
-      }
-    });
+      })
+      .select()
+      .single();
+
+    if (createError) {
+      throw createError;
+    }
 
     return NextResponse.json({
       success: true,

@@ -16,8 +16,7 @@
     "migrate:deploy": "prisma migrate deploy",
     "import:series": "node ./scripts/import-series-folders-to-db.js",
     "db:reset": "rimraf dev.db && prisma migrate reset --force && npm run import:series",
-    "analyze": "ANALYZE=true next build",
-    "vercel:optimize": "node scripts/vercel-build.js"
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.10.0",
@@ -34,7 +33,6 @@
   },
   "optionalDependencies": {
     "@types/bcryptjs": "^2.4.6",
-    "batoto.js": "^3.1.5",
     "chokidar": "^4.0.3",
     "mangadex-full-api": "^6.0.0"
   },
@@ -49,7 +47,7 @@
     "typescript": "^5.5.4"
   },
   "engines": {
-    "node": ">=20.0.0",
+    "node": "20.x",
     "npm": ">=9.0.0"
   }
 }

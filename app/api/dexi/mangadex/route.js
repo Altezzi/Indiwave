@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import { prisma } from '../../../lib/prisma';
+import fs from 'node:fs';
+import path from 'node:path';
+import { prisma } from '../../../lib/prisma.js';
 
 // POST /api/dexi/mangadex - Import manga from MangaDex with cover art
 export async function POST(request) {

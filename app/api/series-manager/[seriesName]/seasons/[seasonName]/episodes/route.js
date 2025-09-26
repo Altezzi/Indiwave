@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import { prisma } from '../../../../../../lib/prisma';
+import fs from 'node:fs';
+import path from 'node:path';
+import { prisma } from '../../../../../../lib/prisma.js';
 
 // GET /api/series-manager/[seriesName]/seasons/[seasonName]/episodes - List all episodes in season
 export async function GET(request, { params }) {

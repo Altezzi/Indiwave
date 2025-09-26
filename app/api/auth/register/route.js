@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import bcrypt from "bcryptjs"
-import { prisma } from "../../../lib/prisma.js"
+import { supabase } from "../../../lib/supabase.js"
 
 export async function POST(request) {
   try {
@@ -32,9 +32,11 @@ export async function POST(request) {
     }
 
     // Check if user already exists
-    const existingUser = await prisma.user.findUnique({
-      where: { email }
-    })
+    const { data: existingUser } = await supabase
+      .from('users')
+      .select('*')
+      .eq('email', email)
+      .single()
 
     if (existingUser) {
       return NextResponse.json(
@@ -45,9 +47,11 @@ export async function POST(request) {
 
     // Check if username is taken (if provided)
     if (username) {
-      const existingUsername = await prisma.user.findUnique({
-        where: { username }
-      })
+      const { data: existingUsername } = await supabase
+        .from('users')
+        .select('*')
+        .eq('username', username)
+        .single()
 
       if (existingUsername) {
         return NextResponse.json(
@@ -61,15 +65,19 @@ export async function POST(request) {
     const hashedPassword = await bcrypt.hash(password, 12)
 
     // Get the next account ID
-    const lastUser = await prisma.user.findFirst({
-      orderBy: { accountId: 'desc' },
-      select: { accountId: true }
-    });
+    const { data: lastUser } = await supabase
+      .from('users')
+      .select('accountId')
+      .order('accountId', { ascending: false })
+      .limit(1)
+      .single()
+    
     const nextAccountId = (lastUser?.accountId || 0) + 1;
 
     // Create user
-    const user = await prisma.user.create({
-      data: {
+    const { data: user, error: createError } = await supabase
+      .from('users')
+      .insert({
         accountId: nextAccountId,
         email,
         password: hashedPassword,
@@ -77,8 +85,13 @@ export async function POST(request) {
         username: username || null,
         role: "USER", // Default role
         isCreator: false,
-      }
-    })
+      })
+      .select()
+      .single()
+
+    if (createError) {
+      throw createError
+    }
 
     // Return user without password
     const { password: _, ...userWithoutPassword } = user
